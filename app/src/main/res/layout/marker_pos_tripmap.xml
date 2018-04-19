@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="21dp"
+    android:layout_height="29dp"
+    android:orientation="vertical"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/currentPosLayout"
+        android:layout_width="21dp"
+        android:layout_height="29dp"
+        android:background="@drawable/amap_marker_start"
+        >
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:background="@drawable/cycle_bg_3"
+        android:gravity="center"
+        android:text="起"
+        android:textColor="@color/text_color10"
+        android:textSize="@dimen/font_size_tiny"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        />
+    </RelativeLayout>
+</LinearLayout>

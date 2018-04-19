@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/dp15">
+
+    <TextView
+        android:button="@null"
+        android:id="@+id/item_grouping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/grouping_n_bg"
+        android:textColor="@color/tab_text_n_color"
+        android:textSize="@dimen/sp12" />
+</LinearLayout>

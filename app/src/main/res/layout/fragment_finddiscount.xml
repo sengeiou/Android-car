@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RadioGroup
+        android:id="@+id/discoutn_group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/discount_limitrb"
+            style="@style/radiobutton_bg"
+            android:checked="true"
+            android:text="限时优惠"
+            android:visibility="gone"
+            android:textColor="@drawable/tab_voucherfont_color" />
+        <RadioButton
+            android:id="@+id/discount_giftgrb"
+            style="@style/radiobutton_bg"
+            android:text="购车有礼"
+            android:visibility="gone"
+            android:textColor="@drawable/tab_voucherfont_color" />
+        <RadioButton
+            android:id="@+id/discount_couponrb"
+            style="@style/radiobutton_bg"
+            android:text="代金券"
+            android:visibility="gone"
+            android:textColor="@drawable/tab_voucherfont_color" />
+</RadioGroup>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1px"
+    android:background="@color/devider"
+    />
+    <FrameLayout
+        android:id="@+id/finddisount_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

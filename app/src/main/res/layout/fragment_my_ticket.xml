@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_layout_bg_color"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/promptMsg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/margin_bottom_size"
+                    android:layout_marginTop="@dimen/margin_top_size"
+                    android:text="每张门票限使用一次，入场作废!"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/font_size_small"
+                    android:visibility="gone" />
+
+
+                <ListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/promptMsg"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/white"
+                    android:divider="@color/app_layout_bg_color"
+                    android:dividerHeight="@dimen/dp10" />
+
+
+                <RelativeLayout
+                    android:id="@+id/bottomLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:layout_below="@id/list">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <TextView
+                            android:id="@+id/msgTv3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_left_size"
+                            android:text="请尽快领取门票，否则领取权限将失效"
+                            android:textColor="@color/text_color17"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/buyTicketBtn1"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_below="@id/msgTv3"
+                            android:layout_marginLeft="@dimen/margin_left_size"
+                            android:layout_marginRight="@dimen/margin_right_size"
+                            android:layout_marginTop="@dimen/margin_top_size"
+                            android:background="@drawable/button_bg_25"
+                            android:text="现在购票"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_more" />
+
+                        <TextView
+                            android:id="@+id/recordBtn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/buyTicketBtn1"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_top_size"
+                            android:text="查看使用/退款记录"
+                            android:textColor="@color/text_color6" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/recordBtn1"
+                            android:text="没有更多了"
+                            android:textColor="@color/text_color15"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dp10"
+                            />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/msgTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/no_data_img_icon"
+            android:text="您还没有购票/领票门票哦！"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small" />
+
+
+        <Button
+            android:id="@+id/buyTicketBtn2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/msgTv2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_size"
+            android:background="@drawable/button_bg_10"
+            android:text="现在购票"
+            android:textColor="@color/text_color16"
+            android:textSize="@dimen/font_size_more" />
+
+
+        <TextView
+            android:id="@+id/recordBtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buyTicketBtn2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_size"
+            android:text="查看使用/退款记录"
+            android:textColor="@color/text_color6"
+            android:textSize="@dimen/font_size_small" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

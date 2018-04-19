@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:paddingRight="@dimen/common_left_margin">
+
+        <TextView
+            android:id="@+id/prebuyorder_datetv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_height"
+            android:gravity="center_vertical"
+            android:text="2015.02.21 13:21"
+            android:textColor="@color/text_color17" />
+
+        <TextView
+            android:id="@+id/preseeoder_filterselect"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_height"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="服务中"
+            android:textColor="@color/text_color3" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/voucher_divide_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_left_margin">
+
+
+        <include
+            android:id="@+id/preseeoder_avatar"
+            layout="@layout/layout_avatar_msg"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_toRightOf="@id/preseeoder_avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/prebuyorder_name"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:text="张小凡"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/prebuyorder_carmodel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="奥迪A8L"
+                android:textSize="@dimen/font_size_s_medium" />
+
+            <TextView
+                android:id="@+id/prebuyorder_looking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="外观：蓝色 内饰: 黑色"
+                android:textSize="@dimen/font_size_s_medium" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/preseeoder_more"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_icon" />
+    </RelativeLayout>
+</LinearLayout>

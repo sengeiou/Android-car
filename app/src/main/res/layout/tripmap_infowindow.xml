@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="45dp"
+    android:background="@drawable/tripmap_tiezi"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/inofowindow_titletv"
+        android:layout_marginTop="4dp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:text="10帖"
+        android:textSize="@dimen/font_size_tiny"
+        android:textStyle="bold" />
+</LinearLayout>

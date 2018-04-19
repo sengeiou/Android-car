@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40">
+
+        <TextView
+            android:id="@+id/ticketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/sp16" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/unitTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_value"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small" />
+
+            <TextView
+                android:id="@+id/moneyTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/unitTv"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/unitTv"
+                android:text="@string/china_money_char"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_tiny" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/moneyTag"
+                android:layout_toRightOf="@id/moneyTag"
+                android:gravity="left"
+                android:text="80"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_m_large" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_layout_bg_color" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/descLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40"
+        android:layout_below="@id/titleLayout">
+
+        <TextView
+            android:id="@+id/descTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp80"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp12" />
+
+
+        <Button
+            android:id="@+id/refundBtn"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp29"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:background="@drawable/button_bg_28"
+            android:text="申请退款"
+            android:textColor="@color/text_selected"
+            android:textSize="@dimen/sp12"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_layout_bg_color" />
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/descLayout"
+        android:background="@color/white"
+        android:divider="@color/app_layout_bg_color"
+        android:dividerHeight="@dimen/dp1"
+
+        />
+
+</RelativeLayout>

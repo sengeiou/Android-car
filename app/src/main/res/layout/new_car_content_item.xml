@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/style_bg3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/carName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:text=""
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_medium"
+
+                />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/carName"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginTop="@dimen/margin_top_size"
+                android:text="指导价：19.38万"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_s_medium"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:layout_marginTop="@dimen/margin_top_size"
+        android:background="@color/white"
+        >
+
+        <View
+            android:id="@+id/split"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:background="@color/app_layout_bg_color"
+            android:visibility="visible"/>
+
+        <com.tgf.kcwc.view.GridViewWithHeaderAndFooter
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/split"
+            android:layout_marginLeft="4sp"
+            android:layout_marginRight="4dp"
+            android:horizontalSpacing="4dp"
+            android:numColumns="2"
+            android:verticalSpacing="4dp"/>
+
+        <View
+            android:id="@+id/split1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_layout_bg_color"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/specLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/titleLayout"
+        android:background="@color/app_layout_bg_color"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/countLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true">
+
+
+            <ImageView
+                android:id="@+id/counterIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_time_1"
+                />
+
+            <com.tgf.kcwc.view.countdown.CountdownView
+                android:id="@+id/setTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/counterIcon"
+                app:isHideTimeBackground="true"
+                app:isShowDay="true"
+                app:isShowHour="true"
+                app:isShowMillisecond="false"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isShowTimeBgDivisionLine="false"
+                app:suffixDay="天"
+                app:suffixGravity="center"
+                app:suffixHour="时"
+                app:suffixMinute="分"
+                app:suffixSecond="秒"
+                app:suffixTextColor="@color/tab_text_s_color"
+                app:suffixTextSize="@dimen/dp14"
+                app:timeTextColor="@color/tab_text_s_color"
+                app:timeTextSize="@dimen/dp17"
+                />
+        </RelativeLayout>
+
+
+        <!--
+        <TextView
+            android:id="@+id/setTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_set_time"
+            android:drawablePadding="10dp"
+            android:textColor="@color/tab_text_s_color"
+            android:textSize="@dimen/font_size_title" /> -->
+
+
+        <TextView
+            android:id="@+id/launchingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/live_launching"
+            android:textColor="@color/tab_text_s_color"
+            android:textSize="@dimen/font_size_title"
+            android:visibility="gone"
+
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

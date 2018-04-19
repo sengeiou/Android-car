@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_title_height"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:paddingRight="@dimen/common_left_margin">
+
+        <TextView
+            android:id="@+id/seecarmsg_createtimetv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_more"
+            android:textSize="@dimen/sp12"
+            tools:text="2016.12.03" />
+
+        <TextView
+            android:id="@+id/seecarmsg_statustv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_more"
+            tools:text="等待抢单" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/devider" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/seecarmsg_cover"
+            android:layout_width="@dimen/img_foureper"
+            android:layout_height="@dimen/img_threeeper"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:scaleType="fitXY"
+            fresco:placeholderImage="@drawable/im_default"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/seecar_brandname"
+            android:layout_toRightOf="@id/seecarmsg_cover"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:paddingRight="@dimen/dp10"
+            android:layout_height="@dimen/text_height"
+            android:paddingLeft="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            android:text="奥迪 A4L 车型名称"
+            android:textSize="@dimen/font_size_s_medium"/>
+        <TextView
+            android:id="@+id/seecar_looking"
+            android:layout_toRightOf="@id/seecarmsg_cover"
+            android:layout_below="@id/seecar_brandname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height"
+            android:paddingLeft="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            tools:text="外观: 黑色    内饰: 白色"
+            android:textSize="@dimen/font_size_small"/>
+        <ImageView
+            android:id="@+id/seecar_seemoreiv"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_icon"/>
+        <ImageView
+            android:id="@+id/seecar_deleteiv"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="centerInside"
+            android:visibility="gone"
+            android:src="@drawable/btn_close_s"/>
+    </RelativeLayout>
+</LinearLayout>

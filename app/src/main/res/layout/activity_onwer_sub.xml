@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <com.tgf.kcwc.view.LoadView
+        android:id="@+id/loadView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/titleBar"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp">
+
+            <Button
+                android:id="@+id/startPKBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/item_status_selector"
+                android:text="@string/start_pk"
+                android:textColor="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/margin_top_size"
+                android:background="@color/style_bg1">
+
+                <TextView
+                    android:id="@+id/addBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/add_btn_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/editBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/edit_btn_text"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_more"
+
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

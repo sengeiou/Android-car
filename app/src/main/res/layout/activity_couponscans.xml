@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="209dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/scans_icon"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_pay_success" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textSize="15sp"
+            android:text="分发成功"
+            android:gravity="center"
+            android:textColor="@color/voucher_black"
+            android:layout_below="@id/scans_icon"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="310dp"
+        android:layout_height="125dp"
+        android:orientation="vertical"
+        android:padding="@dimen/common_left_margin"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_bg_21">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:paddingTop="4dp"
+            tools:text="重庆2016国际汽车消费节 媒体日门票"
+            android:textColor="@color/voucher_black"
+            android:textSize="@dimen/font_size_title" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            tools:text="有效时间:2016.02.12 至 2012.02.18"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_small" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            tools:text="面值：￥200"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_small" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="18dp"
+            tools:text="编号：23872373098 "
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_small" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="17dp"
+            tools:text="有效时间:2016.02.12 至 2012.02.18"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_small" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

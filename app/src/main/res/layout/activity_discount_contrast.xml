@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_header_part"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="@dimen/dp34"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="@dimen/dp34">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+
+                    <ImageView
+                        android:id="@+id/seeImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="center"
+                        android:src="@drawable/icon_see_smaller"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/toggleBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seeImg"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/discount_item"
+                        android:textColor="@color/text_color15" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.tgf.kcwc.view.VSScrollView
+                android:id="@+id/header_content_scroll"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_contrast_model_header_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" />
+            </com.tgf.kcwc.view.VSScrollView>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:background="@color/split_line_color" />
+
+        <LinearLayout
+            android:id="@+id/ll_header_part2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="@dimen/dp34"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="@dimen/dp34">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+
+                    <ImageView
+                        android:id="@+id/seeImg2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="center"
+                        android:src="@drawable/icon_see_smaller"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/toggleBtn2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seeImg2"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/min_discount_item"
+                        android:textColor="@color/text_color15" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.tgf.kcwc.view.VSScrollView
+                android:id="@+id/header_content_scroll2"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_contrast_model_header_content2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" />
+            </com.tgf.kcwc.view.VSScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ownersub_main_nav_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_below="@id/ll_header_part"
+            android:background="@color/split_line_color" />
+
+        <com.tgf.kcwc.view.pinnedheader.PinnedHeaderListView
+            android:id="@+id/contrasr_config_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/ownersub_main_nav_divider"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/transparent90_white"
+            android:dividerHeight="1.0px"
+            android:fadingEdge="vertical"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

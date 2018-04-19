@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/titleBar"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp">
+
+
+        <RelativeLayout
+            android:id="@+id/userInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/headerImg"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                fresco:placeholderImage="@drawable/cover_default"
+                fresco:roundAsCircle="true"
+                fresco:viewAspectRatio="1"
+
+                />
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerImg"
+                android:layout_centerHorizontal="true"
+                android:lines="1"
+                android:singleLine="true"
+                android:text="aaa"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/sp16" />
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/qCodeImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userInfoLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/qCodeImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:gravity="center_horizontal"
+            android:lineSpacingMultiplier="1.2"
+            android:text="请用看车玩车APP扫描二维码\n加我为好友"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp10" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp20">
+
+
+        <ImageView
+            android:id="@+id/applogo"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/icon_applogo" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/applogo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:lines="1"
+            android:text="您身边的超级汽车社区"
+            android:textColor="@color/text_color10"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+
+</RelativeLayout>

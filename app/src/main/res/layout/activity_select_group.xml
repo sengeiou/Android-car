@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:layout_below="@+id/attention_group_name"
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp">
+        <ListView
+            android:id="@+id/friend_group_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/bg_2"
+            android:scrollbars="none"
+            android:dividerHeight="1dp" />
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+</LinearLayout>

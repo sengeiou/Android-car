@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="@color/white"
+    android:minHeight="68dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/discount_moreorgtv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:gravity="center_vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right_size">
+
+
+            <TextView
+                android:id="@+id/countericon"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:text="剩余"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_small" />
+
+            <com.tgf.kcwc.view.countdown.CountdownView
+                android:id="@+id/discountlimit_settimetext"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/countericon"
+                app:isHideTimeBackground="true"
+                app:isShowDay="true"
+                app:isShowHour="true"
+                app:isShowMillisecond="false"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isShowTimeBgDivisionLine="false"
+                app:suffixDay="天"
+                app:suffixGravity="center"
+                app:suffixHour="时"
+                app:suffixMinute="分"
+                app:suffixSecond="秒"
+                app:suffixTextColor="@color/text_color15"
+                app:suffixTextSize="@dimen/font_size_small"
+                app:timeTextColor="@color/text_color12"
+                app:timeTextSize="@dimen/font_size_small" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/discountlimit_org"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:text="↓降 ¥ 300"
+            android:textColor="@color/text_color16"
+            android:textSize="@dimen/font_size_small" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="@color/devider" />
+
+    </RelativeLayout>
+</LinearLayout>

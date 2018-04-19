@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="110dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/selectlayout"
+        android:layout_width="220dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/bigimage"
+            android:layout_width="210dp"
+            android:layout_height="90dp"
+            fresco:actualImageScaleType="fitXY"
+            fresco:failureImage="@drawable/im_default"
+            fresco:retryImage="@drawable/im_default"
+            fresco:failureImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#美女总动员#"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_title" />
+
+            <TextView
+                android:id="@+id/participation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="259人参与"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_more" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

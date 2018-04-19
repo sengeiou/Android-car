@@ -1,0 +1,138 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.FindBackPWDActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@color/app_layout_bg_color"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/titleBar"
+                layout="@layout/login_titlebar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_row_height"
+                android:layout_marginTop="@dimen/margin_top_size"
+                android:gravity="center"
+                android:text="完善资料方便好友找到你"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_medium" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/editmyinfo_avatar"
+                android:layout_width="@dimen/img_size_xlarge"
+                android:layout_height="@dimen/img_size_xlarge"
+                android:layout_gravity="center_horizontal"
+                fresco:actualImageScaleType="centerInside"
+                fresco:placeholderImage="@drawable/icon_edit_avatar"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:roundedCornerRadius="45dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_button_height"
+                android:background="@color/transparent90_white"
+                android:gravity="center">
+
+                <RadioGroup
+                    android:id="@+id/login_gemderrg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:contentDescription="性别"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/female_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/btn_loginbar_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="女生"
+                        android:textColor="@drawable/tab_font_color" />
+
+                    <RadioButton
+                        android:id="@+id/male_login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/btn_loginbar_selector"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:text="男生"
+                        android:textColor="@drawable/tab_font_color" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_right_margin"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/vercode_labeltv"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/nickname"
+                    android:textSize="@dimen/font_size_title" />
+
+                <EditText
+                    android:id="@+id/editmyinfo_nickname_ed"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:gravity="center_vertical"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:text="落单的猫儿"
+                    android:textSize="@dimen/font_size_title" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_right_margin"
+                android:background="@color/color_login_devide" />
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_right_margin"
+                android:layout_marginTop="@dimen/common_item_height"
+                android:background="@drawable/btn_login_selector"
+                android:text="@string/submit"
+                android:textColor="@color/transparent90_white"
+                android:textSize="@dimen/font_size_huge"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</merge>

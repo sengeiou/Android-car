@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <LinearLayout
+            android:id="@+id/select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/common_right_margin">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/couponlist_cover"
+                android:layout_width="@dimen/img_foureper"
+                android:layout_height="@dimen/img_threeeper"
+                android:scaleType="fitXY"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@drawable/im_default"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                fresco:placeholderImageScaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/img_size_xlarge"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:orientation="vertical">
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/listitem_recoment_coupontitle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/voucher_black"
+                        android:textSize="@dimen/font_size_medium"
+                        tools:text="这是代金券标题" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/couponlist_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:singleLine="true"
+                    android:textColor="@color/voucher_gray"
+                    tools:text="代金券简述" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp">
+
+                    <TextView
+                        android:id="@+id/recyleitem_near_nowprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="6dp"
+                        android:text="￥ 100"
+                        android:textColor="@color/voucher_yellow"
+                        android:textSize="@dimen/font_size_more" />
+
+                    <TextView
+                        android:id="@+id/listviewitem_recomment_oldprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@id/recyleitem_near_nowprice"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@id/recyleitem_near_nowprice"
+                        android:gravity="center"
+                        android:text="￥30"
+                        android:textColor="@color/voucher_gray"
+                        android:textSize="@dimen/font_size_small" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="@dimen/common_left_margin"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/refound_numtv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_title"
+                tools:text="有两张可退款" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@id/refound_numtv"
+                android:gravity="center_vertical"
+                android:text=" (可多选)"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:textColor="@color/split_line_color3" />
+
+        <ListView
+            android:id="@+id/couponRefound_codeLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:dividerHeight="1px" />
+
+        <TextView
+            android:id="@+id/refond_priceTv"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_left_margin"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_more"
+            android:text="退款合计：￥0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="@dimen/common_left_margin"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/refound_wayTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_title"
+                android:text="现金退还方式" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@id/refound_wayTitleTv"
+                android:gravity="center_vertical"
+                android:text=" (单选)"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:textColor="@color/split_line_color3" />
+
+        <ListView
+            android:id="@+id/couponRefound_wayLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:dividerHeight="1px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="@dimen/common_left_margin"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/refound_whyTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_title"
+                android:text="退款原因" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignBaseline="@id/refound_whyTitleTv"
+                android:gravity="center_vertical"
+                android:text=" (至少选择一项)"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:textColor="@color/split_line_color3" />
+
+        <ListView
+            android:id="@+id/couponRefound_whyLV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:dividerHeight="1px" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:textColor="@color/split_line_color3" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/refond_backNoteTv"
+                android:layout_width="match_parent"
+                android:layout_height="139dp"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="更多不爽？必须吐槽"
+                android:maxLength="300"
+                android:padding="8dp"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/bockNote_textSizeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="8dp"
+                android:text="0/300" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:textColor="@color/split_line_color3" />
+
+        <TextView
+            android:id="@+id/refond_submittv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/btn_login_selector"
+            android:gravity="center"
+            android:text="申请退款"
+            android:textColor="@color/transparent90_white"
+            android:textSize="@dimen/font_size_title"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

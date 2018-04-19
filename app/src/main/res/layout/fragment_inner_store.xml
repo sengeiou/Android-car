@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/filter_layout_height">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <include
+                android:id="@+id/brand"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/price"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/seat"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/moreFilterLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/isCouponTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/checked_btn_selector"
+                android:drawablePadding="10dp"
+                android:text="有优惠" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_top_size"
+        android:layout_below="@id/filterLayout"
+        android:background="@color/app_layout_bg_color" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/split"
+        android:divider="@color/app_layout_bg_color"
+        android:dividerHeight="@dimen/margin_height_size" />
+
+
+    <RelativeLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/msgTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/no_data_img_icon"
+            android:text="没有符合该条件的车辆!"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/filterContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filterLayout"
+        android:visibility="gone" />
+
+</RelativeLayout>

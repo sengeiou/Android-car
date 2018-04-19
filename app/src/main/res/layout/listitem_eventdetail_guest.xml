@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/eventdetail_guestavatar"
+            android:layout_width="@dimen/img_size_xlarge"
+            android:layout_height="@dimen/img_size_xlarge"
+            android:scaleType="centerInside"
+            android:src="@drawable/popman_avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/eventdetail_guestname"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="2016摩托车论坛"
+                android:textColor="@color/voucher_black"
+                android:textSize="@dimen/font_size_title" />
+            <TextView
+                android:id="@+id/eventdetail_guesttitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="中国国际贸易促进"
+                android:textColor="@color/voucher_gray"
+                android:textSize="@dimen/font_size_medium" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

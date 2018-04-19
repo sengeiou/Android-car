@@ -1,0 +1,42 @@
+<RelativeLayout android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/dp15"
+    android:paddingRight="@dimen/dp15"
+    android:paddingBottom="@dimen/dp12"
+    android:paddingTop="@dimen/dp12"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/base_information_car_iv"
+        android:layout_width="@dimen/dp45"
+        android:layout_height="@dimen/dp45"
+        android:layout_centerVertical="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp7"
+        android:layout_toRightOf="@+id/base_information_car_iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/base_information_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="品牌车系"
+            android:textColor="@color/style_bg7"
+            android:textSize="@dimen/dp12" />
+
+        <TextView
+            android:id="@+id/base_information_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp17"
+            android:text="认证时间"
+            android:textColor="@color/tab_text_n_color"
+            android:textSize="@dimen/dp10" />
+    </LinearLayout>
+
+</RelativeLayout>

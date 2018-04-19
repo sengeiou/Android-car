@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+    <!--- 引入标题栏 -->
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/titlebar" />
+
+    <View
+        android:id="@+id/mg_split"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_below="@id/title_bar"
+        android:background="@color/split_line_color" />
+
+
+    <RelativeLayout
+        android:id="@+id/search_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/mg_split"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/backBtn"
+            android:background="@drawable/search_bg"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|center_vertical"
+            android:hint="请输入用户昵称或手机号"
+            android:paddingLeft="15dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color"
+            android:textColorHint="@color/text_color"
+            android:textSize="@dimen/font_size_medium" />
+
+        <!-- <TextView
+             android:id="@+id/searchBtn"
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="10dp"
+             android:gravity="center_vertical"
+             android:text="搜索"
+             android:textColor="@color/text_dark_ash"
+             android:textSize="@dimen/font_size_medium"
+             android:visibility="visible" /> -->
+    </RelativeLayout>
+    <!---  <RelativeLayout
+          android:id="@+id/title_layout"
+          android:layout_width="match_parent"
+          android:layout_height="40dp"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@id/mg_split"
+          android:background="@color/transparent30"
+          android:orientation="vertical">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="15dp"
+              android:gravity="center"
+              android:text="@string/had_author"
+              android:textColor="@color/text_dark_ash"
+              android:textSize="@dimen/font_size_medium" />
+      </RelativeLayout> -->
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_title_layout"
+        android:background="@color/white" />
+
+</RelativeLayout>

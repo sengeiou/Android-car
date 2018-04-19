@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/exhibit_more_rv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:layout_marginTop="@dimen/list_divider_height"
+        android:background="@color/app_main_color1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/listitem_exhibitpalce_tile"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/titleyellow_tag"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:text="N7"
+            android:textColor="@color/text_selected"
+            android:textSize="@dimen/font_size_title" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_right_margin"
+            android:rotation="-90"
+            android:src="@drawable/loc_drop_down" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/palce_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    />
+<!--
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/palce_img"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/icon_car_loading" />
+-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider3"/>
+<TextView
+    android:id="@+id/palce_desctv"
+    android:layout_width="match_parent"
+    android:layout_height="24dp"
+    android:paddingLeft="32dp"
+    android:text="2016年摩博会"
+    android:gravity="center_vertical"
+    android:textColor="@color/text_color3"
+    android:textSize="7dp"/>
+</LinearLayout>

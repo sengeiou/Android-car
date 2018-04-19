@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+            <TextView
+                android:id="@+id/setting_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                tools:text="允许匹配手机通讯录"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_more" />
+
+        <ImageView
+            android:id="@+id/setting_statusiv"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/btnset_normal" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/setting_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/common_left_margin"
+        android:textSize="@dimen/sp12"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color17"
+        android:layout_marginLeft="15dp"
+        android:paddingBottom="7dp"
+        tools:text="@string/private_near"/>
+    <TextView
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_color" />
+</LinearLayout>

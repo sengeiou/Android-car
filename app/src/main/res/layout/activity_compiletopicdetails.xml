@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!---基本信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/coverLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/cover"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            fresco:actualImageScaleType="fitXY"
+                            fresco:failureImage="@drawable/im_default"
+                            fresco:failureImageScaleType="fitXY"
+                            fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                            fresco:placeholderImageScaleType="fitXY" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginLeft="10dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="10dp"
+                                android:text="#话题标签 及话题名称"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/font_size_huge" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/attentiontext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="关注  623417"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_size_more" />
+
+                                <TextView
+                                    android:id="@+id/message"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="发帖  623417"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/font_size_more" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/picture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginRight="20dp"
+                            android:src="@drawable/btn_grayphone" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/text_content_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/introduction"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cover"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:padding="10dp"
+                            android:text="[ 导语 ]春季重庆马友西藏行！一辈子总要去一次西藏！这次有你吗？"
+                            android:textColor="@color/app_title_color1"
+                            android:textSize="@dimen/font_size_title" />
+
+                        <ImageView
+                            android:id="@+id/attentionbutt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/btn_kuangbianji" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/text_content_color" />
+                </LinearLayout>
+
+
+                <com.tgf.kcwc.view.MyListView
+                    android:id="@+id/rvCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="#00000000"
+                    android:padding="10dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp"></com.tgf.kcwc.view.MyListView>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+</LinearLayout>

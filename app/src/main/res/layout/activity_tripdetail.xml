@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/tripdetail_scrollv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <include layout="@layout/titlebar" />
+
+            <TextView
+                android:id="@+id/tripdetail_titletv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:maxLines="2"
+                android:padding="@dimen/common_left_margin"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_m_large"
+                tools:text="路书标题" />
+
+            <LinearLayout
+                android:id="@+id/tripbook_avatarlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/common_left_margin">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/tripbookdetail_useriv"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="visible"
+                        fresco:placeholderImage="@drawable/rp_avatar"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:retryImageScaleType="fitXY"
+                        fresco:roundAsCircle="true" />
+
+                    <ImageView
+                        android:id="@+id/tripbookdetail_sexiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/icon_women" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:id="@+id/tripbookdetail_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=""
+                            android:textColor="@color/text_color6"
+                            android:textSize="@dimen/font_size_title" />
+
+                        <ImageView
+                            android:id="@+id/comment_model_tv"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_model" />
+
+                        <ImageView
+                            android:id="@+id/drivdetails_convene_da"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/icon_daren" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/drivdetails_brandLogo"
+                            android:layout_width="20dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/im_default"
+                            fresco:actualImageScaleType="centerInside"
+                            fresco:placeholderImageScaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tripbookdetail_usertime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:paddingLeft="@dimen/common_left_margin"
+                        android:textColor="@color/tab_text_n_color"
+                        android:textSize="@dimen/font_size_small"
+                        tools:text="刚刚" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rideStartEndLayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/app_title_color1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp">
+
+                    <TextView
+                        android:id="@+id/rideStartTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom|center_horizontal"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color17"
+                        tools:text="开始地点" />
+
+                    <TextView
+                        android:id="@+id/rideStartTimeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/text_color17"
+                        tools:text="10:20" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_startend" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp">
+
+                    <TextView
+                        android:id="@+id/rideEndTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="bottom|center_horizontal"
+                        android:singleLine="true"
+                        android:textColor="@color/text_color17"
+                        tools:text="结束地点" />
+
+                    <TextView
+                        android:id="@+id/rideEndTimeTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/text_color17"
+                        tools:text="10:20" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/map_startendiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:scaleType="fitXY" />
+                <ImageView
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/dp70"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="bottom|right"
+                    android:src="@drawable/btn_jilu"
+                    android:id="@+id/recordIv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                <LinearLayout
+                    android:id="@+id/lineDataIv"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="@dimen/dp80"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                <ImageView
+                    android:src="@drawable/btn_shuju"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="线路数据"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/mapgoiv"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginRight="@dimen/common_left_margin"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/btn_zhoubian" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="发现周边"/>
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/rideDataInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/app_title_color1">
+
+                <LinearLayout
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/rideMileTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:maxLines="1"
+                            android:text="100"
+                            android:textColor="@color/text_color34"
+                            android:textSize="@dimen/sp21"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rideMileTv"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_horizontal"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="驾途里程\n(km)"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_small" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/totalTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:layout_marginTop="4dp"
+                            android:drawablePadding="2dp"
+                            android:drawableTop="@drawable/icon_trip_timeover"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp12"
+                            android:visibility="visible"
+                            tools:text="15:12:10" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/totalTime"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_horizontal"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="总时间\n(t)"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_small" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+
+                        <TextView
+                            android:id="@+id/rideTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="@dimen/dp10"
+                            android:maxLines="1"
+                            android:text="100"
+                            android:textColor="@color/text_color34"
+                            android:textSize="@dimen/sp21"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/rideTime"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center_horizontal"
+                            android:lineSpacingMultiplier="1.2"
+                            android:text="驾途时间\n(t)"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_small" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <GridView
+                android:id="@+id/tripbookdetail_gridView"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_below="@id/rideDataInfoLayout"
+                android:background="@color/split_line_color2"
+                android:numColumns="5" />
+
+            <TextView
+                android:id="@+id/tripbookdetail_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/common_left_margin"
+                android:textColor="@color/text_color13"
+                tools:text="概述" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/bg_1" />
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/tripbookdetail_nodelv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white"
+                android:padding="@dimen/common_left_margin">
+
+                <TextView
+                    android:id="@+id/tripdetail_addresstv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/icon_location"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/font_size_tiny"
+                    tools:text="北京海淀" />
+
+                <TextView
+                    android:id="@+id/tripdetail_distanceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/font_size_tiny"
+                    tools:text="14.3km" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <RelativeLayout
+                android:id="@+id/tagLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/imgTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/icon_tag_normal" />
+
+                <com.tgf.kcwc.view.FlowLayout
+                    android:id="@+id/tagLists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/imgTag" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/recomentinfo_layout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin">
+
+                <TextView
+                    android:layout_width="40dp"
+                    android:layout_height="54dp"
+                    android:background="@drawable/tripbook_recomd"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="7dp"
+                    android:text="荐"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_m_large" />
+
+                <com.hedgehog.ratingbar.RatingBar
+                    android:id="@+id/tripdetail_ratingbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="@dimen/common_left_margin"
+                    fresco:starFill="@drawable/rating_bar_star_fill"
+                    hedgehog:clickable="false"
+                    hedgehog:halfstart="true"
+                    hedgehog:starCount="5"
+                    hedgehog:starEmpty="@drawable/rating_bar_star_empty"
+                    hedgehog:starHalf="@drawable/icon_half_a_star_n"
+                    hedgehog:starImageHeight="18dp"
+                    hedgehog:starImagePadding="5dp"
+                    hedgehog:starImageWidth="18dp" />
+
+                <TextView
+                    android:id="@+id/recoment_scoretv"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="12dp"
+                    android:text="0"
+                    android:textColor="@color/price_color"
+                    android:textSize="@dimen/font_size_small" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tripdetail_recommedinfotv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/common_left_margin"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_more"
+                tools:text="该路书推荐理由" />
+            <!--荣誉记录-->
+            <LinearLayout
+                android:id="@+id/tripdetail_honortitlelv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/tab_text_s_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="荣誉记录"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/font_size_title" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/text_content_color" />
+
+                <com.tgf.kcwc.view.nestlistview.NestFullListView
+                    android:id="@+id/tripdetail_honorlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/app_layout_bg_color" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/commentHeaderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/commentBtnLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/cmtTitle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/comment"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/cmtContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/cmtTitle"
+                        android:gravity="center"
+                        android:text="(238)"
+                        android:textColor="@color/text_more"
+                        android:textSize="@dimen/font_size_small"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/btmLine1"
+                        android:layout_width="50dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/tab_text_s_color" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/tripbook_likeBtnLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/commentBtnLayout">
+
+                    <TextView
+                        android:id="@+id/likeTitle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="点赞"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/likeContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/likeTitle"
+                        android:gravity="center"
+                        android:text="(10)"
+                        android:textColor="@color/text_more"
+                        android:textSize="@dimen/font_size_small"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/btmLine2"
+                        android:layout_width="50dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/tab_text_s_color"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/melayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/headerImgLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/motodetail_avatar_iv"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/im_default"
+                        fresco:placeholderImage="@drawable/rp_avatar"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/genderImg"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignBottom="@id/motodetail_avatar_iv"
+                        android:layout_alignRight="@id/motodetail_avatar_iv"
+                        fresco:placeholderImage="@drawable/icon_men"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/repayLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/oval_bg">
+
+                    <TextView
+                        android:id="@+id/inputComment"
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:drawableLeft="@drawable/input_text_icon"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="说点什么"
+                        android:textColor="@color/transparent90_white"
+                        android:textSize="@dimen/font_size_more" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@color/white" />
+
+            <FrameLayout
+                android:id="@+id/comment_fragfl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/devider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tripbook_detail_downloadtv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="收藏路线" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/devider" />
+
+            <TextView
+                android:id="@+id/tripbookdetail_getcoupontv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="领券" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/devider" />
+
+            <LinearLayout
+                android:id="@+id/tripdetail_commentiv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/commentLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/comment_numbers"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/oval_text_numbers_bg"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/replayImg"
+                        android:layout_width="40dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:padding="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/btn_comments_n" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/tripdetail_careiv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_heart1" />
+
+                <ImageView
+                    android:id="@+id/tripdetail_shareiv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_share_gray" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

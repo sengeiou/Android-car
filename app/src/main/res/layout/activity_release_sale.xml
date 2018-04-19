@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar">
+
+        <RelativeLayout
+            android:id="@+id/rootView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/uploadCoverLayout"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <TextView
+                    android:id="@+id/uploadBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@drawable/cover_default"
+                    android:gravity="center"
+                    android:text="上传封面" />
+
+                <ImageView
+                    android:id="@+id/cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cover_default" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/goodsTitleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_below="@id/uploadCoverLayout"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <EditText
+                    android:id="@+id/inputGoodsTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:background="@null"
+                    android:hint="宝贝标题，6-30个字，写品牌更容易搜到!"
+                    android:maxLength="30"
+                    android:paddingRight="10dp"
+                    android:textColorHint="@color/text_color2"
+                    android:textSize="@dimen/font_size_small" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/goodsType"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_below="@id/goodsTitleLayout"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/goodsTypeImg"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icon_warning" />
+
+                    <TextView
+                        android:id="@+id/goodsTypeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp4"
+                        android:layout_toRightOf="@id/img"
+                        android:text="宝贝分类"
+                        android:textColor="@color/text_color3"
+                        android:textSize="@dimen/font_size_more" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/goodsTypeDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:text="整车"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_medium" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/itemsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/goodsType"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <ListView
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/goodsDesc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_below="@id/itemsLayout"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:id="@+id/titleLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icon_warning" />
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp4"
+                        android:layout_toRightOf="@id/img"
+                        android:text="宝贝描述"
+                        android:textColor="@color/text_color3"
+                        android:textSize="@dimen/font_size_more" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/more_icon"
+                    android:text=""
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_medium" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/expireLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_below="@id/goodsDesc"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/img2"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/icon_warning" />
+
+                    <TextView
+                        android:id="@+id/title2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp4"
+                        android:layout_toRightOf="@id/img"
+                        android:text="宝贝自动失效时间"
+                        android:textColor="@color/text_color3"
+                        android:textSize="@dimen/font_size_more" />
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/desc2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/more_icon"
+                    android:text="1周"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_medium" />
+            </RelativeLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/time_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expireLayout"
+                android:padding="@dimen/dp15"
+                android:text="若申请参展，自动失效时间将在展会结束后叠加"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/sp12" />
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/exhibition_collect_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/time_hint_tv"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/exhibition_collect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="车主自售参展征集"
+                        android:textColor="@color/text_color3"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp20">
+                        <!--一个参展征集-->
+                        <RelativeLayout
+                            android:visibility="gone"
+                            android:id="@+id/exhibition_collect_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/item_exhibition_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                fresco:actualImageScaleType="fitXY"
+                                fresco:failureImage="@drawable/cover_default"
+                                fresco:placeholderImage="@drawable/cover_default"
+                                fresco:placeholderImageScaleType="fitXY" />
+                            <TextView
+                                android:layout_marginTop="@dimen/dp10"
+                                android:layout_centerHorizontal="true"
+                                android:text="展会时间段(月日)"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp15"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/item_interval"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_below="@+id/item_interval"
+                                android:layout_marginTop="@dimen/dp20"
+                                android:layout_centerHorizontal="true"
+                                android:text="展会名"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp15"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/item_exhibition_name"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_below="@+id/item_exhibition_name"
+                                android:layout_marginTop="@dimen/dp20"
+                                android:layout_centerHorizontal="true"
+                                android:text="展会地址"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp15"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/item_exhibition_address"
+                                android:layout_height="wrap_content" />
+                            <RelativeLayout
+                                android:background="#e0000000"
+                                android:padding="@dimen/dp10"
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:text="剩余展位："
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/sp12"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/item_retain_exhibition_pos"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:text="我要参展"
+                                    android:paddingRight="@dimen/dp12"
+                                    android:paddingLeft="@dimen/dp12"
+                                    android:paddingTop="@dimen/dp3"
+                                    android:paddingBottom="@dimen/dp3"
+                                    android:background="@drawable/shape_green_bg2"
+                                    android:textColor="@color/text_selected"
+                                    android:textSize="@dimen/sp12"
+                                    android:layout_width="wrap_content"
+                                    android:id="@+id/item_join_exhibition"
+                                    android:layout_height="wrap_content" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                        <android.support.v7.widget.RecyclerView
+                            android:visibility="gone"
+                            android:id="@+id/exhibition_collect_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/exhibition_hint_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/exhibition_collect_ll"
+                    android:layout_marginRight="15dp"
+                    android:padding="@dimen/dp15"
+                    android:text="若需参展，请在相应展会下选中“我要参展”"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/sp12" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/dp10"
+                android:id="@+id/bottomLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exhibition_collect_ll">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/acceptLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <TextView
+                            android:id="@+id/accept"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/checked_btn_selector_2"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:text="同意发起"
+                            android:textColor="@color/text_color17"
+                            android:textSize="@dimen/font_size_tiny"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/aboutSale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/accept"
+                            android:text="《车主自售协议》"
+                            android:textColor="@color/text_color10"
+                            android:textSize="@dimen/font_size_tiny" />
+                    </RelativeLayout>
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bottom_function_bar_height_size"
+                        android:layout_below="@id/acceptLayout"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/text_nav_def_color"
+                        android:enabled="false"
+                        android:text="发布"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_m_large" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

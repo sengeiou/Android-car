@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/msgTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="70dp"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/no_data_img_icon"
+                android:text="        你还没分发记录"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small" />
+<!--
+            <TextView
+                android:id="@+id/empty_noticeTvO"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/msgTv2"
+                android:layout_marginTop="15dp"
+                android:text="1、每张门票有领取时限，若超过时限，则该门票“失效”；"
+                android:textSize="@dimen/font_size_tiny" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/empty_noticeTvO"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:text="2、领取后的门票有“使用有效期”，超过有效期未使用则为“过期”；"
+                android:textSize="@dimen/font_size_tiny" />-->
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/sendrecord_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/num"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="27dp"
+                android:src="@drawable/icon_green_kong" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/text_selected"
+                android:textSize="@dimen/font_size_tiny" />
+
+        </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/endtext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="起"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/text_selected"
+                android:textSize="@dimen/font_size_m_large" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingTop="15dp"
+            android:text="春季重庆马友西藏行！一辈子总要去一次西藏！这次有你吗？"
+            android:textColor="@color/app_title_color1"
+            android:textSize="@dimen/font_size_more" />
+
+
+        <TextView
+            android:id="@+id/continuetext"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="已到达"
+            android:textColor="@color/addtraveltexgray"
+            android:textSize="@dimen/font_size_s_medium" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

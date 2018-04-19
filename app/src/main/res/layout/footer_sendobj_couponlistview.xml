@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingTop="@dimen/common_left_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1、每张代金券有领取时限，若超过时限，则该代金券“失效”；"
+        android:textSize="@dimen/font_size_tiny" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:text="2、领取后的代金券有“使用有效期”，超过有效期未使用则为“过期”；"
+        android:textSize="@dimen/font_size_tiny" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:paddingRight="@dimen/common_left_margin"
+        android:lineSpacingExtra="4dp"
+        android:text="3、代金券若在线上抵扣购买门票等产品，表明用户“核销”了该代金券，但抵扣购买的商品是否核销，我们会持续跟踪。"
+        android:textSize="@dimen/font_size_tiny" />
+</LinearLayout>

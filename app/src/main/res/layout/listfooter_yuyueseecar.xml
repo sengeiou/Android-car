@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/style_bg3"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/text_color17"
+        android:textSize="10dp"
+        android:paddingBottom="10dp"
+        android:text="若无须更多人服务，可点“关闭报价”避免打扰；若对服务满意，可点“完成服务”结束买车预约。" />
+
+<!--    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="若对服务满意，可点“完成服务”结束买车预约。" />-->
+</LinearLayout>

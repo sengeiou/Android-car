@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/loadMoreCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/loc_drop_down"
+        android:text=""
+        android:textColor="@color/text_color"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/loadMoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text=""
+        android:textColor="@color/text_def"
+        android:visibility="gone" />
+
+</RelativeLayout>

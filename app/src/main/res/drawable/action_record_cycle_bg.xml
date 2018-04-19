@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@color/white"/>
+    </item>
+    <item
+        android:width="@dimen/dp16"
+        android:height="@dimen/dp16"
+        android:gravity="center"
+        android:drawable="@drawable/action_record_out_cycle" />
+    <item
+        android:width="@dimen/dp9"
+        android:height="@dimen/dp9"
+        android:gravity="center"
+        android:drawable="@drawable/action_record_cycle" />
+</layer-list>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:background="@drawable/dialog_above_shape"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45">
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/btn_close_n" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp180">
+
+        <TextView
+            android:padding="@dimen/dp50"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/decrypt_hint"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/dp14" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/bg_1"/>
+    <LinearLayout
+        android:background="@drawable/dialog_below_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <Button
+            android:background="@color/seek_rl"
+            android:layout_gravity="center"
+            android:id="@+id/dialog_know"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:textColor="@color/text_selected"
+            android:textSize="@dimen/sp16"
+            android:text="我知道了"/>
+    </LinearLayout>
+
+</LinearLayout>

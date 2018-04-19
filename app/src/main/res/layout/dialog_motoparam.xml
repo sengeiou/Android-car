@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:minWidth="260dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.tgf.kcwc.view.MyGridView
+        android:id="@+id/dialogparam_menu_gv"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:numColumns="2"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:verticalSpacing="5dp" />
+</LinearLayout>

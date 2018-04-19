@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright 2016 drakeet. https://github.com/drakeet
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg_selector"
+    android:minHeight="164dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:padding="@dimen/dp15"
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img"
+                    android:layout_width="120dp"
+                    android:layout_height="75dp"
+                    android:layout_alignParentLeft="true"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@drawable/icon_the_default__diagram_n"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <RelativeLayout
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:layout_toRightOf="@id/img">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="标题名称"
+                        android:textColor="@color/text_color12"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <LinearLayout
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/moneyTag"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/china_money_char"
+                            android:textColor="@color/text_color22"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19.0"
+                            android:textColor="@color/text_color22"
+                            android:textSize="@dimen/font_size_title" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/skimTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/icon_visitors"
+                            android:drawablePadding="10dp"
+                            android:text="10"
+                            android:textColor="@color/text_color12"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <TextView
+                            android:id="@+id/incentiveTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/icon_like"
+                            android:drawablePadding="10dp"
+                            android:text="10"
+                            android:textColor="@color/text_color1"
+                            android:textSize="@dimen/font_size_small"
+                            android:visibility="gone" />
+                        <TextView
+                            android:id="@+id/commentsTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/icon_comments"
+                            android:drawablePadding="10dp"
+                            android:text="12"
+                            android:textColor="@color/text_color12"
+                            android:textSize="@dimen/font_size_small" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/split"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_below="@id/topLayout"
+            android:background="@color/partTranslucent" />
+        <RelativeLayout
+            android:paddingRight="@dimen/dp10"
+            android:background="@drawable/shape_dashed_exhibition_bg"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:id="@+id/exhibitionRl"
+            android:layout_below="@+id/split"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="@dimen/sp10"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:paddingTop="@dimen/dp4"
+                android:paddingBottom="@dimen/dp4"
+                android:background="@drawable/shape_left_bg"
+                android:text="等待审核"
+                android:textColor="@color/white"
+                android:id="@+id/exhibitionStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text="展会名"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp12"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_below="@+id/exhibitionStatus"
+                android:id="@+id/exhibitionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="展位"
+                android:textColor="@color/text_more"
+                android:textSize="@dimen/sp12"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_below="@+id/exhibitionName"
+                android:id="@+id/exhibitionPos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="@dimen/dp15"
+                android:layout_toRightOf="@+id/exhibitionPos"
+                android:text="时间段"
+                android:textColor="@color/text_more"
+                android:textSize="@dimen/sp12"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_below="@+id/exhibitionName"
+                android:id="@+id/exhibitionInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:background="@drawable/icon_right"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/bottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/exhibitionRl">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:maxLength="16"
+                    android:text="2017.12.12"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size_tiny" />
+
+                <RelativeLayout
+                    android:padding="@dimen/dp16"
+                    android:id="@+id/btnLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/time">
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/btnMore"
+                        android:id="@+id/btnLeft"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></LinearLayout>
+                    <ImageView
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/btnMore"
+                        android:background="@drawable/icon_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

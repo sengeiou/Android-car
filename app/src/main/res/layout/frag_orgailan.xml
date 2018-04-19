@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/homeleft_margin"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:background="@drawable/shape_ticketm_tongjibg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@color/btn_bg7"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/chart4_column0"
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="票  种"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/divider4" />
+
+                    <TextView
+                        android:id="@+id/chart4_column1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="总量"
+                        android:textColor="@color/text_color9"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/divider4" />
+
+                    <TextView
+                        android:id="@+id/chart4_column2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="分发"
+                        android:textColor="@color/text_color9"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/divider4" />
+
+                    <TextView
+                        android:id="@+id/chart4_column3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="代发"
+                        android:textColor="@color/text_color9"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/divider4" />
+
+                    <TextView
+                        android:id="@+id/chart4_column4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="剩余"
+                        android:textColor="@color/text_color9"
+                        android:textSize="11dp" />
+                </LinearLayout>
+
+                <com.tgf.kcwc.view.nestlistview.NestFullListView
+                    android:id="@+id/orggailan_tongjialllv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/homeleft_margin"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:background="@drawable/shape_ticketm_tongjibg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@color/btn_bg7"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="25dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="票  种"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/divider4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="发给客户
+（人次）"
+                        android:textColor="@color/text_color9"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/divider4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="客户领取
+（人次） "
+                        android:textColor="@color/text_color9"
+                        android:textSize="11dp" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:background="@color/divider4" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="客户到场
+（人次）"
+                        android:textColor="@color/text_color9"
+                        android:textSize="11dp" />
+                </LinearLayout>
+
+                <com.tgf.kcwc.view.nestlistview.NestFullListView
+                    android:id="@+id/orggailan_tongjiFenfalv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/homeleft_margin"
+                android:layout_marginLeft="@dimen/homeleft_margin"
+                android:textColor="@color/text_color9"
+                android:text="以票种颜色代表票种" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

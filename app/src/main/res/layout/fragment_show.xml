@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+        <ScrollView
+            android:id="@+id/showframment_scrollv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:background="@color/tab_text_n_color"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_layout_bg_color"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/app_main_color1"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/show_headlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/detail_header_bg">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/cover_default" />
+
+                        <com.tgf.kcwc.view.bannerview.Banner
+                            android:id="@+id/show_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/detail_header_bg"
+                            banner:image_scale_type="fit_xy" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/exhibitionlist_title_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_left_margin"
+                        android:layout_marginRight="@dimen/common_right_margin"
+                        android:layout_marginTop="@dimen/margin_top_size"
+                        tools:text="2016（第十八届）中国重庆国际汽车工业展"
+                        android:textColor="@color/text_nav_def_color"
+                        android:textSize="@dimen/font_size_huge" />
+
+                    <TextView
+                        android:id="@+id/exhibitionlist_date_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_left_margin"
+                        android:layout_marginRight="@dimen/common_right_margin"
+                        android:layout_marginTop="@dimen/margin_top_size"
+                        tools:text="2016.11.16-2016.11.20"
+                        android:textColor="@color/tab_text_n_color"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/exhibitionlist_address_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/common_left_margin"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginTop="@dimen/margin_top_size"
+                        android:layout_marginBottom="10dp"
+                        tools:text="重庆XXX国际会展中心"
+                        android:textColor="@color/tab_text_n_color"
+                        android:drawableRight="@drawable/icon_positioning"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <LinearLayout
+                        android:id="@+id/getlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/common_right_margin"
+                        android:paddingRight="@dimen/common_right_margin"
+                        android:paddingBottom="@dimen/common_right_margin">
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+                        <Button
+                            android:id="@+id/exhibitdetail_over_btn"
+                            android:layout_width="120dp"
+                            android:layout_marginLeft="@dimen/common_left_margin"
+                            android:layout_height="@dimen/top_title_height"
+                            android:background="@drawable/shape_exhibitionlist_bg"
+                            android:text="已结束"
+                            android:layout_marginRight="@dimen/common_left_margin"
+                            android:textSize="@dimen/font_size_small"
+                            android:visibility="invisible"
+                            android:textColor="@color/white" />
+                        <Button
+                            android:id="@+id/exhibitionlist_getticket_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="@dimen/top_title_height"
+                            android:layout_marginRight="@dimen/common_left_margin"
+                            android:background="@drawable/btn_greenred_selector"
+                            android:visibility="gone"
+                            android:text="领票"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <Button
+                            android:id="@+id/exhibitionlist_buy_btn"
+                            android:layout_width="120dp"
+                            android:layout_height="@dimen/top_title_height"
+                            android:background="@drawable/button_bg_2"
+                            android:text="购票"
+                            android:visibility="gone"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.tgf.kcwc.view.LineGridView
+                    android:id="@+id/show_menu_gv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top_size"
+                    android:background="@color/white"
+                    android:numColumns="4" />
+
+                <com.tgf.kcwc.view.nestlistview.NestFullListView
+                    android:id="@+id/show_place_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/app_layout_bg_color"
+                    android:dividerHeight="@dimen/list_divider_height"
+                    android:orientation="vertical" />
+
+                <RelativeLayout
+                    android:id="@+id/latest_exhibition_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_item_height"
+                    android:layout_marginTop="@dimen/list_divider_height"
+                    android:background="@color/app_main_color1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/lastest_exhibit_tiltetv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/titleyellow_tag"
+                        android:drawablePadding="@dimen/common_left_margin"
+                        android:gravity="center_vertical"
+                        android:text="上届展会照片"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/common_right_margin"
+                        android:rotation="-90"
+                        android:src="@drawable/loc_drop_down" />
+                </RelativeLayout>
+
+                <FrameLayout
+                    android:id="@+id/lastest_exhibit_picsfl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/last_showphoto_iv"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/detail_header_bg"
+                        android:src="@drawable/moto_testdetail"
+                        android:visibility="gone"
+                        fresco:retryImageScaleType="fitXY" />
+
+                    <com.tgf.kcwc.view.MyGridView
+                        android:id="@+id/last_showphoto_threeGv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="3" />
+                </FrameLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/common_item_height"
+                    android:layout_marginTop="@dimen/list_divider_height"
+                    android:background="@color/app_main_color1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/cmtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:drawableLeft="@drawable/titleyellow_tag"
+                        android:drawablePadding="@dimen/common_left_margin"
+                        android:gravity="center_vertical"
+                        android:text="评论"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/font_size_title" />
+                    <TextView
+                        android:id="@+id/cmtContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/cmtTitle"
+                        android:gravity="center"
+                        android:text="(238)"
+                        android:textColor="@color/text_more"
+                        android:textSize="@dimen/font_size_small"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/split_line_color" />
+
+                <LinearLayout
+                    android:id="@+id/melayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp">
+
+                    <RelativeLayout
+                        android:id="@+id/headerImgLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/exhibitdetail_avatar_iv"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dip"
+                            android:scaleType="fitCenter"
+                            fresco:placeholderImage="@drawable/rp_avatar"
+                            fresco:placeholderImageScaleType="fitCenter"
+                            fresco:roundAsCircle="true" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/genderImg"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignBottom="@id/exhibitdetail_avatar_iv"
+                            android:layout_alignRight="@id/exhibitdetail_avatar_iv"
+                            fresco:placeholderImage="@drawable/icon_men"
+                            fresco:placeholderImageScaleType="fitCenter"
+                            fresco:roundAsCircle="true" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/repayLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:background="@drawable/oval_bg">
+
+                        <TextView
+                            android:id="@+id/inputComment"
+                            android:layout_width="250dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="15dp"
+                            android:drawableLeft="@drawable/input_text_icon"
+                            android:drawablePadding="5dp"
+                            android:gravity="center"
+                            android:text="说点什么"
+                            android:textColor="@color/text_color17"
+                            android:textSize="@dimen/font_size_more" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <com.tgf.kcwc.view.nestlistview.NestFullListView
+                    android:id="@+id/fragshow_comments_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@color/app_layout_bg_color"
+                    android:paddingTop="25dp"
+                    android:dividerHeight="@dimen/list_divider_height"
+                    android:orientation="vertical" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/devider"/>
+                <TextView
+                    android:id="@+id/commment_moretv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/top_title_height"
+                    android:background="@color/app_layout_bg_color"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:text="查看更多"/>
+            </LinearLayout>
+        </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/exhibitdetail_selectll"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/show_selectll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:id="@+id/show_alltv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:background="@drawable/btn_sidebar_selector"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/show_pre"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="1px"
+                android:background="@drawable/btn_sidebar_selector"
+                android:gravity="center"
+                android:text="上届"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/show_next"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="1px"
+                android:background="@drawable/btn_sidebar_selector"
+                android:gravity="center"
+                android:text="下届"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_more" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/show_gonebtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:layout_marginTop="1px"
+
+            android:background="@drawable/btn_sidebar_selector"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_top" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/exhibitlist_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/exhibitionlist_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:divider="@color/app_layout_bg_color"
+        android:dividerHeight="@dimen/list_divider_height"/>
+
+</cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+    </LinearLayout>
+</FrameLayout>
+
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="展会看" />
+
+    </RelativeLayout>-->
+

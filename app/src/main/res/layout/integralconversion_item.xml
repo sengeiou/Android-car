@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            fresco:actualImageScaleType="fitXY"
+            fresco:failureImage="@drawable/im_default"
+            fresco:failureImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+            fresco:placeholderImageScaleType="fitXY" />
+
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:text="商品名称可折行，可折行，可折行"
+            android:textColor="@color/app_title_color1"
+            android:textSize="@dimen/font_size_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/bazaar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="市场价：￥3000"
+                    android:textColor="@color/integral_gray"
+                    android:textSize="@dimen/font_size_tiny" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/integral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="110"
+                        android:textColor="@color/text_color20"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/unit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="积分"
+                        android:textColor="@color/text_more"
+                        android:textSize="@dimen/font_size_small" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/conversion"
+                android:layout_width="60dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/button_bg_5"
+                android:gravity="center"
+                android:text="兑换"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_s_medium" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

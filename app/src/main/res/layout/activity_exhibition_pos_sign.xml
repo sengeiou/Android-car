@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/style_bg8">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll"
+        android:layout_below="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp16">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/exhibitionHallPos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="展馆展位"
+                        android:textColor="@color/text_bg"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:id="@+id/exhibitionTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="时间"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/sp15" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp75"
+                    android:layout_marginTop="@dimen/dp32"
+                    android:orientation="horizontal">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/imgSdv"
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:failureImage="@drawable/cover_default"
+                        fresco:placeholderImage="@drawable/cover_default"
+                        fresco:placeholderImageScaleType="fitCenter" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp15">
+
+                        <TextView
+                            android:id="@+id/exhibitionBrand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="品牌"
+                            android:textColor="@color/style_bg7"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:id="@+id/carNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:text="车牌"
+                            android:textColor="@color/text_color15"
+                            android:textSize="@dimen/sp12" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp15">
+
+                <LinearLayout
+                    android:id="@+id/signInLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginRight="@dimen/dp10"
+                            android:layout_toLeftOf="@+id/qrCodeImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="进入展位签到"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp15" />
+
+                            <TextView
+                                android:id="@+id/qrCodeTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp10"
+                                android:text="@string/sign_in"
+                                android:textColor="@color/text_more"
+                                android:textSize="@dimen/sp12" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/qrCodeImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/cover_default" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/signOutLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_toLeftOf="@+id/qrCodeImgLeave"
+                            android:layout_marginRight="@dimen/dp10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:text="离开展位打卡"
+                                android:textColor="@color/text_bg"
+                                android:textSize="@dimen/sp15" />
+                            <TextView
+                                android:id="@+id/qrCodeTimeLeave"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp10"
+                                android:text="@string/sign_out"
+                                android:textColor="@color/text_more"
+                                android:textSize="@dimen/sp12" />
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:id="@+id/qrCodeImgLeave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/cover_default" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp15"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingRight="@dimen/dp30"
+        android:paddingTop="@dimen/dp15">
+
+        <Button
+            android:id="@+id/exhibitionGuideBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:background="@drawable/shape_green_bg3"
+            android:text="接下来怎么走？看展位攻略"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+
+        <Button
+            android:id="@+id/depositBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/shape_gray_bg2"
+            android:text="投诉占位"
+            android:textColor="@color/text_more"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+</RelativeLayout>

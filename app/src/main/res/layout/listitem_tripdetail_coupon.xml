@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tripdetail_coupon_rootlv"
+    android:layout_width="72dp"
+    android:layout_height="44dp"
+    android:background="@drawable/coupon_orange"
+    android:minWidth="72dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tripdetail_coupon_denominationtv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_title"
+        tools:text="¥ 200" />
+
+    <TextView
+        android:id="@+id/tripdetail_coupon_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_tiny"
+        tools:text="免费领取" />
+</LinearLayout>

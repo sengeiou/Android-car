@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/style_bg8">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar" />
+
+    <com.tgf.kcwc.view.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll"
+        android:layout_below="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="投诉展位"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="仅可投诉自己的展位时段被占用"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp15" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp15">
+
+                <TextView
+                    android:id="@+id/exhibitionHallPos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp15" />
+
+                <TextView
+                    android:id="@+id/exhibitionTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/sp15" />
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/divider2"/>
+            <LinearLayout
+                android:background="@color/white"
+                android:padding="@dimen/dp15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="情况描述"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp15" />
+                <EditText
+                    android:layout_marginTop="@dimen/dp10"
+                    android:padding="@dimen/dp10"
+                    android:gravity="top|left"
+                    android:hint="输入投诉内容描述，非必填"
+                    android:id="@+id/depositDesc"
+                    android:background="@drawable/shape_ddd_et_bg"
+                    android:textColorHint="@color/text_color28"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp120" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@color/white"
+                android:padding="@dimen/dp15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="现场拍照"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp15" />
+                <TextView
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/camera_str"
+                    android:textColor="@color/text_color"
+                    android:lineSpacingExtra="@dimen/dp6"
+                    android:textSize="@dimen/sp15" />
+                <com.tgf.kcwc.view.MyGridView
+                    android:layout_marginTop="@dimen/dp15"
+                    android:id="@+id/imgRv"
+                    android:numColumns="3"
+                    android:horizontalSpacing="@dimen/dp10"
+                    android:verticalSpacing="@dimen/dp10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></com.tgf.kcwc.view.MyGridView>
+            </LinearLayout>
+        </LinearLayout>
+    </com.tgf.kcwc.view.MyScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_marginRight="@dimen/dp30"
+        android:layout_marginTop="@dimen/dp20"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/depositBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_green_bg3"
+            android:text="立即投诉"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+</RelativeLayout>

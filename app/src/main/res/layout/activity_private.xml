@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:SettingSelectedLayoutView="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/private_contacts"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="允许匹配手机通讯录"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/private_contacts_add"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="允许手机通讯录加我好友"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/private_main_page"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="个人主页仅向好友开放"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/private_not_attention_chat"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="允许我未关注的人跟我私聊"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/private_near"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:isdesc="true"
+        SettingSelectedLayoutView:desc="@string/private_near"
+        SettingSelectedLayoutView:settingselecttitle="对附近的人可见"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/private_save_photo"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="允许他人保存我的照片"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/private_hint"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="允许我未关注的人@我"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/private_back_list"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp66">
+        <LinearLayout
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp14"
+                android:gravity="center"
+                android:textColor="@color/text_color12"
+                android:layout_marginLeft="15dp"
+                android:text="黑名单"/>
+            <TextView
+                android:layout_marginTop="@dimen/dp12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/sp10"
+                android:gravity="center"
+                android:textColor="@color/text_color17"
+                android:layout_marginLeft="15dp"
+                android:text="@string/private_back_list"/>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_centerVertical="true"
+            android:layout_width="50dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_right"
+            android:scaleType="centerInside"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_color" />
+</LinearLayout>

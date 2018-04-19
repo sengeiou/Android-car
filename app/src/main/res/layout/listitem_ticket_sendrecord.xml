@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/sendrecore_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@drawable/btn_radiusblack_bg"
+        android:padding="5dp"
+        android:text="2017年7月5日"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_margin"
+        android:background="@drawable/btn_radiuswhite_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/common_margin">
+
+        <TextView
+            android:id="@+id/record_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_text_height"
+            android:gravity="center_vertical"
+            android:text="门票分发"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_more" />
+
+        <com.tgf.kcwc.view.nestlistview.NestFullListView
+            android:id="@+id/sendrecord_userlv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null" />
+
+        <TextView
+            android:id="@+id/senduser_limit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_text_height"
+            android:gravity="center_vertical"
+            android:text="24失效"
+            android:textColor="@color/rect_color1"
+            android:textSize="@dimen/font_size_medium" />
+    </LinearLayout>
+</LinearLayout>

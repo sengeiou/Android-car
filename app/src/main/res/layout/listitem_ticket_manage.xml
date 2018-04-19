@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/split_line_color3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/ticketmanage_event_iv"
+            android:layout_width="@dimen/img_foureper"
+            android:layout_height="@dimen/img_threeeper"
+            android:layout_alignParentLeft="true"
+            fresco:actualImageScaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/ticketmange_ticketinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/ticketmanage_event_iv"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_medium"
+            tools:text="邓丹第一届汽车展" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_color3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/ticketmanage_nums_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:drawableLeft="@drawable/icon_ticket_n"
+            android:drawablePadding="15dp"
+            android:textSize="@dimen/font_size_medium"
+            tools:text="总量   50  剩余   7" />
+
+        <ImageView
+            android:id="@+id/ticketmanagelist_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_expired" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp66"
+
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:text="头像"
+                    android:textColor="@color/text_bg"
+                    android:textSize="@dimen/sp14" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/headerImg"
+                    android:layout_width="@dimen/dp50"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_left_size"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImage="@drawable/def_header_img"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    fresco:roundAsCircle="false"
+                    fresco:viewAspectRatio="1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_height_size"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/split_line_color" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_below="@id/headerLayout"
+                android:background="@color/white"
+
+                />
+
+            <ListView
+                android:id="@+id/list2"
+                android:layout_width="match_parent"
+                android:layout_height="132dp"
+                android:layout_below="@id/list1"
+                android:layout_marginTop="@dimen/margin_top_size"
+                android:background="@color/white" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

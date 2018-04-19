@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/completeserver_org_cover"
+            android:layout_width="@dimen/img_foureper"
+            android:layout_height="@dimen/img_threeeper"
+            android:layout_alignParentLeft="true"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/im_default"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/completeserver_tickettitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/completeserver_org_cover"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_title"
+            tools:text="邓丹第一届汽车展" />
+
+        <TextView
+            android:id="@+id/completeserver_carmodel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/completeserver_tickettitle"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="37dp"
+            android:layout_marginTop="@dimen/common_left_margin"
+            android:layout_toRightOf="@id/completeserver_org_cover"
+            android:maxLines="2"
+            android:textColor="@color/text_def"
+            android:textSize="@dimen/font_size_more"
+            tools:text="豪爵铃木" />
+
+        <ImageView
+            android:id="@+id/completeserver_outimg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/completeserver_tickettitle"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/common_left_margin" />
+
+        <ImageView
+            android:id="@+id/completeserver_inimg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/completeserver_tickettitle"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/common_left_margin" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/completeserver_orglistlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+</LinearLayout>

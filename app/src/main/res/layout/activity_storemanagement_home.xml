@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:minHeight="75dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/sponsor_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="机构名称机构名称机构名称机构名称"
+                android:textColor="@color/app_title_color1"
+                android:textSize="@dimen/font_size_more" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/btn_place_gray" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="023-33935599 "
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/btn_place_gray" />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="渝北区龙溪镇松石大道80号 "
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_small" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sponsor_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="15dp"
+            android:visibility="visible"
+            fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+            fresco:retryImageScaleType="fitXY"
+            fresco:roundAsCircle="true" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/split_line_color" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/app_layout_bg_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="店铺积分"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_more" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:text="钻石  3300  经验  3300"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_small" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/btn_nextjiantou" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/split_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="店铺积分"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_more" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:text="钻石  3300  经验  3300"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_small" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/btn_nextjiantou" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/split_line_color" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/app_layout_bg_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="店铺积分"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_more" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:text="钻石  3300  经验  3300"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_small" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/btn_nextjiantou" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/split_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="店铺积分"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_more" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:text="钻石  3300  经验  3300"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_small" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/btn_nextjiantou" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/split_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center|left"
+                android:text="店铺积分"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_more" />
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:text="钻石  3300  经验  3300"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_small" />
+
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:src="@drawable/btn_nextjiantou" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/split_line_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="店铺管理人：俞佩玉1333012312"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/font_size_s_medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="若需更改店铺管理人账号，请联系看车玩车"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/font_size_s_medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:text="其他店铺管理功能请登录到商户中心后台"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/font_size_s_medium" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tgf.kcwc.view.ObservableScrollView
+        android:id="@+id/motodetail_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/app_layout_bg_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/img_coupon_head">
+
+
+                <com.tgf.kcwc.view.bannerview.Banner
+                    android:id="@+id/motodetail_looppng_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    banner:image_scale_type="fit_xy"
+                    banner:is_auto_play="false" />
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/common_left_margin"
+                        android:background="@drawable/button_bg_3">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:id="@+id/imageIcon"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/gallery_icon_1" />
+
+                            <TextView
+                                android:id="@+id/motodetail_tv_picnum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:layout_toRightOf="@id/imageIcon"
+                                android:text="0张"
+                                android:textColor="@color/transparent90_white"
+                                android:textSize="@dimen/font_size_medium" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/cardetail_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/dp1"
+                android:maxLines="2"
+                android:padding="@dimen/dp10"
+                android:text="null"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_title" />
+
+            <TextView
+                android:id="@+id/cardetail_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/dp10"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:text="厂商指导价：  万"
+                android:textSize="@dimen/sp12" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="@dimen/list_divider_height"
+                android:background="@color/app_main_color1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/titleyellow_tag"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/motordeail_orgs"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+                <TextView
+                    android:id="@+id/motodetail_compare_saleoff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/shapeborder_radiusredrect_bg"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="比优惠"
+                    android:textColor="@color/text_color16" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/split_line_color" />
+
+            <RadioGroup
+                android:id="@+id/cardetail_filterRg"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbtn_all"
+                    style="@style/radiobutton_bg"
+                    android:background="@drawable/motodetail_radio_selector"
+                    android:text="全部"
+                    android:textColor="@drawable/selector_rb_color"
+                    android:textSize="@dimen/font_size_more" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_limit"
+                    style="@style/radiobutton_bg"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/motodetail_radio_selector"
+                    android:text="限时优惠"
+                    android:textColor="@drawable/selector_rb_color"
+                    android:textSize="@dimen/font_size_more" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_coupon"
+                    style="@style/radiobutton_bg"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/motodetail_radio_selector"
+                    android:text="有代金券"
+                    android:textColor="@drawable/selector_rb_color"
+                    android:textSize="@dimen/font_size_more" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_pack"
+                    style="@style/radiobutton_bg"
+                    android:layout_marginLeft="1dp"
+                    android:background="@drawable/motodetail_radio_selector"
+                    android:text="有礼包"
+                    android:textColor="@drawable/selector_rb_color"
+                    android:textSize="@dimen/font_size_more"
+                    android:visibility="gone" />
+            </RadioGroup>
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/motodetail_org_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_main_color1"
+                android:divider="@color/app_layout_bg_color"
+                android:dividerHeight="@dimen/dp10"
+                android:orientation="vertical" />
+
+            <RelativeLayout
+                android:id="@+id/motodetail_ownsale_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:background="@color/app_main_color1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/titleyellow_tag"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/usedcar_sellers"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_right_margin"
+                    android:rotation="-90"
+                    android:src="@drawable/loc_drop_down" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/split_line_color" />
+
+            <GridView
+                android:id="@+id/motodetail_usedcar_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_main_color1"
+                android:numColumns="3" />
+
+            <RelativeLayout
+                android:id="@+id/motodetail_popmanes_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="@dimen/list_divider_height"
+                android:background="@color/app_main_color1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/titleyellow_tag"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="@string/popman_estimate"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_right_margin"
+                    android:rotation="-90"
+                    android:src="@drawable/loc_drop_down" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/split_line_color" />
+
+            <ListView
+                android:id="@+id/motodetail_popmanlv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_main_color1" />
+
+            <!--评论列表-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="@dimen/list_divider_height"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/motodetail_commentnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/titleyellow_tag"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="车主说（0）"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingTop="@dimen/dp10">
+
+                <RelativeLayout
+                    android:id="@+id/headerImgLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/motodetail_avatar_iv"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/im_default"
+                        fresco:placeholderImage="@drawable/rp_avatar"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/genderImg"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignBottom="@id/motodetail_avatar_iv"
+                        android:layout_alignRight="@id/motodetail_avatar_iv"
+                        fresco:placeholderImage="@drawable/icon_men"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cardetail_repayLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp15"
+                    android:layout_marginRight="@dimen/dp35"
+                    android:background="@drawable/oval_bg"
+                    android:drawableLeft="@drawable/comment_icon"
+                    android:drawablePadding="@dimen/dp9"
+                    android:gravity="center_vertical"
+                    android:padding="@dimen/dp7"
+                    android:text="我要说"
+                    android:textColor="@color/btn_gray_normal"
+                    android:textSize="@dimen/sp14" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/split_line_color"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/comment_fragfl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:background="@color/app_main_color1"
+                android:divider="@color/app_layout_bg_color"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp5" />
+
+
+        </LinearLayout>
+
+    </com.tgf.kcwc.view.ObservableScrollView>
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/motodeatail_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:background="@color/gray_btnbg" />
+
+        <LinearLayout
+            android:id="@+id/last_time_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp44"
+            android:background="@color/app_layout_bg_color">
+
+            <RelativeLayout
+                android:id="@+id/motodetail_info_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/paramIv"
+                    android:layout_width="@dimen/dp18"
+                    android:layout_height="@dimen/dp18"
+                    android:background="@drawable/icon_param" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/paramIv"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:gravity="center"
+                    android:text="参数"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp10" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/split_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/motodetail_pk_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/pkIv"
+                    android:layout_width="@dimen/dp22"
+                    android:layout_height="@dimen/dp22"
+                    android:background="@drawable/icon_pkbtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pkIv"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:drawablePadding="8dp"
+                    android:text="对比"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp10" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/motodetail_buy_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="6"
+                android:background="@color/app_main_color2"
+                android:gravity="center"
+                android:text="我要看"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_huge" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+

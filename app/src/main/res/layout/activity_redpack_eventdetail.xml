@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/titlebar"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginRight="7dp"
+                android:background="@color/white"
+                android:ellipsize="none"
+                android:gravity="center_vertical"
+                android:text="输入红包名称，0~26字"
+                android:maxLength="26"
+                android:textColor="@color/text_color3"
+                android:paddingLeft="@dimen/homeleft_margin"
+                android:singleLine="true"
+                android:textSize="@dimen/dp15" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="欢迎语 :"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/homeleft_margin"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="none"
+                    android:gravity="left|center_vertical"
+                    android:text="如恭喜发财，大吉大利，0~26字"
+                    android:maxLength="26"
+                    android:textColor="@color/text_color3"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="门票 :"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/homeleft_margin"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="none"
+                    android:gravity="left|center_vertical"
+                    android:text="门票:项目名称+票种"
+                    android:maxLength="26"
+                    android:textColor="@color/text_color3"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="发放数量 :"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/homeleft_margin"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="none"
+                    android:gravity="left|center_vertical"
+                    android:text="155张"
+                    android:maxLength="26"
+                    android:textColor="@color/text_color3"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

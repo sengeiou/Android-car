@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/style_bg7"
+
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/style_bg7">
+
+
+        <ImageButton
+            android:id="@+id/title_bar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/nav_back_n" />
+
+
+        <TextView
+            android:id="@+id/title_bar_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/text_color11"
+            android:textSize="@dimen/font_size_title" />
+
+
+        <ImageButton
+            android:id="@+id/settingBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/setting_icon"
+            android:visibility="invisible" />
+
+        <ImageButton
+            android:id="@+id/locationBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/settingBtn"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/map_loc_icon"
+            android:visibility="gone" />
+
+
+        <ImageButton
+            android:id="@+id/cameraBtn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/locationBtn"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/camera_icon"
+            android:visibility="invisible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentBottom="true"
+            android:background="#000000" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/mapRootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7">
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/field_margin_right"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_bg_18">
+
+                <ImageView
+                    android:id="@+id/myLocationBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/btn_my_location_selector" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/field_margin_right"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/button_bg_18">
+
+                <ImageView
+                    android:id="@+id/trafficBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/traffic_btn_selector" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3">
+
+            <com.tgf.kcwc.view.ClickableSlidingDrawer
+                android:id="@+id/slidingdrawer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:content="@+id/content"
+                android:handle="@+id/handle"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@id/handle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/titleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/text_height"
+                        android:background="@color/style_bg7">
+
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="3dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/shape_radiuswhiterect_bg" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/handleContentLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/trackingDataLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="71dp">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/split_height_size"
+                                android:layout_alignParentTop="true"
+                                android:background="@color/split_line_color" />
+
+                            <GridView
+                                android:id="@+id/grid"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:numColumns="3" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bottomLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/style_bg1"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/navBtn"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_left_size"
+                                android:clickable="true"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/btn_nav_selector" />
+
+                            <TextView
+                                android:id="@+id/readyBtn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:text="GO"
+                                android:textColor="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/postBtn"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/margin_left_size"
+                                android:clickable="true"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/btn_publish_selector"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/my_image_view"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_top_size"
+                            fresco:actualImageScaleType="focusCrop"
+                            fresco:fadeDuration="300"
+                            fresco:placeholderImage="@drawable/inst_icon"
+                            fresco:placeholderImageScaleType="fitXY"
+                            fresco:roundAsCircle="true" />
+
+
+                        <com.tgf.kcwc.view.InstrumentView
+                            android:id="@+id/instrumentView"
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_top_size" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/baseInfoLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/title_bar_height">
+
+                            <TextView
+                                android:id="@+id/gpsStatusTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_left_size"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:text="GPS"
+                                android:textColor="@color/text_color10"
+                                android:textSize="@dimen/font_size_huge" />
+
+
+                            <TextView
+                                android:id="@+id/weatherTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/margin_right_size"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:text="14C"
+                                android:textColor="@color/text_color10"
+                                android:textSize="@dimen/font_size_huge" />
+
+                            <ImageView
+                                android:id="@+id/weatherImg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="55dp"
+                                android:src="@drawable/icon_sun" />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/counterTv"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="260dp"
+                            android:background="@color/style_bg7"
+                            android:gravity="center"
+                            android:text="00:00:00"
+                            android:textColor="@color/text_color10"
+                            android:textSize="30sp" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/trackingDataLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/counterTv">
+
+                            <!-- <View
+                                 android:layout_width="match_parent"
+                                 android:layout_height="@dimen/split_height_size"
+                                 android:layout_alignParentTop="true"
+                                 android:background="@color/split_line_color"
+                                 android:visibility="gone"
+                                 /> -->
+
+                            <GridView
+                                android:id="@+id/grid2"
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:numColumns="3" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bottomLayout2"
+                            android:layout_width="match_parent"
+                            android:layout_height="75dp"
+                            android:layout_alignParentBottom="true"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/navBtn2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/margin_left_size"
+                                android:drawableTop="@drawable/nav_icon_s"
+                                android:gravity="center"
+                                android:text="导航"
+                                android:textColor="@color/text_color24"
+                                android:textSize="@dimen/font_size_tiny" />
+
+                            <ImageView
+                                android:id="@+id/readyBtn2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:clickable="true"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/track_go_icon" />
+
+                            <TextView
+                                android:id="@+id/postBtn2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/margin_left_size"
+                                android:clickable="true"
+                                android:drawableTop="@drawable/btn_publish_selector2"
+                                android:gravity="center"
+                                android:text="发帖"
+                                android:textColor="@color/text_color24"
+                                android:textSize="@dimen/font_size_tiny"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+            </com.tgf.kcwc.view.ClickableSlidingDrawer>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

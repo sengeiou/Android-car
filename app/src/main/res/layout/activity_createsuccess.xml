@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_header_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_pay_success" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/success_hint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:gravity="center"
+            android:text="红包创建成功，请耐心等待审核！"
+            android:textColor="@color/voucher_black"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/paydesc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height"
+            android:gravity="center"
+            android:text="我们将在3个工作日内反馈审核结果。"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_tiny" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/phone"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/service_phone"
+            android:textColor="@color/text_more"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+
+
+</RelativeLayout>

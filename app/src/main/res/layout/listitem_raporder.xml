@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:padding="@dimen/common_left_margin">
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_speaker" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            >
+
+            <TextView
+                android:id="@+id/raporder_carnametv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_marginRight="54dp"
+                android:maxLines="3"
+                tools:text="奥迪  A4L"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/raporder_offercounttv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                tools:text="2人抢单" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/raporder_lookingtv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/common_left_margin"
+            tools:text="外观： 蓝色"/>
+        <TextView
+            android:id="@+id/raporder_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/common_left_margin"
+            tools:text="张先生发出一条看车需求 "/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/raporder_address"
+                android:layout_alignParentLeft="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                tools:text=" 重庆|大渡口"/>
+            <TextView
+                android:id="@+id/raporder_datetv"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="6秒前"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/homeleft_margin"
+            android:layout_marginRight="@dimen/homeleft_margin"
+            android:background="@drawable/search_bg3"
+            android:gravity="center_vertical"
+            android:hint="输入手机号、昵称或红包名称"
+            android:paddingLeft="@dimen/common_left_margin"
+            android:textColorHint="@color/text_color28"
+            android:textSize="@dimen/dp15" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/redpackjoiner_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/homeleft_margin" />
+
+</LinearLayout>

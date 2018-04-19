@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <RelativeLayout
+            android:id="@+id/headerImgLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_left_margin">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/home_avatarIv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/im_default"
+                fresco:placeholderImage="@drawable/rp_avatar"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true" />
+
+            <ImageView
+                android:id="@+id/genderImg"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignBottom="@id/home_avatarIv"
+                android:layout_alignRight="@id/home_avatarIv"
+                android:src="@drawable/icon_men" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_toRightOf="@id/headerImgLayout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nametv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:maxLength="8"
+                    android:text="潇洒哥你好呀够了"
+                    android:textColor="@color/text_color21"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <ImageView
+                    android:id="@+id/comment_model_tv"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_model" />
+
+                <ImageView
+                    android:id="@+id/comment_popman_tv"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_daren" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/brandLogo"
+                    android:layout_width="40dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/im_default"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImageScaleType="fitCenter" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/home_createTimeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:singleLine="true"
+                android:text="刚刚"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:layout_marginRight="@dimen/common_left_margin"
+        android:layout_marginTop="8dp"
+        android:text="她发布了路书，看看发现了哪些好吃的、好玩的!"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/sp15" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:layout_marginLeft="@dimen/homeleft_margin"
+        android:layout_marginRight="@dimen/homeleft_margin"
+        android:layout_marginTop="@dimen/common_left_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/home_coverIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:actualImageScaleType="centerCrop" />
+
+        <include
+            android:id="@+id/layou_item_recom"
+            layout="@layout/layout_include_recom"
+            android:layout_width="40dp"
+            android:layout_height="54dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="7dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:layout_gravity="bottom"
+            android:background="@color/transparent70"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tripbook_speedmaxtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_height"
+                    android:gravity="center"
+                    android:text="25"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="极速(km/h)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_tiny" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tripbook_speedavgtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_height"
+                    android:gravity="center"
+                    android:text="25"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="均速(km/h)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_tiny" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tripbook_altitudetv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_height"
+                    android:gravity="center"
+                    android:text="25"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="海拔(m)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_tiny" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tripbook_mileage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_height"
+                    android:gravity="center"
+                    android:text="25"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="里程(km)"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_tiny" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tripbook_actualtimetv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_height"
+                    android:gravity="center"
+                    android:text="00:18:34"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="6dp"
+                    android:gravity="center"
+                    android:text="驾途时间"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_tiny" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/home_titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_left_margin"
+        android:lineSpacingExtra="5dp"
+        android:maxLines="2"
+        android:text="青海水上丹雅，大漠中的独一无二，这是路书标题"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/sp15" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:layout_marginRight="@dimen/common_left_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/home_createPlaceTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/hometop_margin"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/icon_location"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="重庆市渝北区龙溪镇松石道80号附5号"
+            android:textColor="@color/text_color17" />
+
+        <TextView
+            android:id="@+id/home_createDistanceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="918.21km"
+            android:textColor="@color/text_color17" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:layout_marginRight="@dimen/common_left_margin"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:id="@+id/home_visitors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/listviewitem_focuson"
+            android:layout_toStartOf="@+id/listviewitem_focuson"
+            android:drawableLeft="@drawable/icon_visitors"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:text="267"
+            android:textColor="@color/text_nav_def_color"
+            android:textSize="@dimen/font_size_tiny" />
+
+        <ImageView
+            android:id="@+id/home_isPraiseIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/icon_like" />
+
+        <TextView
+            android:id="@+id/home_focuson"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="267"
+            android:textColor="@color/text_nav_def_color"
+            android:textSize="@dimen/font_size_tiny" />
+
+        <TextView
+            android:id="@+id/home_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:drawableLeft="@drawable/icon_comments"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:text="267"
+            android:textColor="@color/text_nav_def_color"
+            android:textSize="@dimen/font_size_tiny" />
+    </LinearLayout>
+</LinearLayout>

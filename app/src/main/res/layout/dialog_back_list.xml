@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:background="@drawable/dialog_above_shape">
+
+        <ImageView
+            android:id="@+id/dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/btn_close_n" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp180"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/dialog_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/dp50"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/dp16" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/bg_1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_below_shape"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp45"
+            android:background="@color/seek_rl"
+            android:text="我再想想"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp16" />
+        <View
+            android:layout_width="@dimen/dp1"
+            android:layout_height="match_parent"
+            android:background="@color/bg_1" />
+        <Button
+            android:id="@+id/dialog_sure"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/dp45"
+            android:background="@color/seek_rl"
+            android:text="确定移除"
+            android:textColor="@color/text_selected"
+            android:textSize="@dimen/sp16" />
+    </LinearLayout>
+
+</LinearLayout>

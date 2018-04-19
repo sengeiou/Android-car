@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contrast_item_title_footer"
+    android:layout_width="100.0dip"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent90_white"
+    android:minHeight="50.0dip">
+
+    <TextView
+        android:id="@+id/contrast_footer_divider_line2"
+        android:layout_width="1.0px"
+        android:layout_height="50.0dip"
+        android:layout_alignParentLeft="true"
+        android:background="@color/text_def"
+        android:maxHeight="60.0dip" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="1.0dip"
+        android:paddingRight="1.0dip">
+
+        <TextView
+            android:id="@+id/tv_item_footer_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/text_def"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:id="@+id/tv_item_footer_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:background="@color/transparent90_white"
+            android:gravity="center"
+            android:paddingLeft="6.0dip"
+            android:paddingRight="6.0dip"
+            android:singleLine="true"
+            android:text="询底价"
+            android:textColor="@color/text_def"
+            android:textSize="@dimen/font_size_medium"
+            android:visibility="visible" />
+    </LinearLayout>
+</RelativeLayout>

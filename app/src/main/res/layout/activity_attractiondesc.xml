@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/style_bg1">
+
+        <ImageView
+            android:id="@+id/backiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/nav_back_selector"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="9dp" />
+
+        <TextView
+            android:id="@+id/titletv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="景点描述"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/save_btn"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/nodetitel_lv"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/attraction_titleed"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/common_left_margin"
+                    android:hint="输入景点名称或者选择景点"
+                    android:textColor="@color/text_color3"
+                    android:textColorHint="@color/text_color2"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/attraction_choicetv"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:drawableLeft="@drawable/btn_ta"
+                    android:gravity="center"
+                    android:text="选择"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/font_size_medium" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <com.tgf.kcwc.view.richeditor.TripSortRichEditor
+                android:id="@+id/richEditor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_layout_bg_color" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/btnGallery_lv"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/btnGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/btn_gallery_selector"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="添加图片"
+            android:textColor="@color/text_content_color"
+            android:textSize="@dimen/font_size_medium" />
+    </RelativeLayout>
+</LinearLayout>

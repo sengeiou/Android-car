@@ -1,0 +1,95 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@color/voucher_main_bg"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/recomment_root_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/img_coupon_head">
+
+                <com.tgf.kcwc.view.bannerview.Banner
+                    android:id="@+id/recomend_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/moto_testdetail" />
+
+                <include layout="@layout/voucher_search_bar"/>
+
+            </FrameLayout>
+
+            <com.tgf.kcwc.view.PageGridView
+                android:id="@+id/pagegridview_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:PagingColums="5"
+                app:PagingRows="2" />
+
+            <com.tgf.kcwc.view.MyPageIndicator
+                android:id="@+id/pageindicator"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/white"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/voucher_divide_line" />
+
+            <TextView
+                android:id="@+id/recoment_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/knight_recomment"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:visibility="gone"
+                android:text="[旅行] 这是代金券的标题名称"
+                android:textColor="@color/voucher_black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:background="@color/voucher_main_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="猜您喜欢"
+                    android:textColor="@color/voucher_gray"
+                    android:textSize="@dimen/font_size_title" />
+            </LinearLayout>
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/recoment_voucherlist_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</merge>

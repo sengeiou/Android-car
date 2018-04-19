@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:minHeight="80dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true">
+
+        <RelativeLayout
+            android:id="@+id/headerImgLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                fresco:actualImageScaleType="fitCenter"
+                fresco:failureImage="@drawable/im_default"
+                fresco:placeholderImage="@drawable/im_default"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/genderImg"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignBottom="@id/img"
+                android:layout_alignRight="@id/img"
+                fresco:placeholderImage="@drawable/cover_default"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/headerImgLayout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nametv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="10"
+                    android:text="潇洒哥"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/font_size_small" />
+
+                <ImageView
+                    android:id="@+id/comment_model_tv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_model" />
+
+                <ImageView
+                    android:id="@+id/comment_popman_tv"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_daren" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/brandLogo"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginLeft="8dp"
+                    fresco:placeholderImage="@drawable/icon_dazong"
+                    fresco:placeholderImageScaleType="fitCenter" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:text="本人男，爱好女"
+                android:textColor="@color/text_more" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/attentionBtn"
+            android:layout_width="40dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_bg_3"
+            android:text="关注"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_tiny"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/attentionStatusImg"
+            android:layout_width="21dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_attention"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

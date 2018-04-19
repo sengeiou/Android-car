@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:psd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp200"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="请输入支付密码"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/sp20" />
+
+            <ImageView
+                android:id="@+id/iv_close"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:scaleType="fitCenter"
+                android:src="@drawable/nav_back_selector2" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:background="@color/split_line_color" />
+
+
+        <com.tgf.kcwc.view.PayPwdInputView
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginTop="40dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="number"
+            psd:isPlaintext="false"
+            psd:maxCount="6"
+            psd:psdType="weChat"
+            psd:pwdTextColor="@color/text_color3"
+            psd:rectAngle="4dp" />
+
+
+        <TextView
+            android:id="@+id/forgetPwdTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp30"
+            android:text="忘记密码"
+            android:textColor="@color/text_color6"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+</LinearLayout>

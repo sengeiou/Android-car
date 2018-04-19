@@ -1,0 +1,253 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/filter_layout_height"
+        android:layout_below="@id/titleBar"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <include
+                android:id="@+id/appearanceFilterLayout"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/interiorFilterLayout"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filterLayout">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/appearanceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_size">
+
+
+                <RelativeLayout
+                    android:id="@+id/appearanceHeaderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/list_item_selector">
+
+
+                    <TextView
+                        android:id="@+id/appearanceTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left_size"
+                        android:text="外观"
+                        android:textColor="@color/text_color12"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/appearanceNums"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left_size"
+                        android:layout_toRightOf="@id/appearanceTitle"
+                        android:text="10"
+                        android:textColor="@color/text_color17"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_right_size"
+                        android:src="@drawable/more_icon" />
+
+                </RelativeLayout>
+
+
+                <com.tgf.kcwc.view.GridViewWithHeaderAndFooter
+                    android:id="@+id/appearanceGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/appearanceHeaderLayout"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:horizontalSpacing="4dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="4dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/interiorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/appearanceLayout"
+                android:layout_marginTop="@dimen/margin_top_size">
+
+
+                <RelativeLayout
+                    android:id="@+id/interiorHeaderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/list_item_selector">
+
+
+                    <TextView
+                        android:id="@+id/interiorTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left_size"
+                        android:text="内饰"
+                        android:textColor="@color/text_color12"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/interiorNums"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left_size"
+                        android:layout_toRightOf="@id/interiorTitle"
+                        android:text="10"
+                        android:textColor="@color/text_color17"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_right_size"
+                        android:src="@drawable/more_icon" />
+
+                </RelativeLayout>
+
+
+                <com.tgf.kcwc.view.GridViewWithHeaderAndFooter
+                    android:id="@+id/interiorGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/interiorHeaderLayout"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:horizontalSpacing="4dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="4dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/liveLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/interiorLayout"
+                android:layout_marginTop="@dimen/margin_top_size">
+
+
+                <RelativeLayout
+                    android:id="@+id/liveHeaderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/list_item_selector">
+
+
+                    <TextView
+                        android:id="@+id/liveTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left_size"
+                        android:text="现场"
+                        android:textColor="@color/text_color12"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/liveNums"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_left_size"
+                        android:layout_toRightOf="@id/liveTitle"
+                        android:text="10"
+                        android:textColor="@color/text_color17"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/margin_right_size"
+                        android:src="@drawable/more_icon" />
+
+                </RelativeLayout>
+
+
+                <com.tgf.kcwc.view.GridViewWithHeaderAndFooter
+                    android:id="@+id/liveGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/liveHeaderLayout"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="4sp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white"
+                    android:horizontalSpacing="4dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="4dp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

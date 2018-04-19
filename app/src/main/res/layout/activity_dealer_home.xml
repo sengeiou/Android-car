@@ -1,0 +1,307 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+    <com.tgf.kcwc.view.ObservableScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/topLayout"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/bigHeaderImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@drawable/moto_testdetail"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/moto_testdetail"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical">
+
+                    <RelativeLayout
+                        android:layout_width="60dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/common_left_margin"
+                        android:background="@drawable/button_bg_3">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:id="@+id/imageIcon"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/gallery_icon_1" />
+
+                            <TextView
+                                android:id="@+id/tv_picnum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp5"
+                                android:layout_toRightOf="@id/imageIcon"
+                                android:text="0张"
+                                android:textColor="@color/transparent90_white"
+                                android:textSize="@dimen/font_size_medium" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/dealerBaseInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topLayout"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        fresco:actualImageScaleType="fitXY"
+                        fresco:failureImage="@drawable/cover_default"
+                        fresco:failureImageScaleType="fitXY"
+                        fresco:placeholderImage="@drawable/cover_default"
+                        fresco:placeholderImageScaleType="fitXY"
+                        fresco:roundAsCircle="true" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/img">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/text_color12"
+                            android:textSize="@dimen/font_size_m_large" />
+
+                        <com.hedgehog.ratingbar.RatingBar
+                            android:id="@+id/ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/name"
+                            android:layout_marginTop="10dp"
+                            fresco:starFill="@drawable/rating_bar_star_fill"
+                            hedgehog:clickable="false"
+                            hedgehog:halfstart="true"
+                            hedgehog:starCount="5"
+                            hedgehog:starEmpty="@drawable/rating_bar_star_empty"
+                            hedgehog:starHalf="@drawable/icon_half_a_star_n"
+                            hedgehog:starImageHeight="18dp"
+                            hedgehog:starImagePadding="5dp"
+                            hedgehog:starImageWidth="18dp" />
+
+                        <TextView
+                            android:id="@+id/serviceRatingText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignTop="@id/ratingBar"
+                            android:layout_marginRight="30dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_small" />
+                    </RelativeLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/split_line_color"
+                        android:visibility="visible" />
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:id="@+id/addressText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="@dimen/dp65"
+                        android:drawableLeft="@drawable/icon_location"
+                        android:drawablePadding="5dp"
+                        android:singleLine="true"
+                        android:text="重庆市南岸区长江国际xxx号"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="60dp"
+                        android:background="@color/split_line_color"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/telImg"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/btn_phone_selector" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/split_line_color" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--  <ImageView
+                  android:id="@+id/splitLayout1"
+                  android:layout_width="match_parent"
+                  android:layout_height="15dp"
+                  android:layout_below="@id/dealerBaseInfoLayout"
+                  android:background="@color/split_line_color" /> -->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/dealerBaseInfoLayout"
+                android:layout_marginTop="@dimen/margin_top_size">
+
+
+                <GridView
+
+                    android:id="@+id/subTabGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:numColumns="3" />
+
+                <View
+                    android:id="@+id/split"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_height_size"
+                    android:layout_below="@id/subTabGridView"
+                    android:background="@color/split_line_color" />
+
+                <RelativeLayout
+                    android:id="@+id/contentLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/split" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </com.tgf.kcwc.view.ObservableScrollView>
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentTop="true"
+            android:background="@color/split_line_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/callBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:drawableLeft="@drawable/icon_dianhua"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="@string/call"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_more" />
+
+            <ImageView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@color/split_line_color" />
+
+            <TextView
+                android:id="@+id/navBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
+                android:drawableLeft="@drawable/icon_dingwei"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="@string/map_nav"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_more" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/voucher_main_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/common_right_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/evaluate_avatar"
+            android:layout_width="80dp"
+            android:layout_height="@dimen/size_avatar"
+            android:scaleType="centerInside"
+            fresco:actualImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/rp_avatar"
+            fresco:placeholderImageScaleType="centerInside"
+            fresco:roundAsCircle="true" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/evaluate_nickname"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/text_height"
+                android:textColor="@color/color_0babd1"
+                android:textSize="@dimen/font_size_more"
+                tools:text="潇洒哥" />
+
+            <TextView
+                android:id="@+id/evaluate_orgname"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:layout_toRightOf="@id/evaluate_nickname"
+                android:text="这是商户名称"
+                android:textColor="@color/text_more"
+                android:textSize="@dimen/font_size_more" />
+
+            <com.hedgehog.ratingbar.RatingBar
+                android:id="@+id/evaluate_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/evaluate_orgname"
+                hedgehog:clickable="false"
+                hedgehog:starCount="5"
+                hedgehog:starEmpty="@drawable/red_starn"
+                hedgehog:starFill="@drawable/red_stars"
+                hedgehog:starImageHeight="15dp"
+                hedgehog:starImagePadding="3dp"
+                hedgehog:starImageWidth="20dp" />
+
+            <TextView
+                android:id="@+id/evaluate_leveal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/evaluate_nickname"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_toRightOf="@id/evaluate_rating"
+                android:textColor="@color/tab_text_s_color"
+                tools:text="4.9" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_right_margin"
+        android:paddingRight="@dimen/common_right_margin">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/voucher_divide_line" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/common_right_margin"
+            android:paddingRight="@dimen/common_right_margin"
+            android:text="您的评价是TA的动力"
+            android:textColor="@color/voucher_black"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/voucher_divide_line" />
+    </LinearLayout>
+
+    <com.hedgehog.ratingbar.RatingBar
+        android:id="@+id/evaluate_commitrating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/evaluate_nickname"
+        android:background="@color/white"
+        android:gravity="center"
+        hedgehog:clickable="true"
+        hedgehog:starCount="5"
+        hedgehog:starEmpty="@drawable/red_starn"
+        hedgehog:starFill="@drawable/red_stars"
+        hedgehog:starImageHeight="20dp"
+        hedgehog:starImagePadding="4dp"
+        hedgehog:starImageWidth="20dp" />
+
+    <TextView
+        android:id="@+id/evstar_desctv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textColor="@color/text_color12"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:text="请选择标签"
+        android:textColor="@color/voucher_black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="100dp">
+
+        <com.tgf.kcwc.view.FlowLayout
+            android:id="@+id/evaluation_tag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="5dp">
+
+        </com.tgf.kcwc.view.FlowLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/voucher_divide_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/evaluate_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:maxLength="150"
+            android:gravity="left"
+            android:hint="其他意见和建议"
+            android:padding="@dimen/common_left_margin"
+            android:textSize="@dimen/font_size_more" />
+
+        <TextView
+            android:id="@+id/evaluate_limmittv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:text="0/150" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <CheckBox
+            android:id="@+id/evaluate_ansyccb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:button="@drawable/motordetail_checkbox_selector"
+            android:text="   匿名评价" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/evaluate_commit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:layout_margin="@dimen/common_left_margin"
+        android:background="@drawable/btn_login_selector"
+        android:gravity="center"
+        android:text="提交评价"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_title" />
+</LinearLayout>

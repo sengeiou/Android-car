@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="68dp"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp20">
+
+        <TextView
+            android:id="@+id/priceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/text_color36"
+            android:textSize="@dimen/sp18" />
+
+        <TextView
+            android:id="@+id/descTv"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/priceTv"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@id/priceTv"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/expireTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descTv"
+            android:layout_marginTop="@dimen/dp5"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp12" />
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/getCouponBtn"
+        android:layout_width="70dp"
+        android:layout_height="29dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp20"
+        android:background="@drawable/button_bg_36"
+        android:text=""
+        android:textColor="@color/text_color36"
+        android:textSize="@dimen/sp14" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:background="@color/split_line_color" />
+</RelativeLayout>

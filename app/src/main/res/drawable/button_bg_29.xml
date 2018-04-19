@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="3dp" />
+    <solid android:color="@color/style_bg6" />
+    <!-- 形状的填充色 -->
+
+    <stroke
+        android:width="1dp"
+        android:color="@color/style_bg6" />
+</shape>

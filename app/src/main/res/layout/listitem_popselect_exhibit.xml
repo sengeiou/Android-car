@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="@dimen/homeleft_margin"
+        android:layout_marginTop="@dimen/homeleft_margin"
+        android:layout_marginRight="@dimen/homeleft_margin"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/listitem_coveriv"
+            android:layout_width="90dp"
+            android:layout_height="68dp"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/icon_car_loading"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tickem_exhibitnametv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/homeleft_margin"
+            android:layout_weight="1"
+            android:lineSpacingExtra="5dp"
+            android:text="第十五届中国国际摩托车博览会第国际摩托车博览会"
+            android:textColor="@color/text_color3"
+            android:textSize="16dp" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:layout_marginLeft="@dimen/homeleft_margin"
+    android:layout_marginRight="@dimen/homeleft_margin"
+    android:orientation="horizontal">
+    <TextView
+        android:id="@+id/tickem_exhibitAdtv"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textSize="12dp"
+        android:layout_marginRight="@dimen/common_left_margin"
+        android:textColor="@color/text_color17"
+        android:text="九龙坡陈家坪展览中心"/>
+    <TextView
+        android:id="@+id/tickem_exhibitTimetv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textSize="12dp"
+        android:textColor="@color/text_color17"
+        android:text="2017.06.08-2017.06.14"
+        android:gravity="center_vertical"/>
+</LinearLayout>
+    <TextView
+        android:layout_marginLeft="@dimen/homeleft_margin"
+        android:layout_marginRight="@dimen/homeleft_margin"
+        android:layout_width="match_parent"
+        android:layout_height= "1px"
+        android:background="@color/divider3"/>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingTop="@dimen/common_left_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1、每张门票有领取时限，若超过时限，则该门票“失效”；"
+        android:textSize="@dimen/font_size_tiny" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:text="2、领取后的门票有“使用有效期”，超过有效期未使用则为“过期”；"
+        android:textSize="@dimen/font_size_tiny" />
+</LinearLayout>

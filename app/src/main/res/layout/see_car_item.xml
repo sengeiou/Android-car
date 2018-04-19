@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/see_car_record_all"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp15"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_see_car"
+            android:drawablePadding="@dimen/dp7"
+            android:gravity="center_vertical"
+            android:text="看车"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/record_see_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="@dimen/dp11"
+            android:drawableRight="@drawable/icon_right"
+            android:gravity="center_vertical"
+            android:text="查看记录"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp12" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/style_bg4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp21"
+            android:layout_weight="1"
+            android:text="30天内"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/sp14" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp21"
+            android:layout_marginRight="@dimen/dp21"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="0"
+                android:id="@+id/record_my_see_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp12"
+                android:text="次"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/style_bg1"
+                android:textSize="@dimen/sp12"
+                android:text="(我抢单)"/>
+            <TextView
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp15"
+                android:text="/"/>
+            <TextView
+                android:text="0"
+                android:layout_marginLeft="@dimen/dp4"
+                android:id="@+id/record_see_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp12"
+                android:text="次"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/style_bg1"
+                android:textSize="@dimen/sp12"
+                android:text="(共)"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/style_bg4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp21"
+            android:layout_weight="1"
+            android:text="6个月内"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/sp14" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp21"
+            android:layout_marginRight="@dimen/dp21"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="0"
+                android:id="@+id/record_my_see_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp12"
+                android:text="次"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/style_bg1"
+                android:textSize="@dimen/sp12"
+                android:text="(我抢单)"/>
+            <TextView
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp15"
+                android:text="/"/>
+            <TextView
+                android:text="0"
+                android:layout_marginLeft="@dimen/dp4"
+                android:id="@+id/record_see_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp12"
+                android:text="次"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/style_bg1"
+                android:textSize="@dimen/sp12"
+                android:text="(共)"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/style_bg4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp21"
+            android:layout_weight="1"
+            android:text="近一年内"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/sp14" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp21"
+            android:layout_marginRight="@dimen/dp21"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="0"
+                android:id="@+id/record_my_see_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp12"
+                android:text="次"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/style_bg1"
+                android:textSize="@dimen/sp12"
+                android:text="(我抢单)"/>
+            <TextView
+                android:layout_marginLeft="@dimen/dp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp15"
+                android:text="/"/>
+            <TextView
+                android:text="0"
+                android:layout_marginLeft="@dimen/dp4"
+                android:id="@+id/record_see_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp12" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp12"
+                android:text="次"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/style_bg1"
+                android:textSize="@dimen/sp12"
+                android:text="(共)"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/style_bg4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp21"
+            android:layout_weight="1"
+            android:text="最近想看"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/record_see_nearest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp21"
+            android:layout_marginRight="@dimen/dp21"
+            android:layout_weight="2"
+            android:maxLines="2"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp5"
+        android:background="@color/style_bg3"/>
+</LinearLayout>

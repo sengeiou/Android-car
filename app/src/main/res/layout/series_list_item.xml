@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:minHeight="@dimen/dp90"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/list_item_selector"
+        >
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginRight="@dimen/margin_right_size"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@drawable/icon_the_default__diagram_n"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:viewAspectRatio="1.33"
+                />
+
+
+            <TextView
+                android:id="@+id/seriesName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/img"
+                android:text="宝马760"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_title"/>
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/seriesName"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/img"
+                android:text="12-15万"
+                android:textColor="@color/text_color16"
+                android:textSize="@dimen/font_size_medium"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

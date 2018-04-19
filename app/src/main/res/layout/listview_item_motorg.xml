@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_color1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:paddingRight="@dimen/common_left_margin">
+
+        <TextView
+            android:id="@+id/org_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="重庆新元素雅和汽车销售"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/motoshoper_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_right_margin"
+            android:textSize="@dimen/font_size_tiny"
+            android:textColor="@color/app_main_color2"
+            android:src="@drawable/btn_phone_selector" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:paddingRight="@dimen/common_left_margin">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/motorg_coupon"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_coupon" />
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/motorg_per"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_per" />
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/motorg_pack"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_pack" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:paddingRight="@dimen/common_left_margin">
+
+        <TextView
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_toLeftOf="@+id/orgs_distance"
+            android:id="@+id/orgs_addresstv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="地址：重庆市区华北废墟"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/orgs_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_right_margin"
+            android:drawableLeft="@drawable/icon_location"
+            android:drawablePadding="10dp"
+            android:textSize="@dimen/sp10"
+            android:text="1.5km"
+            android:textColor="@color/text_color17" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/text_color25"/>
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp12"
+        android:id="@+id/cardetail_salesrl"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_left_margin">
+
+        <com.tgf.kcwc.view.MyGridView
+            android:id="@+id/motorg_gr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="5"
+            android:verticalSpacing="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:layout_marginRight="50dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_icon" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/devider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/motoshoper_item_telbtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/icon_graytel"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:gravity="center"
+                android:text="拨打电话" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/devider" />
+
+        <RelativeLayout
+            android:id="@+id/item_gotonavi"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/icon_place"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:gravity="center"
+                android:text="地图导航" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp10"
+        android:background="@color/app_layout_bg_color" />
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#11ffffff">
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_radius_bg"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_left_margin"
+            android:background="@drawable/dialogtitle_radius_bg"
+            android:text="请输入手机号"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            android:text="  " />
+        <EditText
+            android:id="@+id/sendobj_dialoged"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_marginRight="@dimen/common_left_margin"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text_color3"
+            android:hint="请输入手机号"
+            android:background="@drawable/search_bg"
+            android:inputType="number"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="15dp"
+            android:background="#E4E4E4" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/text_def"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btnleft_radius_selector"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="取消"
+                android:textColor="@color/font_sendobj_selector"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/text_def"/>
+            <Button
+                android:id="@+id/yes"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/btnright_radius_selector"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="确定"
+                android:textColor="@color/font_sendobj_selector"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

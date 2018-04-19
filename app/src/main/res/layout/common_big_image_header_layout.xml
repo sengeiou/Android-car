@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/bigHeaderImg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        fresco:actualImageScaleType="fitXY"
+        fresco:failureImage="@drawable/moto_testdetail"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/moto_testdetail"
+        fresco:placeholderImageScaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/imgCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="20dp"
+        android:drawableLeft="@android:drawable/ic_menu_camera"
+        android:drawablePadding="3dp"
+        android:gravity="center"
+        android:text="30张"
+        android:textColor="@color/text_content_color" />
+
+</RelativeLayout>

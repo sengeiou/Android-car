@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:gravity="center"
+    android:minHeight="100dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/driving_list_view_dynamic"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="10dp"
+            android:text="发布的动态缩略，非标题发布的动态缩略，非标题发布的动态缩略，非标题发布的动态缩略，发布的动态缩略"
+            android:textColor="@color/app_title_color1"
+            android:textSize="@dimen/font_size_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/look"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/btn_eye1"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/app_title_color1"
+                android:textSize="@dimen/font_size_medium" />
+
+
+            <TextView
+                android:id="@+id/like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:drawableLeft="@drawable/btn_heart1"
+                android:drawablePadding="5dp"
+                android:text="10"
+                android:textColor="@color/app_title_color1"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/information"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/btn_comments_n"
+                android:drawablePadding="5dp"
+                android:text="10"
+                android:textColor="@color/app_title_color1"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:gravity="center"
+                android:text="2016.09.16"
+                android:textColor="@color/app_title_color1"
+                android:textSize="@dimen/font_size_medium" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/thumbnaillayout"
+        android:layout_width="85dp"
+        android:layout_height="85dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/thumbnail"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_marginRight="5dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:scaleType="fitXY"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/thumbnailjinh"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/icon_jing" />
+    </RelativeLayout>
+</LinearLayout>
+

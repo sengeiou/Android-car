@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:layout_marginBottom="@dimen/dp120"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="188dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:focusableInTouchMode="true"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@drawable/cover_default"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/cover_default"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:roundAsCircle="false"
+                    fresco:viewAspectRatio="2" />
+
+                <ImageView
+                    android:id="@+id/ticketDetailImage"
+                    android:layout_width="50dp"
+                    android:layout_height="15dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/btn_ticket_desc_down_selector" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/titleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/senseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:maxLines="2"
+                    android:text=""
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/sp18" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/senseName"
+                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:background="@color/split_line_color" />
+
+                    <TextView
+                        android:layout_width="28dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="官方售票"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/sp15" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:background="@color/split_line_color" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <ListView
+                android:id="@+id/ticketList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleLayout"
+                android:divider="@null"
+                android:dividerHeight="@dimen/dp20" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/orderConfirmLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp120"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_layout_bg_color"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp70">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/ticketDescTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="每票限用一次，进场作废"
+                    android:textColor="@color/text_color35"
+                    android:textSize="@dimen/sp12" />
+
+                <RelativeLayout
+                    android:id="@+id/ticketAgreementLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ticketDescTv"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/accept"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:drawableLeft="@drawable/btn_accept_selector"
+                        android:drawablePadding="5dp"
+                        android:text="我同意且遵守"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/sp12"
+                        android:visibility="visible" />
+
+
+                    <TextView
+                        android:id="@+id/aboutTicket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/accept"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/accept"
+                        android:text="票务须知"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/sp12"
+                        android:visibility="visible" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:background="@color/app_main_color1"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/totalTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="合计"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/font_size_more" />
+
+                    <TextView
+                        android:id="@+id/tag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toRightOf="@id/totalTv"
+                        android:text="@string/china_money_char"
+                        android:textColor="@color/text_color36"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <TextView
+                        android:id="@+id/spendText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/tag"
+                        android:layout_toRightOf="@id/tag"
+                        android:text="0.00"
+                        android:textColor="@color/text_color36"
+                        android:textSize="@dimen/font_size_m_large"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/deductionTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/totalTv"
+                        android:layout_centerHorizontal="true"
+                        android:text="已抵扣 ￥ 0.00"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/sp12" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/submitOrder"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp50"
+                android:layout_weight="1"
+                android:background="@drawable/order_submit_selector"
+                android:enabled="true"
+                android:text="提交订单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_more"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/getCouponImgLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp70">
+
+        <ImageView
+            android:id="@+id/getCouponImg"
+            android:layout_width="62dp"
+            android:layout_height="55dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_get_coupon_1"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/couponContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/couponTitleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp29"
+            android:background="@color/app_layout_bg_color">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:text="领取代金券"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp12" />
+
+            <ImageView
+                android:id="@+id/closeCouponBtn"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp20"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_close_selector" />
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/couponList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/couponTitleLayout"
+            android:divider="@null" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/couponTitleLayout">
+
+            <TextView
+                android:id="@+id/msgTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/no_data_img_icon"
+                android:text="暂无可领的门票代金券！"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ticketDetailContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/partOneLayout"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/ticketTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="票务活动"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp16" />
+
+            <WebView
+                android:id="@+id/ticketDescContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/ticketTitle" />
+
+            <ImageView
+                android:id="@+id/ticketUpImage"
+                android:layout_width="50dp"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_ticket_desc_up_selector" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/partTwoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/partOneLayout"
+            android:background="#000000" />
+
+    </RelativeLayout>
+</RelativeLayout>

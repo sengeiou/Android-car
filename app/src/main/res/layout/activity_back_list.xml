@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:layout_height="match_parent">
+    <include layout="@layout/titlebar"/>
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/back_list_empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/empty_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="80dp"
+                    android:src="@drawable/icon_search_empty" />
+
+                <TextView
+                    android:id="@+id/hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/empty_image"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/dp30"
+                    android:text="陛下，暂时没有人被你关进小黑屋"
+                    android:textColor="@color/tab_text_n_color"
+                    android:textSize="@dimen/font_size_small" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/back_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></ListView>
+        </RelativeLayout>
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+</RelativeLayout>

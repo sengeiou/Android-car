@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/style_bg1">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height">
+
+        <ImageButton
+            android:id="@+id/title_bar_back"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/nav_back_selector"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:id="@+id/title_bar_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/text_color11"
+            android:textSize="@dimen/font_size_title" />
+
+        <com.tgf.kcwc.view.FunctionView
+            android:id="@+id/title_function_btn"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <View
+            android:id="@+id/split"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

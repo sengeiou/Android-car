@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:minHeight="86dp">
+
+
+    <com.tgf.kcwc.view.SpecRectView
+        android:id="@+id/specRectView"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        app:bgColor="@color/white"
+        app:drawCycleColor="@color/app_layout_bg_color"
+        app:type="3" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/sp18"
+                android:layout_marginTop="@dimen/dp2"
+                />
+
+            <RelativeLayout
+                android:id="@+id/checkLayout"
+                android:layout_width="90dp"
+                android:layout_height="29dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="90dp"
+                android:background="@drawable/button_bg_12"
+                android:layout_marginTop="@dimen/dp2"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageView
+                        android:id="@+id/checkImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/motodetail_checkbox_off" />
+
+                    <TextView
+                        android:id="@+id/checkTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:layout_toRightOf="@id/checkImg"
+                        android:text="选择此票"
+                        android:textColor="@color/text_more"
+                        android:textSize="@dimen/sp12" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/expire"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/checkLayout"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/text_more"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/remark"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/expire"
+                android:layout_marginTop="10dp"
+                android:maxLines="3"
+                android:text=""
+                android:textColor="@color/red" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/priceDescLayout"
+            android:layout_width="60dp"
+            android:layout_height="86dp"
+            android:layout_alignParentRight="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp22">
+
+                <TextView
+                    android:id="@+id/moneyTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/china_money_char"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/moneyTag"
+                    android:layout_toRightOf="@id/moneyTag"
+                    android:gravity="center"
+                    android:text="80"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18" />
+
+                <TextView
+                    android:id="@+id/desc3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/price"
+                    android:text="赠票"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp18"
+                    android:gravity="center"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+

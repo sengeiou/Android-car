@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="@dimen/dp1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="18dp"
+        android:background="@color/bg_2" />
+
+    <ImageView
+        android:id="@+id/item_ticket_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp10"
+        android:background="@drawable/shape_see_car_circle_s" />
+
+    <RelativeLayout
+        android:id="@+id/item_rl"
+        android:padding="@dimen/dp3"
+        android:layout_toRightOf="@+id/item_ticket_circle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="时间"
+            android:textColor="@color/btn_bg4"
+            android:textSize="@dimen/sp10" />
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:text="发放门票"
+            android:id="@+id/item_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp18"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp10" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_marginRight="@dimen/dp18"
+        android:background="@drawable/shape_see_car_bg"
+        android:layout_marginLeft="@dimen/dp35"
+        android:layout_below="@+id/item_rl"
+        android:layout_marginTop="@dimen/dp16"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_order"
+                android:textColor="@color/tab_text_n_color"
+                android:text="请求订单"
+                android:textSize="@dimen/sp12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/item_receive_get"
+                android:textColor="@color/tab_text_s_color"
+                android:text="某某  发放"
+                android:textSize="@dimen/sp10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <TextView
+            android:maxLines="2"
+            android:layout_below="@+id/item_order"
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/item_title"
+            android:textColor="@color/style_bg7"
+            android:text="展会名称"
+            android:textSize="@dimen/sp16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_below="@+id/item_title"
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/item_ticket_ll"
+            android:background="@drawable/shape_ticket_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_ticket_name"
+                android:textColor="@color/bg_3"
+                android:text="票证的名称"
+                android:textSize="@dimen/sp14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_toRightOf="@+id/item_ticket_name"
+                android:layout_marginLeft="@dimen/dp9"
+                android:id="@+id/item_ticket_num"
+                android:textColor="@color/bg_3"
+                android:text="x3"
+                android:textSize="@dimen/sp15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <ListView
+            android:divider="@color/white"
+            android:dividerHeight="0dp"
+            android:scrollbars="none"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_below="@+id/item_ticket_ll"
+            android:id="@+id/item_ticket_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></ListView>
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_below="@+id/item_ticket_ll"
+            android:id="@+id/item_not_receive"
+            android:textColor="@color/text_color17"
+            android:text="客户未领取，自动收回"
+            android:textSize="@dimen/sp12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_below="@+id/item_ticket_ll"
+            android:id="@+id/item_receive_print"
+            android:textColor="@color/text_color17"
+            android:text="03.23 13:00 打印"
+            android:textSize="@dimen/sp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_below="@+id/item_receive_print"
+            android:id="@+id/item_receive"
+            android:textColor="@color/text_color17"
+            android:text="03.23 13:00 领取"
+            android:textSize="@dimen/sp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp7"
+            android:layout_below="@+id/item_receive"
+            android:id="@+id/item_enter"
+            android:textColor="@color/text_color17"
+            android:text="03.23 13:00 进场"
+            android:textSize="@dimen/sp10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

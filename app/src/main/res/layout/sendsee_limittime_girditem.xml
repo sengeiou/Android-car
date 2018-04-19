@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioButton
+        android:id="@+id/sendsee_limitTimeBtn"
+        android:layout_width="77dp"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_sendsee_borderwhite"
+        android:button="@null"
+        android:gravity="center"
+        android:text="12小时"
+        android:textColor="@color/text_color3" />
+</LinearLayout>

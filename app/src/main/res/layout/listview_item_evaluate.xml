@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:hedgehog="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent90_white"
+    android:orientation="horizontal"
+    android:paddingTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/headerImgLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:failureImage="@drawable/im_default"
+            fresco:placeholderImage="@drawable/im_default"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:roundAsCircle="true" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/genderImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@id/img"
+            android:layout_alignRight="@id/img"
+            fresco:placeholderImage="@drawable/cover_default"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:roundAsCircle="true" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nametv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLength="10"
+                android:text="潇洒哥"
+                android:textColor="@color/text_color6"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/comment_model_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@color/color_C231C7"
+                android:text="模"
+                android:textColor="@color/tab_text_n_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/comment_popman_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@color/color_C231C7"
+                android:text="达"
+                android:textColor="@color/tab_text_n_color"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/brandLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/icon_dazong" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5" />
+
+            <com.hedgehog.ratingbar.RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                hedgehog:clickable="true"
+                hedgehog:halfstart="true"
+                hedgehog:starCount="6" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timeRecord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="刚刚"
+            android:textColor="@color/text_more"
+            android:gravity="top"
+            />
+
+        <com.tgf.kcwc.view.EmojiTextView
+            android:id="@+id/contentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:maxLength="100"
+            android:text="我是评论标题内容欢迎回复"
+            android:textColor="@color/app_main_color1" />
+
+        <com.tgf.kcwc.view.MultiImageView
+            android:id="@+id/multiImagView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" />
+
+        <com.tgf.kcwc.view.nestlistview.NestFullListView
+            android:id="@+id/listview_item_reply_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/app_layout_bg_color"
+            android:dividerHeight="@dimen/list_divider_height"
+            android:orientation="vertical" />
+    </LinearLayout>
+</LinearLayout>

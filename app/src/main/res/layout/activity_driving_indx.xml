@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/commentHeaderLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RelativeLayout
+                android:id="@+id/commentBtnLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/cmtTitle"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="@string/comment"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+                <TextView
+                    android:id="@+id/cmtContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/cmtTitle"
+                    android:gravity="center"
+                    android:text="(238)"
+                    android:textColor="@color/text_more"
+                    android:textSize="@dimen/font_size_small"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/btmLine1"
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/tab_text_s_color" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/likeBtnLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/commentBtnLayout">
+
+                <TextView
+                    android:id="@+id/likeTitle"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:text="点赞"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+                <TextView
+                    android:id="@+id/likeContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@id/likeTitle"
+                    android:gravity="center"
+                    android:text="(10)"
+                    android:textColor="@color/text_more"
+                    android:textSize="@dimen/font_size_small"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/btmLine2"
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/tab_text_s_color"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/split_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/commentHeaderLayout"
+            android:background="@color/partTranslucent" />
+
+
+        <com.tgf.kcwc.view.nestlistview.NestFullListView
+            android:id="@+id/commentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/split_line"
+            android:layout_marginBottom="60dp"
+            android:background="@color/transparent90_white"
+            android:divider="@color/transparent90_white"
+            android:dividerHeight="@dimen/list_divider_height"
+            android:orientation="vertical" />
+
+        <ListView
+            android:id="@+id/likeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/split_line"
+            android:layout_marginBottom="60dp"
+            android:background="@color/transparent90_white"
+            android:divider="@color/partTranslucent"
+            android:dividerHeight="1px"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/emptyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/emptyContentTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

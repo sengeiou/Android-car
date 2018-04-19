@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/titleBar"
+        android:layout_marginTop="@dimen/margin_top_size">
+
+
+        <TextView
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:background="@drawable/search_bg"
+            android:drawableRight="@drawable/search_btn_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|center_vertical"
+            android:hint="搜索"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color12"
+            android:textColorHint="@color/text_content_color"
+            android:textSize="@dimen/font_size_medium" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/mapRootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/searchLayout"
+        android:layout_marginTop="@dimen/margin_top_size">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/currentPosLayout"
+            android:layout_width="21dp"
+            android:layout_height="29dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/amap_marker_start">
+
+            <TextView
+                android:id="@+id/markerImg"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/cycle_bg_3"
+                android:gravity="center"
+                android:text="起"
+                android:textColor="@color/text_color10"
+                android:textSize="@dimen/font_size_tiny" />
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/indicatorImg1"
+            android:layout_width="20dp"
+            android:layout_height="8dp"
+            android:layout_below="@id/currentPosLayout"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/oval_bg4"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/indicatorImg2"
+            android:layout_width="20dp"
+            android:layout_height="8dp"
+            android:layout_below="@id/currentPosLayout"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/oval_bg4"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/confirmBtn"
+            android:layout_width="75dp"
+            android:layout_height="24dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/currentPosLayout"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_confirm_mark_point" />
+
+
+    </RelativeLayout>
+
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mapRootLayout" />
+
+
+
+</RelativeLayout>

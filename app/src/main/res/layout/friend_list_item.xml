@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp8"
+    android:paddingTop="@dimen/dp8"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/headerImgLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/tagHeaderImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:failureImage="@drawable/cover_default"
+            fresco:placeholderImage="@drawable/cover_default"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:roundAsCircle="true" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/genderImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@id/tagHeaderImg"
+            android:layout_alignRight="@id/tagHeaderImg"
+            fresco:placeholderImage="@drawable/icon_men"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:roundAsCircle="true"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_toRightOf="@+id/headerImgLayout"
+        android:id="@+id/item_nickname"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/field_textsize"
+        android:textColor="@color/style_bg1"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginLeft="@dimen/dp12"
+        android:layout_marginTop="@dimen/dp6"
+        android:layout_toRightOf="@+id/headerImgLayout"
+        android:layout_alignBottom="@+id/headerImgLayout"
+        android:id="@+id/item_source"
+        android:layout_width="wrap_content"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/tab_text_n_color"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/item_relation"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/icon_attention_add"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

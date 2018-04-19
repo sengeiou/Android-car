@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+
+    <RelativeLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp34"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择支付银行卡"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/sp14" />
+
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/split_line_color"
+        android:dividerHeight="@dimen/dp1"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp10"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/addBankLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/list_item_selector"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/bankCardImg"
+            android:layout_width="@dimen/dp21"
+            android:layout_height="@dimen/dp21"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_bank_card" />
+
+        <TextView
+            android:id="@+id/bankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_toRightOf="@id/bankCardImg"
+            android:gravity="center_vertical"
+            android:text="添加银行卡"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:src="@drawable/more_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color" />
+    </RelativeLayout>
+
+</LinearLayout>

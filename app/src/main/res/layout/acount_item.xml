@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp17"
+        android:paddingLeft="@dimen/dp11"
+        android:paddingRight="@dimen/dp11"
+        android:paddingTop="@dimen/dp17">
+
+        <TextView
+            android:visibility="gone"
+            android:paddingRight="@dimen/dp5"
+            android:id="@+id/item_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="已绑定"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/item_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/item_status"
+            android:text="139****1234"
+            android:textColor="@color/style_bg7"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/item_modify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="修改"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/sp14" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/item_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/item_modify"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_centerVertical="true"
+            android:text="撤销绑定"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/sp14" />
+
+    </RelativeLayout>
+</LinearLayout>

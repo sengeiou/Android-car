@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:layout_below="@id/titleBar"
+        android:background="@drawable/list_item_selector">
+
+        <TextView
+            android:id="@+id/exhibitionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:id="@+id/moreImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/more_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <com.mcxtzhang.indexlib.IndexBar.widget.IndexBar
+                android:id="@+id/indexBar"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:paddingBottom="@dimen/dp20"
+                android:paddingTop="@dimen/dp20"
+                android:visibility="visible"
+                app:indexBarPressBackground="@color/partTranslucent"
+                app:indexBarTextSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvSideBarHint"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_side_bar_bg"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:visibility="gone"
+                tools:text="A"
+                tools:visibility="visible" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:minHeight="62dp">
+
+    <ImageView
+        android:id="@+id/selectaddress_lociv"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_locationdingwei" />
+
+    <TextView
+        android:id="@+id/selectaddress_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:layout_toRightOf="@id/selectaddress_lociv"
+        android:gravity="center_vertical"
+        android:textColor="@color/voucher_black"
+        android:textSize="@dimen/font_size_more"
+        tools:text="重庆" />
+
+    <TextView
+        android:id="@+id/selectaddress_addess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/selectaddress_name"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/selectaddress_lociv"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color17"
+        android:textSize="@dimen/font_size_tiny"
+        android:maxLines="1"
+        tools:text="福州路" />
+</RelativeLayout>

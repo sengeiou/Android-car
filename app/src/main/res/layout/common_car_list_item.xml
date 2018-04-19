@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:minHeight="230dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+
+        <ImageView
+            android:id="@+id/couponImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:src="@drawable/youhui"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_toRightOf="@id/couponImg"
+            android:text="宝马5系"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/font_size_title"/>
+
+
+        <LinearLayout
+            android:id="@+id/coverLayout"
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:layout_below="@id/name"
+            android:layout_marginTop="@dimen/margin_top_size"
+            android:orientation="horizontal">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/cover1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@drawable/cover_default"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@drawable/cover_default"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:roundAsCircle="false"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/cover2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@drawable/cover_default"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@drawable/cover_default"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:roundAsCircle="false"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/appearanceTv"
+            android:layout_width="78dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/coverLayout"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginTop="@dimen/margin_top_size"
+            android:background="@drawable/button_bg18"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="外观"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small"
+            />
+
+
+        <TextView
+            android:id="@+id/interiorTv"
+            android:layout_width="78dp"
+            android:layout_height="24dp"
+            android:layout_below="@id/coverLayout"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginTop="@dimen/margin_top_size"
+            android:layout_toRightOf="@id/appearanceTv"
+            android:background="@drawable/button_bg18"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="内饰"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

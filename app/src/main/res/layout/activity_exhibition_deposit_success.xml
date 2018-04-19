@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/style_bg8"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+    <ImageView
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:background="@drawable/icon_pay_success"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="@dimen/dp22"
+        android:textColor="@color/style_bg7"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:text="投诉成功，请保持电话联系"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="@dimen/dp10"
+        android:textColor="@color/style_bg7"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:text="以保证现场工作人员会与您取得联系"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="@dimen/dp10"
+        android:textColor="@color/style_bg7"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:text="并前往现场处理"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/sure"
+        android:layout_marginLeft="@dimen/dp40"
+        android:layout_marginRight="@dimen/dp40"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/dp40"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_green_bg3"/>
+
+</LinearLayout>

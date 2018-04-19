@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="27dp"
+                        android:src="@drawable/icon_green_kong" />
+
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/font_size_tiny" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="12dp"
+                    android:text="春季重庆马友西藏行！一辈子总要去一次西藏！这次有你吗？"
+                    android:textColor="@color/app_title_color1"
+                    android:textSize="@dimen/font_size_title" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center|right"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/split_line_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="235dp"
+                android:background="@color/app_layout_bg_color"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/qrcodeurl"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@drawable/im_default"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="请用app扫描识别二维码"
+                    android:textColor="@color/signin_rl"
+                    android:textSize="@dimen/font_size_s_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="签到"
+                        android:textColor="@color/sevicecity_tilefontloc" />
+
+                    <TextView
+                        android:id="@+id/siginlistnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 45 "
+                        android:textColor="@color/text_color14"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人"
+                        android:textColor="@color/sevicecity_tilefontloc" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/split_line_color" />
+
+                <com.tgf.kcwc.view.MyListView
+                    android:id="@+id/siginlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:listSelector="#00000000"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp"></com.tgf.kcwc.view.MyListView>
+
+                <LinearLayout
+                    android:id="@+id/siginmore"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="更多"
+                        android:textColor="@color/progress_gray"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <ImageView
+                        android:id="@+id/siginpull"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:padding="13dp"
+                        android:src="@drawable/btn_pulldown" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/text_content_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/app_layout_bg_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="未到"
+                        android:textColor="@color/sevicecity_tilefontloc" />
+
+                    <TextView
+                        android:id="@+id/nonarrivallistnumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 6 "
+                        android:textColor="@color/text_color14"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="人"
+                        android:textColor="@color/sevicecity_tilefontloc" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/split_line_color" />
+
+                <com.tgf.kcwc.view.MyListView
+                    android:id="@+id/nonarrivallist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="#00000000"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp"></com.tgf.kcwc.view.MyListView>
+
+                <LinearLayout
+                    android:id="@+id/nonarrivalmore"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="更多"
+                        android:textColor="@color/progress_gray"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <ImageView
+                        android:id="@+id/nonarrivalpull"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:padding="13dp"
+                        android:src="@drawable/btn_pulldown" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/text_content_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/app_layout_bg_color" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

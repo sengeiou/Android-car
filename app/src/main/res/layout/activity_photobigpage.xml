@@ -1,0 +1,45 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_layout_bg_color"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/phtonbig_page_vp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/photobig_count_tv"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_gravity="top|center_horizontal"
+                android:layout_marginBottom="@dimen/common_item_height"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:gravity="center"
+                android:text="1/12"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_medium" />
+
+            <ImageView
+                android:id="@+id/photobig_close_tv"
+                android:layout_width="45dp"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_gravity="top|right"
+                android:layout_marginBottom="@dimen/common_item_height"
+                android:gravity="center"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_close_selector"
+                android:textColor="@color/tab_text_n_color"
+                android:textSize="@dimen/font_size_medium" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

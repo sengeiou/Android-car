@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/subtraction_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="center"
+        android:src="@drawable/btn_subtract_selector" />
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:minEms="2"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="1"
+        android:textSize="@dimen/font_size_small"
+        android:textColor="@color/white"
+        android:background="@null"
+        />
+
+    <ImageView
+        android:id="@+id/addition_btn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="center"
+        android:src="@drawable/btn_add_selector" />
+</LinearLayout>

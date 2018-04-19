@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clicklayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:minHeight="133dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/im_default"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/biaoqian"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/brandicon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="7dp"
+                fresco:placeholderImage="@drawable/im_default" />
+
+            <TextView
+                android:id="@+id/brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="斯巴鲁"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_title" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="#00ffffff">
+
+            <com.tgf.kcwc.view.MyGridView
+                android:id="@+id/mygridview"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:numColumns="3"
+                android:verticalSpacing="7dp"></com.tgf.kcwc.view.MyGridView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/limit_gotodetailll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/button_bg_limitdiscounts"
+                android:gravity="center"
+                android:text="惠"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/limit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="大宗尽快最高优惠9000元"
+                android:textColor="@color/text_color20"
+                android:textSize="@dimen/font_size_more" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/devider" />
+
+        <LinearLayout
+            android:id="@+id/limitdiscount_morerl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_right_margin"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:layout_weight="2">
+
+
+                <TextView
+                    android:id="@+id/countericon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="剩余"
+                    android:textColor="@color/text_more"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <com.tgf.kcwc.view.countdown.CountdownView
+                    android:id="@+id/limit_settimetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/countericon"
+                    app:isHideTimeBackground="true"
+                    app:isShowDay="true"
+                    app:isShowHour="true"
+                    app:isShowMillisecond="false"
+                    app:isShowMinute="true"
+                    app:isShowSecond="true"
+                    app:isShowTimeBgDivisionLine="false"
+                    app:suffixDay="天"
+                    app:suffixGravity="center"
+                    app:suffixHour="时"
+                    app:suffixMinute="分"
+                    app:suffixSecond="秒"
+                    app:suffixTextColor="@color/text_color15"
+                    app:suffixTextSize="@dimen/font_size_small"
+                    app:timeTextColor="@color/text_color14"
+                    app:timeTextSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/limit_settimetextitletv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/countericon"
+                    android:text="未开始" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/limit_org"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="2"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="1"
+                android:paddingRight="10dp"
+                android:text="重庆品总汽车"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small" />
+
+            <ImageView
+                android:id="@+id/limit_orgmore"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/rp_arrow_forward"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/split_line_color" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/app_layout_bg_color" />
+</LinearLayout>

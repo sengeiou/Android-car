@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/common_left_margin">
+
+    <ImageView
+        android:layout_width="@dimen/img_avatar"
+        android:layout_height="@dimen/img_avatar"
+        android:scaleType="centerInside"
+        android:src="@drawable/rp_avatar" />
+
+    <TextView
+        android:id="@+id/sendsee_desctv"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        tools:text="13368246530"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+    <ImageView
+        android:id="@+id/sendsee_reduce"
+        android:layout_width="@dimen/num_select"
+        android:layout_height="@dimen/num_select"
+        android:scaleType="centerInside"
+        android:background="@drawable/btn_reduce_selector"/>
+    <TextView
+        android:id="@+id/sendsee_nums"
+        android:layout_width="50dp"
+        android:layout_height="@dimen/num_select"
+        android:text="1"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:background="@drawable/shape_topbottonborder_bg"
+        android:inputType="number"
+        android:textSize="@dimen/font_size_title"/>
+    <ImageView
+        android:id="@+id/sendsee_add"
+        android:layout_width="@dimen/num_select"
+        android:layout_height="@dimen/num_select"
+        android:scaleType="centerInside"
+        android:background="@drawable/btn_add_xcselector"
+        android:layout_marginRight="10dp"/>
+
+</LinearLayout>

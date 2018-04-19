@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="当前到达：九龙坡区会展中心"
+            android:textColor="@color/text_color14"
+            android:textSize="@dimen/font_size_m_large" />
+
+        <TextView
+            android:id="@+id/backhome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_radiusgrayrect_bg"
+            android:padding="10dp"
+            android:text="返回首页"
+            android:textColor="@color/text_color14"
+            android:textSize="@dimen/font_size_more" />
+    </LinearLayout>
+
+</LinearLayout>

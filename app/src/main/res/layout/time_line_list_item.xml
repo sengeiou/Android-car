@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rlTimeline"
+        android:layout_width="32dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/refund_tvTopLine"
+            android:layout_width="0.5dp"
+            android:layout_height="12dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/text_color17" />
+
+        <ImageView
+            android:id="@+id/refond_tvDot"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_below="@id/refund_tvTopLine"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icon_green" />
+
+        <TextView
+            android:id="@+id/refond_tvBottomLine"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/refond_tvDot"
+            android:layout_centerHorizontal="true"
+            android:background="@color/text_color17" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="6dp"
+        android:paddingRight="10dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/refond_progressActionTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            tools:text=""
+            android:textColor="@color/text_color3"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/refond_progressTimeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/refond_progressActionTv"
+            android:layout_marginTop="5dp"
+            tools:text="2014/06/24 20:55:28"
+            android:textColor="@color/text_color17"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

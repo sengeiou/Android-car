@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <ListView
+
+        android:id="@+id/mytripbook_lv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <RelativeLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:visibility="gone"
+        android:layout_centerVertical="true">
+
+
+        <TextView
+            android:id="@+id/msgTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/no_data_img_icon"
+            android:text="您尚未发布任何路书"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small" />
+
+
+        <Button
+            android:id="@+id/buyTicketBtn2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/msgTv2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_size"
+            android:background="@drawable/button_bg_10"
+            android:text="我要发布"
+            android:textColor="@color/text_color16"
+            android:textSize="@dimen/font_size_more" />
+
+    </RelativeLayout>
+</LinearLayout>

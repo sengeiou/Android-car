@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/titleBar"
+        fresco:actualImageScaleType="fitXY"
+        fresco:failureImage="@drawable/cover_default"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/cover_default"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundAsCircle="false" />
+
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="专业观众预登记"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/activeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginTop="5dp"
+            android:text="2016.8.30 9:00-2016.8.30 12:00"
+            android:textColor="@color/text_color2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout">
+
+        <TextView
+            android:id="@+id/type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="请选择登记类别"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_more" />
+
+        <GridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/type"
+            android:layout_margin="15dp"
+            android:horizontalSpacing="2dp"
+            android:numColumns="4" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/nextStepBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="下一步"
+        android:textColor="@color/btn_text_color"
+        android:background="@drawable/item_status_selector"
+       android:layout_margin="5dp"
+        android:enabled="false"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/numimag"
+            android:layout_width="23dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/icon_gold" />
+
+        <TextView
+            android:id="@+id/numtext"
+            android:layout_width="23dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/text_color14"
+            android:textSize="@dimen/font_size_m_large" />
+
+        <RelativeLayout
+            android:id="@+id/headerImgLayout"
+            android:layout_width="50dp"
+            android:layout_marginLeft="15dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/head"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/im_default"
+                android:visibility="visible"
+                fresco:placeholderImage="@drawable/rp_avatar"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true" />
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/genderImg"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignBottom="@id/head"
+                android:layout_alignRight="@id/head"
+                fresco:placeholderImage="@drawable/icon_men"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/noxuwei"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:visibility="visible"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="玩家名字7个字"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_title" />
+
+            <TextView
+                android:id="@+id/integral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="贡献值 134"
+                android:textColor="@color/text_more"
+                android:textSize="@dimen/font_size_more" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/xuwei"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|left"
+            android:textSize="@dimen/font_size_title"
+            android:textColor="@color/text_more"
+            android:visibility="gone"
+            android:text="虛位以待"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/style_bg3" />
+</LinearLayout>
+
+
+</LinearLayout>

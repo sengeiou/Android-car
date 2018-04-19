@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  ~ Development by ZengRui
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/postedImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:scaleType="centerCrop"
+        android:src="@drawable/tab_posted" />
+
+
+</LinearLayout>

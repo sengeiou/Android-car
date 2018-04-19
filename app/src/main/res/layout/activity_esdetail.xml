@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include layout="@layout/titlebar"/>
+            <TextView
+                android:id="@+id/esdetail_tiltetv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/common_left_margin"
+                android:textColor="@color/text_color12"
+                android:maxLines="2"
+                android:textSize="@dimen/font_size_m_large"
+                android:gravity="center_horizontal"
+                tools:text="达人评测标题" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/common_left_margin">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/tripbookdetail_useriv"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginLeft="10dp"
+                        android:visibility="visible"
+                        fresco:placeholderImage="@drawable/rp_avatar"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:retryImageScaleType="fitXY"
+                        fresco:roundAsCircle="true" />
+
+                    <ImageView
+                        android:id="@+id/tripbookdetail_sexiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="30dp"
+                        android:src="@drawable/icon_women" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp">
+
+                        <TextView
+                            android:id="@+id/tripbookdetail_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="NULL"
+                            android:textColor="@color/text_color6"
+                            android:textSize="@dimen/font_size_title" />
+
+                        <ImageView
+                            android:id="@+id/comment_model_tv"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_model" />
+
+                        <ImageView
+                            android:id="@+id/drivdetails_convene_da"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/icon_daren" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/drivdetails_brandLogo"
+                            android:layout_width="22dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="5dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/im_default"
+                            fresco:actualImageScaleType="fitStart"
+                            fresco:placeholderImageScaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tripbookdetail_usertime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:paddingLeft="@dimen/common_left_margin"
+                        android:textColor="@color/tab_text_n_color"
+                        android:textSize="@dimen/font_size_small"
+                        tools:text="刚刚" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <WebView
+                android:id="@+id/esdetail_contenwv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:padding="@dimen/common_left_margin"
+                android:textSize="@dimen/font_size_tiny"
+                android:gravity="center_vertical"
+                android:text="声明：本评测文章观点仅代表个人，不代表看车玩车平台。"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white"
+                android:padding="@dimen/common_left_margin">
+
+                <TextView
+                    android:id="@+id/tripdetail_addresstv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/icon_location"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/font_size_tiny"
+                    tools:text="北京海淀" />
+
+                <TextView
+                    android:id="@+id/tripdetail_distanceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/font_size_tiny"
+                    tools:text="14.3km" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tagLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/imgTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/icon_tag_normal" />
+
+                <com.tgf.kcwc.view.FlowLayout
+                    android:id="@+id/tagLists"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/imgTag" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/commentHeaderLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/commentBtnLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/cmtTitle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="@string/comment"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/cmtContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/cmtTitle"
+                        android:gravity="center"
+                        android:text="(238)"
+                        android:textColor="@color/text_more"
+                        android:textSize="@dimen/font_size_small"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/btmLine1"
+                        android:layout_width="50dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/tab_text_s_color" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/likeBtnLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:layout_toRightOf="@id/commentBtnLayout">
+
+                    <TextView
+                        android:id="@+id/likeTitle"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="点赞"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/likeContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/likeTitle"
+                        android:gravity="center"
+                        android:text="(10)"
+                        android:textColor="@color/text_more"
+                        android:textSize="@dimen/font_size_small"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/btmLine2"
+                        android:layout_width="50dp"
+                        android:layout_height="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/tab_text_s_color"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/melayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingTop="8dp">
+
+                <RelativeLayout
+                    android:id="@+id/headerImgLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/motodetail_avatar_iv"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="10dip"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/im_default"
+                        fresco:placeholderImage="@drawable/rp_avatar"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/genderImg"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_alignBottom="@id/motodetail_avatar_iv"
+                        android:layout_alignRight="@id/motodetail_avatar_iv"
+                        fresco:placeholderImage="@drawable/icon_men"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/repayLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/oval_bg">
+
+                    <TextView
+                        android:id="@+id/inputComment"
+                        android:layout_width="250dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="15dp"
+                        android:drawableLeft="@drawable/input_text_icon"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:text="说点什么"
+                        android:textColor="@color/transparent90_white"
+                        android:textSize="@dimen/font_size_more" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/comment_fragfl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/app_layout_bg_color"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

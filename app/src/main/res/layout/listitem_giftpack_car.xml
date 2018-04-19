@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="86dp"
+    android:minHeight="86dp"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/common_left_margin"
+    android:paddingTop="@dimen/common_left_margin"
+    android:paddingBottom="@dimen/common_left_margin">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/giftpack_carcover"
+        android:layout_width="@dimen/img_foureper"
+        android:layout_height="@dimen/img_threeeper"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/im_default"
+        fresco:placeholderImageScaleType="fitXY" />
+
+
+
+        <TextView
+            android:id="@+id/giftpack_cartitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_marginTop="@dimen/common_left_margin"
+            android:maxLines="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/font_size_more"
+            tools:text="标题" />
+
+</LinearLayout>

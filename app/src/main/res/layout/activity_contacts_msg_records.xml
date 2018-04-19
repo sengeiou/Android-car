@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/style_bg1">
+
+
+        <ImageButton
+            android:id="@+id/title_bar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:background="@null"
+            android:padding="5dp"
+            android:src="@drawable/nav_back_selector" />
+
+        <ImageView
+            android:id="@+id/contactsBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:scaleType="fitCenter"
+            android:src="@drawable/contact_selector" />
+
+        <TextView
+            android:id="@+id/title_bar_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_title" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@color/split_line_color" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/split"
+        tools:openDrawer="start">
+
+
+        <RelativeLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+            <RelativeLayout
+                android:id="@+id/tagLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:layout_marginRight="@dimen/margin_right_size">
+
+
+                    <RelativeLayout
+                        android:id="@+id/headerImgLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/tagHeaderImg"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            fresco:actualImageScaleType="fitCenter"
+                            fresco:failureImage="@drawable/cover_default"
+                            fresco:placeholderImage="@drawable/cover_default"
+                            fresco:placeholderImageScaleType="fitCenter"
+                            fresco:roundAsCircle="true" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/genderImg"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:layout_alignBottom="@id/tagHeaderImg"
+                            android:layout_alignRight="@id/tagHeaderImg"
+                            fresco:placeholderImage="@drawable/icon_men"
+                            fresco:placeholderImageScaleType="fitCenter"
+                            fresco:roundAsCircle="true" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/headerImgLayout"
+                        android:text=""
+                        android:textColor="@color/text_color6"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <ImageView
+                        android:id="@+id/comment_model_tv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/nickname"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_model" />
+
+                    <ImageView
+                        android:id="@+id/comment_popman_tv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/comment_model_tv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_daren" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/brandLogo"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/comment_popman_tv"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/im_default"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:placeholderImage="@drawable/icon_dazong"
+                        fresco:placeholderImageScaleType="fitCenter" />
+
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_height_size"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/split_line_color" />
+            </RelativeLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/tagLayout"
+                android:layout_marginBottom="@dimen/action_bar_height" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:background="@color/bg_1">
+
+            <ListView
+                android:id="@+id/list2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_1" />
+
+        </LinearLayout>
+    </android.support.v4.widget.DrawerLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/sendMsgLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+
+        <View
+            android:id="@+id/layerView"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@color/bg_1"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentTop="true"
+            android:background="@color/split_line_color" />
+
+        <TextView
+            android:id="@+id/sendMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/msg_icon"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="私信Ta"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/font_size_medium" />
+
+    </RelativeLayout>
+</RelativeLayout>

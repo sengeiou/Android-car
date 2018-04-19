@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_main_color1"
+    android:gravity="center_horizontal"
+    android:padding="8dp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/recyleitme_beauty_avatar"
+            layout="@layout/widget_avatar_badge"/>
+        <TextView
+            android:id="@+id/beauty_name"
+            android:layout_toRightOf="@id/recyleitme_beauty_avatar"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="安然"
+            android:textColor="@color/common_nav_bar"/>
+        <ImageView
+            android:layout_alignBottom="@+id/recyleitme_beauty_avatar"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_toRightOf="@+id/recyleitme_beauty_avatar"
+            android:id="@+id/modelIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/brandIv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_marginTop="@dimen/dp10"
+        android:id="@+id/recyleitme_beauty_cover"
+        android:layout_width="@dimen/img_size_xxxlarge"
+        android:layout_height="@dimen/img_size_xxxlarge"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/icon_car_loading"
+        android:src="@drawable/cover_default" />
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:drawablePadding="@dimen/dp6"
+            android:drawableLeft="@drawable/icon_attention_add"
+            android:id="@+id/add_attentiontv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="加关注"
+            android:textSize="@dimen/sp10"
+            android:textColor="@color/text_selected"/>
+        <TextView
+            android:text="粉丝：0"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/fansTv"
+            android:textSize="@dimen/sp10"
+            android:textColor="@color/font_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

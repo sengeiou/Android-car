@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:luckpan="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/style_bg1">
+
+        <ImageButton
+            android:id="@+id/title_bar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:src="@drawable/nav_back_selector" />
+
+        <TextView
+            android:id="@+id/title_bar_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/text_color11"
+            android:textSize="@dimen/font_size_title" />
+
+        <com.tgf.kcwc.view.FunctionView
+            android:id="@+id/title_function_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+
+        <View
+            android:id="@+id/split"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/hend"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/raffle_hend" />
+
+            <RelativeLayout
+                android:id="@+id/backg"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_below="@id/hend"
+                android:background="@color/raffle_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="45dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="剩余抽奖次数: "
+                        android:textColor="@color/raffle_text"
+                        android:textSize="@dimen/font_size_more" />
+
+                    <TextView
+                        android:id="@+id/number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 次"
+                        android:textColor="@color/raffle_text"
+                        android:textSize="@dimen/font_size_more" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_below="@id/backg"
+                android:background="@drawable/raffle_trail"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/raffle"
+                    android:layout_width="145dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/button_bg_24"
+                    android:gravity="center"
+                    android:text="开始抽奖"
+                    android:textColor="@color/raffle_text"
+                    android:textSize="@dimen/font_size_more" />
+            </LinearLayout>
+
+
+            <com.tgf.kcwc.view.LuckPanLayout
+                android:id="@+id/luckpan_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:background="@android:color/transparent">
+
+                <com.tgf.kcwc.view.RotatePan
+                    android:id="@+id/rotatePan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <ImageView
+                    android:id="@+id/go"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/start_raffle"
+                    android:tag="startbtn" />
+
+
+            </com.tgf.kcwc.view.LuckPanLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

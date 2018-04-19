@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@color/text_nav_def_color"
+            android:orientation="vertical">
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:numColumns="3"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/split"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_height_size"
+                android:background="@color/app_title_color1"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/bestMileLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:text="最远距离(km)"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/bestDistanceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_right_size"
+                    android:text=""
+                    android:textColor="@color/text_color10" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_height_size"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/app_title_color1" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bestTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:layout_marginTop="@dimen/margin_top_size"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:text="最长时间(hh:mm:ss)"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:id="@+id/bestTimeTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_right_size"
+                    android:text=""
+                    android:textColor="@color/text_color10" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_height_size"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/split_line_color" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.tgf.kcwc.view.NestedListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/titleLayout"
+            android:dividerHeight="@dimen/dp10" />
+    </RelativeLayout>
+
+
+</ScrollView>

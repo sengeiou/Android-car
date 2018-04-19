@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="300dp"
+             android:layout_height="50dp"
+             android:background="@android:color/transparent"
+    >
+
+    <View
+        android:layout_width="300dp"
+        android:layout_height="53dp"
+        android:background="@drawable/custom_info_bubble"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="225dp"
+            android:layout_height="40dp"
+            android:background="@color/black"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_marginRight="@dimen/dp5"
+
+                >
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp14"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/snippet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/sp12"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/navLayout"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:background="@color/style_bg6"
+            >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                >
+
+                <ImageView
+                    android:id="@+id/navimage"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/nav_icon_n"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp5"
+                    android:layout_toRightOf="@id/navimage"
+                    android:text="导航"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp12"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

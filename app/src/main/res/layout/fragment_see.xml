@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <RelativeLayout
+        android:id="@+id/navBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/searchBar"
+            layout="@layout/common_search_bar2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/linkPKListsImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/pk_icon_n"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/linkShareListsImg"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/btn_share_selector2"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            />
+
+        <TextView
+            android:id="@+id/pkNums"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="-12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/notice_reddot"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/tab_text_n_color"
+            android:textSize="8sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/common_child_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/navBarLayout" />
+
+</RelativeLayout>
+

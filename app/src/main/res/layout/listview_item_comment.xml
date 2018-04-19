@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/headerImgLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/motodetail_avatar_iv"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/im_default"
+                fresco:placeholderImage="@drawable/rp_avatar"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/genderImg"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignBottom="@id/motodetail_avatar_iv"
+                android:layout_alignRight="@id/motodetail_avatar_iv"
+                fresco:placeholderImage="@drawable/icon_men"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/nametv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:maxLength="10"
+                    android:text="潇洒哥"
+                    android:textColor="@color/text_color21"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <ImageView
+                    android:id="@+id/comment_model_tv"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_model" />
+
+                <ImageView
+                    android:id="@+id/comment_popman_tv"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/icon_daren" />
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/brandLogo"
+                    android:layout_width="40dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/im_default"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImageScaleType="fitCenter" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5" />
+
+                <TextView
+                    android:id="@+id/commnt_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_like"
+                    android:drawablePadding="10dp"
+                    android:text="20"
+                    android:textColor="@color/text_color3" />
+
+                <TextView
+                    android:id="@+id/reply_comments_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:drawableLeft="@drawable/icon_comments"
+                    android:drawablePadding="10dp"
+                    android:text="20"
+                    android:textColor="@color/text_color3" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/comment_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top_size"
+                android:text="刚刚"
+                android:textColor="@color/text_color17" />
+
+            <com.tgf.kcwc.view.EmojiTextView
+                android:id="@+id/contentTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:lineSpacingExtra="7dp"
+                android:text="我是评论标题内容欢迎回复"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_more" />
+
+            <com.tgf.kcwc.view.MultiImageView
+                android:id="@+id/multiImagView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp" />
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/listview_item_reply_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/app_layout_bg_color"
+                android:dividerHeight="@dimen/list_divider_height"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:background="@color/devider" />
+</LinearLayout>

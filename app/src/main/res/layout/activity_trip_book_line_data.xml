@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar"/>
+    <com.amap.api.maps.MapView
+        android:layout_below="@+id/title"
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:layout_below="@+id/title"
+        android:paddingTop="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/sp12"
+        android:textColor="@color/white"
+        android:text="时间+距离"
+        android:id="@+id/dateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:layout_alignParentBottom="true"
+        android:background="@color/style_bg7_alpha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/speedTv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="19"
+                    android:textSize="@dimen/sp30"
+                    android:textColor="@color/text_selected"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/elevationTv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="1444"
+                    android:textSize="@dimen/sp30"
+                    android:textColor="@color/text_selected"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="center_horizontal"
+                    android:id="@+id/angleTv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="3"
+                    android:textSize="@dimen/sp30"
+                    android:textColor="@color/text_selected"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="@dimen/dp16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="速度(km/h)"
+                android:textSize="@dimen/sp12"
+                android:textColor="@color/text_more"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="海拔(m)"
+                android:textSize="@dimen/sp12"
+                android:textColor="@color/text_more"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="center_horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="压弯角度(°)"
+                android:textSize="@dimen/sp12"
+                android:textColor="@color/text_more"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/text_color46"/>
+        <com.tgf.kcwc.view.chart.TrendView
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/speedTrendView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+    </LinearLayout>
+</RelativeLayout>

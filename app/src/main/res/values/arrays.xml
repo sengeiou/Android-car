@@ -1,0 +1,841 @@
+<resources>
+
+
+    <string-array name="see_tabs">
+
+        <item>选车</item>
+        <item>展会看</item>
+        <item>店内看</item>
+        <item>车主自售</item>
+        <item>找优惠</item>
+    </string-array>
+
+
+    <string-array name="bank_card_base_infos">
+
+        <item>姓名</item>
+        <item>卡号</item>
+        <item>卡类型</item>
+        <item>手机号</item>
+    </string-array>
+
+    <string-array name="pay_types">
+
+        <item>全部</item>
+        <item>交易</item>
+        <item>充值</item>
+        <item>提现</item>
+    </string-array>
+
+    <string-array name="balance_detail_values">
+        <item>类型</item>
+        <item>时间</item>
+        <item>交易单号</item>
+        <item>剩余零钱</item>
+    </string-array>
+
+    <string-array name="my_lines_tabs">
+
+        <item>驾途</item>
+        <item>规划</item>
+        <item>收藏</item>
+    </string-array>
+    <string-array name="filter_expire">
+        <item>有效</item>
+        <item>失效</item>
+    </string-array>
+    <string-array name="preseeorder_filter">
+        <item>全部</item>
+        <item>服务中</item>
+        <item>已完成</item>
+        <item>已评价</item>
+        <item>已关闭</item>
+    </string-array>
+    <string-array name="me_businessmenu">
+        <item>门票管理</item>
+        <item>代金券管理</item>
+        <!--
+                <item>我的评测</item>
+                <item>话题管理</item>
+                <item>扫码核销</item>-->
+        <item>我要抢单</item>
+        <item>拍店内展车</item>
+        <item>拍展会展车</item>
+        <item>商务关注</item>
+        <item>潜客跟踪</item>
+    </string-array>
+
+    <string-array name="user_page_tabs">
+
+        <item>动态</item>
+        <item>主页</item>
+        <item>驾途</item>
+        <!-- <item>爱车</item> -->
+    </string-array>
+    <string-array name="user_info_items">
+
+        <item>年龄</item>
+        <item>星座</item>
+        <item>签名</item>
+        <item>兴趣标签</item>
+        <!-- <item>加入的群</item> -->
+    </string-array>
+
+    <string-array name="user_info_items2">
+
+        <item>注册时间</item>
+        <item>注册地区</item>
+        <!--<item>设备</item> -->
+    </string-array>
+
+    <string-array name="play_tabs">
+
+        <item>推荐</item>
+        <item>发现</item>
+        <item>同城</item>
+    </string-array>
+
+    <string-array name="customer_tabs">
+
+        <item>基本信息</item>
+        <item>商务记录</item>
+        <item>行为分析</item>
+        <item>行为记录</item>
+    </string-array>
+
+    <string-array name="filter_type">
+        <item>燃油</item>
+        <item>品牌</item>
+        <item>价格</item>
+        <item>座位</item>
+        <item>车级</item>
+    </string-array>
+
+    <string-array name="filter_type2">
+        <item>品牌</item>
+        <item>价格</item>
+        <item>座位</item>
+    </string-array>
+
+    <string-array name="custom_type">
+
+        <item>动力</item>
+        <item>价格(万)</item>
+        <item>品牌</item>
+        <item>车型</item>
+        <item>排量(cc)</item>
+        <item>续航里程(km)</item>
+        <item>电机功率(w)</item>
+    </string-array>
+
+    <string-array name="driver_type">
+        <item>燃油</item>
+        <item>电动</item>
+        <item>混合动力</item>
+    </string-array>
+
+    <string-array name="cars_levels">
+
+        <item>轿车</item>
+        <item>SUV</item>
+        <item>MPV</item>
+        <item>跑车</item>
+        <item>微面</item>
+        <item>微卡</item>
+        <item>轻客</item>
+        <item>皮卡</item>
+
+    </string-array>
+
+    <string-array name="seat_values">
+
+        <!-- <item>不限</item> -->
+        <item>不限</item>
+        <item>2座</item>
+        <item>3座</item>
+        <item>4座</item>
+        <item>5座</item>
+        <item>6座</item>
+        <item>7座</item>
+        <item>7座以上</item>
+
+    </string-array>
+
+    <string-array name="price_values">
+
+        <item>不限</item>
+        <item>3万以下</item>
+        <item>3-5万</item>
+        <item>5-8万</item>
+        <item>8-10万</item>
+        <item>10-15万</item>
+        <item>15-20万</item>
+        <item>20-30万</item>
+        <item>30-50万</item>
+        <item>50-100万</item>
+        <item>100万以上</item>
+
+    </string-array>
+
+    <string-array name="driver_km_values">
+
+        <item>15以下</item>
+        <item>15-25</item>
+        <item>25-35</item>
+        <item>35-45</item>
+        <item>45-55</item>
+        <item>55-65</item>
+        <item>65以上</item>
+
+    </string-array>
+
+    <string-array name="power_values">
+
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>2500以上</item>
+
+    </string-array>
+
+
+    <string-array name="provinces">
+        <item>广东</item>
+        <item>北京</item>
+        <item>福建</item>
+        <item>浙江</item>
+        <item>山东</item>
+        <item>江苏</item>
+        <item>河南</item>
+        <item>安徽</item>
+        <item>123</item>
+        <item>重庆</item>
+        <item>湖北</item>
+        <item>湖南</item>
+        <item>河北</item>
+        <item>四川</item>
+        <item>天津</item>
+        <item>吉林</item>
+        <item>黑龙江</item>
+        <item>江西</item>
+        <item>辽宁</item>
+        <item>内蒙古</item>
+        <item>宁夏</item>
+        <item>青海</item>
+        <item>山西</item>
+        <item>陕西</item>
+        <item>上海</item>
+        <item>新疆</item>
+        <item>西藏</item>
+        <item>云南</item>
+        <item>甘肃</item>
+        <item>贵州</item>
+        <item>广西</item>
+        <item>海南</item>
+    </string-array>
+
+    <string-array name="list_header_titles">
+        <item>店内活动</item>
+        <item>销售精英</item>
+        <item>评价</item>
+    </string-array>
+
+    <string-array name="image_types">
+
+        <item>不限类型</item>
+        <item>展车图库</item>
+        <item>新车图库</item>
+        <item>活动图库</item>
+        <item>模特图库</item>
+
+    </string-array>
+    <string-array name="image_place">
+
+        <item>N1</item>
+        <item>N2</item>
+        <item>N3</item>
+        <item>N4</item>
+
+    </string-array>
+    <string-array name="areas">
+        <item>N1</item>
+        <item>N2</item>
+        <item>N3</item>
+        <item>N4</item>
+        <item>N5</item>
+        <item>N6</item>
+        <item>N7</item>
+        <item>N8</item>
+    </string-array>
+
+    <string-array name="jazzy_effects">
+        <item>买车</item>
+        <item>配件</item>
+        <item>改装</item>
+        <item>维保</item>
+        <item>旅行</item>
+        <item>吃喝</item>
+        <item>玩乐</item>
+        <item>户外</item>
+        <item>酒店</item>
+        <item>景点</item>
+        <item>展会</item>
+        <item>洗车</item>
+    </string-array>
+
+
+    <string-array name="ticket_tabs">
+
+        <item>赠票</item>
+        <item>我的</item>
+        <item>未支付</item>
+    </string-array>
+
+
+    <string-array name="series_by_brand_value">
+
+        <item>在售</item>
+        <item>预售</item>
+        <item>停售</item>
+    </string-array>
+
+    <string-array name="driving_tabs">
+
+        <item>我报名的</item>
+        <item>我发起的</item>
+
+    </string-array>
+
+    <string-array name="play_topic_tabs">
+
+        <item>推荐</item>
+        <item>热门</item>
+        <item>我的</item>
+
+    </string-array>
+
+    <string-array name="play_havefun_tabs">
+
+        <item>最新</item>
+        <item>最热</item>
+
+    </string-array>
+
+    <string-array name="playhome_tabs">
+
+        <item>每日更新</item>
+        <item>热图</item>
+        <item>红人</item>
+        <item>关注</item>
+        <item>兴趣</item>
+        <item>爱车</item>
+
+    </string-array>
+
+    <string-array name="coupon_rank">
+        <item>智能排序</item>
+        <item>离我最近</item>
+        <item>好评优先</item>
+        <item>人气最高</item>
+        <item>最新发布</item>
+        <item>价格最低</item>
+        <item>折扣最大</item>
+    </string-array>
+
+    <string-array name="viewers_type">
+
+        <item>专业买家</item>
+        <item>摩友</item>
+        <item>业内从业者</item>
+        <item>整车经销商</item>
+    </string-array>
+
+
+    <string-array name="buyers">
+
+        <item>姓名</item>
+        <item>性别</item>
+        <item>年龄</item>
+        <item>所在地</item>
+        <item>公司名称</item>
+        <item>公司地址</item>
+        <item>所在部门</item>
+        <item>职务</item>
+        <item>主营品牌</item>
+        <item>其它品牌</item>
+    </string-array>
+    <string-array name="visitors">
+        <item>姓名</item>
+        <item>性别</item>
+        <item>年龄</item>
+        <item>所在地</item>
+        <item>预计参观日期</item>
+        <item>公司名称</item>
+        <item>公司地址</item>
+        <item>所在部门</item>
+        <item>职务</item>
+    </string-array>
+
+    <string-array name="filter_playfind_distance">
+        <item>1日行程(含内)</item>
+        <item>2日行程</item>
+        <item>3日行程(含以上)</item>
+    </string-array>
+    <string-array name="filter_lists">
+
+        <item>区域</item>
+        <item>品牌</item>
+        <item>价格</item>
+        <item>排序</item>
+    </string-array>
+
+    <string-array name="dealer_sub_tabs">
+
+        <item>优惠及活动</item>
+        <item>店内展车</item>
+        <item>店内现车</item>
+    </string-array>
+
+    <string-array name="vehicles">
+        <item>整车</item>
+        <item>装备</item>
+        <item>配件</item>
+    </string-array>
+
+    <string-array name="filter_sort">
+        <item>默认</item>
+        <item>最新发布</item>
+        <item>价格最低</item>
+        <item>价格最高</item>
+        <item>离我最近</item>
+        <item>推荐优先</item>
+    </string-array>
+    <string-array name="filter_discount_limit">
+        <item>综合排序</item>
+        <item>车型价格从低到高</item>
+        <item>车型价格从高到低</item>
+        <item>按优惠幅度</item>
+        <item>按限时期限</item>
+        <item>按折扣幅度</item>
+    </string-array>
+    <string-array name="filter_discount_coupon">
+        <item>离我最近</item>
+        <item>好评优先</item>
+        <item>人气最高</item>
+        <item>最新发布</item>
+        <item>价格最低</item>
+        <item>折扣最大</item>
+    </string-array>
+    <string-array name="filter_discount_gift">
+        <item>综合排序</item>
+    </string-array>
+    <string-array name="config_params">
+        <item>品牌</item>
+        <item>车型名称</item>
+        <item>购买年份</item>
+        <item>行驶里程</item>
+    </string-array>
+
+    <string-array name="sale_title_items">
+        <item>出售车型</item>
+        <item>购买年份</item>
+        <item>行驶里程(万公里)</item>
+        <item>售价(元)</item>
+        <item>宝贝位置</item>
+        <item>联系电话</item>
+    </string-array>
+
+    <string-array name="sale_title_item2">
+        <item>售价</item>
+        <item>宝贝位置</item>
+        <item>联系电话</item>
+    </string-array>
+
+    <string-array name="expire_items">
+        <item>1周</item>
+        <item>15天</item>
+        <item>1个月</item>
+    </string-array>
+
+    <string-array name="sale_mgr_filter_items">
+        <item>全部</item>
+        <item>发布中</item>
+        <item>已失效</item>
+    </string-array>
+    <string-array name="sale_filter_items">
+        <item>全部</item>
+        <item>审核通过</item>
+        <item>审核不通过</item>
+        <item>等待审核</item>
+        <item>打回修改</item>
+    </string-array>
+
+    <string-array name="cert_reg_values">
+        <item>证件类型</item>
+        <item>证件编号</item>
+        <item>手机号</item>
+        <item>姓名</item>
+        <item>服务品牌</item>
+        <item>展商名称</item>
+
+    </string-array>
+
+    <string-array name="cert_reg_values_2">
+        <item>证件类型</item>
+        <item>证件编号</item>
+        <item>手机号</item>
+        <item>姓名</item>
+        <item>展商名称</item>
+
+    </string-array>
+
+    <string-array name="global_nav_values">
+
+        <item>首页</item>
+        <item>消息</item>
+        <item>分享</item>
+        <item>收藏</item>
+        <item>扫一扫</item>
+        <item>反馈</item>
+        <item>举报</item>
+    </string-array>
+
+    <string-array name="global_nav_values5">
+
+        <item>首页</item>
+        <item>消息</item>
+        <item>分享</item>
+        <item>扫一扫</item>
+        <item>反馈</item>
+        <!--<item>举报</item> -->
+    </string-array>
+
+
+    <string-array name="global_nav_values6">
+
+        <item>首页</item>
+        <item>消息</item>
+        <item>分享</item>
+        <item>收藏</item>
+        <item>扫一扫</item>
+        <item>反馈</item>
+        <!--<item>举报</item> -->
+    </string-array>
+
+    <string-array name="global_nav_values8">
+        <item>首页</item>
+        <item>消息</item>
+        <item>反馈</item>
+    </string-array>
+
+    <string-array name="global_nav_values2">
+        <item>首页</item>
+        <item>消息</item>
+        <item>反馈</item>
+        <item>收藏</item>
+    </string-array>
+    <string-array name="sendsee_limittime">
+        <item>12小时</item>
+        <item>24小时</item>
+        <item>48小时</item>
+        <item>72小时</item>
+        <item>永不失效</item>
+    </string-array>
+
+    <string-array name="global_nav_values3">
+
+        <item>收藏</item>
+        <item>分享</item>
+    </string-array>
+    <string-array name="global_navme_values">
+
+        <item>首页</item>
+        <item>消息</item>
+        <item>编辑</item>
+        <item>删除</item>
+        <item>分享</item>
+        <item>收藏</item>
+        <item>扫一扫</item>
+        <item>反馈</item>
+    </string-array>
+
+    <string-array name="right_pop_values">
+
+        <item>首页</item>
+        <item>消息</item>
+        <item>扫一扫</item>
+        <item>添加客户</item>
+        <item>好友分组</item>
+        <item>分组管理</item>
+    </string-array>
+    <string-array name="business_analysis_time">
+
+        <item>一周内</item>
+        <item>一个月内</item>
+        <item>3个月内</item>
+        <item>6个月内</item>
+        <item>12个月内</item>
+    </string-array>
+    <string-array name="ride_items_titles">
+
+        <item>极速\n(km/h)</item>
+        <item>平均速度\n(km/h)</item>
+        <item>海拔\n(m)</item>
+        <item>百米加速\n(s)</item>
+        <item>0-400米\n(s)</item>
+
+    </string-array>
+
+    <declare-styleable name="TagCloudLayout">
+        <attr name="lineSpacing" format="dimension" />
+        <attr name="tagSpacing" format="dimension" />
+        <!-- 是否是固定布局 -->
+        <attr name="isFixed" format="boolean" />
+        <attr name="columnSize" format="integer" />
+    </declare-styleable>
+
+
+    <string-array name="user_tabs">
+        <item>动态</item>
+        <item>关注</item>
+        <item>粉丝</item>
+        <!-- <item>爱车</item> -->
+    </string-array>
+
+    <string-array name="ride_infos">
+        <item>里程(km)</item>
+        <item>时长(h)</item>
+        <item>次数(t)</item>
+    </string-array>
+
+    <string-array name="add_friend_type">
+
+        <item>通讯录好友</item>
+        <item>微信好友</item>
+        <item>QQ好友</item>
+        <item>新浪好友</item>
+    </string-array>
+
+    <string-array name="open_share_type">
+
+        <item>微信朋友圈</item>
+        <item>微信好友</item>
+        <item>新浪微博</item>
+        <item>QQ空间</item>
+        <item>QQ好友</item>
+
+
+    </string-array>
+
+
+    <string-array name="open_share_type2">
+
+        <item>看车玩车</item>
+        <item>微信好友</item>
+        <item>朋友圈</item>
+        <item>微博</item>
+        <item>QQ好友</item>
+        <item>QQ空间</item>
+
+
+    </string-array>
+
+
+    <string-array name="user_info_titles">
+
+        <item>昵称</item>
+        <item>性别</item>
+        <item>生日</item>
+        <item>签名</item>
+        <item>兴趣标签</item>
+
+    </string-array>
+
+    <string-array name="user_info_titles2">
+
+        <item>手机号</item>
+        <item>注册时间</item>
+        <item>注册地区</item>
+
+    </string-array>
+
+    <string-array name="user_info_hints">
+
+        <item>取个拉风的名字吧!</item>
+        <item>你是GG还是MM?</item>
+        <item>看看我们是同龄人么?</item>
+        <item>最近怎么样？</item>
+        <item>对什么感兴趣？</item>
+
+    </string-array>
+
+
+    <string-array name="age_group_values">
+        <item>20岁以下</item>
+        <item>21-30岁</item>
+        <item>31-40岁</item>
+        <item>41-50岁</item>
+        <item>51-60岁</item>
+        <item>60岁以上</item>
+    </string-array>
+
+    <string-array name="industry_items">
+
+        <item>企业家/合伙人/老板</item>
+        <item>高层管理人员/董事等</item>
+        <item>中层管理人员</item>
+        <item>其他管理人员</item>
+        <item>科研人员/老板</item>
+        <item>技术工人</item>
+        <item>公司其他职务</item>
+        <item>自由职业者</item>
+        <item>退休</item>
+        <item>其他</item>
+
+
+    </string-array>
+    <string-array name="icon">
+        <item>ic_launcher</item>
+        <item>ic_launcher</item>
+        <item>ic_launcher</item>
+        <item>ic_launcher</item>
+        <item>ic_launcher</item>
+        <item>ic_launcher</item>
+    </string-array>
+    <string-array name="refond_why">
+        <item>预约不上</item>
+        <item>商家营业但不接待</item>
+        <item>店里活动更优惠</item>
+        <item>商家停业/装修/转让</item>
+        <item>后悔了，不想要了</item>
+        <item>买多了，买错了</item>
+        <item>朋友/网上评价不好</item>
+    </string-array>
+
+    <string-array name="order_info_list1">
+
+        <item>订单编号:</item>
+        <item>购买手机号:</item>
+        <item>下单时间:</item>
+        <item>订单金额:</item>
+    </string-array>
+
+    <string-array name="order_info_list2">
+
+        <item>订单编号:</item>
+        <item>领取手机号:</item>
+        <item>领取时间:</item>
+        <item>赠送手机号:</item>
+        <item>赠送时间:</item>
+    </string-array>
+    <string-array name="order_info_list3">
+        <item>抵扣券金额:</item>
+       <!-- <item>抵扣码:</item> -->
+        <item>代金券编号:</item>
+    </string-array>
+
+    <string-array name="nav_filter_values">
+        <item>展馆</item>
+        <item>品牌</item>
+    </string-array>
+
+    <string-array name="ticket_refund_desc">
+        <item>退款金额:</item>
+        <item>退回账户:</item>
+        <item>到账时间:</item>
+    </string-array>
+
+    <string-array name="buy_car_budget">
+
+        <item>10万以下</item>
+        <item>10-15万</item>
+        <item>15-20万</item>
+        <item>20-30万</item>
+        <item>30-50万</item>
+        <item>50万以上</item>
+
+    </string-array>
+
+    <string-array name="report_reasons">
+
+        <item>垃圾营销</item>
+        <item>人身攻击</item>
+        <item>敏感信息</item>
+        <item>淫秽色情</item>
+        <item>不实信息</item>
+    </string-array>
+
+    //车牌号
+    <string-array name="car_num_arr">
+        <item>京</item>
+        <item>津</item>
+        <item>沪</item>
+        <item>渝</item>
+        <item>冀</item>
+        <item>豫</item>
+        <item>云</item>
+        <item>辽</item>
+        <item>黑</item>
+        <item>湘</item>
+        <item>皖</item>
+        <item>鲁</item>
+        <item>新</item>
+        <item>苏</item>
+        <item>浙</item>
+        <item>赣</item>
+        <item>鄂</item>
+        <item>桂</item>
+        <item>甘</item>
+        <item>晋</item>
+        <item>蒙</item>
+        <item>陕</item>
+        <item>吉</item>
+        <item>闽</item>
+        <item>贵</item>
+        <item>粤</item>
+        <item>青</item>
+        <item>藏</item>
+        <item>川</item>
+        <item>宁</item>
+        <item>琼</item>
+        <item>甲</item>
+        <item>乙</item>
+        <item>丙</item>
+        <item>己</item>
+        <item>庚</item>
+        <item>辛</item>
+        <item>壬</item>
+        <item>寅</item>
+        <item>辰</item>
+        <item>戍</item>
+        <item>午</item>
+        <item>未</item>
+        <item>申</item>
+    </string-array>
+    <string-array name="car_tabs">
+        <item>看新车</item>
+        <item>看模特</item>
+        <item>展会展车</item>
+        <item>车主自售</item>
+        <item>展会活动</item>
+        <item>展会现场</item>
+    </string-array>
+    <string-array name="brand_car_tabs">
+        <item>新车发布</item>
+        <item>看模特</item>
+        <item>品牌展车</item>
+        <item>车主自售</item>
+    </string-array>
+
+    <string-array name="markArray">
+        <item>0</item>
+        <item>10km</item>
+        <item>20km</item>
+        <item>30km</item>
+        <item>40km</item>
+        <item>不限</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginTop="20dp"
+            android:text="@string/custom_price_value"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/font_size_more" />
+
+
+        <RelativeLayout
+            android:id="@+id/customPriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/priceText"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10">
+
+
+            <RelativeLayout
+                android:id="@+id/minLayout"
+                android:layout_width="100dp"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_bg_21">
+
+
+                <EditText
+                    android:id="@+id/minPriceEdit"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="最小"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:text="万"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/sp14" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/splitView"
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp2"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/minLayout"
+                android:background="@color/split_line_color" />
+
+            <RelativeLayout
+                android:id="@+id/maxLayout"
+                android:layout_width="100dp"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/splitView"
+                android:background="@drawable/button_bg_21">
+
+
+                <EditText
+                    android:id="@+id/priceMaxEdit"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="最大"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textSize="@dimen/sp14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:text="万"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/sp14" />
+
+            </RelativeLayout>
+
+
+            <Button
+                android:id="@+id/confirmBtn"
+                android:layout_width="60dp"
+                android:layout_height="34dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_confirm_selector"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_more"
+
+                />
+
+        </RelativeLayout>
+
+
+        <GridView
+            android:id="@+id/priceGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/customPriceLayout"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:horizontalSpacing="@dimen/dp5"
+            android:numColumns="4"
+            android:verticalSpacing="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/popwin_supplier_list_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        android:orientation="vertical" />
+</RelativeLayout>

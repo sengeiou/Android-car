@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <TextView
+        android:id="@+id/iraporder_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color17"
+        tools:text="邓女士 想看" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/common_left_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/iraporder_cover"
+            android:layout_width="@dimen/img_foureper"
+            android:layout_height="@dimen/img_threeeper"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/im_default"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/iraporder_motomdel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_toRightOf="@id/iraporder_cover"
+            tools:text="车型名称" />
+
+        <TextView
+            android:id="@+id/iraporder_motoout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iraporder_motomdel"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iraporder_cover"
+            tools:text="外观： 银白" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/chat_itemtip" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:paddingRight="@dimen/common_left_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color17"
+            android:text="看车需求" />
+        <TextView
+            android:id="@+id/iraporder_createtime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color17"
+            tools:text="下单时间：2015.01.21 13：21" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/iraporder_motodesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_left_margin"
+            android:textColor="@color/text_color3"
+            tools:text="这是车描述" />
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/iraporder_raptv2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_circle_greenq" />
+
+            <TextView
+                android:id="@+id/iraporder_raptv"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/common_left_margin"
+                android:background="@drawable/shape_circle_green"
+                android:gravity="center"
+                android:text="抢单"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_title" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="请勿盲目抢单，否则会影响你的服务评价"
+            android:textColor="@color/btn_bg6" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_layout_bg_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/titlebar" />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/giftpack_cover"
+                android:layout_width="match_parent"
+                android:layout_height="188dp"
+                fresco:actualImageScaleType="fitXY"
+                fresco:placeholderImageScaleType="centerInside"
+                app:placeholderImage="@drawable/icon_car_loading" />
+
+            <TextView
+                android:id="@+id/giftpack_title"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_button_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_title"
+                tools:text="标题" />
+
+            <TextView
+                android:id="@+id/gifttpack_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/common_left_margin"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_small"
+                tools:text="描述" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:text="发券商家"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_medium" />
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/giftpack_orglv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <RelativeLayout
+                android:id="@+id/giftpack_storemore"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_left_margin"
+                    android:drawableRight="@drawable/rp_arrow_forward"
+                    android:text="查看更多门店" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:text="适用商品"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_medium" />
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/giftpack_fitgoodslv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <RelativeLayout
+                android:id="@+id/giftpack_carmore"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableRight="@drawable/loc_drop_down"
+                    android:text="更多" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:gravity="center"
+                android:text="最终解释权归发行方所有" />
+        </LinearLayout>
+    </ScrollView>
+
+</merge>

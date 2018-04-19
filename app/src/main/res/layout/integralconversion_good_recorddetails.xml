@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/split_line_color3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="兑换商品详情"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size_more" />
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/btn_cha_gray2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_margin="15dp"
+                    android:scaleType="fitXY"
+                    android:visibility="visible"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@drawable/im_default"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="商品名称可折行，可折行，可折行"
+                        android:textColor="@color/app_title_color1"
+                        android:textSize="@dimen/font_size_title" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/divider2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="兑换价格"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_more" />
+
+
+                <TextView
+                    android:id="@+id/unitprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="2222金币"
+                    android:textColor="@color/sevicecity_tilefontopen"
+                    android:textSize="@dimen/font_size_more" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="兑换数量"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="×2"
+                    android:textColor="@color/sevicecity_tilefontopen"
+                    android:textSize="@dimen/font_size_more" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="兑换总价"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/totalprices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="4444金币"
+                    android:textColor="@color/sevicecity_tilefontopen"
+                    android:textSize="@dimen/font_size_more" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="兑换时间"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="2016 12-12 14:00"
+                    android:textColor="@color/sevicecity_tilefontopen"
+                    android:textSize="@dimen/font_size_more" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center_vertical"
+                    android:text="领取状态"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="25dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="已领取"
+                    android:textColor="@color/sevicecity_tilefontopen"
+                    android:textSize="@dimen/font_size_more" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pickupmethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/receiveyardlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:text="领取码"
+                            android:textColor="@color/text_color17"
+                            android:textSize="@dimen/font_size_more" />
+
+                        <TextView
+                            android:id="@+id/receiveyard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:background="#ceffde"
+                            android:gravity="center"
+                            android:minHeight="30dp"
+                            android:minWidth="100dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:text="XX001XX001"
+                            android:textColor="@color/btn_color1"
+                            android:textSize="@dimen/font_size_more" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:gravity="center_vertical"
+                        android:paddingTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center"
+                            android:text="领取地"
+                            android:textColor="@color/text_color17"
+                            android:textSize="@dimen/font_size_more" />
+
+                        <TextView
+                            android:id="@+id/receiveaddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:gravity="center_vertical"
+                            android:minHeight="30dp"
+                            android:paddingRight="10dp"
+                            android:text="后台录入的领取地址"
+                            android:textColor="@color/text_color9"
+                            android:textSize="@dimen/font_size_more" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/recipientslayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/addresslayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:minHeight="40dp"
+                                android:paddingTop="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:text="收件人"
+                                    android:textColor="@color/text_color17"
+                                    android:textSize="@dimen/font_size_more" />
+
+                                <TextView
+                                    android:id="@+id/recipients"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="40dp"
+                                    android:gravity="center"
+                                    android:text="某某某（13800001111）"
+                                    android:textColor="@color/text_color9"
+                                    android:textSize="@dimen/font_size_more" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:minHeight="40dp"
+                                android:paddingTop="5dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:gravity="center"
+                                    android:text="收件地址"
+                                    android:textColor="@color/text_color17"
+                                    android:textSize="@dimen/font_size_more" />
+
+                                <TextView
+                                    android:id="@+id/consigneeaddress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="25dp"
+                                    android:gravity="center_vertical"
+                                    android:minHeight="40dp"
+                                    android:text="重庆市展览中心有限公司重庆展览中心重"
+                                    android:textColor="@color/text_color9"
+                                    android:textSize="@dimen/font_size_more" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/modification"
+                            android:layout_width="40dp"
+                            android:layout_height="80dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/btn_nextjiantou" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/add_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/button_bg_continue_address"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text=" + 添加收货地址"
+                            android:textColor="@color/text_color14"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:text="看车玩车平台将于3~7个工作日内将商品寄出"
+                        android:textColor="@color/text_more"
+                        android:textSize="@dimen/font_size_small" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/divider2" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

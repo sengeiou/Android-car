@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:SettingLayoutView="http://schemas.android.com/apk/res-auto"
+              xmlns:SettingSelectedLayoutView="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/app_layout_bg_color"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/titlebar"/>
+
+            <com.tgf.kcwc.view.SettingLayoutView
+                android:id="@+id/setting_account"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/dp10"
+                android:visibility="gone"
+                SettingLayoutView:settingtitle="账号与安全"/>
+
+
+            <com.tgf.kcwc.view.SettingLayoutView
+                android:id="@+id/setting_online"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/dp10"
+                SettingLayoutView:settingtitle="在线设置"/>
+
+            <com.tgf.kcwc.view.SettingLayoutView
+                android:id="@+id/setting_private"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                SettingLayoutView:settingtitle="隐私设置"/>
+
+            <com.tgf.kcwc.view.SettingLayoutView
+                android:id="@+id/setting_msgbtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                SettingLayoutView:settingtitle="免打扰设置"/>
+
+            <RelativeLayout
+                android:id="@+id/setting_clearbtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/sethome_cleartv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="清除缓存"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_more"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/more_icon"/>
+
+                <TextView
+                    android:id="@+id/sethome_sizetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"
+                    android:gravity="center"
+                    android:text="0.3M"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_small"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/payMgrLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/payTitleTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_more"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/more_icon"/>
+
+
+            </RelativeLayout>
+
+            <com.tgf.kcwc.view.SettingSelectedLayoutView
+                android:id="@+id/setNonConfidentialPaymentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                SettingSelectedLayoutView:is_selected="false"
+                SettingSelectedLayoutView:settingselecttitle="小额免密支付"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/split_line_color"/>
+
+            <RelativeLayout
+                android:id="@+id/setting_help_feedback_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/setting_help_feedback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="帮助与反馈"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_more"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/more_icon"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/split_line_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp10"
+                android:background="@color/app_layout_bg_color"/>
+
+            <RelativeLayout
+                android:id="@+id/update_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/sethome_updtaetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="版本更新"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_more"/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/more_icon"/>
+
+                <ImageView
+                    android:id="@+id/sethome_newiv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_new"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/split_line_color"/>
+
+            <com.tgf.kcwc.view.SettingLayoutView
+                android:id="@+id/setting_about"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                SettingLayoutView:settingtitle="关于我们"/>
+
+            <com.tgf.kcwc.view.SettingLayoutView
+                android:id="@+id/userAgreementView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                SettingLayoutView:settingtitle="用户协议"/>
+
+            <RelativeLayout
+                android:id="@+id/setting_versionbtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/sethome_versiontv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:gravity="center"
+                    android:text="当前版本号"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_more"/>
+
+
+                <TextView
+                    android:id="@+id/sethome_versionnumtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"
+                    android:gravity="center"
+                    android:text="V 1.0"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_small"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/split_line_color"
+                    />
+
+            </RelativeLayout>
+
+            <com.tgf.kcwc.view.SettingLayoutView
+                android:id="@+id/sethome_userfakui"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                SettingLayoutView:settingtitle="用户反馈"/>
+
+            <com.tgf.kcwc.view.SettingLayoutView
+                android:id="@+id/setting_help"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                SettingLayoutView:settingtitle="帮助中心"/>
+
+            <TextView
+                android:id="@+id/settinghome_loginouttv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_login_selector"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_title"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

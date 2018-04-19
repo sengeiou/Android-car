@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="100dp"
+    android:orientation="vertical">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img"
+        android:layout_width="63dp"
+        android:layout_height="63dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:failureImage="@drawable/cover_default"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/cover_default"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundAsCircle="false" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/img">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:text="这是帖子的标题......"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_more" />
+
+        <TextView
+            android:id="@+id/expire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:singleLine="true"
+            android:text="2016.12.31-2017.12.31"
+            android:textColor="@color/text_def"
+            android:textSize="@dimen/font_size_medium" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

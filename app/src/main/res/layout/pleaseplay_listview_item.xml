@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_main_color1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/driverlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/driving_list_view_imageview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_big_image_height"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            fresco:actualImageScaleType="fitXY"
+            fresco:failureImage="@drawable/im_default"
+            fresco:failureImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/driving_list_view_elite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/icon_jinghua"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/driving_list_view_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/btn_apply" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="170dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/icon_chatcontact" />
+
+            <TextView
+                android:id="@+id/driving_list_view_number"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="2/不限"
+                android:textColor="@color/tab_text_n_color"
+                android:textSize="@dimen/font_size_small" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/driving_list_view_dynamic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="10dp"
+        android:text="发布的动态缩略，非标题发布的动态缩略，非标题发布的动态缩略，非标题发布的动态缩略，发布的动态缩略"
+        android:textColor="@color/app_title_color1"
+        android:textSize="@dimen/font_size_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:visibility="visible"
+                    fresco:failureImage="@drawable/im_default"
+                    fresco:placeholderImage="@drawable/icon_the_default__diagram_n" />
+
+                <ImageView
+                    android:id="@+id/drivdetails_convene_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/icon_men"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:text="小元宝的大元宝"
+                    android:textColor="@color/text_color6"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:maxLength="10"
+                    android:text="10km"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_small"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/btn_eye1" />
+
+                <TextView
+                    android:id="@+id/driving_list_view_look"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text="267"
+                    android:textColor="@color/app_title_color1"
+                    android:textSize="@dimen/font_size_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:src="@drawable/btn_heart11" />
+
+                <TextView
+                    android:id="@+id/driving_list_view_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="10"
+                    android:textColor="@color/app_title_color1"
+                    android:textSize="@dimen/font_size_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingRight="15dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/btn_comments_n" />
+
+                <TextView
+                    android:id="@+id/driving_list_view_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="@color/app_title_color1"
+                    android:textSize="@dimen/font_size_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/app_layout_bg_color" />
+    </LinearLayout>
+
+    <com.tgf.kcwc.view.VacancyListView
+        android:id="@+id/hintlayout"
+        app:hintText="暂时没有数据"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/white">
+
+    </com.tgf.kcwc.view.VacancyListView>
+</LinearLayout>

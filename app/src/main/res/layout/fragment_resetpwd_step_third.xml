@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:psd="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/remarkTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:gravity="center_horizontal"
+        android:lineSpacingMultiplier="1.2"
+        android:text="请再次输入"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/sp14" />
+
+    <com.tgf.kcwc.view.PayPwdInputView
+        android:id="@+id/password"
+        android:layout_width="@dimen/dp240"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:inputType="number"
+        psd:isPlaintext="false"
+        psd:maxCount="6"
+        psd:psdType="weChat"
+        psd:pwdTextColor="@color/text_color3"
+        psd:rectAngle="4dp" />
+
+
+    <TextView
+        android:id="@+id/cipherSpecTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:gravity="center_horizontal"
+        android:text="支付密码不能是重复连续的数字"
+        android:textColor="@color/text_color20"
+        android:textSize="@dimen/sp14" />
+
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginBottom="@dimen/dp30"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp50"
+        android:background="@drawable/btn_confirm_selector2"
+        android:text="确定"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:enabled="false"
+        />
+</LinearLayout>

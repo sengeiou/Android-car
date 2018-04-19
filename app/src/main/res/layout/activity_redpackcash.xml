@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/titlebar" />
+
+
+            <EditText
+                android:id="@+id/redpack_nameEd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginRight="7dp"
+                android:background="@color/white"
+                android:ellipsize="none"
+                android:gravity="center_vertical"
+                android:hint="输入红包名称，0~26字"
+                android:maxLength="26"
+                android:paddingLeft="@dimen/homeleft_margin"
+                android:singleLine="true"
+                android:textSize="@dimen/dp15" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="欢迎语"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/homeleft_margin"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="none"
+                    android:gravity="right|center_vertical"
+                    android:hint="如恭喜发财，大吉大利，0~26字"
+                    android:maxLength="26"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="总金额"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:ellipsize="none"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入金额"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="元"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="定额红包"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:id="@+id/redpack_createwaysbtn"
+                    android:layout_width="@dimen/dp45"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_pulldown" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <LinearLayout
+                android:id="@+id/redpack_suijilayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="随机金额区间"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:ellipsize="none"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入金额"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingRight="5dp"
+                    android:text="元 -"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:ellipsize="none"
+                    android:gravity="left|center_vertical"
+                    android:hint="输入金额"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="元"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/redpack_dingelayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="定额红包金额"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:ellipsize="none"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入金额"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="元"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="中奖概率"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <EditText
+                    android:id="@+id/repback_possibiltyEd"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:ellipsize="none"
+                    android:gravity="right|center_vertical"
+                    android:hint="输入中奖率"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="‰"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="红包开始时间"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:id="@+id/redpack_starttimetv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/homeleft_margin"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="选择开始时间"
+                    android:maxLength="26"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="红包结束时间"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:id="@+id/redpack_endtimetv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/homeleft_margin"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="right|center_vertical"
+                    android:hint="选择结束时间"
+                    android:maxLength="26"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="红包类型"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:id="@+id/redpack_onlineiv"
+                    android:layout_width="@dimen/dp45"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/homeleft_margin"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_xianxia" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/repback_sendway"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="口令红包"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <ImageView
+                    android:id="@+id/redpack_showwaysbtn"
+                    android:layout_width="@dimen/dp45"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_pulldown" />
+            </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/redpack_koulinglayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_marginRight="7dp"
+                    android:background="@color/white"
+                    android:editable="false"
+                    android:ellipsize="none"
+                    android:gravity="center_vertical"
+                    android:hint="请输入口令，4~10字"
+                    android:maxLength="10"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/divider4" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp45"
+                    android:layout_marginRight="7dp"
+                    android:background="@color/white"
+                    android:editable="false"
+                    android:ellipsize="none"
+                    android:gravity="center_vertical"
+                    android:hint="请输入口令问题,2~30字"
+                    android:maxLength="30"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/divider4" />
+
+            <TextView
+                android:id="@+id/redpack_sendWayNoticeTv"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:lineSpacingExtra="3dp"
+                android:paddingLeft="@dimen/homeleft_margin"
+                android:paddingRight="@dimen/homeleft_margin"
+                android:paddingTop="10dp"
+                android:text="用以提醒用户口令是什么，非必填项"
+                android:textColor="@color/text_color17"
+                android:textSize="10dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp44"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/homeleft_margin"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="识别范围"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="7dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:editable="false"
+                    android:ellipsize="none"
+                    android:gravity="right|center_vertical"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textSize="@dimen/dp15" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:paddingRight="@dimen/homeleft_margin"
+                    android:text="米"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/dp15" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:lineSpacingExtra="3dp"
+                android:paddingLeft="@dimen/homeleft_margin"
+                android:paddingRight="@dimen/homeleft_margin"
+                android:paddingTop="10dp"
+                android:text="设置可见红包范围， 最大可识别范围：3000米"
+                android:textColor="@color/text_color17"
+                android:textSize="10dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:background="@color/divider4" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/redpack_createbtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_gravity="bottom"
+        android:background="@color/style_bg1"
+        android:gravity="center"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+</FrameLayout>

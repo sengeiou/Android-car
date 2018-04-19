@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp34"
+        android:background="@color/red">
+
+        <TextView
+            android:id="@+id/adTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="没错就是一句话福利！"
+            android:textColor="@color/text_color5"
+
+            android:textSize="@dimen/sp16" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/exhibitionNameTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/typeTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="免费申领门票"
+                android:textColor="@color/text_color20"
+                android:textSize="@dimen/sp21" />
+
+
+            <TextView
+                android:id="@+id/applyTotalTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp10" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/split_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/typeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/icon_warning" />
+
+            <TextView
+                android:id="@+id/applyTypeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/img"
+                android:text="选择票种"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_more" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/ticketNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/more_icon"
+            android:text=""
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_small" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@color/split_line_color"
+        android:dividerHeight="@dimen/split_height_size"
+        android:scrollbars="none"
+        android:transcriptMode="normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/split_line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/list_item_selector">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/titleyellow_tag"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            android:text="报名参展名单"
+            android:textColor="@color/text_selected"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp20"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/text_color20"
+            android:textSize="@dimen/sp12"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/split_line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/white">
+
+        <com.tgf.kcwc.view.autoscrolltext.AutoCircleScrollListView
+            android:id="@+id/applyList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:divider="@null"
+            android:scrollbars="none"
+            android:transcriptMode="normal"
+            android:visibility="visible" />
+
+
+        <com.tgf.kcwc.view.UPMarqueeView
+            android:id="@+id/marqueeView"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+
+        <com.tgf.kcwc.view.autoscrolltext.VerticalScrollTextView
+            android:id="@+id/scrollTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:text=""
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/split_line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/list_item_selector">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/titleyellow_tag"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            android:text="预报名审核通过后可获得以下特权"
+            android:textColor="@color/text_selected"
+            android:textSize="@dimen/sp14" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color" />
+
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:id="@+id/commitLayout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/app_layout_bg_color"
+        android:visibility="visible">
+
+
+        <Button
+            android:id="@+id/commitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@color/app_main_color2"
+            android:text="提交预报名"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp16" />
+
+    </RelativeLayout>
+
+</LinearLayout>

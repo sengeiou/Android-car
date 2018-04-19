@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/margin_left_size"
+    android:background="@drawable/list_item_selector"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:failureImage="@drawable/cover_default"
+            fresco:failureImageScaleType="fitCenter"
+            fresco:placeholderImage="@drawable/cover_default"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:viewAspectRatio="1.33"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_toRightOf="@id/img"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/font_size_medium"
+            tools:text="" />
+
+        <ImageView
+            android:id="@+id/select_status_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp25"
+            android:src="@drawable/icon_single_checked_s" />
+
+    </RelativeLayout>
+</RelativeLayout>

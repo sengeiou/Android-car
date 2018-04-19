@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:SettingSelectedLayoutView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/onlineSet_salerlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        SettingSelectedLayoutView:desc="设为在线后，将在店铺页显示您的个人信息，便于客户直接联系到您。"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:isdesc="true"
+        android:visibility="gone"
+        SettingSelectedLayoutView:settingselecttitle="销售在线" />
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/onlineSet_couponlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        SettingSelectedLayoutView:desc="设为在线后，将在相关代金券详情等页面显示您的个人信息，表示您可提供相应服务并进行现场核销，便于客户直接联系到您。"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:isdesc="true"
+        SettingSelectedLayoutView:settingselecttitle="代金券服务在线" />
+</LinearLayout>

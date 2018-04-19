@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants">
+
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp40">
+
+        <TextView
+            android:id="@+id/ticketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/remarkTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@id/ticketName"
+            android:text=" (可多选)"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small" />
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/unitTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/price"
+                android:text="@string/unit_value"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small" />
+
+            <TextView
+                android:id="@+id/moneyTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/price"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/unitTv"
+                android:text="@string/china_money_char"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_tiny" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/moneyTag"
+                android:gravity="left"
+                android:text="80"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_m_large" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_layout_bg_color" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout"
+        android:background="@color/white"
+        android:divider="@null"
+
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/orderInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp50"
+        android:layout_below="@id/list"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp20">
+
+            <TextView
+                android:id="@+id/partTagTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/refund_part_value"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/moneyTag1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/partTagTv"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/partTagTv"
+                android:text="@string/china_money_char"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/sp11" />
+
+            <TextView
+                android:id="@+id/partAccountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/moneyTag1"
+                android:layout_toRightOf="@id/moneyTag1"
+                android:gravity="left"
+                android:text="80"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_m_large" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_layout_bg_color" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0ffffff"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/top_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="30dip"
+        android:src="@mipmap/default_image"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_image"
+        android:layout_marginLeft="30dip"
+        android:layout_marginTop="20dip"
+        android:lineSpacingMultiplier="1.5"
+        android:text="如果不是相互喜欢\n你的痴情就是别人的负担"
+        android:textColor="#333333"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_above="@+id/view1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/points"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/pop_rl_click"
+        android:background="@color/split_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/pop_rl_click"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_action_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/tabbar_compose_background_icon_close" />
+
+        <ImageView
+            android:id="@+id/pop_iv_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/default_image"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

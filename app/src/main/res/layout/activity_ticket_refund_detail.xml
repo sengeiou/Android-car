@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar">
+
+
+        <RelativeLayout
+            android:id="@+id/rootView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@color/white">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:failureImage="@drawable/cover_default"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/cover_default"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:roundAsCircle="false"
+                    fresco:viewAspectRatio="1.33" />
+
+
+                <TextView
+                    android:id="@+id/senseName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:layout_toRightOf="@id/img"
+                    android:lines="2"
+                    android:text=""
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_title" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_height_size"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:background="@color/app_layout_bg_color" />
+            </RelativeLayout>
+
+
+            <ListView
+                android:id="@+id/ticketList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:background="@color/white" />
+
+
+            <RelativeLayout
+                android:id="@+id/splitLineLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_below="@id/ticketList"
+                android:background="@color/white">
+
+                <View
+                    android:id="@+id/splitLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:background="@color/app_layout_bg_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/refundDescLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/splitLineLayout"
+                android:background="@color/white">
+
+                <ListView
+                    android:id="@+id/refundDescList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:divider="@null" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/refundStateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/refundDescLayout"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_left_margin"
+                    android:text="退款进度"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/app_layout_bg_color" />
+
+                <ListView
+                    android:id="@+id/refund_progresslv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:divider="@null" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

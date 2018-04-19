@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customized_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/customized_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp34"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="@dimen/dp3"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_left_line" />
+
+        <TextView
+            android:id="@+id/customized_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:text="定制数据分析"
+            android:textColor="@color/text_bg"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/customized_select_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp11"
+            android:text="周期选择"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp10" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/style_bg4" />
+
+    <com.tgf.kcwc.view.MyListView
+        android:id="@+id/customized_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1"
+        android:background="@color/white"
+        android:dividerHeight="@dimen/dp10"
+        android:paddingBottom="@dimen/dp20"
+        android:paddingLeft="@dimen/dp25"
+        android:paddingRight="@dimen/dp50"
+        android:paddingTop="@dimen/dp15"
+        android:divider="@color/white"
+        android:scrollbars="none"></com.tgf.kcwc.view.MyListView>
+
+</LinearLayout>

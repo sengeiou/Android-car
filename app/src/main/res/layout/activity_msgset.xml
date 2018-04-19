@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:SettingSelectedLayoutView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/msgset_vibratelv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="推送震动" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/msgset_soundlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="推送声音" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:background="@color/app_layout_bg_color"
+        android:gravity="center_vertical"
+        android:text="开启以下消息的通知" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/msgset_chatlv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="私聊" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/msgset_new_fans"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="新粉丝" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/msgset_comment_reply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="评论和回复" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/msgset_zan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="赞" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/msgset_night_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_left_margin"
+        SettingSelectedLayoutView:is_selected="true"
+        SettingSelectedLayoutView:settingselecttitle="夜间防打扰23::00-8:00" />
+    <TextView
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp12"
+        android:layout_marginRight="@dimen/dp33"
+        android:text="@string/account_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

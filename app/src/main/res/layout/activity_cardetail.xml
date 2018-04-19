@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:banner="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_header_bg"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon_car_loading" />
+
+                <com.tgf.kcwc.view.bannerview.Banner
+                    android:id="@+id/cardetail_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/detail_header_bg"
+                    app:is_auto_play="false"
+                    banner:image_scale_type="fit_xy" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:text="奥迪进口车"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_title" />
+
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:text="参考价： 253万"
+                android:textSize="@dimen/font_size_tiny" />
+
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_right_margin"
+                android:paddingRight="@dimen/common_right_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="限时优惠"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_more" />
+
+                <com.tgf.kcwc.view.countdown.CountdownView
+                    android:id="@+id/cardetail_countdownView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    app:isHideTimeBackground="false"
+                    app:isShowDay="true"
+                    app:isShowHour="true"
+                    app:isShowMillisecond="false"
+                    app:isShowMinute="true"
+                    app:isShowSecond="true"
+                    app:suffixDay="天"
+                    app:suffixGravity="center"
+                    app:suffixHour="时"
+                    app:suffixMinute="分"
+                    app:suffixSecond="秒"
+                    app:suffixTextColor="@color/text_selected"
+                    app:timeBgColor="@color/white"
+                    app:timeTextColor="@color/text_selected" />
+            </RelativeLayout>
+
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_right_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_selected"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:text="在售"
+                    android:textSize="@dimen/font_size_tiny" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_right_margin"
+                    android:background="@color/text_selected"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:text="展车"
+                    android:textSize="@dimen/font_size_tiny" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_right_margin"
+                    android:background="@color/text_selected"
+                    android:paddingBottom="2dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="2dp"
+                    android:text="现车"
+                    android:textSize="@dimen/font_size_tiny" />
+            </LinearLayout>
+
+            <view
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/devider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_right_margin"
+                android:paddingRight="@dimen/common_right_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="当前配置"
+                    android:textColor="@color/text_color13"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/cardetail_inner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shapeborder_grayrect_bg"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="内饰: 经典黑"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/cardetail_outer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_left_margin"
+                    android:layout_toLeftOf="@id/cardetail_inner"
+                    android:background="@drawable/shapeborder_grayrect_bg"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="外观: 经典黑"
+                    android:textColor="@color/text_color13"
+                    android:textSize="@dimen/font_size_medium" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="@dimen/common_left_margin"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:text="描述车辆信息"
+                android:textColor="@color/text_color13"
+                android:textSize="@dimen/font_size_medium" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_height">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/font_size_more"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

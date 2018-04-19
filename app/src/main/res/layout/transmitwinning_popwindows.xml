@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/seek_rl"
+                android:gravity="center"
+                android:text="谢谢参与"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="25dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_choujiangsb" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text="不要灰心 请再接再厉哟！"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_size_more" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/know"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/seek_rl"
+                android:gravity="center"
+                android:text="知道了"
+                android:textColor="@color/text_selected"
+                android:textSize="@dimen/font_size_title" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

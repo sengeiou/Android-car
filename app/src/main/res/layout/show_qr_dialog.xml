@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/qr_msg"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp16" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/btn_close_selector" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/topLayout"
+        android:background="@color/split_line_color" />
+
+    <RelativeLayout
+        android:id="@+id/ticketBaseInfo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp90"
+        android:layout_below="@id/split">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="第十四摩托车国际博览会"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_medium" />
+
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/title"
+                android:gravity="center"
+                android:text="媒体日"
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/font_size_title" />
+
+
+            <TextView
+                android:id="@+id/type2"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/type"
+                android:text=""
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/sp20" />
+
+            <TextView
+                android:id="@+id/expire"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/type"
+                android:layout_marginTop="15dp"
+                android:maxLines="3"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_small" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/expire"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/moneyTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/price"
+                    android:text="@string/china_money_char"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/moneyTag"
+                    android:gravity="left"
+                    android:text="80"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_m_large" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/limitCunt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/type"
+                android:text="@string/ticket_desc"
+                android:textColor="@color/text_color5"
+                android:textSize="@dimen/font_size_small"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ticketBaseInfo">
+
+
+        <ImageView
+            android:id="@+id/qrImg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:scaleType="centerCrop" />
+
+        <RelativeLayout
+            android:id="@+id/ticketNoLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/qrImg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/ticketNoTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="No."
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/ticket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/ticketNoTv"
+                android:layout_toRightOf="@id/ticketNoTv"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/sp16" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/remarkTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ticketNoLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:lineSpacingMultiplier="1.5"
+            android:maxLines="3"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp14" />
+
+
+        <RelativeLayout
+            android:id="@+id/forwardLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/remarkTv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10">
+
+            <ImageView
+                android:id="@+id/forwardImg"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/forward_ticket_icon_n" />
+
+            <TextView
+                android:id="@+id/forwardTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp5"
+                android:layout_toRightOf="@id/forwardImg"
+                android:gravity="center_vertical"
+                android:text="转送朋友"
+                android:textColor="@color/text_color3" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

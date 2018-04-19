@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/app_layout_bg_color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/backBtnLayout"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/title_bar_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:src="@drawable/nav_back_selector2" />
+
+                <View
+                    android:layout_width="@dimen/split_height_size"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/split_line_color" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+
+                <TextView
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/search_bg2"
+                    android:drawableRight="@drawable/search_btn_selector"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="start|center_vertical"
+                    android:hint="输入导航目的地"
+                    android:imeOptions="actionSearch"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color12"
+                    android:textColorHint="@color/text_content_color"
+                    android:textSize="@dimen/font_size_medium"
+
+                    />
+
+                <View
+                    android:layout_width="@dimen/split_height_size"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/split_line_color" />
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                >
+
+                <ImageView
+                    android:id="@+id/loadRideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/import_ride_line"
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color" />
+    </RelativeLayout>
+
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searchLayout"
+
+        />
+
+
+    <ImageView
+        android:id="@+id/trafficBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/field_margin_right"
+        android:layout_marginTop="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/traffic_btn_selector" />
+
+    <RelativeLayout
+        android:id="@+id/navInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/search_bg2"
+        android:visibility="gone"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true">
+
+
+                <RelativeLayout
+                    android:id="@+id/titleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/orgTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_left_size"
+                        android:singleLine="true"
+                        android:text="重庆新元素雅和汽车销售"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <ImageView
+                        android:id="@+id/moreIcon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/orgTitle"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/margin_right_size"
+                        android:src="@drawable/more_icon"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/orgAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@id/orgTitle"
+                        android:layout_below="@id/orgTitle"
+                        android:layout_marginTop="@dimen/margin_top_size"
+                        android:maxLength="18"
+                        android:singleLine="true"
+                        android:text="地址：重庆市区华北废墟"
+                        android:textColor="@color/text_color17"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <TextView
+                        android:id="@+id/distanceTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/orgAddress"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/common_right_margin"
+                        android:drawableLeft="@drawable/icon_location"
+                        android:drawablePadding="10dp"
+                        android:text="1.5km"
+                        android:textColor="@color/text_color17" />
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_height_size"
+                android:layout_alignParentBottom="true"
+                android:background="@color/split_line_color" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/navLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/nav_icon_s"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:text="开始导航"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_title" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

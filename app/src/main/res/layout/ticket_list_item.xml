@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/item_checkout_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/item_checkout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="编号："
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/item_checkout_serial_sn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/item_checkout_title"
+            android:text="AJ00000"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/item_checkout_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="(3.26 11:00 核销)"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp10" />
+    </RelativeLayout>
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/item_receive_rl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/dp9">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/item_receive_title"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="编号："-->
+            <!--android:textColor="@color/text_color15"-->
+            <!--android:textSize="@dimen/sp12" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/item_receive_serial_sn"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toRightOf="@+id/item_receive_title"-->
+            <!--android:text="AJ00000"-->
+            <!--android:textColor="@color/text_color15"-->
+            <!--android:textSize="@dimen/sp12" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/item_receive_time"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:text="(3.26 11:00 领取)"-->
+            <!--android:textColor="@color/text_color17"-->
+            <!--android:textSize="@dimen/sp10" />-->
+    <!--</RelativeLayout>-->
+
+</LinearLayout>

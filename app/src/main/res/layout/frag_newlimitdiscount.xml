@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/limit_filterlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/limit_type"
+            layout="@layout/common_filter_layout"
+            android:layout_width="100dp"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/timelimit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <include
+                android:id="@+id/limit_brand"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/limit_price"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/limit_seat"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exhibitionlayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/fTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/nav_filter_selector"
+                android:ellipsize="end"
+                android:paddingLeft="2dp"
+                android:singleLine="true"
+                android:text="北京市"
+                android:paddingRight="5dp"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_medium" />
+
+            <ImageView
+                android:id="@+id/filterImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/nav_filter_selector"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/devider" />
+
+    <RelativeLayout
+        android:id="@+id/setPriceLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+            android:id="@+id/rl_modulename_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.tgf.kcwc.view.ObservableScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/split_line_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/app_layout_bg_color" />
+
+                    <LinearLayout
+                        android:id="@+id/brandlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.tgf.kcwc.view.MyGridView
+                            android:id="@+id/mygridview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:horizontalSpacing="5dp"
+                            android:numColumns="6"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="5dp"
+                            android:verticalSpacing="5dp"></com.tgf.kcwc.view.MyGridView>
+
+                        <LinearLayout
+                            android:id="@+id/unwindlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/unwindtext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:padding="10dp"
+                                android:text="所有优惠品牌"
+                                android:textColor="@color/text_color12"
+                                android:textSize="@dimen/font_size_title" />
+
+                            <ImageView
+                                android:id="@+id/unwindimag"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/btn_xiala" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/split_line_color" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:background="@color/app_layout_bg_color" />
+                    </LinearLayout>
+
+                    <com.tgf.kcwc.view.MyListView
+                        android:id="@+id/discount_limit_lv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:listSelector="#00000000" />
+                </LinearLayout>
+
+            </com.tgf.kcwc.view.ObservableScrollView>
+        </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+        <TextView
+            android:id="@+id/limitdiscount_emptytv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/no_data_img_icon"
+            android:text="没有数据，请换个条件试试"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small"
+            android:visibility="gone" />
+
+    </FrameLayout>
+</LinearLayout>

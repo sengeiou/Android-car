@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+
+    <RelativeLayout
+        android:id="@+id/navMenuLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar">
+
+        <RelativeLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginRight="@dimen/margin_right_size">
+
+
+            <GridView
+                android:id="@+id/filterGridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true" />
+
+        </RelativeLayout>
+
+
+        <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+            android:id="@+id/rl_modulename_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/filterLayout">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/app_main_color1"
+                app:layoutManager="LinearLayoutManager" />
+
+        </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/filterContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/filterLayout"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <!--  <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_below="@id/splitLine"
+
+          >
+
+          <ListView
+              android:id="@+id/filterList"
+              android:layout_width="40dp"
+              android:layout_height="wrap_content"
+              android:divider="@color/white"
+              android:dividerHeight="1px"
+              android:scrollbars="none" />
+
+          <ImageView
+              android:id="@+id/filterSplit"
+              android:layout_width="40dp"
+              android:layout_height="1px"
+              android:layout_below="@id/filterList"
+              android:background="@color/white" />
+
+          <ImageView
+              android:id="@+id/toggleImg"
+              android:layout_width="40dp"
+              android:layout_height="45dp"
+              android:layout_below="@id/filterSplit"
+              android:background="@color/transparent30"
+              android:scaleType="center"
+              android:src="@drawable/toggle_btn_selector" />
+      </RelativeLayout> -->
+
+
+</RelativeLayout>

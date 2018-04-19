@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tgf.kcwc.view.MyScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/analysis_sv"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_2"
+        android:orientation="vertical">
+
+        <include layout="@layout/customized_item" />
+
+        <include layout="@layout/search_item" />
+
+        <include layout="@layout/browsed_item"
+            android:visibility="gone"/>
+
+        <include layout="@layout/collect_item" />
+
+        <include layout="@layout/exhibition_item"
+            android:visibility="gone"/>
+
+        <include layout="@layout/community_item" />
+    </LinearLayout>
+</com.tgf.kcwc.view.MyScrollView>

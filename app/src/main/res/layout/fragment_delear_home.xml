@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/couponLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/common_header_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_row_height" />
+
+
+        <ListView
+            android:id="@+id/couponList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/giftByShoppingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/couponLayout"
+        android:layout_marginTop="@dimen/margin_top_size"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/common_header_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_row_height" />
+
+
+        <ListView
+            android:id="@+id/giftList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/limitCouponLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/giftByShoppingLayout"
+        android:layout_marginTop="@dimen/margin_top_size"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <include
+            layout="@layout/common_header_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/custom_row_height" />
+
+
+        <ListView
+            android:id="@+id/limitCouponList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/shopActivityLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/limitCouponLayout"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/shopActivityHeaderLayout"
+            layout="@layout/common_list_header_layout" />
+
+        <ListView
+            android:id="@+id/shopActivityList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shopActivityHeaderLayout" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/saleEliteLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shopActivityLayout"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/salesHeaderLayout"
+            layout="@layout/common_list_header_layout" />
+
+        <com.tgf.kcwc.view.GridViewWithHeaderAndFooter
+            android:id="@+id/salespersonGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/salesHeaderLayout"
+            android:layout_marginLeft="4sp"
+            android:layout_marginRight="4dp"
+            android:horizontalSpacing="4dp"
+            android:numColumns="6"
+            android:verticalSpacing="4dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/evaluateLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saleEliteLayout"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/evaluateHeaderLayout"
+            layout="@layout/common_list_header_layout" />
+
+        <com.tgf.kcwc.view.nestlistview.NestFullListView
+            android:id="@+id/evaluateList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/evaluateHeaderLayout"
+            android:layout_marginBottom="60dp"
+            android:background="@color/transparent90_white"
+            android:divider="@color/transparent90_white"
+            android:dividerHeight="@dimen/list_divider_height"
+            android:orientation="vertical" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

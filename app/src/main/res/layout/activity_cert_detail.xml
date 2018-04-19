@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/button_bg_14">
+
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginRight="@dimen/margin_right_size">
+
+            <TextView
+                android:id="@+id/currentRecord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="1/4"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_medium" />
+
+
+            <TextView
+                android:id="@+id/notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="使用须知"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_medium" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/middleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/topLayout"
+            android:layout_marginBottom="50dp"
+            android:background="@color/white">
+
+
+            <TextView
+                android:id="@+id/senseName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_top_size"
+                android:text=""
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_medium" />
+
+
+            <TextView
+                android:id="@+id/certTypeTv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/senseName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp15"
+                android:text=""
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_m_large" />
+
+            <TextView
+                android:id="@+id/certTypeTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/certTypeTv1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_top_size"
+                android:gravity="center"
+                android:text="Professional Visitor Permit"
+                android:textColor="@color/text_more"
+                android:textSize="@dimen/sp18"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/errorStatusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/certTypeTv2"
+                android:layout_marginTop="@dimen/margin_top_size"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/desc1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.5"
+                        android:text=""
+                        android:textColor="@color/text_color3"
+                        android:textSize="@dimen/sp18" />
+
+
+                    <TextView
+                        android:id="@+id/desc2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/desc1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text=""
+                        android:textColor="@color/text_more"
+                        android:textSize="@dimen/font_size_medium" />
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/reapplyBtn"
+                    android:layout_width="120dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dp30"
+                    android:layout_marginTop="@dimen/margin_top_size"
+                    android:background="@drawable/button_bg_2"
+                    android:text="重新申请"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp16" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/normalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/certTypeTv2">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_top_size"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@drawable/icon_certificate_n"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/icon_certificate_n"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/qrImg"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/img"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp" />
+
+                <TextView
+                    android:id="@+id/snTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/qrImg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_more" />
+
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/pendulumImg"
+                    android:layout_width="100dp"
+                    android:layout_height="10dp"
+                    android:layout_below="@id/snTv"
+                    android:layout_centerHorizontal="true"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@drawable/icon_certificate_n"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/icon_certificate_n"
+                    fresco:placeholderImageScaleType="fitXY"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    android:id="@+id/printSN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/snTv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/sp12"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/printSN"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/company"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/name"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_more" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginRight="@dimen/margin_right_size">
+
+            <TextView
+                android:id="@+id/remark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_small" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_top_size"
+        android:background="@color/app_main_color1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lockBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/cert_btn_selector3"
+                android:gravity="center"
+                android:text="证件挂失"
+                android:textColor="@color/text_color15" />
+
+            <TextView
+                android:id="@+id/printBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/cert_btn_selector1"
+                android:gravity="center"
+                android:text="证件打印"
+                android:textColor="@color/text_color15" />
+
+            <TextView
+                android:id="@+id/recordBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="6dp"
+                android:drawableTop="@drawable/cert_btn_selector2"
+                android:gravity="center"
+                android:text="门禁记录"
+                android:textColor="@color/text_color15" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

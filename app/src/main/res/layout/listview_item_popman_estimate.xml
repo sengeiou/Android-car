@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_color1"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/common_right_margin">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/daren_coveriv"
+        android:layout_width="@dimen/dp85"
+        android:layout_height="@dimen/dp85"
+        fresco:actualImageScaleType="fitXY"
+        fresco:placeholderImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/icon_car_loading" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp16"
+        android:orientation="vertical">
+
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/daren_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/sp16"
+            android:text="null"
+            android:textColor="@color/text_color12" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp12"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/daren_avatar"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/rp_avatar"
+                fresco:roundAsCircle="true" />
+
+            <TextView
+                android:layout_marginLeft="@dimen/dp8"
+                android:id="@+id/daren_nickname"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/daren_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:textSize="@dimen/sp12"
+                android:maxEms="7"
+                android:text="null"
+                android:textColor="@color/text_color6" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/listviewitem_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:drawableLeft="@drawable/icon_comments"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:text="267"
+                android:textSize="@dimen/font_size_tiny"
+                android:textColor="@color/text_nav_def_color" />
+
+            <TextView
+                android:id="@+id/listviewitem_focuson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_toLeftOf="@id/listviewitem_comment"
+                android:drawableLeft="@drawable/icon_like"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:text="267"
+                android:textSize="@dimen/font_size_tiny"
+                android:textColor="@color/text_nav_def_color" />
+
+            <TextView
+                android:id="@+id/listviewitem_visitors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/listviewitem_focuson"
+                android:layout_toStartOf="@+id/listviewitem_focuson"
+                android:drawableLeft="@drawable/icon_visitors"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:text="267"
+                android:textSize="@dimen/font_size_tiny"
+                android:textColor="@color/text_nav_def_color" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

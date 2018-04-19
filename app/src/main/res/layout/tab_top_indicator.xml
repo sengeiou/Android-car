@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_tab_height"
+        android:layout_below="@id/ivTabMain"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="46dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="推荐"
+                android:textColor="@color/tab_text_color" />
+
+            <!--            <TextView
+                            android:id="@+id/striping"
+                            android:layout_width="40dp"
+                            android:layout_height="2dp"
+                            android:background="@color/tab_striping_color" />-->
+            <ImageView
+                android:id="@+id/striping"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/tab_top_selector" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_color"></TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/app_layout_bg_color"></TextView>
+
+</LinearLayout>

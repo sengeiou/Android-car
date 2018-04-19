@@ -1,0 +1,75 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_layout_bg_color"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_main_color1" />
+
+        <LinearLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_button_height"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <include
+                android:id="@+id/popmanes_place"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+
+            <include
+                android:id="@+id/popmanes_brand"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+            <include
+                android:id="@+id/popmanes_type"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/devider"/>
+        <!-- 不同的地方 -->
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+                android:id="@+id/rl_modulename_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <GridView
+                android:layout_marginTop="10dp"
+                android:id="@+id/pics_list"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_right_margin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:verticalSpacing="@dimen/griviewitem_margin"
+                android:horizontalSpacing="@dimen/griviewitem_margin"
+                android:numColumns="3"/>
+            </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+        </FrameLayout>
+    </LinearLayout>
+</merge>

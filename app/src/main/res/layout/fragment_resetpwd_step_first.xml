@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="258dp"
+        android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/remarkTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:gravity="center_horizontal"
+            android:lineSpacingMultiplier="1.2"
+            android:text=""
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp14" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp45"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp50">
+
+
+            <Button
+                android:id="@+id/forgetBtn"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp45"
+                android:background="@drawable/button_bg_17"
+                android:text="不记得"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+
+            <Button
+                android:id="@+id/rememberBtn"
+                android:layout_width="@dimen/dp150"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginLeft="@dimen/dp20"
+                android:background="@drawable/button_bg_5"
+                android:text="记得"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp16" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

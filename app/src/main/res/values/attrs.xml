@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="fewItemView">
+        <attr name="column" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="JazzyViewPager">
+        <attr name="style">
+            <enum name="standard" value="0" />
+            <enum name="tablet" value="1" />
+            <enum name="cubein" value="2" />
+            <enum name="cubeout" value="3" />
+            <enum name="flipvertical" value="4" />
+            <enum name="fliphorizontal" value="5" />
+            <enum name="stack" value="6" />
+            <enum name="zoomin" value="7" />
+            <enum name="zoomout" value="8" />
+            <enum name="rotateup" value="9" />
+            <enum name="rotatedown" value="10" />
+            <enum name="accordion" value="11" />
+        </attr>
+        <attr name="fadeEnabled" format="boolean" />
+        <attr name="outlineEnabled" format="boolean" />
+        <attr name="outlineColor" format="color|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPaddingTopBottom" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <!--该属性表示里面的TAB是否均分整个PagerSlidingTabStrip控件的宽,true是,false不均分,从左到右排列,默认false-->
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+        <attr name="pstsTextSelectedColor" format="color" />
+        <!--缩放的最大值,0.3表示放大后最大是原来的0.3倍,默认未0.3-->
+        <attr name="pstsScaleZoomMax" format="float" />
+        <attr name="pstsSmoothScrollWhenClickTab" format="boolean" />
+    </declare-styleable>
+
+    <!-- Link -->
+
+    <declare-styleable name="LinkBuilder">
+        <attr name="defaultLinkColor" format="color" />
+    </declare-styleable>
+
+    <attr name="linkBuilderStyle" format="reference" />
+
+    <declare-styleable name="SettingLayoutView">
+        <attr name="settingtitle" format="string" />
+    </declare-styleable>
+    <declare-styleable name="SettingSelectedLayoutView">
+        <attr name="is_selected" format="boolean" />
+        <attr name="isdesc" format="boolean" />
+        <attr name="desc" format="string" />
+        <attr name="settingselecttitle" format="string" />
+    </declare-styleable>
+    <!--轮播图-->
+    <declare-styleable name="Banner">
+        <attr name="delay_time" format="integer" />
+        <attr name="scroll_time" format="integer" />
+        <attr name="is_auto_play" format="boolean" />
+        <attr name="title_background" format="color|reference" />
+        <attr name="title_textcolor" format="color" />
+        <attr name="title_textsize" format="dimension" />
+        <attr name="title_height" format="dimension" />
+        <attr name="indicator_width" format="dimension" />
+        <attr name="indicator_height" format="dimension" />
+        <attr name="indicator_margin" format="dimension" />
+        <attr name="indicator_drawable_selected" format="reference" />
+        <attr name="indicator_drawable_unselected" format="reference" />
+        <attr name="image_scale_type" format="enum">
+            <enum name="center" value="0" />
+            <enum name="center_crop" value="1" />
+            <enum name="center_inside" value="2" />
+            <enum name="fit_center" value="3" />
+            <enum name="fit_end" value="4" />
+            <enum name="fit_start" value="5" />
+            <enum name="fit_xy" value="6" />
+            <enum name="matrix" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CountdownView">
+        <attr name="isHideTimeBackground" format="boolean" />
+        <attr name="isShowTimeBgDivisionLine" format="boolean" />
+        <attr name="timeBgDivisionLineColor" format="color" />
+        <attr name="timeBgDivisionLineSize" format="dimension" />
+        <attr name="timeBgColor" format="color" />
+        <attr name="timeBgSize" format="dimension" />
+        <attr name="timeBgRadius" format="dimension" />
+
+        <attr name="isTimeTextBold" format="boolean" />
+        <attr name="timeTextSize" format="dimension" />
+        <attr name="timeTextColor" format="color" />
+        <attr name="isShowDay" format="boolean" />
+        <attr name="isShowHour" format="boolean" />
+        <attr name="isShowMinute" format="boolean" />
+        <attr name="isShowSecond" format="boolean" />
+        <attr name="isShowMillisecond" format="boolean" />
+
+        <attr name="isSuffixTextBold" format="boolean" />
+        <attr name="suffixTextSize" format="dimension" />
+        <attr name="suffixTextColor" format="color" />
+        <attr name="suffix" format="string" />
+        <attr name="suffixDay" format="string" />
+        <attr name="suffixHour" format="string" />
+        <attr name="suffixMinute" format="string" />
+        <attr name="suffixSecond" format="string" />
+        <attr name="suffixMillisecond" format="string" />
+        <attr name="suffixGravity">
+            <enum name="top" value="0" />
+            <enum name="center" value="1" />
+            <enum name="bottom" value="2" />
+        </attr>
+        <attr name="suffixLRMargin" format="dimension" />
+        <attr name="suffixDayLeftMargin" format="dimension" />
+        <attr name="suffixDayRightMargin" format="dimension" />
+        <attr name="suffixHourLeftMargin" format="dimension" />
+        <attr name="suffixHourRightMargin" format="dimension" />
+        <attr name="suffixMinuteLeftMargin" format="dimension" />
+        <attr name="suffixMinuteRightMargin" format="dimension" />
+        <attr name="suffixSecondLeftMargin" format="dimension" />
+        <attr name="suffixSecondRightMargin" format="dimension" />
+        <attr name="suffixMillisecondLeftMargin" format="dimension" />
+
+        <attr name="isShowTimeBgBorder" format="boolean" />
+        <attr name="timeBgBorderColor" format="color" />
+        <attr name="timeBgBorderSize" format="dimension" />
+        <attr name="timeBgBorderRadius" format="dimension" />
+    </declare-styleable>
+
+    <!--裁剪属性 -->
+    <declare-styleable name="ClipViewLayout">
+        <attr name="clipType" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="rectangle" value="2" />
+        </attr>
+        <attr name="mHorizontalPadding" format="dimension" />
+        <attr name="clipBorderWidth" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="SpecRectView">
+        <attr name="drawTopLeft" format="boolean" />
+        <attr name="drawTopRight" format="boolean" />
+        <attr name="drawBottomLeft" format="boolean" />
+        <attr name="drawBottomRight" format="boolean" />
+        <attr name="bgColor" format="color" />
+        <attr name="type" format="integer" />
+        <attr name="drawCycleColor" format="color" />
+        <attr name="isBgStroke" format="boolean"></attr>
+        <attr name="isCycleStroke" format="boolean"></attr>
+    </declare-styleable>
+    <declare-styleable name="PageGridView">
+        <!--行数，如果为0表示横向显示gridview-->
+        <attr name="PagingRows" format="integer" />
+        <!--列数,如果为0表示纵向显示gridview-->
+        <attr name="PagingColums" format="integer" />
+        <attr name="PagingDiver" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="bmWidth" format="dimension"></attr>
+        <attr name="bmHeight" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="TipView">
+        <!-- 显示的数量 -->
+        <attr name="text" format="integer" />
+        <!-- 文字大小，0-1，1为默认，值越小，文字越小 -->
+        <attr name="textMargin" format="float" />
+        <!-- 数量文字的颜色 -->
+        <attr name="textColor" format="reference|color" />
+        <!-- 最大数量，超出这个数字会显示 这个数字+ -->
+        <attr name="textMax" format="integer" />
+        <!-- 背景圆的颜色 -->
+        <attr name="circleColor" format="reference|color" />
+    </declare-styleable>
+
+    <!--  列表返回为空的时候显示的视图-->
+    <declare-styleable name="VacancyListView">
+        <!--修改提示的文字-->
+        <attr name="hintText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SortRichEditor">
+
+        <attr name="isTitle" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="luckpan">
+        <attr name="pannum" format="integer" />
+        <attr name="names" format="reference" />
+        <attr name="icons" format="reference" />
+    </declare-styleable>
+
+    <!--折线数据类型饼状统计图-->
+    <declare-styleable name="LinePieView">
+        <attr name="centerTextSize" format="dimension" />
+        <attr name="dataTextSize" format="dimension" />
+        <attr name="centerTextColor" format="color" />
+        <attr name="dataTextColor" format="color" />
+        <attr name="circleWidth" format="dimension" />
+    </declare-styleable>
+
+    <!--环信-->
+    <declare-styleable name="ContactItemView">
+        <attr name="contactItemImage" format="reference" />
+        <attr name="contactItemName" format="string" />
+    </declare-styleable>
+
+
+    <!-- ******************** 参数解释 ******************** -->
+
+    <!--最大值-->
+    <!--最小值-->
+    <!--两个按钮的最小间距-->
+    <!--cells 等于0为普通模式，大于1时切换为刻度模式-->
+    <!--进度提示模式 default：当拖动时显示 alwaysHide：一直隐藏 alwaysShow：一直显示-->
+    <!--拖动后的Seekbar颜色-->
+    <!--默认的Seekbar颜色-->
+    <!--进度为最小值或最大值时按钮的颜色，默认此属性不调用-->
+    <!--进度不为最小值或最大值时按钮的颜色，默认此属性不调用-->
+    <!--刻度文字，不设置的时候默认隐藏-->
+    <!--按钮的背景资源，不设置的时候默认为圆形按钮-->
+    <!--进度提示背景资源，必须使用 9 path文件-->
+    <!--刻度文字与进度条之间的距离-->
+    <!--刻度文字和进度提示文字的大小-->
+    <!--进度提示背景的高度，不设置时根据文字尺寸自适应-->
+    <!--进度提示背景的宽度，不设置时根据文字尺寸自适应-->
+    <!--进度提示背景和进度条之间的距离-->
+    <!--进度条的高度-->
+    <!--按钮的尺寸-->
+    <!--刻度模式
+    number 根据刻度的实际所占比例分配位置（markTextArray中必须都为数字）
+    other 平分当前布局（markTextArray可以是任何字符）
+    -->
+    <!--单向、双向模式 single 单向模式，只有一个按钮 range 双向模式，有两个按钮 -->
+
+    <!-- ******************** 参数解释 ******************** -->
+
+    <!-- ******************** Parameter Explanation ******************** -->
+
+    <!--The maximum-->
+    <!--The minimum-->
+    <!--The minimum distance between two buttons-->
+    <!--Cells equal to 0 for the normal mode, greater than 1 to switch to scale mode-->
+    <!--the progress hint mode
+    defaultMode: show hint when you move the thumb
+    alwaysHide: hide progress hint all the time
+    alwaysShow: show progress hint all the time
+    -->
+    <!--The Seekbar color after dragging-->
+    <!--The default Seekbar color-->
+    <!--The color of the thumb when the progress is minimum or maximum, by default this property is not called-->
+    <!--The color of the thumb moving, this property is not called-->
+    <!--Scale text, do not set the default when hidden-->
+    <!--thumb Button background resources, do not set the default when the circular button-->
+    <!--Progress prompt background resources, you must use the 9 path file-->
+    <!--The distance between the scale text and the progress bar-->
+    <!--Scale text, and the size of the progress prompt text-->
+    <!--The height of the progress prompt background, not set according to the text size adaptive-->
+    <!--The with of the progress prompt background, not set according to the text size adaptive-->
+    <!--The progress indicates the distance between the background and the progress bar-->
+    <!--The height of the progress bar-->
+    <!--The size of the button-->
+    <!--Scale mode
+    Number according to the scale of the actual proportion of the distribution of the location (markTextArray must be a number)
+    Other bisects the current layout (markTextArray can be any character)
+    -->
+    <!--One-way, two-way mode single one-way mode, there is only one button range bidirectional mode, two buttons -->
+
+    <!-- ******************** Parameter Explanation ******************** -->
+    <declare-styleable name="RangeSeekBar">
+        <attr name="max" format="float" />
+        <attr name="min" format="float" />
+        <attr name="reserve" format="float" />
+        <attr name="cells" format="integer" />
+        <attr name="progressHintMode" format="enum">
+            <enum name="defaultMode" value="0" />
+            <enum name="alwaysHide" value="1" />
+            <enum name="alwaysShow" value="2" />
+        </attr>
+        <attr name="lineColorSelected" format="color" />
+        <attr name="lineColorEdge" format="color" />
+        <attr name="thumbPrimaryColor" format="color" />
+        <attr name="thumbSecondaryColor" format="color" />
+        <attr name="markTextArray" format="reference" />
+        <attr name="thumbResId" format="reference" />
+        <!-- must use 9 path ！！！-->
+        <attr name="progressHintResId" format="reference" />
+        <attr name="textPadding" format="dimension" />
+        <attr name="textSize" format="dimension" />
+        <attr name="hintBGHeight" format="dimension" />
+        <attr name="hintBGWith" format="dimension" />
+        <attr name="hintBGPadding" format="dimension" />
+        <attr name="seekBarHeight" format="dimension" />
+        <attr name="thumbSize" format="dimension" />
+        <attr name="cellMode" format="enum">
+            <enum name="number" value="0" />
+            <enum name="other" value="1" />
+        </attr>
+        <attr name="seekBarMode" format="enum">
+            <enum name="single" value="1" />
+            <enum name="range" value="2" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="pieView">
+        <attr name="normal_color" format="color" />
+        <attr name="select_color" format="color" />
+        <attr name="normal_text_color" format="color" />
+        <attr name="select_text_color" format="color" />
+        <attr name="circle_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="PayPwdInputView">
+
+        <attr name="maxCount" format="integer" />
+        <attr name="pwd_circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color" />
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+        <attr name="isPlaintext" format="boolean" />
+        <attr name="pwdTextColor" format="color"/>
+    </declare-styleable>
+
+
+
+</resources>

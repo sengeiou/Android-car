@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_root_lv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/voucher_main_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/exclusive_root_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_filter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_title_height"
+            android:layout_below="@id/laytout_title"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/exclusive_itemnum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:gravity="center"
+                android:text="共0条" />
+
+
+            <LinearLayout
+                android:id="@+id/filterTitlelayout"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/filterTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有效"
+                    android:textColor="@color/text_state_color"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <ImageView
+                    android:id="@+id/filterImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/fitler_drop_down_n" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/exclusive_expirely"
+                layout="@layout/common_filter_layout"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <ListView
+            android:layout_marginTop="20dp"
+            android:id="@+id/exclusive_coupon_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_filter"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/emptyboxTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/no_data_img_icon"
+            android:text="        暂无可领取/购买的代金券"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small" />
+    </RelativeLayout>
+</LinearLayout>

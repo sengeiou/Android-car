@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="87dp"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sendsee_event_iv"
+            android:layout_width="@dimen/img_foureper"
+            android:layout_height="@dimen/img_threeeper"
+            android:layout_alignParentLeft="true"
+            fresco:actualImageScaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/sendsee_ticketinfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/sendsee_event_iv"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_medium"
+            tools:text="邓丹第一届汽车展" />
+
+        <TextView
+            android:id="@+id/manageorgdetail_tickettype_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/sendsee_event_iv"
+            android:background="@drawable/shape_ticketm_orgdetailbg"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/white"
+            android:textSize="11dp"
+            tools:text="媒体日门票" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+
+        <com.tgf.kcwc.view.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tabs" />
+    </LinearLayout>
+
+</LinearLayout>

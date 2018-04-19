@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <RelativeLayout
+        android:id="@+id/mycoupon_orderrv"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/white"
+        android:paddingLeft="15dp">
+
+        <TextView
+            android:id="@+id/mycoupon_ordersntv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_small"
+            tools:text="订单编号：12324" />
+
+        <TextView
+            android:id="@+id/mycoupon_onlinetv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_small"
+            tools:text="5人在线服务" />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_icon" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/split_line_color" />
+
+    <com.tgf.kcwc.view.SpecRectView
+        android:id="@+id/specRectView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="45dp"
+        app:bgColor="@color/ticket_bg"
+        app:drawBottomLeft="true"
+        app:drawBottomRight="true" />
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="45dp"
+        android:paddingLeft="20dp">
+
+        <RelativeLayout
+            android:id="@+id/mycoupon_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/moneyTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignBaseline="@id/price"
+                android:text="@string/china_money_char"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_small" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/moneyTag"
+                android:gravity="left"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp30"
+                tools:text="80" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/expire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_small"
+            tools:text="有效期至: 2017.6.30" />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/mycoupon_rv"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_medium"
+            tools:text="第十四摩托车国际博览会" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/text_color4"
+            android:textSize="@dimen/font_size_small"
+            tools:text="重庆奥迪大坪4s店" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topLayout"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <ListView
+            android:id="@+id/innerlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/topLayout"
+            android:background="@color/white"
+            android:divider="@null" />
+
+        <com.tgf.kcwc.view.SpecRectView
+            android:id="@+id/specRectView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:bgColor="@color/app_layout_bg_color"
+            app:drawCycleColor="@color/white"
+            app:drawTopLeft="true"
+            app:drawTopRight="true"
+            app:isBgStroke="true"
+            app:isCycleStroke="true" />
+    </FrameLayout>
+</RelativeLayout>

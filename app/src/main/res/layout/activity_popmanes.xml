@@ -1,0 +1,90 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_layout_bg_color"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_main_color1" />
+
+        <LinearLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_button_height"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/popmanes_brand"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/popmanes_place"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/popmanes_type"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/split_line_color"/>
+        <!-- 不同的地方 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--<ViewStub-->
+                <!--android:id="@+id/viewccstub"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" />-->
+            <!--<ViewStub-->
+                <!--android:id="@+id/viewpricestub"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" />-->
+            <!--<ViewStub-->
+                <!--android:id="@+id/viewbrandstub"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" />-->
+            <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+                android:id="@+id/rl_modulename_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <ListView
+                android:id="@+id/popmanes_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="@dimen/list_divider_height" />
+            </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+            <TextView
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp120"
+                android:layout_gravity="center_horizontal"
+                android:drawablePadding="@dimen/dp18"
+                android:drawableTop="@drawable/icon_search_empty"
+                android:id="@+id/emptyTv"
+                android:text="木有找到您要的结果"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

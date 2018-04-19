@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_layout_bg_color"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_bar_height"
+                android:background="@color/style_bg1">
+
+                <ImageButton
+                    android:id="@+id/manageorgdetail_back"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@null"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/nav_back_selector" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_text"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="向员工分发概览"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_title" />
+
+                <View
+                    android:id="@+id/split"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/split_line_color"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ticketmOrgdetail_headpng_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/moto_testdetail1"
+                    fresco:actualImageScaleType="fitXY" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/title_bar_height"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/shape_titlebar_bg"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/title_bar_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:padding="5dp"
+                        android:src="@drawable/nav_back_selector" />
+
+                    <TextView
+                        android:id="@+id/title_bar_text"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="票务管理"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_title" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/common_left_margin"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="37dp">
+
+                    <TextView
+                        android:id="@+id/manageorgdetail_eventname_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="37dp"
+                        android:layout_marginRight="80dp"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/font_size_title"
+                        tools:text="第一届汽车展" />
+
+                    <TextView
+                        android:id="@+id/manageorgdetail_price"
+                        android:layout_width="62dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/manageorgdetail_eventname_tv"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/common_left_margin"
+                        android:gravity="right"
+                        android:text="￥100元"
+                        android:textColor="@color/text_color36"
+                        android:textSize="13dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="18dp">
+
+                    <TextView
+                        android:id="@+id/manageorgdetail_tickettype_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_ticketm_orgdetailbg"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="11dp"
+                        tools:text="媒体日门票" />
+
+                    <TextView
+                        android:id="@+id/manageorgdetail_ticketdate_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/common_left_margin"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/text_color3"
+                        android:textSize="@dimen/sp12"
+                        tools:text="有效期：2016.11.12 - 2015.11.15" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/manageorgdetail_from_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/common_left_margin"
+                    android:singleLine="true"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp12"
+                    tools:text="来源：重庆展览" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:background="@color/voucher_divide_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin">
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="总量"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="@string/sendsaler"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="@string/sendorg"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="剩余"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:background="@color/voucher_divide_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin">
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_nums_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="11" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_htsalernums_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="32" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_htorgnums_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="32" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_leftnum_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="123" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:background="@color/voucher_divide_line" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textSize="@dimen/font_size_medium" />
+
+            <LinearLayout
+                android:id="@+id/manageorgdetail_goods_lv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin">
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="发给客户"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_usernums_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="32" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="员工剩余"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_userhavenums_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="123" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:background="@color/voucher_divide_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin">
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="领取量"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_recnums_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="32" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="领取人次"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_recpnums_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="123" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:background="@color/voucher_divide_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin">
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="核销量"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_usenums_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="32" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/bg_1"
+                    android:gravity="center"
+                    android:text="核销人次"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+
+                <TextView
+                    android:id="@+id/manageorgdetail_usepnums_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:textColor="@color/text_color9"
+                    android:textSize="@dimen/font_size_more"
+                    tools:text="123" />
+
+                <TextView
+                    android:layout_width="1px"
+                    android:layout_height="match_parent"
+                    android:background="@color/voucher_divide_line" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:background="@color/voucher_divide_line" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="70dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/tickem_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:layout_gravity="bottom"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/manageorgdetail_query"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/manageorgdetail_sendQueryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/teicketm_query"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:text="分发查询"
+                android:textColor="@color/text_color32"
+                android:textSize="@dimen/font_size_title"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout  >
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/voucher_divide_line" />
+
+        <RelativeLayout
+            android:id="@+id/manageorgdetail_send"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/manageorgdetail_sendTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/icon_forwarding_n"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:text="现在分发"
+                android:textColor="@color/text_color32"
+                android:textSize="@dimen/font_size_title" />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/user_avatariv"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/rp_loading_bg"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/user_nameTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/homeleft_margin"
+            android:text="员工姓名(13312345678)"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_ticketm_tongjibg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/btn_bg7"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="票  种"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="总量"
+                android:textColor="@color/text_color9"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="剩余"
+                android:textColor="@color/text_color9"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider4" />
+
+            <TextView
+                android:id="@+id/chart4_column3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="发给客户"
+                android:textColor="@color/text_color9"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="客户领取"
+                android:textColor="@color/text_color9"
+                android:textSize="11dp" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="@color/divider4" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="客户到场"
+                android:textColor="@color/text_color9"
+                android:textSize="11dp" />
+        </LinearLayout>
+
+        <com.tgf.kcwc.view.nestlistview.NestFullListView
+            android:id="@+id/orgfenfa_tongjiChartlv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_ticketm_tongjibg"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="@dimen/homeleft_margin"
+        android:background="@color/divider4" />
+</LinearLayout>

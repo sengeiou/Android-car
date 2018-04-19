@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/limit_filterlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/filter_layout_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/limit_brand"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/limit_price"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/limit_sort"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/limit_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_right_margin"
+                android:button="@drawable/motordetail_checkbox_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/font_size_medium"
+                android:textColor="@color/text_state_color"
+                android:text="展期特惠" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/devider"
+        />
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/discount_limit_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+    <TextView
+        android:id="@+id/limitdiscount_emptytv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="10dp"
+        android:layout_gravity="center"
+        android:drawableTop="@drawable/no_data_img_icon"
+        android:text="没有数据，请换个条件试试"
+        android:textColor="@color/text_color17"
+        android:visibility="gone"
+        android:textSize="@dimen/font_size_small" />
+
+</FrameLayout>
+</LinearLayout>

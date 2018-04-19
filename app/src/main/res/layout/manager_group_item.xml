@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grouping_item_bg"
+    android:orientation="horizontal">
+
+    <com.tgf.kcwc.view.swipelistview.SwipeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--内容部分-->
+        <include layout="@layout/swipe_content" />
+        <!--侧滑部分-->
+        <include layout="@layout/swipe_delete" />
+    </com.tgf.kcwc.view.swipelistview.SwipeLayout>
+</LinearLayout>

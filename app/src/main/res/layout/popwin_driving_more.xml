@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <com.tgf.kcwc.view.MyGridView
+                android:id="@+id/onlylook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:verticalSpacing="10dp"></com.tgf.kcwc.view.MyGridView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="状态"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_more" />
+
+            <com.tgf.kcwc.view.MyGridView
+                android:id="@+id/state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:verticalSpacing="10dp"></com.tgf.kcwc.view.MyGridView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="行程"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_more" />
+
+            <com.tgf.kcwc.view.MyGridView
+                android:id="@+id/journey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="4"
+                android:verticalSpacing="10dp"></com.tgf.kcwc.view.MyGridView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="类型"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_more" />
+
+            <com.tgf.kcwc.view.MyGridView
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:verticalSpacing="10dp"></com.tgf.kcwc.view.MyGridView>
+
+            <LinearLayout
+                android:id="@+id/seekbarlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="发帖距离"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/font_size_more" />
+
+                <com.tgf.kcwc.view.RangeSeekBar
+                    android:id="@+id/seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cellMode="other"
+                    app:lineColorEdge="@color/split_line_color"
+                    app:lineColorSelected="@color/style_bg1"
+                    app:markTextArray="@array/markArray"
+                    app:seekBarMode="single"
+                    app:textPadding="17dp"
+                    app:thumbResId="@drawable/seekbar_thumb" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/confirm"
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/button_bg_limitdispink"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_more" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/popwin_supplier_list_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</LinearLayout>

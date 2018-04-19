@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:background="@color/app_main_color1"
+    android:padding="10dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="@dimen/img_size_xxlarge"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/model_avatar"
+            android:layout_width="@dimen/img_size_xxlarge"
+            android:layout_height="@dimen/img_size_xxlarge"
+            fresco:actualImageScaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/beautyalbum_gohomepage_tv"
+            android:layout_width="@dimen/img_size_xxlarge"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/goto_her_homepage"
+            android:textColor="@color/common_nav_bar" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp">
+
+        <TextView
+            android:id="@+id/beautyalbum_modelname_tv"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:maxLength="20"
+            android:text="Lucky"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_huge" />
+
+        <TextView
+            android:id="@+id/beautyalbum_modelheight_tv"
+            android:layout_width="240dp"
+            android:layout_height="@dimen/text_modle_height"
+            android:layout_below="@id/beautyalbum_modelname_tv"
+            android:maxLength="20"
+            android:text="身高： 178cm"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_small" />
+
+        <TextView
+            android:id="@+id/beautyalbum_modelsize_tv"
+            android:layout_width="240dp"
+            android:layout_height="@dimen/text_modle_height"
+            android:layout_below="@id/beautyalbum_modelheight_tv"
+            android:maxLength="20"
+            android:text="三围： 78/76/12"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_small" />
+
+        <TextView
+            android:id="@+id/beautyalbum_modeldesc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/beautyalbum_modelsize_tv"
+            android:maxLength="30"
+            android:maxLines="2"
+            android:text="奖项：2006新丝路中国模特大赛亚军；国际权威网站Models.com上排名38"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_small" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/beautyalbum_brand"
+            android:layout_width="50dp"
+            android:layout_height="@dimen/img_size_large"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            fresco:actualImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/rp_avatar" />
+
+        <TextView
+            android:id="@+id/beautyalbum_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/beautyalbum_brand"
+            android:text="1T01/N1馆"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_medium" />
+    </RelativeLayout>
+</LinearLayout>

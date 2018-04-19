@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_color1"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="@dimen/common_right_margin">
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="@dimen/img_size_xlarge"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/popmanes_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:maxEms="200"
+            android:maxLines="2"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/sp16"
+            tools:text="达人评测内容评测内容评测内容" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/listviewitem_visitors"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:drawableLeft="@drawable/icon_visitors"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:text="267"
+                android:textColor="@color/text_nav_def_color" />
+
+            <TextView
+                android:id="@+id/listviewitem_focuson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:layout_toRightOf="@id/listviewitem_visitors"
+                android:drawableLeft="@drawable/icon_like"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:text="267"
+                android:textColor="@color/text_nav_def_color" />
+
+            <TextView
+                android:id="@+id/listviewitem_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:layout_toRightOf="@id/listviewitem_focuson"
+                android:drawableLeft="@drawable/icon_comments"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:text="267"
+                android:textColor="@color/text_nav_def_color" />
+
+            <TextView
+                android:id="@+id/listviewitem_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:text="1天前"
+                android:textSize="@dimen/sp10"
+                android:textColor="@color/text_content_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/popmen_coveriv"
+        android:layout_width="@dimen/img_size_xlarge"
+        android:layout_height="@dimen/img_size_xlarge"
+        android:layout_marginLeft="10dp"
+        fresco:actualImageScaleType="fitXY"
+        fresco:failureImage="@drawable/im_default"
+        fresco:failureImageScaleType="fitXY"
+        fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+        fresco:placeholderImageScaleType="fitXY" />
+</LinearLayout>

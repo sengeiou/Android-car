@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/voucher_main_bg" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/voucher_main_bg" />
+            <!--选择车型-->
+            <LinearLayout
+                android:id="@+id/car_type"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingRight="20dp"
+                    android:text="车型"
+                    android:textColor="@color/text_color14"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:gravity="center|left"
+                    android:text="请选择"
+                    android:textColor="@color/text_content_color"
+                    android:textSize="@dimen/font_size_more" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/btn_nextjiantou" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/voucher_main_bg" />
+
+            <!--选择是否是店内-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingRight="20dp"
+                    android:text="类型"
+                    android:textColor="@color/text_color14"
+                    android:textSize="@dimen/font_size_more" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/shopprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="店内展车"
+                        android:textColor="@color/text_color14"
+                        android:textSize="@dimen/font_size_more" />
+
+                    <CheckBox
+                        android:id="@+id/carstock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="店内现车"
+                        android:textColor="@color/text_color14"
+                        android:textSize="@dimen/font_size_more" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/btn_nextjiantou"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/voucher_main_bg" />
+
+            <!--选择外观-->
+            <LinearLayout
+                android:id="@+id/facadelayout"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingRight="20dp"
+                    android:text="外观"
+                    android:textColor="@color/text_color14"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/facadename"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center|left"
+                    android:text="请选择"
+                    android:textColor="@color/text_content_color"
+                    android:textSize="@dimen/font_size_more" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/btn_nextjiantou" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/voucher_main_bg" />
+            <!--选择外观图片-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/facadelay"
+                    android:layout_width="175dp"
+                    android:layout_height="130dp"
+                    android:visibility="gone">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/facadeimage"
+                        android:layout_width="175dp"
+                        android:layout_height="130dp"
+                        android:scaleType="fitXY"
+                        android:visibility="visible"
+                        fresco:actualImageScaleType="fitXY"
+                        fresco:failureImage="@drawable/im_default"
+                        fresco:failureImageScaleType="fitXY"
+                        fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                        fresco:placeholderImageScaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#4F000000"
+                        android:gravity="center"
+                        android:text="您已上传预览图片 点击可重新上传"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_tiny" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/facadeselect"
+                    android:layout_width="175dp"
+                    android:layout_height="130dp"
+                    android:layout_alignLeft="@+id/facadelay"
+                    android:layout_alignStart="@+id/facadelay"
+                    android:layout_alignTop="@+id/facadelay"
+                    android:background="@color/voucher_main_bg"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/btn_addpgrays" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/voucher_main_bg" />
+            <!--选择内饰-->
+            <LinearLayout
+                android:id="@+id/upholstery"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingRight="20dp"
+                    android:text="内饰"
+                    android:textColor="@color/text_color14"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/upholsteryname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center|left"
+                    android:text="请选择"
+                    android:textColor="@color/text_content_color"
+                    android:textSize="@dimen/font_size_more" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/btn_nextjiantou" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/voucher_main_bg" />
+            <!--选择内饰图片-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/upholsterylay"
+                    android:layout_width="175dp"
+                    android:layout_height="130dp"
+                    android:visibility="gone">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/upholsteryimage"
+                        android:layout_width="175dp"
+                        android:layout_height="130dp"
+                        android:scaleType="fitXY"
+                        android:visibility="visible"
+                        fresco:actualImageScaleType="fitXY"
+                        fresco:failureImage="@drawable/im_default"
+                        fresco:failureImageScaleType="fitXY"
+                        fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                        fresco:placeholderImageScaleType="fitXY" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#4F000000"
+                        android:gravity="center"
+                        android:text="您已上传预览图片 点击可重新上传"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_tiny" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/upholsteryselect"
+                    android:layout_width="175dp"
+                    android:layout_height="130dp"
+                    android:background="@color/voucher_main_bg"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/btn_addpgrays" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/voucher_main_bg" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:gravity="center|left"
+                android:paddingLeft="12dp"
+                android:text="外观可见差异配置"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_more" />
+
+            <EditText
+                android:id="@+id/edtext"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="15dp"
+                android:background="@drawable/dialog_edtext_bg"
+                android:gravity="left"
+                android:inputType="textMultiLine"
+                android:maxLength="140"
+                android:maxLines="6"
+                android:minHeight="120dp"
+                android:padding="10dp"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_medium" />
+
+            <LinearLayout
+                android:id="@+id/userlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/voucher_main_bg"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:padding="5dp"
+                    android:text="上传人："
+                    android:textColor="@color/text_content_color" />
+
+                <TextView
+                    android:id="@+id/usertime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:padding="5dp"
+                    android:text="上传时间："
+                    android:textColor="@color/text_content_color" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:background="@color/voucher_main_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/uploading"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg_19"
+                    android:gravity="center"
+                    android:text="上传"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_title" />
+
+                <TextView
+                    android:id="@+id/release"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg_20"
+                    android:gravity="center"
+                    android:text="发布"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_title" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

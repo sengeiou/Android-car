@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:background="@drawable/gridview_item_selector"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/gridview_item_menuiv"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_brand_show" />
+
+    <TextView
+        android:id="@+id/gridview_item_menutv"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/gridview_item_menuiv"
+        android:gravity="center_horizontal|top"
+        android:text="看新车"
+        android:textColor="@color/text_more" />
+
+</RelativeLayout>

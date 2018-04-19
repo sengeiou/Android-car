@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="@color/split_line_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="15dp"
+            android:text="泸州自驾游旅游心得"
+            android:textColor="@color/app_title_color1"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="5分钟前"
+            android:textColor="@color/color_login_devide"
+            android:textSize="@dimen/font_size_small" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/drivingdetails_explain"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            fresco:actualImageScaleType="fitXY"
+            fresco:failureImage="@drawable/im_default"
+            fresco:failureImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_place" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="四川 泸州市"
+                android:textColor="@color/color_login_devide"
+                android:textSize="@dimen/font_size_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/drdetails_share_head"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="10dp"
+                    android:visibility="visible"
+                    fresco:placeholderImage="@drawable/rp_avatar"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    fresco:retryImageScaleType="fitXY"
+                    fresco:roundAsCircle="true" />
+
+                <ImageView
+                    android:id="@+id/sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/icon_women" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="安然"
+                        android:textColor="@color/text_color6"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <ImageView
+                        android:id="@+id/comment_model_tv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_model" />
+
+                    <ImageView
+                        android:id="@+id/drivdetails_convene_da"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:src="@drawable/icon_daren" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/drivdetails_convene_brandLogo"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/im_default"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:placeholderImage="@drawable/icon_dazong"
+                        fresco:placeholderImageScaleType="fitCenter" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

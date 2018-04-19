@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/voucher_gray"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/tb_other_user_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/chat_time"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:failureImage="@drawable/cover_default"
+        fresco:placeholderImage="@drawable/cover_default"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:roundAsCircle="true"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chat_time"
+        android:layout_toRightOf="@+id/tb_other_user_icon"
+        android:orientation="horizontal">
+
+        <com.tgf.kcwc.view.GifTextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/chatfrom_bg_focused"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</RelativeLayout>

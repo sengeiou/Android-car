@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/style_bg8"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/style_bg1"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/input_box_height">
+
+        <ImageButton
+            android:id="@+id/title_bar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:src="@drawable/nav_back_selector" />
+
+        <TextView
+            android:id="@+id/title_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="商务关注"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_m_large" />
+        <ImageView
+            android:id="@+id/attention_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/title_function_btn"
+            android:layout_marginRight="@dimen/dp18"
+            android:background="@drawable/icon_title_search"/>
+        <com.tgf.kcwc.view.FunctionView
+            android:id="@+id/title_function_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp" />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:paddingBottom="@dimen/dp10"
+        android:paddingTop="@dimen/dp10"
+        android:paddingLeft="@dimen/dp15"
+        android:layout_below="@+id/title_layout"
+        android:id="@+id/attention_group_name"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:layout_below="@+id/attention_group_name"
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:layout_marginTop="@dimen/dp15"
+            android:paddingBottom="@dimen/dp15"
+            android:paddingRight="@dimen/dp15"
+            android:paddingLeft="@dimen/dp15"
+            android:id="@+id/attention_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/sevicecity_openbg"
+            android:scrollbars="none"
+            android:dividerHeight="1dp" />
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+    <RelativeLayout
+        android:background="@color/style_bg8"
+        android:visibility="gone"
+        android:layout_below="@+id/attention_group_name"
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+        <TextView
+            android:layout_marginTop="@dimen/dp75"
+            android:id="@+id/msgTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/dp15"
+            android:drawableTop="@drawable/no_data_img_icon"
+            android:text="亲,你还木有添加客户哦!"
+            android:textColor="@color/text_content_color"
+            android:textSize="@dimen/font_size_title" />
+    </RelativeLayout>
+</RelativeLayout>

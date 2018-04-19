@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_right_margin"
+        android:paddingRight="@dimen/common_right_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/exculsivecoupon_cover"
+            android:layout_width="@dimen/img_foureper"
+            android:layout_height="@dimen/img_threeeper"
+            android:scaleType="fitXY"
+            fresco:placeholderImage="@drawable/cover_default"
+            fresco:placeholderImageScaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:orientation="vertical">
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/listitem_recoment_coupontitle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="这是代金券标题"
+                    android:textColor="@color/voucher_black"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/distance"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="1.5km"
+                    android:textColor="@color/price_color" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dealer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:maxLines="1"
+                android:text="代金券商家"
+                android:textColor="@color/voucher_gray" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/recyleitem_near_nowprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="6dp"
+                    android:text="￥ 100"
+                    android:textColor="@color/voucher_yellow"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/listviewitem_recomment_oldprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/recyleitem_near_nowprice"
+                    android:gravity="bottom"
+                    android:paddingBottom="6dp"
+                    android:text="￥30"
+                    android:textColor="@color/voucher_gray"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/listviewitem_exclusive_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/text_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/shape_radiusgreenrect_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="去购买"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_more" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="2dp"
+        android:background="@color/voucher_divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:paddingRight="@dimen/common_right_margin">
+
+        <LinearLayout
+            android:id="@+id/nickname_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/exclusive_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:maxLength="8"
+                android:text="用户名"
+                android:textColor="@color/text_color6"
+                android:textSize="@dimen/font_size_small" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/counterLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="6dp">
+
+            <com.tgf.kcwc.view.countdown.CountdownView
+                android:id="@+id/setTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_toRightOf="@id/counterIcon"
+                app:isHideTimeBackground="true"
+                app:isShowHour="true"
+                app:isShowMillisecond="false"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isShowTimeBgDivisionLine="false"
+                app:suffixGravity="center"
+                app:suffixTextColor="@color/text_color12"
+                app:suffixTextSize="@dimen/sp12"
+                app:timeTextColor="@color/text_color12"
+                app:timeTextSize="@dimen/sp12" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="14dp"
+                android:layout_marginLeft="6dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@id/setTimeText"
+                android:text="后领取失效，请尽快领取"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/sp12" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/voucher_divide_line" />
+</LinearLayout>

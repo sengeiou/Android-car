@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/action_record_item_all"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/cycle_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_marginLeft="@dimen/dp17"
+            android:layout_width="@dimen/dp1"
+            android:background="@color/text_color25"
+            android:layout_height="match_parent"/>
+        <ImageView
+            android:layout_marginLeft="@dimen/dp9"
+            android:background="@drawable/action_record_cycle_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_toRightOf="@+id/cycle_rl"
+        android:paddingBottom="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/item_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/dp14" />
+        <TextView
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/dp9"
+            android:id="@+id/item_action_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/sp14" />
+        <TextView
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/dp9"
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+</RelativeLayout>

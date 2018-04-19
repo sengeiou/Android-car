@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="34dp"
+    android:minHeight="34dp"
+    android:paddingLeft="@dimen/dp20"
+    android:paddingRight="@dimen/dp20"
+
+    >
+
+    <TextView
+        android:id="@+id/refund_wayTv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/font_size_small"
+        tools:text="原路退回" />
+
+    <TextView
+        android:id="@+id/refund_wayDescTv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBaseline="@id/refund_wayTv"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/refund_wayTv"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color17"
+        android:textSize="@dimen/font_size_small"
+        tools:text="(ding)" />
+
+    <ImageView
+        android:id="@+id/refund_statusIv"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/refound_n" />
+
+
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_layout_bg_color" />
+</RelativeLayout>

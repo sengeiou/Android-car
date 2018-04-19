@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="88dp"
+    android:orientation="vertical">
+
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/img"
+        android:layout_width="92dp"
+        android:layout_height="69dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        fresco:actualImageScaleType="fitXY"
+        fresco:failureImage="@drawable/cover_default"
+        fresco:placeholderImage="@drawable/cover_default"
+        fresco:placeholderImageScaleType="fitXY"
+        fresco:roundAsCircle="false" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@id/img">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="这是代金券的标题......"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/font_size_more"
+
+            />
+
+        <TextView
+            android:id="@+id/expire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:singleLine="true"
+            android:text="过期时间为2016.12.31"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small" />
+
+        <TextView
+            android:id="@+id/moneyTag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expire"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="￥"
+            android:textColor="@color/text_color18"
+            android:textSize="@dimen/font_size_tiny" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/moneyTag"
+            android:layout_below="@id/expire"
+            android:layout_toRightOf="@id/moneyTag"
+            android:singleLine="true"
+            android:text="80"
+            android:textColor="@color/text_color18"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/originalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/price"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/price"
+            android:singleLine="true"
+            android:text="180"
+            android:textColor="@color/text_color2"
+            android:textSize="@dimen/font_size_small" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/acquireBtn"
+        android:layout_width="50dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:text="领"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:background="@drawable/button_bg_2"
+        />
+
+    <TextView
+        android:id="@+id/acquiredCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:text="领"
+        android:textColor="@color/text_color12"
+        android:textSize="@dimen/font_size_small"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_main_color1"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <!-- android:descendantFocusability="blocksDescendants" -->
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginBottom="@dimen/dp10"
+        >
+
+
+        <TextView
+            android:id="@+id/carName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text=""
+            android:textColor="@color/text_color14"
+            android:textSize="@dimen/font_size_more" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleLayout">
+
+        <View
+            android:id="@+id/split"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_height"
+
+            android:background="@color/app_layout_bg_color"
+            android:visibility="visible" />
+
+        <com.tgf.kcwc.view.GridViewWithHeaderAndFooter
+            android:id="@+id/grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/split"
+            android:layout_marginLeft="4sp"
+            android:layout_marginRight="4dp"
+            android:horizontalSpacing="4dp"
+            android:numColumns="2"
+            android:verticalSpacing="4dp" />
+
+        <View
+            android:id="@+id/split1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_divider_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_layout_bg_color"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</RelativeLayout>

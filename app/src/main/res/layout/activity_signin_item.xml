@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/currentPosLayout"
+            android:layout_width="21dp"
+            android:layout_height="29dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/amap_marker_start">
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/cycle_bg_3"
+                android:gravity="center"
+                android:text="起"
+                android:textColor="@color/text_color10"
+                android:textSize="@dimen/font_size_tiny" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sta"
+            android:layout_width="21dp"
+            android:layout_height="29dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:text="起"
+            android:textColor="@color/text_color10"
+            android:textSize="@dimen/font_size_title"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingTop="15dp"
+            android:text="春季重庆马友西藏行！一辈子总要去一次西藏！这次有你吗？"
+            android:textColor="@color/app_title_color1"
+            android:textSize="@dimen/font_size_more" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="70dp"
+            android:gravity="center|right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/qrcode"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="6dp"
+                android:src="@drawable/icon_erweima"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/endpoint"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center|right"
+                android:padding="5dp"
+                android:src="@drawable/icon_dengpao"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

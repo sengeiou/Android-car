@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <View
+        android:layout_width="@dimen/dp2"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21dp"
+        android:background="@color/tab_text_s_color"/>
+    <ImageView
+        android:layout_marginLeft="@dimen/dp12"
+        android:id="@+id/item_circle_iv"
+        android:layout_marginTop="@dimen/dp24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_order_circle_n"/>
+    <LinearLayout
+        android:layout_toRightOf="@+id/item_circle_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp14"
+        android:layout_marginRight="@dimen/dp14"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:maxLines="2"
+            android:id="@+id/item_dynamic_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp15" />
+        <TextView
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/item_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color28"
+            android:textSize="@dimen/sp12" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tgf.kcwc.view.ExRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/app_layout_bg_color">
+
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/search_bg"
+            android:drawableRight="@drawable/search_btn_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|center_vertical"
+            android:hint="话题、活动、车、个性标签"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color12"
+            android:textColorHint="@color/text_content_color"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="#"
+            android:textColor="@color/text_color12" />
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:text="取消"
+            android:textColor="@color/text_color15" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/addTagLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/searchLayout"
+        android:background="@drawable/topic_item_selector"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/addTagTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/font_size_medium" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/addTagLayout">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:text="请选择标签"
+            android:textColor="@color/text_color17" />
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleLayout"
+        android:background="@color/white"
+        android:divider="@null" />
+
+
+</com.tgf.kcwc.view.ExRelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/browsed_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp34"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="@dimen/dp3"
+            android:layout_height="match_parent"
+            android:background="@drawable/common_left_line" />
+
+        <TextView
+            android:id="@+id/browsed_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:background="@color/white"
+            android:text="浏览行为分析"
+            android:textColor="@color/text_bg"
+            android:textSize="@dimen/sp15" />
+
+        <TextView
+            android:id="@+id/browsed_select_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp11"
+            android:background="@color/white"
+            android:text="周期选择"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/sp10" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/style_bg4" />
+
+    <LinearLayout
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingTop="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/browsed_model_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_analysis_left"
+            android:drawablePadding="@dimen/dp5"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/storebelowbutton_orange"
+            android:text="浏览车型指数" />
+        <TextView
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/dp17"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/storebelowbutton_orange"
+            android:id="@+id/browsed_model"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:text="30-90万" />
+    </LinearLayout>
+
+    <com.tgf.kcwc.view.HistogramView
+        android:background="@color/white"
+        android:id="@+id/browsed_histogram_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+    <LinearLayout
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp30"
+        android:paddingTop="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/browsed_model_time_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/icon_analysis_left"
+            android:drawablePadding="@dimen/dp5"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/storebelowbutton_orange"
+            android:text="浏览车型停留时间" />
+        <TextView
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/dp17"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/storebelowbutton_orange"
+            android:id="@+id/browsed_model_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:text="30-90万" />
+    </LinearLayout>
+
+    <com.tgf.kcwc.view.MyListView
+        android:id="@+id/browsed_time_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/white"
+        android:dividerHeight="@dimen/dp12"
+        android:paddingBottom="@dimen/dp20"
+        android:paddingLeft="@dimen/dp12"
+        android:paddingRight="@dimen/dp16"
+        android:paddingTop="@dimen/dp13"
+        android:scrollbars="none"></com.tgf.kcwc.view.MyListView>
+</LinearLayout>

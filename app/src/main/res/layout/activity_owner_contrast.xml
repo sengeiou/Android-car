@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_header_part"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:minHeight="70.0dip"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="70dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+
+                    <ImageView
+                        android:id="@+id/seeImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:scaleType="center"
+                        android:src="@drawable/icon_see_smaller"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/toggleBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/seeImg"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/hidden_same_item"
+                        android:textColor="@color/text_color15" />
+
+                    <TextView
+                        android:id="@+id/contrast_footer_devier_line"
+                        android:layout_width="1.0px"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/split_line_color" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.tgf.kcwc.view.VSScrollView
+                android:id="@+id/header_content_scroll"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/ll_contrast_model_header_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal" />
+            </com.tgf.kcwc.view.VSScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ownersub_main_nav_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:layout_below="@id/ll_header_part"
+            android:background="@color/split_line_color" />
+
+        <com.tgf.kcwc.view.pinnedheader.PinnedHeaderListView
+            android:id="@+id/contrasr_config_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/ownersub_main_nav_divider"
+            android:cacheColorHint="#00000000"
+            android:divider="@color/transparent90_white"
+            android:dividerHeight="1.0px"
+            android:fadingEdge="vertical"
+            android:scrollbars="none" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/param_menu_btn"
+        android:layout_width="@dimen/common_button_height"
+        android:layout_height="@dimen/common_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/shape_greencircle_btn"
+        android:text="目录"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

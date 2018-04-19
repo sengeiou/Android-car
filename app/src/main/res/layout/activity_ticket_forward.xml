@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+
+    <RelativeLayout
+        android:id="@+id/ticketBaseInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleBar"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/white">
+
+        <com.tgf.kcwc.view.SpecRectView
+            android:id="@+id/specRectView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="visible"
+            app:bgColor="@color/white"
+            app:drawBottomLeft="true"
+            app:drawBottomRight="true" />
+
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_medium" />
+
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/title"
+                    android:gravity="center"
+                    android:text="媒体日"
+                    android:textColor="@color/text_color4"
+                    android:textSize="@dimen/font_size_title" />
+
+
+                <TextView
+                    android:id="@+id/type2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/title"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_toRightOf="@id/type"
+                    android:text=""
+                    android:textColor="@color/text_color4"
+                    android:textSize="@dimen/sp20" />
+
+                <TextView
+                    android:id="@+id/expire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/type"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/type"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/moneyTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/price"
+                        android:text="@string/china_money_char"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/moneyTag"
+                        android:gravity="left"
+                        android:text="80"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_m_large" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/limitCunt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/type"
+                    android:text="@string/ticket_desc"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/font_size_small" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/topLayout">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/ticketId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:text=""
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_medium" />
+
+            </RelativeLayout>
+
+            <com.tgf.kcwc.view.SpecRectView
+                android:id="@+id/specRectView1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible"
+                app:bgColor="@color/app_layout_bg_color"
+                app:drawCycleColor="@color/white"
+                app:drawTopLeft="true"
+                app:drawTopRight="true"
+                app:isBgStroke="true"
+                app:isCycleStroke="true" />
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ticketBaseInfo"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:text="赠送对象"
+                android:textColor="@color/text_color9"
+                android:textSize="@dimen/sp14" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/phoneNumET"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:layout_marginBottom="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/button_bg_31"
+            android:hint="请输入手机号码"
+            android:inputType="number"
+            android:maxLength="11"
+            android:paddingLeft="@dimen/dp20"
+            android:textColor="@color/text_color3"
+            android:textColorHint="@color/text_color28"
+            android:textSize="@dimen/sp15" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp85"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:gravity="start|center_vertical"
+            android:lineSpacingMultiplier="1.5"
+            android:text="@string/ticket_forward_desc"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp12" />
+
+        <Button
+            android:id="@+id/confirmShareBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp45"
+            android:layout_margin="@dimen/dp20"
+            android:background="@drawable/button_bg_3"
+            android:text="确认分享"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp16" />
+
+    </LinearLayout>
+
+</RelativeLayout>

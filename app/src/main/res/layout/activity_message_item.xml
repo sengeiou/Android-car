@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/avatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_huodong"
+                android:visibility="visible"
+                fresco:placeholderImage="@drawable/rp_avatar"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:retryImageScaleType="fitXY"
+                fresco:roundAsCircle="true" />
+
+            <com.tgf.kcwc.view.TipView
+                android:id="@+id/number"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginLeft="42dp"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                app:circleColor="@color/red"
+                app:text="99"
+                app:textColor="@color/white"
+                app:textMargin="6"
+                app:textMax="99"></com.tgf.kcwc.view.TipView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="系统消息"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_title" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:text="消息类容，只显示一行，只显示一行，只显示一行"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_medium" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="8dp"
+            android:text="2016.06.24"
+            android:textSize="@dimen/font_size_tiny" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/text_content_color"/>
+</LinearLayout>

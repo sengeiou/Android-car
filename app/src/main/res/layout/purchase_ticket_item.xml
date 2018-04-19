@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/dp20"
+    android:paddingRight="@dimen/dp20">
+
+
+    <com.tgf.kcwc.view.SpecRectView
+        android:id="@+id/specRectView"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        app:bgColor="@color/white"
+        app:drawCycleColor="@color/app_layout_bg_color"
+        app:type="4" />
+
+    <RelativeLayout
+        android:id="@+id/leftLayout"
+        android:layout_width="45dp"
+        android:layout_height="126dp">
+
+
+        <ImageView
+            android:layout_width="@dimen/dp30"
+            android:layout_height="@dimen/dp46"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_qr_code" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_toRightOf="@id/leftLayout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp29">
+
+            <TextView
+                android:id="@+id/ticketTypeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:id="@+id/ticketDescTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:drawableLeft="@drawable/icon_ticket_arrow"
+                android:drawablePadding="@dimen/dp5"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp12" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp">
+
+
+            <TextView
+                android:id="@+id/ticketRemarkTv"
+                android:layout_width="162dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp10"
+                android:text=""
+                android:textColor="@color/text_color9"
+                android:textSize="@dimen/sp12"
+                android:lineSpacingMultiplier="1.2"
+                />
+
+            <RelativeLayout
+                android:id="@+id/priceLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp10">
+
+                <TextView
+                    android:id="@+id/moneyTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/china_money_char"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/moneyTag"
+                    android:layout_toRightOf="@id/moneyTag"
+                    android:gravity="left"
+                    android:text="80"
+                    android:textColor="@color/text_color18"
+                    android:textSize="@dimen/font_size_m_large" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <com.tgf.kcwc.view.ControlNumberView
+            android:id="@+id/cnView"
+            android:layout_width="300dp"
+            android:layout_height="29dp"
+            android:layout_gravity="center"
+            />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

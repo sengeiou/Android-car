@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="133dp"
+    android:background="@color/white"
+    android:minHeight="133dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/limit_gotodetailll"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:background="@drawable/item_bg_selector"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="@dimen/img_foureper"
+            android:layout_height="@dimen/img_threeeper"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/common_left_margin">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/limit_cover"
+                android:layout_width="@dimen/img_foureper"
+                android:layout_height="@dimen/img_threeeper"
+
+                fresco:actualImageScaleType="fitXY"
+                fresco:placeholderImage="@drawable/im_default"
+                fresco:placeholderImageScaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/limit_istehui"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="bottom"
+                android:background="@color/text_bg1"
+                android:gravity="center"
+                android:text="展期特惠"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_tiny" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_threeeper"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_marginTop="@dimen/common_left_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/limit_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:text="大宗尽快"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_title" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:id="@+id/limit_rate_guideprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="$300"
+                    android:textColor="@color/text_color20"
+                    android:textSize="@dimen/font_size_m_large" />
+
+                <TextView
+                    android:id="@+id/limit_guideprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/limit_rate_guideprice"
+                    android:layout_centerInParent="true"
+                    android:text="$300"
+                    android:textColor="@color/text_color2"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/limit_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/limit_rate_guideprice"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_left_margin"
+                    android:text="$300"
+                    android:textColor="@color/text_color16"
+                    android:textSize="@dimen/font_size_small" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/devider" />
+
+    <RelativeLayout
+        android:id="@+id/limitdiscount_morerl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_bg_selector"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_right_margin"
+            android:layout_marginRight="@dimen/margin_right_size">
+
+
+            <ImageView
+                android:id="@+id/countericon"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/timer_icon_green" />
+
+            <com.tgf.kcwc.view.countdown.CountdownView
+                android:id="@+id/limit_settimetext"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_toRightOf="@id/countericon"
+                app:isHideTimeBackground="true"
+                app:isShowDay="true"
+                app:isShowHour="true"
+                app:isShowMillisecond="false"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isShowTimeBgDivisionLine="false"
+                app:suffixDay="天"
+                app:suffixGravity="center"
+                app:suffixHour="时"
+                app:suffixMinute="分"
+                app:suffixSecond="秒"
+                app:suffixTextColor="@color/text_color15"
+                app:suffixTextSize="@dimen/font_size_small"
+                app:timeTextColor="@color/text_color12"
+                app:timeTextSize="@dimen/font_size_small" />
+            <TextView
+                android:id="@+id/limit_settimetextitletv"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_toRightOf="@id/countericon"
+                android:text="未开始"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/limit_org"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="24dp"
+            android:text="重庆品总汽车"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_small" />
+
+        <ImageView
+            android:id="@+id/limit_orgmore"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/rp_arrow_forward" />
+    </RelativeLayout>
+</LinearLayout>

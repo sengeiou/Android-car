@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <com.tgf.kcwc.view.SpecRectView
+        android:id="@+id/specRectView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        app:bgColor="@color/text_green"
+        app:drawBottomLeft="true"
+        app:drawBottomRight="true"
+        app:drawCycleColor="@color/app_layout_bg_color" />
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_medium" />
+
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginTop="@dimen/dp5"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/font_size_title" />
+
+            <TextView
+                android:id="@+id/tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/type"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/type"
+                android:gravity="center"
+                android:text="x "
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/font_size_tiny" />
+
+            <TextView
+                android:id="@+id/numTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tag"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/tag"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/text_color4"
+                android:textSize="@dimen/font_size_more" />
+
+
+            <RelativeLayout
+                android:id="@+id/tagLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/type"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp">
+
+                <TextView
+                    android:id="@+id/moneyTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/price"
+                    android:text="@string/china_money_char"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/moneyTag"
+                    android:gravity="left"
+                    android:text="80"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_m_large" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/type">
+
+
+                <TextView
+                    android:id="@+id/expire"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp5"
+                    android:layout_toLeftOf="@id/limitCunt"
+                    android:gravity="center_vertical|left"
+                    android:maxLines="3"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_small" />
+
+
+                <TextView
+                    android:id="@+id/limitCunt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical|start"
+                    android:text="@string/ticket_desc"
+                    android:textColor="@color/text_color5"
+                    android:textSize="@dimen/font_size_small" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@id/topLayout"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/white">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10">
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:text=""
+                android:textColor="@color/text_color6"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/desc"
+                android:layout_toRightOf="@id/desc"
+                android:text=" 发放"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_small" />
+
+            <TextView
+                android:id="@+id/counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc"
+                android:text="5小时"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/acquireBtn"
+            android:layout_width="90dp"
+            android:layout_height="29dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20"
+            android:background="@drawable/button_bg_2"
+            android:text="免费领取"
+            android:textColor="@color/white" />
+
+
+        <TextView
+            android:id="@+id/ticketStatus"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/countText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/acquireBtn"
+            android:drawableLeft="@drawable/counter_icon"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="02:00:00"
+            android:textColor="@color/app_main_color1"
+            android:textSize="@dimen/font_size_medium"
+            android:visibility="gone"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/counterLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/acquireBtn"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/margin_top_size">
+
+
+            <ImageView
+                android:id="@+id/counterIcon"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/counter_icon" />
+
+            <com.tgf.kcwc.view.countdown.CountdownView
+                android:id="@+id/setTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp20"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_toRightOf="@id/counterIcon"
+                app:isHideTimeBackground="true"
+                app:isShowDay="true"
+                app:isShowHour="true"
+                app:isShowMillisecond="false"
+                app:isShowMinute="true"
+                app:isShowSecond="true"
+                app:isShowTimeBgDivisionLine="false"
+                app:suffixDay="天"
+                app:suffixGravity="center"
+                app:suffixHour=":"
+                app:suffixMinute=":"
+                app:suffixSecond=""
+                app:suffixTextColor="@color/text_color12"
+                app:suffixTextSize="@dimen/font_size_medium"
+                app:timeTextColor="@color/text_color12"
+                app:timeTextSize="@dimen/font_size_medium" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/hadExpire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/acquireBtn"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_marginTop="@dimen/margin_top_size"
+            android:text="领取失效"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp12"
+            android:visibility="gone" />
+
+        <com.tgf.kcwc.view.SpecRectView
+            android:id="@+id/specRectView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:bgColor="@color/white"
+            app:drawCycleColor="@color/app_layout_bg_color"
+            app:drawTopLeft="true"
+            app:drawTopRight="true"
+            app:isBgStroke="true"
+            app:isCycleStroke="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

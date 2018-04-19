@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/hint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="“请你玩”活动的发起权限仅向机构商户授权的工作人员开放。"
+        android:textColor="@color/text_color12"
+        android:textSize="@dimen/font_size_more"
+        android:padding="15dp"
+        android:visibility="gone"/>
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:visibility="visible" />
+
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+    <com.tgf.kcwc.view.VacancyListView
+        android:id="@+id/hintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:hintText="暂时没有数据">
+
+    </com.tgf.kcwc.view.VacancyListView>
+</LinearLayout>

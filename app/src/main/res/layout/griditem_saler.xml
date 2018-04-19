@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:minHeight="60dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/saler_avatariv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:placeholderImage="@drawable/rp_avatar"
+            fresco:placeholderImageScaleType="centerInside"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:id="@+id/salerstar"
+            android:layout_width="19dp"
+            android:layout_height="10dp"
+            android:layout_alignBottom="@id/saler_avatariv"
+            android:layout_alignRight="@id/saler_avatariv"
+            android:background="@drawable/button_bg_14"
+            android:gravity="center"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:singleLine="true"
+            android:text=" "
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_xtiny" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp9"
+        android:id="@+id/salernametv"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        tools:text="张三"
+        android:textColor="@color/text_color6"
+        android:textSize="@dimen/sp14" />
+</LinearLayout>

@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/bigHeaderImg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            fresco:actualImageScaleType="fitXY"
+            fresco:failureImage="@drawable/u_cover2"
+            fresco:failureImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/u_cover2"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/titlebar" />
+
+
+        <RelativeLayout
+            android:id="@+id/userInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/titleBar"
+            android:layout_marginTop="@dimen/dp10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginRight="@dimen/margin_right_size">
+
+
+                <RelativeLayout
+                    android:id="@+id/headerImgLayout"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/tagHeaderImg"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:failureImage="@drawable/cover_default"
+                        fresco:placeholderImage="@drawable/cover_default"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+
+                    <LinearLayout
+                        android:id="@+id/sexlayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/button_bg_sexpink"
+                        android:gravity="center"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/genderImg"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            fresco:placeholderImage="@drawable/icon_men"
+                            fresco:placeholderImageScaleType="fitCenter"
+                            fresco:roundAsCircle="true" />
+
+                        <TextView
+                            android:id="@+id/yeartext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="1dp"
+                            android:text="22"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp10" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/userTagLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/headerImgLayout"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:layout_toRightOf="@id/headerImgLayout"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/userLevel"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="bottom|center_horizontal"
+                        android:text="Lv.12"
+                        android:textColor="@color/text_color18"
+                        android:textSize="@dimen/sp12" />
+
+
+                    <ImageView
+                        android:id="@+id/comment_model_tv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_model" />
+
+                    <ImageView
+                        android:id="@+id/comment_popman_tv"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/icon_daren" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/brandLogo"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="10dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/im_default"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:placeholderImage="@drawable/icon_dazong"
+                        fresco:placeholderImageScaleType="fitCenter" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/distanceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp10"
+                android:text="1.5km"
+                android:textColor="@color/text_color3"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/namelayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userInfoLayout"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nametv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:maxLength="10"
+                android:paddingLeft="30dp"
+                android:text="潇洒哥"
+                android:textColor="@color/text_color11"
+                android:textSize="@dimen/sp18" />
+
+            <ImageView
+                android:id="@+id/compile"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/icon_qianbi" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/descTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/namelayout"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp12" />
+
+
+        <TextView
+            android:id="@+id/fansTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descTv"
+            android:layout_centerHorizontal="true"
+            android:singleLine="true"
+            android:text="潇洒哥"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp14" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/content"
+        layout="@layout/common_child_tab"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topLayout"
+        android:layout_marginBottom="@dimen/dp50" />
+
+    <!-- 底部的按钮 -->
+    <RelativeLayout
+        android:id="@+id/relay_option"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentTop="true"
+            android:background="@color/split_line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/attentionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/attImage"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/btn_attention" />
+
+                    <TextView
+                        android:id="@+id/attentionTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toRightOf="@id/attImage"
+                        android:gravity="center"
+                        android:text="关注"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/font_size_medium" />
+                </RelativeLayout>
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="50dp"
+                   android:layout_alignParentRight="true"
+                    android:background="@color/split_line_color" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/secretMsgLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/secretImage"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/secret_icon" />
+
+                    <TextView
+                        android:id="@+id/secretMsgTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toRightOf="@id/secretImage"
+                        android:gravity="center"
+                        android:text="私信"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/font_size_medium" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/salePersonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:visibility="gone"
+                >
+
+                <View
+                    android:layout_width="1px"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/split_line_color" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/callImage"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/orderfellow_tel" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toRightOf="@id/callImage"
+                        android:gravity="center"
+                        android:text="联系TA"
+                        android:textColor="@color/text_color15"
+                        android:textSize="@dimen/font_size_medium" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <!-- 底部的按钮 -->
+    <RelativeLayout
+        android:id="@+id/relay_option2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentTop="true"
+            android:background="@color/split_line_color" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+
+            <ImageView
+                android:id="@+id/inputTxtImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/input_txt_icon" />
+
+            <TextView
+                android:id="@+id/releasePostedBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_toRightOf="@id/inputTxtImg"
+                android:text="发帖"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/dp18" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

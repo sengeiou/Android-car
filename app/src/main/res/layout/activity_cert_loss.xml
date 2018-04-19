@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_height_size"
+        android:layout_below="@id/titleBar"
+        android:background="@color/split_line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/split">
+
+
+        <TextView
+            android:id="@+id/senseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_size"
+            android:gravity="center"
+            android:text="2016第十四届中国国际摩托车博览会"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/font_size_medium" />
+
+
+        <TextView
+            android:id="@+id/certTypeTv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/senseName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="专业观众证"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/font_size_m_large" />
+
+        <TextView
+            android:id="@+id/certTypeTv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/certTypeTv1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_size"
+            android:gravity="center"
+            android:text="Professional Visitor Permit"
+            android:textColor="@color/text_more"
+            android:textSize="@dimen/font_size_medium"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/certTypeTv2">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_top_size"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@drawable/icon_certificate_n"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@drawable/icon_certificate_n"
+                fresco:placeholderImageScaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_more" />
+
+
+            <View
+                android:id="@+id/split2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_height_size"
+                android:layout_below="@id/company"
+                android:background="@color/split_line_color"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginTop="30dp"
+                />
+
+            <TextView
+                android:id="@+id/desc1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/split2"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/desc2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/desc1"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="一旦挂失成功，原纸质证件即时失效"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_size_small" />
+
+
+            <Button
+                android:id="@+id/lossBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/desc2"
+                android:layout_margin="@dimen/margin_left_size"
+                android:background="@drawable/button_bg_11"
+                android:text="确认挂失"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_more" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

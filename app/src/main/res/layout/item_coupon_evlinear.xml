@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:gravity="center">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            fresco:actualImageScaleType="fitXY"
+            fresco:failureImage="@drawable/im_default"
+            fresco:failureImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_cha" />
+        <TextView
+            android:id="@+id/evliner_covertv"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:textColor="@color/white"
+            android:text="封面"
+            android:textSize="8sp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent40b"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="3dp"
+        android:layout_height="70dp" />
+</LinearLayout>

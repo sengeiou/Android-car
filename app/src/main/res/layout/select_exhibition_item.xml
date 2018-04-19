@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/dp16"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/item_img"
+        android:layout_width="@dimen/dp90"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:failureImage="@drawable/cover_default"
+        fresco:placeholderImage="@drawable/cover_default"
+        fresco:placeholderImageScaleType="fitCenter"
+        android:layout_height="@dimen/dp70" />
+    <LinearLayout
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/item_exhibition_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="展会名"
+            android:textColor="@color/text_color9"
+            android:textSize="@dimen/sp16" />
+        <TextView
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/item_exhibition_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="展会时间"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp12" />
+        <TextView
+            android:layout_marginTop="@dimen/dp10"
+            android:id="@+id/item_exhibition_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="展会地址"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+</LinearLayout>

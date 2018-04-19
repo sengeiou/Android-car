@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@color/text_color14"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/totalrun"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="319"
+                android:textColor="@color/text_content_color"
+                android:textSize="@dimen/font_size_huge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="总行程（km）"
+                android:textColor="@color/text_content_color"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="计划用时 （t） 42小时15分"
+                android:textColor="@color/text_content_color"
+                android:textSize="@dimen/font_size_more" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/text_nav_def_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="已进行（km）"
+                    android:textColor="@color/text_content_color"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/already"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="31.9"
+                    android:textColor="@color/tab_text_s_color"
+                    android:textSize="@dimen/font_size_huge" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="自驾时间 （t）"
+                    android:textColor="@color/text_content_color"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/elapsedtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="2:37:21"
+                    android:textColor="@color/text_color23"
+                    android:textSize="@dimen/font_size_huge" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="途经第"
+                        android:textColor="@color/text_content_color"
+                        android:textSize="@dimen/font_size_more" />
+
+                    <TextView
+                        android:id="@+id/stationnum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text=" 2 "
+                        android:textColor="@color/tab_text_s_color"
+                        android:textSize="@dimen/font_size_m_large" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="个站点"
+                        android:textColor="@color/text_content_color"
+                        android:textSize="@dimen/font_size_more" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:text="31.9"
+                    android:textColor="@color/tab_text_s_color"
+                    android:textSize="@dimen/font_size_huge">
+
+                    <ProgressBar
+                        android:id="@+id/my_progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:max="100"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/progressbar"
+                        android:secondaryProgress="16" />
+
+                    <TextView
+                        android:id="@+id/percentage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center|right"
+                        android:text="16%"
+                        android:textColor="@color/tab_text_s_color"
+                        android:textSize="@dimen/font_size_more" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.tgf.kcwc.view.MyListView
+            android:id="@+id/mylistview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:horizontalSpacing="10dp"
+            android:listSelector="#00000000"
+            android:padding="10dp"
+            android:scrollbars="none"
+            android:verticalSpacing="10dp"></com.tgf.kcwc.view.MyListView>
+    </LinearLayout>
+
+</LinearLayout>

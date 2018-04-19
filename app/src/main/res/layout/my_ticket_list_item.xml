@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+
+
+    <RelativeLayout
+        android:id="@+id/orderTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/list_item_selector"
+        android:visibility="visible">
+
+
+        <TextView
+            android:id="@+id/orderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:gravity="center_vertical"
+            android:text="订单编号:"
+            android:textColor="@color/text_color3" />
+
+        <TextView
+            android:id="@+id/orderId"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@id/orderTitle"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color12" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:src="@drawable/more_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/app_layout_bg_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/orderTitleLayout"
+        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/white">
+
+        <com.tgf.kcwc.view.SpecRectView
+            android:id="@+id/specRectView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="visible"
+            app:bgColor="@color/white"
+            app:drawBottomLeft="true"
+            app:drawBottomRight="true" />
+
+
+        <RelativeLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/dp5"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/dp5">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_medium" />
+
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/title"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color4"
+                    android:textSize="@dimen/font_size_title" />
+
+
+                <TextView
+                    android:id="@+id/type2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_below="@id/title"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:layout_toRightOf="@id/type"
+                    android:text=""
+                    android:textColor="@color/text_color4"
+                    android:textSize="@dimen/sp20" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/type">
+
+
+                    <TextView
+                        android:id="@+id/expire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp5"
+                        android:layout_toLeftOf="@id/limitCunt"
+                        android:gravity="center_vertical|left"
+                        android:maxLines="3"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_small" />
+
+
+                    <TextView
+                        android:id="@+id/limitCunt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical|start"
+                        android:text="@string/ticket_desc"
+                        android:textColor="@color/text_color5"
+                        android:textSize="@dimen/font_size_small" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/type"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="20dp">
+
+                    <TextView
+                        android:id="@+id/moneyTag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/china_money_char"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/moneyTag"
+                        android:gravity="left"
+                        android:text="80"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_m_large"
+                        android:layout_alignBaseline="@id/moneyTag"
+                        />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/topLayout">
+
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null" />
+
+            <com.tgf.kcwc.view.SpecRectView
+                android:id="@+id/specRectView1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible"
+                app:bgColor="@color/app_layout_bg_color"
+                app:drawCycleColor="@color/white"
+                app:drawTopLeft="true"
+                app:drawTopRight="true"
+                app:isBgStroke="true"
+                app:isCycleStroke="true" />
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

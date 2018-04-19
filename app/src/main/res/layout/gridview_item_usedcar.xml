@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/app_main_color1"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/common_left_margin"
+    android:paddingRight="@dimen/dp10"
+    android:paddingTop="@dimen/common_right_margin">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp120"
+        android:layout_height="@dimen/dp90"
+        android:gravity="center_vertical">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/usedcar_coverIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cover_default"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/im_default"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <TextView
+            android:paddingBottom="@dimen/dp5"
+            android:id="@+id/owersale_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            tools:text="重庆|江津"
+            android:textColor="@color/text_more"
+            android:textSize="@dimen/font_size_tiny" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/ownersale_price"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="￥11,196"
+        android:textColor="@color/style_bg5" />
+</LinearLayout>

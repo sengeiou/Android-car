@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="50dp">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+
+        <TextView
+            android:id="@+id/ticketName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:text=""
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_title"
+
+            />
+
+
+        <TextView
+            android:id="@+id/ticketId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ticketName"
+            android:layout_marginLeft="@dimen/dp20"
+            android:text=""
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_medium" />
+
+
+        <TextView
+            android:id="@+id/priceTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp2"
+            android:layout_toRightOf="@id/ticketName"
+            android:text=""
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/sp12" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/refundState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp20"
+        android:text=""
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/font_size_medium" />
+
+</RelativeLayout>

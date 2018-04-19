@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <RelativeLayout
+            android:id="@+id/waitingprice_carinforl"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/waitingpric_ringiv"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/horn_selected" />
+
+            <TextView
+                android:id="@+id/waitingpric_timetitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/waitingpric_ringiv"
+                android:gravity="center_vertical"
+                android:text="正在预约经销商,已等待"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_more" />
+
+            <Chronometer
+                android:visibility="gone"
+                android:id="@+id/waitingpric_time"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/waitingpric_timetitle"
+                android:gravity="center_vertical"
+                android:textColor="@color/btn_select_color"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/waittingprice_carname"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:layout_below="@id/waitingpric_timetitle"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/waitingpric_ringiv"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_size_more"
+                tools:text="目标:豪爵铃木2016" />
+
+            <ImageView
+                android:id="@+id/waitingprice_outimg"
+                android:layout_below="@id/waitingpric_time"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentRight="true" />
+
+            <ImageView
+                android:id="@+id/waitingprice_inimg"
+                android:layout_below="@id/waitingpric_time"
+                android:layout_width="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/waittingprice_map"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp58"/>
+
+            <RelativeLayout
+                android:id="@+id/waitiongprice_noticerl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/btn_bg3">
+
+                <TextView
+                    android:id="@+id/waitiongprice_notice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginLeft="@dimen/common_left_margin"
+                    android:layout_marginRight="@dimen/common_left_margin"
+                    android:layout_marginTop="6dp"
+                    android:drawableLeft="@drawable/icon_horn"
+                    android:drawablePadding="20dp"
+                    android:gravity="center_vertical"
+                    android:paddingRight="40dp"
+                    android:text="等待报价或者直接联系经销商"
+                    android:textColor="@color/text_def"
+                    android:textSize="@dimen/font_size_small" />
+
+                <ImageView
+                    android:id="@+id/waitingnotice_closeiv"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_close" />
+
+            </RelativeLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:id="@+id/hintRl"
+        android:padding="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp30"
+        android:layout_marginLeft="@dimen/dp30"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/hintX"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:src="@drawable/icon_friend_x"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/hintAbove"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_below="@+id/hintX"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/style_bg5"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wait_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/hintBelow"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_below="@+id/hintAbove"
+            android:textSize="@dimen/sp16"
+            android:textColor="@color/style_bg5"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wait_str2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:layout_marginTop="@dimen/dp50"
+            android:layout_below="@+id/hintBelow"
+            android:textSize="@dimen/sp12"
+            android:textColor="@color/tab_text_n_color"
+            android:layout_centerHorizontal="true"
+            android:text="@string/wait_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <SlidingDrawer
+            android:id="@+id/slidingdrawer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:content="@+id/content"
+            android:handle="@+id/handle"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@id/handle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:background="@color/style_bg1">
+
+                    <TextView
+                        android:id="@+id/waitingpric_handle"
+                        android:layout_width="60dp"
+                        android:layout_height="4dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/shape_radiuswhiterect_bg" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/waitingpric_numtv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_height"
+                    android:background="@color/style_bg1"
+                    android:gravity="center"
+                    android:text="附近有0家商户"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_more" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@id/content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/app_layout_bg_color" />
+
+                <ListView
+                    android:id="@+id/waittingpriceact_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/devider" />
+            </LinearLayout>
+        </SlidingDrawer>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/waittingprice_orgdetailll"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/org_titlelayout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/org_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_title"
+                tools:text="1 重庆新元素雅和汽车销售" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/more_icon" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/org_addresslayout"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+
+            <TextView
+                android:id="@+id/orgs_addresstv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:drawableLeft="@drawable/icon_location"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:text="地址：重庆市区华北废墟"
+                android:textColor="@color/text_def"
+                android:textSize="@dimen/font_size_tiny" />
+
+            <TextView
+                android:id="@+id/waitingpric_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_right_margin"
+                android:text="142km"
+                android:textColor="@color/text_def" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/devider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <RelativeLayout
+                android:id="@+id/waittingprice_navirl"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="导航"
+                    android:textColor="@color/text_def"
+                    android:textSize="@dimen/font_size_more" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/waittingprice_route"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="路线"
+                    android:textColor="@color/text_def"
+                    android:textSize="@dimen/font_size_more" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/waittingpice_callphone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="询价"
+                    android:textColor="@color/text_def"
+                    android:textSize="@dimen/font_size_more" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="34dp"
+    android:background="@color/white"
+    android:minHeight="34dp">
+
+    <TextView
+        android:id="@+id/refound_sntv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_left_margin"
+        android:singleLine="true"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/font_size_title"
+        tools:text="No.238748327420" />
+
+    <TextView
+        android:id="@+id/refond_backstatusTv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignBaseline="@id/refound_sntv"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/common_left_margin"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color16"
+        android:textSize="@dimen/font_size_small"
+        tools:text="退款中" />
+</RelativeLayout>

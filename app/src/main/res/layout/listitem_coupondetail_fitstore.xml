@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="杜卡迪重庆"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_size_more" />
+
+        <com.hedgehog.ratingbar.RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            hedgehog:clickable="true"
+            hedgehog:halfstart="true"
+            hedgehog:starCount="5"
+            hedgehog:starEmpty="@drawable/rating_bar_star_empty"
+            hedgehog:starFill="@drawable/rating_bar_star_fill"
+            hedgehog:starImageHeight="15dp"
+            hedgehog:starImagePadding="5dp"
+            hedgehog:starImageWidth="25dp" />
+
+        <TextView
+            android:id="@+id/near_area_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingBar"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:singleLine="true"
+            android:text="解放碑"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:id="@+id/near_distance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ratingBar"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/near_area_tv"
+            android:singleLine="true"
+            android:text="1.7km"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_tiny" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="@dimen/img_size_xlarge"
+            android:layout_height="@dimen/img_size_xlarge"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_phone_selector" />
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/voucher_divide_line"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

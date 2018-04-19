@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/titlebar"/>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp10">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/detail_header_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:failureImage="@drawable/cover_default"
+            fresco:placeholderImage="@drawable/cover_default"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:roundAsCircle="true" />
+
+        <TextView
+            android:layout_alignTop="@+id/detail_header_img"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/text_color9"
+            android:id="@+id/detail_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/detail_header_img"
+            />
+        <ImageView
+            android:id="@+id/detail_brand"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignTop="@+id/detail_header_img"
+            android:layout_marginLeft="@dimen/dp13"
+            android:layout_toRightOf="@+id/detail_nickname"
+            android:scaleType="fitCenter"
+            />
+        <LinearLayout
+            android:id="@+id/detail_ll"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_toRightOf="@+id/detail_header_img"
+            android:layout_alignBottom="@+id/detail_header_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_detail_age_bg"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/detail_gender"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_men"
+                />
+            <TextView
+                android:layout_marginLeft="@dimen/dp2"
+                android:id="@+id/detail_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/sp10"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/detail_model"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/detail_header_img"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_toRightOf="@+id/detail_ll"
+            android:src="@drawable/icon_model"
+            android:scaleType="fitCenter"/>
+
+        <ImageView
+            android:src="@drawable/icon_daren"
+            android:id="@+id/detail_master"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/detail_header_img"
+            android:layout_marginLeft="@dimen/dp8"
+            android:layout_toRightOf="@+id/detail_model"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/bg_1"/>
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:padding="@dimen/dp15"
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@color/sevicecity_openbg"
+            android:scrollbars="none"
+            android:dividerHeight="0dp" />
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+</LinearLayout>

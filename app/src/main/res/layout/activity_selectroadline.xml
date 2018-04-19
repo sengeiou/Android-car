@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/common_left_margin"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/selectline_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/eidtbook_nobookroot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_layout_bg_color"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="70dp"
+                android:src="@drawable/road_line" />
+
+            <TextView
+                android:id="@+id/notice_titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:layout_marginTop="@dimen/common_left_margin"
+                android:gravity="center"
+                android:text="路书需含驾途路线"
+                android:textColor="@color/text_color20"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/notice_msgTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="您尚无驾途路线，现在开始驾途吗？"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_medium" />
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="70dp">
+
+                <TextView
+                    android:id="@+id/roadline_cancel"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/common_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/btn_grayred_selector"
+                    android:gravity="center"
+                    android:text="否"
+                    android:textColor="@color/text_color15"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/roadline_yes"
+                    android:layout_width="120dp"
+                    android:layout_height="@dimen/common_button_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/button_bg_2"
+                    android:gravity="center"
+                    android:text="是"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_medium" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/selectline_startnewtv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:background="@drawable/btn_login_selector"
+        android:gravity="center"
+        android:textSize="@dimen/font_size_title"
+        android:text="开始新的驾途"
+        android:textColor="@color/transparent90_white" />
+</LinearLayout>

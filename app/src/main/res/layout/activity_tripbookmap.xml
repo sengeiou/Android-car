@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+<include layout="@layout/titlebar"/>
+    <com.amap.api.maps.MapView
+        android:id="@+id/tripbook_map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:paddingTop="9dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tripmap_addressname"
+            android:layout_width="310dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="地址名称"
+            android:singleLine="true"
+            android:textSize="@dimen/font_size_title"
+            android:textColor="@color/text_color12" />
+
+        <ImageView
+            android:id="@+id/tripmap_navibtn"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/pink_mapicon" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tripbookmap_addresstv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="@dimen/common_left_margin"
+        android:textSize="@dimen/font_size_tiny"
+        android:text="地址 |351米"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:drawablePadding="@dimen/common_left_margin"
+        android:textColor="@color/text_color15"
+        android:drawableLeft="@drawable/icon_location"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/tripbook_around_searchrl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_tripbook_aroundselector">
+
+            <TextView
+                style="@style/radiobutton_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:checked="true"
+                android:drawableLeft="@drawable/btn_search"
+                android:drawablePadding="5dp"
+                android:text="搜周边"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_medium" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/split_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/tripbook_around_couponrl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_tripbook_aroundselector">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/btn_coupon"
+                android:drawablePadding="5dp"
+                android:text="代金券"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_medium" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/split_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/tripbook_around_tongxrl"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_tripbook_aroundselector">
+
+            <TextView
+                style="@style/radiobutton_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/btn_tongxing"
+                android:drawablePadding="5dp"
+                android:text="搜同行"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_medium" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

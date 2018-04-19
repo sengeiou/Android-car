@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/sendobj_avatar"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                fresco:actualImageScaleType="centerInside"
+                fresco:placeholderImage="@drawable/rp_avatar"
+                fresco:roundAsCircle="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/sendobj_username"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="用户昵称你好你好"
+            android:textColor="@color/black"
+            android:singleLine="true"
+            android:textSize="@dimen/font_size_more" />
+
+        <TextView
+            android:id="@+id/sendobj_sendticket"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:gravity="center"
+            android:text="补发"
+            android:textColor="@color/blue_font1"
+            android:textSize="@dimen/font_size_more" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_icon" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/voucher_divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="分发"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="失效"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="领取"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="核销"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="过期"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_medium" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/sendobj_all"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="8"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/sendobj_lose"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/sendobj_receive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/sendobj_use"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/sendobj_expire"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center"
+            android:text="4"
+            android:textColor="@color/black"
+            android:textSize="@dimen/font_size_title" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/coverLayout"
+                android:layout_width="match_parent"
+                android:layout_height="190dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@drawable/im_default"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                    fresco:placeholderImageScaleType="fitXY"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/btn_grayphone"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/hintpicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/text_color2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/btn_grayphone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="上传海报" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/labeltext"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:hint="话题标签（4-16字）"
+                android:maxLength="16"
+                android:padding="10dp"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_medium" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_content_color" />
+
+            <EditText
+                android:id="@+id/edtext"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:gravity="left"
+                android:hint="话题简介（100字）"
+                android:inputType="textMultiLine"
+                android:maxLength="100"
+                android:maxLines="6"
+                android:minHeight="120dp"
+                android:padding="10dp"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_medium" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_content_color" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10px"
+                android:background="@color/app_layout_bg_color2" />
+
+            <LinearLayout
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:text="选择分类"
+                    android:textColor="@color/text_color14"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/typename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="点击选择"
+                    android:textColor="@color/text_color14"
+                    android:textSize="@dimen/font_size_more" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/btn_nextjiantou" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_content_color" />
+
+            <TextView
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:background="@color/color_login_devide"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="创建"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_title" />
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

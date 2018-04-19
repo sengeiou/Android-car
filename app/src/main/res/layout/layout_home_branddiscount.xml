@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/latest_exhibition_rl"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@color/app_main_color1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/lastest_exhibit_tiltetv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/titleyellow_tag"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            android:text="品牌钜惠，特价大促"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_right_margin"
+            android:rotation="-90"
+            android:src="@drawable/loc_drop_down" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="@dimen/homeleft_margin"
+        android:layout_height="189dp"
+        android:layout_marginLeft="@dimen/homeleft_margin"
+        android:layout_marginTop="@dimen/common_left_margin">
+
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/home_coverIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:actualImageScaleType="fitXY" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/biaoqianyellow"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/brandicon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="7dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/im_default" />
+
+            <TextView
+                android:id="@+id/brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="斯巴鲁"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_title" />
+        </LinearLayout>
+        <com.tgf.kcwc.view.MyGridView
+            android:id="@+id/home_mygridview"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/transparent"
+            android:numColumns="3"
+            android:verticalSpacing="7dp" />
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:layout_marginRight="@dimen/common_left_margin">
+
+        <TextView
+            android:id="@+id/branddiscount_maxprice"
+            android:layout_width="match_parent"
+            android:layout_marginRight="87dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:text="最高优惠8,000"
+            android:textColor="@color/text_color20"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/branddiscount_data"
+            android:layout_width="match_parent"
+            android:layout_marginRight="87dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/branddiscount_maxprice"
+            android:layout_marginTop="7dp"
+            android:text="报名仅剩19天"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp12" />
+
+        <LinearLayout
+            android:id="@+id/home_gototicketLayout"
+            android:layout_width="75dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_login_selector"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/home_gototicketTv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="抢门票"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/limitbrand_baomingTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="3dp"
+                android:text="333人报名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp10" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/common_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/scanoff_cover"
+            android:layout_width="@dimen/img_foureper"
+            android:layout_height="@dimen/img_threeeper"
+            android:scaleType="fitXY"
+            fresco:actualImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/rp_loading_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/listitem_scanoff_coupontitle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:text="这是代金券标题"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/font_size_medium" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/scanoff_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="2017-08-30 00:00: "
+                android:textColor="@color/textash" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="32dp">
+
+                <TextView
+                    android:id="@+id/scanoff_nowprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="6dp"
+                    android:text="￥100"
+                    android:textColor="@color/text_color23"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/scanoff_oldprice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@id/scanoff_nowprice"
+                    android:paddingBottom="6dp"
+                    android:layout_alignBaseline="@id/scanoff_nowprice"
+                    android:text="￥30"
+                    android:textColor="@color/textash"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/scanoff_orgname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="6dp"
+                    android:text="发行机构简称"
+                    android:textColor="@color/textash"
+                    android:textSize="@dimen/font_size_tiny" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_color2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/scanoff_numtv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginTop="7dp"
+            android:maxLines="1"
+            tools:text="核销总量:90"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_tiny" />
+
+        <TextView
+            android:id="@+id/scanoff_moneytv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/scanoff_numtv"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginTop="7dp"
+            android:maxLines="1"
+            tools:text="累计金额:90"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_tiny" />
+
+        <ImageView
+            android:id="@+id/couponmore_recordiv"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_icon" />
+    </RelativeLayout>
+</LinearLayout>

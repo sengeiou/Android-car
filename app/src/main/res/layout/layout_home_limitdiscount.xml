@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/home_titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@color/app_main_color1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/titleyellow_tag"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            android:text="限时特惠，怕你错过"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_right_margin"
+            android:rotation="-90"
+            android:src="@drawable/loc_drop_down" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginRight="@dimen/homeleft_margin"
+        android:layout_marginLeft="@dimen/homeleft_margin"
+        android:background="@color/divider2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:layout_marginLeft="@dimen/homeleft_margin"
+        android:layout_marginRight="@dimen/homeleft_margin"
+        android:layout_marginTop="@dimen/hometop_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/home_coverIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:actualImageScaleType="centerCrop" />
+        <com.tgf.kcwc.view.MyGridView
+            android:id="@+id/home_mygridview"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:background="@color/transparent"
+            android:numColumns="3"
+            android:verticalSpacing="7dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/biaoqianyellow"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/brandicon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="7dp"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:placeholderImage="@drawable/im_default" />
+
+            <TextView
+                android:id="@+id/brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="斯巴鲁"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_title" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/home_titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_left_margin"
+        android:lineSpacingExtra="5dp"
+        android:maxLines="2"
+        android:text="裸车0首付，爱车轻松享！购起亚K5 2014款 这是优惠标题这是优惠标题"
+        android:textColor="@color/text_color20"
+        android:textSize="@dimen/sp18" />
+
+    <RelativeLayout
+        android:id="@+id/home_limitLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_right_margin"
+        android:layout_marginRight="@dimen/margin_right_size">
+
+
+        <TextView
+            android:id="@+id/countericon"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:textSize="@dimen/font_size_small"
+            android:text="倒计时"
+            android:textColor="@color/text_color17" />
+
+        <com.tgf.kcwc.view.countdown.CountdownView
+            android:id="@+id/limittime_settimetext"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/countericon"
+            app:isHideTimeBackground="true"
+            app:isShowDay="true"
+            app:isShowHour="true"
+            app:isShowMillisecond="false"
+            app:isShowMinute="true"
+            app:isShowSecond="true"
+            app:isShowTimeBgDivisionLine="false"
+            app:suffixDay="天"
+            app:suffixGravity="center"
+            app:suffixHour="时"
+            app:suffixMinute="分"
+            app:suffixSecond="秒"
+            app:suffixTextColor="@color/text_color17"
+            app:suffixTextSize="@dimen/font_size_small"
+            app:timeTextColor="@color/text_color17"
+            app:timeTextSize="@dimen/font_size_small" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="@dimen/homeleft_margin"
+        android:layout_marginRight="@dimen/homeleft_margin"
+        android:background="@color/divider2" />
+
+    <RelativeLayout
+        android:id="@+id/home_storeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/common_left_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/home_storeCoverIv"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/home_storeNameTv"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_marginTop="@dimen/common_left_margin"
+            android:layout_toRightOf="@id/home_storeCoverIv"
+            android:singleLine="true"
+            android:text="重庆新雅和汽车销售服务有限公司"
+            android:textColor="@color/text_color3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/home_storeAddressTv"
+            android:layout_width="221dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/home_storeNameTv"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/home_storeCoverIv"
+            android:drawableLeft="@drawable/icon_location"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="重庆市渝北区龙溪镇松石道80号附5号"
+            android:textColor="@color/text_color17" />
+
+        <ImageView
+            android:id="@+id/home_storeTelTv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_phone_green" />
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/externaltime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/message_time_bg"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:text="2017-05-18 11:01:53"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/oppositelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/externalhead"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            fresco:placeholderImage="@drawable/rp_avatar"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:retryImageScaleType="fitXY"
+            fresco:roundAsCircle="true" />
+
+        <!--messagewhite 白色有边框 messagegreen 绿色有边框   message_layout_bg 正常边框-->
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/messagewhite"
+            android:orientation="vertical">
+
+            <!--title-->
+            <TextView
+                android:id="@+id/announcementtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="为庆祝XXX"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_medium" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/melayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/mehead"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            fresco:placeholderImage="@drawable/rp_avatar"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:retryImageScaleType="fitXY"
+            fresco:roundAsCircle="true" />
+        <!--messagewhite 白色有边框 messagegreen 绿色有边框   message_layout_bg 正常边框-->
+        <LinearLayout
+            android:id="@+id/metitlelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_toLeftOf="@id/mehead"
+            android:background="@drawable/messagegreen"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--title-->
+            <TextView
+                android:id="@+id/metitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="为庆祝XXX为庆祝XXX为庆祝XXX"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_medium" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

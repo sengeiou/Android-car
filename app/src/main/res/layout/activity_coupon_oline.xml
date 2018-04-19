@@ -1,0 +1,102 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+
+
+    <LinearLayout
+        android:id="@+id/exclusive_root_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/couonpOnline_laytoutTitle"
+            layout="@layout/voucher_search_bar" />
+
+        <LinearLayout
+            android:id="@+id/nearact_filterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_button_height"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/nearact_categroy"
+                    layout="@layout/common_filter_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/nearact_brand"
+                    layout="@layout/common_filter_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/nearact_kilometer"
+                    layout="@layout/common_filter_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/nearact_rank"
+                    layout="@layout/common_filter_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/voucher_divide_line" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+                android:id="@+id/rl_modulename_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_left_margin">
+
+                <ListView
+                    android:id="@+id/onlineCoupon_contentlv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_filter"
+                    android:orientation="vertical" />
+            </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+            <TextView
+                android:id="@+id/msgTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/no_data_img_icon"
+                android:text="        没有代金券咯"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+</merge>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sevicecity_locationbg"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:id="@+id/add_customer_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp44"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/add_grouping"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:gravity="right"
+                android:text="分组"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/add_group_name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp22"
+                android:layout_toRightOf="@+id/add_grouping"
+                android:text="通讯录好友"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp14" />
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/rp_arrow_forward" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@color/bg_1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp44"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/add_customer_name"
+                android:layout_width="46dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:gravity="right"
+                android:text="名称"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp12" />
+
+            <EditText
+                android:inputType="text"
+                android:id="@+id/add_name_et"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp22"
+                android:layout_toRightOf="@+id/add_customer_name"
+                android:hint="请输入名称"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_gravity="center_vertical"
+                android:textColorHint="@color/btn_bg4"
+                android:background="@null"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@color/bg_1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp44"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/add_phone"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp20"
+                android:gravity="right"
+                android:text="手机号码"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/sp12" />
+
+            <EditText
+                android:inputType="number"
+                android:layout_gravity="center_vertical"
+                android:textColorHint="@color/text_color_hint"
+                android:id="@+id/add_phone_et"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp22"
+                android:layout_toRightOf="@+id/add_phone"
+                android:hint="请输入手机号码"
+                android:textColorHighlight="@color/btn_bg4"
+                android:background="@null"
+                android:layout_marginRight="@dimen/dp20"
+                android:textColor="@color/text_bg"
+                android:textSize="@dimen/sp14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@color/bg_1" />
+        <Button
+            android:layout_marginTop="@dimen/dp25"
+            android:layout_marginRight="@dimen/dp15"
+            android:layout_marginLeft="@dimen/dp15"
+            android:id="@+id/add_customer_btn"
+            android:layout_width="match_parent"
+            android:text="添加"
+            android:textSize="@dimen/sp18"
+            android:textColor="@color/white"
+            android:background="@drawable/add_btn_shape"
+            android:layout_height="@dimen/dp45" />
+        <TextView
+            android:layout_marginTop="@dimen/dp10"
+            android:textColor="@color/text_color28"
+            android:textSize="@dimen/sp12"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_customer_notes"/>
+    </LinearLayout>
+
+</LinearLayout>

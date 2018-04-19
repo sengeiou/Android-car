@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:hedgehog="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_layout_bg_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <LinearLayout
+            android:id="@+id/select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/common_right_margin">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/couponlist_cover"
+                android:layout_width="@dimen/img_foureper"
+                android:layout_height="@dimen/img_threeeper"
+                android:scaleType="fitXY"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@drawable/im_default"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                fresco:placeholderImageScaleType="fitXY" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/img_size_xlarge"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:orientation="vertical">
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/listitem_recoment_coupontitle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/voucher_black"
+                        android:textSize="@dimen/font_size_medium"
+                        tools:text="这是代金券标题" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/couponlist_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:singleLine="true"
+                    android:textColor="@color/voucher_gray"
+                    tools:text="代金券简述" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp">
+
+                    <TextView
+                        android:id="@+id/recyleitem_near_nowprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="6dp"
+                        android:text="￥ 100"
+                        android:textColor="@color/voucher_yellow"
+                        android:textSize="@dimen/font_size_more" />
+
+                    <TextView
+                        android:id="@+id/listviewitem_recomment_oldprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@id/recyleitem_near_nowprice"
+                        android:layout_marginLeft="4dp"
+                        android:layout_toRightOf="@id/recyleitem_near_nowprice"
+                        android:gravity="center"
+                        android:text="￥30"
+                        android:textColor="@color/voucher_gray"
+                        android:textSize="@dimen/font_size_small" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/input_textEd"
+            android:layout_width="match_parent"
+            android:layout_height="98dp"
+            android:layout_marginTop="@dimen/common_left_margin"
+            android:background="@color/white"
+            android:gravity="top"
+            android:hint="在此输入评价"
+            android:padding="8dp"
+            android:textSize="@dimen/font_size_medium" />
+
+        <com.tgf.kcwc.view.dragview.SwipeRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="73dp"
+            android:background="@color/white"
+            android:paddingLeft="3dp"
+            android:visibility="visible" />
+        <!--   <android.support.v7.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="90dp" />-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="点击图片可进行编辑，拖动更改图片位置"
+            android:textColor="@color/text_color17"
+            android:textSize="9dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:text="综合评价"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_small" />
+
+            <com.hedgehog.ratingbar.RatingBar
+                android:id="@+id/couponev_star"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="@dimen/common_left_margin"
+                fresco:starFill="@drawable/rating_bar_star_fill"
+                hedgehog:clickable="true"
+                hedgehog:starCount="5"
+                hedgehog:starEmpty="@drawable/rating_bar_star_empty"
+                hedgehog:starImageHeight="18dp"
+                hedgehog:starImagePadding="5dp"
+                hedgehog:starImageWidth="18dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/split_line_color3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:text="店铺评分"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_medium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="8dp"
+                android:text="店铺环境"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_medium" />
+
+            <com.hedgehog.ratingbar.RatingBar
+                android:id="@+id/evaluate_shoprating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                hedgehog:clickable="true"
+                hedgehog:halfstart="false"
+                hedgehog:starCount="5"
+                hedgehog:starEmpty="@drawable/red_starn"
+                hedgehog:starFill="@drawable/red_stars"
+                hedgehog:starImageHeight="20dp"
+                hedgehog:starImagePadding="4dp"
+                hedgehog:starImageWidth="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/split_line_color3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="8dp"
+                android:text="服务态度"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/font_size_medium" />
+
+            <com.hedgehog.ratingbar.RatingBar
+                android:id="@+id/evaluate_attitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center"
+                hedgehog:clickable="true"
+                hedgehog:halfstart="false"
+                hedgehog:starCount="5"
+                hedgehog:starEmpty="@drawable/red_starn"
+                hedgehog:starFill="@drawable/red_stars"
+                hedgehog:starImageHeight="20dp"
+                hedgehog:starImagePadding="4dp"
+                hedgehog:starImageWidth="20dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/coupon_commitEvalTv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_margin="15dp"
+            android:background="@drawable/button_bg_10"
+            android:gravity="center"
+            android:text="提交评价"
+            android:textColor="@color/text_color16"
+            android:textSize="@dimen/font_size_title" />
+    </LinearLayout>
+
+</ScrollView>

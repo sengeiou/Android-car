@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_centerVertical="true"
+            android:textColor="@color/text_color3"
+            android:text="请扫描一下二维码核销" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/btn_close_selector" />
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/topLayout"
+        android:background="@color/split_line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/split">
+
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/gif"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:failureImage="@drawable/cover_default"
+            fresco:failureImageScaleType="fitXY"
+
+            fresco:placeholderImageScaleType="fitXY"
+            fresco:roundAsCircle="false" />
+
+        <TextView
+            android:id="@+id/ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="票号 22233332323223"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_medium" />
+
+
+        <ImageView
+            android:id="@+id/qrImg"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

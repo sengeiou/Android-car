@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_layout_bg_color"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+            android:id="@+id/rl_modulename_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/beauty_pics_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/releaseLayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/cycle_bg_2"
+
+        >
+
+        <ImageView
+            android:id="@+id/releaseTopicBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera_icon" />
+
+    </RelativeLayout>
+</FrameLayout>

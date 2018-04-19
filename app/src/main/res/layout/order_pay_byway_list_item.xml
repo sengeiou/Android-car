@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:minHeight="45dp"
+    android:paddingLeft="@dimen/dp20"
+    android:paddingRight="@dimen/dp20"
+
+    >
+
+
+    <ImageView
+        android:id="@+id/payByWayIcon"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/titleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_toRightOf="@id/payByWayIcon"
+        android:gravity="center_vertical"
+        android:textColor="@color/text_color15"
+        android:textSize="@dimen/sp15"
+        tools:text="" />
+
+
+    <ImageView
+        android:id="@+id/selectImg"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_right_red" />
+
+
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_layout_bg_color" />
+</RelativeLayout>

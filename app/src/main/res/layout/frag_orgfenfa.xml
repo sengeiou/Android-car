@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/seek"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/homeleft_margin"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/dp10"
+                android:layout_weight="1"
+                android:background="@drawable/search_bg3"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/search_btn_selector"
+                android:gravity="center_vertical"
+                android:hint="员工手机号、姓名、昵称"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="10dp" />
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/orgfenfa_tongjiFenfalv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/homeleft_margin"
+                android:layout_marginRight="@dimen/homeleft_margin"
+
+                android:orientation="vertical" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/homeleft_margin"
+                android:layout_marginLeft="@dimen/homeleft_margin"
+                android:textColor="@color/text_color9"
+                android:text="以票种颜色代表票种" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

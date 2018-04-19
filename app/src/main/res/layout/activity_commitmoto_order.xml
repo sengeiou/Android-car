@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color2"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_layout_bg_color2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/commitorder_lv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin">
+
+
+                <TextView
+                    android:id="@+id/commitorder_brandname"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="2"
+                    android:paddingRight="@dimen/common_left_margin"
+                    android:textColor="@color/voucher_black"
+                    android:textSize="@dimen/font_size_medium"
+                    tools:text="豪爵" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/more_icon" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/voucher_divide_line" />
+
+            <TextView
+                android:id="@+id/outlookTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:text="我想看的外观"
+                android:textColor="@color/voucher_black" />
+
+            <com.tgf.kcwc.view.MyGridView
+                android:id="@+id/commitorder_outlook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="5"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/commitorder_address_ll"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="我的位置"
+                    android:textColor="@color/voucher_black"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/commitorder_myplace"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical|right"
+                    android:paddingRight="@dimen/common_left_margin"
+                    android:singleLine="true"
+                    android:text="重庆"
+                    android:textColor="@color/voucher_black"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/more_icon" />
+
+            </LinearLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/voucher_divide_line" />
+
+            <TextView
+                android:id="@+id/inlookTv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:text="我想看的内饰"
+                android:textColor="@color/voucher_black" />
+
+            <com.tgf.kcwc.view.MyGridView
+                android:paddingBottom="@dimen/dp10"
+                android:id="@+id/commitorder_inlook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="5"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scrollbars="none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/voucher_divide_line" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin">
+
+                <EditText
+                    android:paddingTop="@dimen/dp12"
+                    android:id="@+id/commitorder_motodesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="top|left"
+                    android:hint="外观可见差异配置需求"
+                    android:maxLength="500"
+                    android:paddingRight="@dimen/common_left_margin"
+                    android:textColor="@color/voucher_black"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/commitorder_limmittv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_height"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    android:gravity="center_vertical|right"
+                    android:text="0/500" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/voucher_divide_line" />
+
+            <EditText
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/text_color3"
+                android:padding="@dimen/dp16"
+                android:id="@+id/commitorder_tel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="请输入联系电话"
+                android:inputType="number"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/voucher_divide_line" />
+
+            <EditText
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/text_color3"
+                android:id="@+id/commitorder_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="怎么称呼您"
+                android:padding="@dimen/dp16" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/voucher_divide_line" />
+
+            <Button
+                android:id="@+id/commitorder_commitbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_left_margin"
+                android:layout_marginRight="@dimen/common_left_margin"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_login_selector"
+                android:text="提交"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_title" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dp15"
+                android:textSize="@dimen/sp10"
+                android:textColor="@color/btn_gray_normal"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/see_car_hint" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

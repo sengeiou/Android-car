@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            fresco:actualImageScaleType="fitCenter"
+            fresco:failureImage="@drawable/icon_rongyu"
+            fresco:failureImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/icon_rongyu"
+            fresco:placeholderImageScaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:text="此贴被“管理员”设置为精华帖"
+            android:textColor="@color/app_title_color1"
+            android:textSize="@dimen/font_size_s_medium" />
+
+        <TextView
+            android:id="@+id/bonuspoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="+50分"
+            android:textColor="@color/tab_text_s_color"
+            android:textSize="@dimen/font_size_s_medium" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginTop="10dp"
+        android:background="@color/text_content_color" />
+</LinearLayout>

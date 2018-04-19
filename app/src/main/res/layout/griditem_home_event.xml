@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#00ffffff"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="60dp"
+        android:layout_height="24dp"
+        android:background="@drawable/rectangleboder_greenwhite"
+        android:gravity="center"
+        tools:text="展位图"
+        android:textColor="@color/text_color10"
+        android:textSize="@dimen/font_size_tiny" />
+</LinearLayout>

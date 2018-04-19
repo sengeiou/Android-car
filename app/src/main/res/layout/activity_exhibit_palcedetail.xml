@@ -1,0 +1,223 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login.LoginActivity">
+    <include layout="@layout/titlebar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@color/app_layout_bg_color"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/exhibitplace_headiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    fresco:actualImageScaleType ="fitXY"
+                    android:src="@drawable/moto_testdetail" />
+
+
+                <TextView
+                    android:id="@+id/exhibitplace_name"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/shape_exhitplacedetail_bg"
+                    android:gravity="center"
+                    android:paddingBottom="2dp"
+                    android:paddingTop="2dp"
+                    android:text="N1"
+                    android:textSize="@dimen/font_size_title" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/exhibitplace_desc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_main_color1"
+                android:padding="10dp"
+                android:text=""
+                android:textSize="@dimen/font_size_medium"
+                android:textColor="@color/text_def"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="@dimen/list_divider_height"
+                android:background="@color/app_main_color1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/titleyellow_tag"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="参展品牌"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_right_margin"
+                    android:rotation="-90" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/title_layout"
+                android:background="@color/devider" />
+
+            <com.tgf.kcwc.view.MyGridView
+                android:id="@+id/palcedeatail_brands_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_main_color1"
+                android:numColumns="6"
+                android:padding="10dp"
+                android:verticalSpacing="5dp" />
+
+            <RelativeLayout
+                android:id="@+id/placedetail_gotonewcarrl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="@dimen/list_divider_height"
+                android:background="@color/app_main_color1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/titleyellow_tag"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="新车发布"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_right_margin"
+                    android:rotation="-90"
+                    android:src="@drawable/loc_drop_down" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/title_layout"
+                android:background="@color/devider" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/exhibitplacedetail_newcar_rc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="@dimen/list_divider_height"
+                android:background="@color/app_main_color1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/titleyellow_tag"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="看模特"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_right_margin"
+                    android:rotation="-90"
+                    android:src="@drawable/loc_drop_down" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/title_layout"
+                android:background="@color/devider" />
+
+            <GridView
+                android:id="@+id/palcedetail_beauty_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_layout_bg_color"
+                android:horizontalSpacing="1dp"
+                android:numColumns="2"
+                android:verticalSpacing="1dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="@dimen/list_divider_height"
+                android:background="@color/app_main_color1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/titleyellow_tag"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="展会活动"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_right_margin"
+                    android:rotation="-90"
+                    android:src="@drawable/loc_drop_down" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/title_layout"
+                android:background="@color/devider" />
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/palcedeatail_envent_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

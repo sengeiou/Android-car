@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp8"
+            android:paddingLeft="@dimen/dp16"
+            android:paddingRight="@dimen/dp16"
+            android:paddingTop="@dimen/dp8">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp22"
+                android:paddingRight="@dimen/dp22">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_centerVertical="true"
+                    android:background="@color/text_selected" />
+
+                <ImageView
+                    android:id="@+id/commit_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_apply_circle_s" />
+
+                <ImageView
+                    android:id="@+id/apply_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shape_apply_circle_selector" />
+
+                <ImageView
+                    android:id="@+id/wait_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/shape_apply_circle_selector" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp6">
+
+                <TextView
+                    android:id="@+id/commit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="提交审核资料"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/sp10" />
+
+                <TextView
+                    android:id="@+id/apply_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="展位申请"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/sp10" />
+
+                <TextView
+                    android:id="@+id/wait_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="等待审核"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/sp10" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_header_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_pay_success" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/success_hint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:gravity="center"
+            android:text="恭喜您!订单支付成功!"
+            android:textColor="@color/voucher_black"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/paydesc_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height"
+            android:gravity="center"
+            android:text="请进入“会员中心-门票-我的”查看购买到的门票。"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_tiny" />
+
+        <TextView
+            android:id="@+id/goTicketBtn"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_radiusgreenrect_bg"
+            android:gravity="center"
+            android:text="查看门票"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium" />
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/phone"
+            android:layout_marginTop="@dimen/dp30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/service_phone"
+            android:textColor="@color/text_more"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/payFailureLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_header_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_pay_failure" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:gravity="center"
+            android:text="抱歉!订单支付失败!"
+            android:textColor="@color/voucher_black"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/failContentTv"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="您可“继续支付”，完成门票购买；也可“取消订单“，放弃购买。"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_tiny" />
+
+
+        <LinearLayout
+            android:layout_width="260dp"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/cancelPayBtn"
+                android:layout_width="120dp"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_radiuswhiterect_bg"
+                android:gravity="center"
+                android:text="取消支付"
+                android:textColor="@color/text_color8"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/continuePayBtn"
+                android:layout_width="120dp"
+                android:layout_height="@dimen/common_button_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_radiusyellowrect_bg"
+                android:gravity="center"
+                android:text="继续支付"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_medium" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.tgf.kcwc.view.LoadView
+        android:id="@+id/loadView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

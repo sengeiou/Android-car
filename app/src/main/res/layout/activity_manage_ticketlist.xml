@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RadioGroup
+        android:id="@+id/ticketm_filterRG"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/ticketm_filter_workerBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableBottom="@drawable/tab_tiketmange_selector"
+            android:gravity="center"
+            android:text="发给员工"
+            android:textColor="@color/tab_hometext_color" />
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/divider3" />
+
+        <RadioButton
+            android:id="@+id/ticketm_filter_worksuBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/tab_tiketmange_selector"
+            android:gravity="center"
+            android:text="转让授权"
+            android:textColor="@color/tab_hometext_color" />
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/divider3" />
+
+        <RadioButton
+            android:id="@+id/ticketm_filter_customerBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/tab_tiketmange_selector"
+            android:gravity="center"
+            android:text="发给客户"
+            android:textColor="@color/tab_hometext_color" />
+    </RadioGroup>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ticketmanage_list_tickeKindtv"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/homeleft_margin"
+                android:text="店长或赠票管理人可将机构下的票分发给业务人员"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/sp12" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="99dp"
+                android:background="@color/white"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="15dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/ticketm_exhibitcoveriv"
+                    android:layout_width="91dp"
+                    android:layout_height="69dp"
+                    android:layout_centerVertical="true"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                    fresco:placeholderImageScaleType="fitXY"
+                    />
+
+                <TextView
+                    android:id="@+id/ticketm_exhibitTitleTv"
+                    android:layout_width="220dp"
+                    android:layout_height="43dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/ticketm_exhibitcoveriv"
+                    android:lineSpacingExtra="5dp"
+                    android:maxLines="2"
+                    android:text="第十五届中国国际摩托车博览会第国际摩托车博览会"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp16" />
+
+                <TextView
+                    android:id="@+id/ticketm_exhibitExpiredIv"
+                    android:layout_width="49dp"
+                    android:layout_height="17dp"
+                    android:layout_below="@id/ticketm_exhibitTitleTv"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/ticketm_exhibitcoveriv"
+                    android:background="@drawable/shape_ticketm_expired"
+                    android:gravity="center"
+                    android:text="过期"
+                    android:textColor="@color/text_color17"
+                    android:textSize="12dp" />
+
+                <ImageView
+                    android:id="@+id/ticketm_list_seemoreIv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/rp_arrow_forward" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="15dp"
+                android:textColor="@color/divider3" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/ticketm_totalTicketTv"
+                    android:layout_width="92dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/homeleft_margin"
+                    android:gravity="center_vertical"
+                    android:text="总量 80"
+                    android:textColor="@color/text_color3" />
+
+                <TextView
+                    android:id="@+id/ticketm_leftTicketTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/ticketm_totalTicketTv"
+                    android:gravity="center_vertical"
+                    android:text="剩余 27"
+                    android:textColor="@color/text_color3" />
+
+                <TextView
+                    android:id="@+id/ticketm_list_tongjiIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/homeleft_margin"
+                    android:drawableLeft="@drawable/ticketm_tongji"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="统计概览" />
+            </RelativeLayout>
+
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/ticketm_handlistlv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:padding="@dimen/common_left_margin" />
+
+            <TextView
+                android:id="@+id/ticketmlist_gotoTongjiTV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_button_height"
+                android:gravity="center"
+                android:text="查看统计概览"
+                android:background="@color/white"
+                android:textColor="@color/text_selected"
+                android:textSize="@dimen/sp18" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="61dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/style_bg7"
+        android:gravity="center"
+        android:text="若需向其他机构发放赠票，请登录商户后台进行“代发”"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+</LinearLayout>

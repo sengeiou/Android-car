@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg_2"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/add_group_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp16"
+            android:gravity="right"
+            android:text="分组名称"
+            android:textColor="@color/text_bg"
+            android:textSize="@dimen/sp16" />
+
+        <EditText
+            android:id="@+id/add_group_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp22"
+            android:layout_marginRight="@dimen/dp16"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入分组名称"
+            android:textColor="@color/btn_bg4"
+            android:textColorHint="@color/btn_bg4"
+            android:textSize="@dimen/sp14" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/bg_1" />
+
+    <Button
+        android:id="@+id/add_group_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp30"
+        android:background="@drawable/add_btn_shape"
+        android:text="添加"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp18" />
+</LinearLayout>

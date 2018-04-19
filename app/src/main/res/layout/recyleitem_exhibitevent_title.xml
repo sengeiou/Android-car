@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/exhibitevent_tile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_titlebar_height"
+        android:background="@color/app_main_color1"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/common_right_margin"
+        android:text=" "
+        android:textColor="@color/text_content_color"
+        android:textSize="@dimen/font_size_title" />
+
+    <TextView
+        android:id="@+id/exhibitevent_time"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height"
+        android:gravity="center_vertical"
+        android:background="@color/app_main_color1"
+        android:paddingLeft="@dimen/common_right_margin"
+        android:text="   ~  "
+        android:textColor="@color/text_more"
+        android:drawableLeft="@drawable/counter_icon"
+        android:drawablePadding="5dp"
+        android:textSize="@dimen/font_size_medium" />
+</LinearLayout>

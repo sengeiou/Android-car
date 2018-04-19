@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/firstLayout"
+        android:layout_width="match_parent"
+        android:layout_height="151dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ticket_contacts"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="分发给通讯录好友"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_huge" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/split_line_color" />
+
+        <TextView
+            android:id="@+id/ticket_user"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="分发给站内好友"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_huge" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/split_line_color" />
+
+        <TextView
+            android:id="@+id/ticket_input"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="输入手机号分发"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_huge" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/split_line_color" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <TextView
+        android:id="@+id/ticket_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:gravity="center"
+        android:text="取消"
+        android:background="@color/white"
+        android:textColor="@color/blue_font1"
+        android:textSize="@dimen/font_size_huge" />
+</LinearLayout>

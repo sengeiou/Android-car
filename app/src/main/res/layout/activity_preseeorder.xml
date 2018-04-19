@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_2"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/common_left_margin"
+            android:paddingRight="@dimen/common_left_margin">
+
+            <TextView
+                android:id="@+id/preseeorder_count"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="共0条请求记录"
+                android:textColor="@color/text_color3" />
+
+            <TextView
+                android:id="@+id/preseeoder_filterselect"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_height"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/common_left_margin"
+                android:drawableRight="@drawable/fitler_drop_down_n"
+                android:gravity="center_vertical"
+                android:text="全部"
+                android:textColor="@color/text_color3" />
+        </RelativeLayout>
+        <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+            android:id="@+id/rl_modulename_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+        <ListView
+            android:id="@+id/preseeorder_lv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:dividerHeight="5dp"
+            android:background="@color/white" />
+</cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+        <TextView
+            android:id="@+id/prebuyorder_start"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:background="@drawable/btn__item_submit"
+            android:gravity="center"
+            android:text="开启抢单模式"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_title" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/msgTv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:drawablePadding="10dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:drawableTop="@drawable/no_data_img_icon"
+        android:text="没有预约服务了咯"
+        android:textColor="@color/text_color17"
+        android:textSize="@dimen/font_size_small" />
+
+    <ListView
+        android:id="@+id/preseeoder_filterlv"
+        android:padding="1dp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="85dp"
+
+        android:background="@drawable/rectangle_filter_bg" />
+</FrameLayout>

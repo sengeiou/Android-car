@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.tgf.kcwc.view.ObservableScrollView
+        android:id="@+id/event_detailscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/voucher_main_bg"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="272dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/eventdetal_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/moto_testdetail"
+                    fresco:actualImageScaleType="fitXY" />
+
+
+                <TextView
+                    android:id="@+id/motodetail_tv_picnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|right"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingTop="3dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="3dp"
+                    android:background="@color/style_bg1"
+                    android:layout_marginRight="@dimen/common_left_margin"
+                    android:drawableLeft="@drawable/icon_picnum"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:text="0张"
+                    android:textColor="@color/transparent90_white"
+                    android:textSize="@dimen/font_size_medium" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <TextView
+                    android:id="@+id/evetdetail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:text="2016摩托车论坛"
+                    android:textColor="@color/voucher_black"
+                    android:textSize="@dimen/font_size_title" />
+
+                <TextView
+                    android:id="@+id/evetdetail_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:drawableLeft="@drawable/exhibitevent_time"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="6.7 12:00 - 6.8 16:00"
+                    android:textColor="@color/voucher_gray"
+                    android:textSize="@dimen/font_size_tiny" />
+
+
+                <TextView
+                    android:id="@+id/evetdetail_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:drawableLeft="@drawable/exhibitevent_location"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:text="N7 T701"
+                    android:textColor="@color/voucher_gray"
+                    android:textSize="@dimen/font_size_tiny" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/exhibitevent_desc" />
+
+                    <TextView
+                        android:id="@+id/evetdetail_desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/voucher_gray"
+                        android:textSize="@dimen/font_size_tiny"
+                        tools:text="中国国际贸易促进委员会汽车行业分会" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/guest_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/exhibitevent_titleleft"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/exhibitevent_titleright"
+                    android:text="嘉宾"
+                    android:textColor="@color/tab_text_s_color"
+                    android:textSize="@dimen/font_size_huge" />
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/eventdetail_guestlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/exhibitevent_titleleft"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/exhibitevent_titleright"
+                    android:text="简介"
+                    android:textColor="@color/tab_text_s_color"
+                    android:textSize="@dimen/font_size_huge" />
+            </RelativeLayout>
+
+            <WebView
+                android:id="@+id/topicWebView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <RelativeLayout
+                android:id="@+id/qzone_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@drawable/exhibitevent_titleleft"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/exhibitevent_titleright"
+                    android:text="动态"
+                    android:textColor="@color/tab_text_s_color"
+                    android:textSize="@dimen/font_size_huge" />
+            </RelativeLayout>
+
+
+            <ListView
+                android:id="@+id/eventdetail_qzone_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_item_height"
+                android:layout_marginTop="@dimen/list_divider_height"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:drawableLeft="@drawable/titleyellow_tag"
+                    android:drawablePadding="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    android:text="评论"
+                    android:textColor="@color/text_selected"
+                    android:textSize="@dimen/font_size_title" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/comment_fragfl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:background="@color/app_main_color1"
+                android:divider="@color/app_layout_bg_color"
+                android:dividerHeight="@dimen/list_divider_height" />
+        </LinearLayout>
+    </com.tgf.kcwc.view.ObservableScrollView>
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/transparent">
+
+        <ImageButton
+            android:id="@+id/title_bar_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:src="@drawable/btn_back_white" />
+
+        <TextView
+            android:id="@+id/title_bar_text"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@color/app_main_color2"
+            android:textSize="@dimen/font_size_title" />
+
+        <ImageView
+            android:id="@+id/exhibitevent_moreiv"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/global_nav_n" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/app_layout_bg_color">
+
+
+        <LinearLayout
+            android:id="@+id/repayLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/oval_bg">
+
+            <TextView
+                android:id="@+id/inputComment"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="15dp"
+                android:drawableLeft="@drawable/input_text_icon"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="说点什么"
+                android:textColor="@color/transparent90_white"
+                android:textSize="@dimen/font_size_more" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/repayLayout"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/commentLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/comment_numbers"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/oval_text_numbers_bg"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/replayImg"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="6dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_discuss" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/favoriteImg"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_heart1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/shareImg"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_share_selector2" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

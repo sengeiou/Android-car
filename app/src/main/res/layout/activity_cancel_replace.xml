@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+    <include layout="@layout/titlebar"/>
+    <RelativeLayout
+        android:background="@color/white"
+        android:padding="@dimen/dp15"
+        android:id="@+id/cancel_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:visibility="gone"
+            android:background="@null"
+            android:textSize="@dimen/sp14"
+            android:textColorHint="@color/btn_gray_normal"
+            android:id="@+id/cancel_phone_et"
+            android:hint="请输入新的手机号"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/cancel_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:background="@null"
+                android:textSize="@dimen/sp14"
+                android:textColor="@color/btn_bg4"
+                android:hint="手机号："
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/cancel_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="139****1234"
+                android:textColor="@color/style_bg7"
+                android:textSize="@dimen/sp14" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/bg_1"/>
+    <LinearLayout
+        android:background="@color/white"
+        android:padding="@dimen/dp15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:background="@null"
+            android:textSize="@dimen/sp14"
+            android:textColorHint="@color/btn_gray_normal"
+            android:id="@+id/cancel_code_et"
+            android:hint="请输入短信验证码"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/cancel_code_tv"
+            android:background="@null"
+            android:textSize="@dimen/sp14"
+            android:textColor="@color/btn_bg4"
+            android:hint="获取验证码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/bg_1"/>
+    <Button
+        android:id="@+id/cancel_bind_btn"
+        android:background="@drawable/account_bind_bg"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:text="撤销绑定"/>
+</LinearLayout>

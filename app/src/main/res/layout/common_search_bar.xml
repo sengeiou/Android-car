@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_search_title_bar"
+    android:background="@color/app_main_color1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/filterLayout"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/seek"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg"
+            android:drawableRight="@drawable/search_btn_selector" />
+
+        <ImageView
+            android:layout_width="@dimen/common_button_height"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+             />
+    </LinearLayout>
+
+   <!-- <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+
+        <include
+            android:id="@+id/filterLayout"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/filterLayout">
+
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/search_bg"
+                android:drawableRight="@drawable/search_btn_selector"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="start|center_vertical"
+                android:hint="请输入用户或昵称"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColor="@color/text_content_color"
+                android:textColorHint="@color/text_content_color"
+                android:textSize="@dimen/font_size_medium" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+-->
+
+</RelativeLayout>

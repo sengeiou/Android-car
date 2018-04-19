@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/externaltime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/message_time_bg"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:text="2017-05-18 11:01:53"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_deletagray"
+            android:visibility="gone" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/externalhead"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:scaleType="fitXY"
+            android:visibility="visible"
+            fresco:placeholderImage="@drawable/rp_avatar"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:retryImageScaleType="fitXY"
+            fresco:roundAsCircle="true" />
+        <!--messagewhite 白色有边框 messagegreen 绿色有边框   message_layout_bg 正常边框-->
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/messagewhite"
+            android:orientation="vertical">
+
+            <!--头像带回复-->
+            <LinearLayout
+                android:id="@+id/headportraitlayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_margin="5dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/headportraitavatar"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitXY"
+                        android:visibility="visible"
+                        fresco:placeholderImage="@drawable/rp_avatar"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:retryImageScaleType="fitXY"
+                        fresco:roundAsCircle="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/headportraitname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:text="laoshiji"
+                        android:textColor="@color/text_color6"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/headportraittime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:paddingLeft="5dp"
+                        android:text="2秒前"
+                        android:textColor="@color/chat_itemtip"
+                        android:textSize="@dimen/font_size_s_medium" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="8dp">
+
+                    <TextView
+                        android:id="@+id/headportraitreply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/message_huifu_bg"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:text="回复"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_tiny" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--系统提示-->
+            <LinearLayout
+                android:id="@+id/announcement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/announcementname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="系统公告"
+                    android:textColor="@color/text_color14"
+                    android:textSize="@dimen/font_size_title" />
+
+                <TextView
+                    android:id="@+id/announcementtime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:text="2017-02-15 11:01:53"
+                    android:textColor="@color/chat_itemtip"
+                    android:textSize="@dimen/font_size_s_medium" />
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/text_color25" />
+
+            <!--title-->
+            <TextView
+                android:id="@+id/announcementtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="20dp"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_medium" />
+            <!-- keylist-->
+            <com.tgf.kcwc.view.MyListView
+                android:id="@+id/keylistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/white"
+                android:horizontalSpacing="5dp"
+                android:listSelector="#00000000"
+                android:scrollbars="none"
+                android:verticalSpacing="5dp">
+            </com.tgf.kcwc.view.MyListView>
+            <!-- listview-->
+            <com.tgf.kcwc.view.MyListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/white"
+                android:horizontalSpacing="5dp"
+                android:listSelector="#00000000"
+                android:scrollbars="none"
+                android:verticalSpacing="5dp">
+
+            </com.tgf.kcwc.view.MyListView>
+            <!-- 单链接 网页-->
+            <TextView
+                android:id="@+id/webpage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:text="https://www.baidu.com/"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/font_size_medium"
+                android:visibility="gone" />
+            <!-- 单链接 跳转-->
+            <TextView
+                android:id="@+id/skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="all"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
+                android:text="查看他的主页>>"
+                android:textColor="@color/text_color21"
+                android:textSize="@dimen/font_size_medium" />
+
+            <!-- 双连接-->
+            <LinearLayout
+                android:id="@+id/doublelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/doublelayoutleft"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/sevicecity_openbg"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="取消订单" />
+
+
+                <TextView
+                    android:id="@+id/doublelayoutright"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@color/style_bg1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="立即支付"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <!--帖子-->
+            <LinearLayout
+                android:id="@+id/invitationlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/devider"
+                android:orientation="horizontal">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/invitationcover"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/cheshi" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/invitationtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:text="话题哟"
+                        android:textColor="@color/text_color14"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/invitationintro"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="center|left"
+                        android:maxLines="1"
+                        android:text="adadasd"
+                        android:textColor="@color/chat_itemtip"
+                        android:textSize="@dimen/font_size_medium" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

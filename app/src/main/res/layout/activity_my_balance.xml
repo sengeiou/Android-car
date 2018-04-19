@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/titlebar" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp132"
+        android:background="@color/white">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账户余额  (元)"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/balanceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp20"
+                android:text=""
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/sp30" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp88"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:id="@+id/prePaidLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp44"
+            android:background="@drawable/list_item_selector"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/dp21"
+                android:layout_height="@dimen/dp21"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:scaleType="fitCenter"
+                android:src="@drawable/balance_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_toRightOf="@id/img"
+                android:gravity="center_vertical"
+                android:text="充值"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/sp14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:src="@drawable/more_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_height_size"
+                android:layout_alignParentBottom="true"
+                android:background="@color/split_line_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/withdrawCashLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp44"
+            android:background="@drawable/list_item_selector"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="@dimen/dp21"
+                android:layout_height="@dimen/dp21"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:scaleType="fitCenter"
+                android:src="@drawable/withdraw_cash" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_toRightOf="@id/img2"
+                android:gravity="center_vertical"
+                android:text="提现"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/sp14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:src="@drawable/more_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_height_size"
+                android:layout_alignParentBottom="true"
+                android:background="@color/split_line_color" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/myBankCardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:background="@drawable/list_item_selector"
+        android:layout_marginTop="@dimen/dp10"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/bankCardImg"
+            android:layout_width="@dimen/dp21"
+            android:layout_height="@dimen/dp21"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_bank_card" />
+
+        <TextView
+            android:id="@+id/bankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_toRightOf="@id/bankCardImg"
+            android:gravity="center_vertical"
+            android:text="我的银行卡"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:src="@drawable/more_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/accountCheckingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:background="@drawable/list_item_selector"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="@dimen/dp21"
+            android:layout_height="@dimen/dp21"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_account_checking" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:layout_toRightOf="@id/img3"
+            android:gravity="center_vertical"
+            android:text="账单"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:src="@drawable/more_icon" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/split_height_size"
+            android:layout_alignParentBottom="true"
+            android:background="@color/split_line_color" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

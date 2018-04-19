@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_layout_bg_color"
+    >
+
+    <include
+        android:id="@+id/title_layout"
+        layout="@layout/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/title_layout">
+
+
+        <RelativeLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white">
+
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/img"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@drawable/cover_default"
+                fresco:failureImageScaleType="fitXY"
+                fresco:placeholderImage="@drawable/cover_default"
+                fresco:placeholderImageScaleType="fitXY"
+                fresco:roundAsCircle="false"/>
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_toRightOf="@id/img"
+                android:text="宝马"
+                android:textColor="@color/text_more"
+                android:textSize="@dimen/font_size_small"/>
+
+            <TextView
+                android:id="@+id/area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_toRightOf="@id/name"
+                android:text="N8馆"
+                android:textColor="@color/text_more"
+                android:textSize="@dimen/font_size_small"/>
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/split"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_height_size"
+            android:layout_below="@id/headerLayout"
+            android:background="@color/app_layout_bg_color"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/split"
+            android:background="@color/white">
+
+
+            <RelativeLayout
+                android:id="@+id/itemHeader"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/custom_row_height">
+
+                <TextView
+                    android:id="@+id/modelName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:text="宝逸HR-250A"
+                    android:textColor="@color/text_color15"
+                    android:textSize="@dimen/font_size_medium"/>
+
+                <ImageView
+                    android:id="@+id/moreImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_left_size"
+                    android:src="@drawable/more_icon"/>
+            </RelativeLayout>
+
+
+            <com.tgf.kcwc.view.GridViewWithHeaderAndFooter
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/itemHeader"
+                android:layout_marginLeft="4sp"
+                android:layout_marginRight="4dp"
+                android:background="@color/white"
+                android:horizontalSpacing="4dp"
+                android:numColumns="3"
+                android:verticalSpacing="4dp"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/releaseLayout"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/cycle_bg_2"
+
+        >
+
+        <ImageView
+            android:id="@+id/releaseTopicBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera_icon"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

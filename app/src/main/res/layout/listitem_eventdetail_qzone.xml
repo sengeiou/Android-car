@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/eventdetail_qozavatar"
+            android:layout_width="@dimen/img_foureper"
+            android:layout_height="@dimen/img_threeeper"
+            android:scaleType="centerInside"
+            fresco:actualImageScaleType="fitXY"
+            android:src="@drawable/popman_avatar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/eventdtail_qoztitle"
+                android:paddingTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="活动概览或开幕辞等，随意动概览或开幕辞等动概览或开幕辞等"
+                android:textColor="@color/voucher_black"
+                android:maxLines="2"
+                android:textSize="@dimen/font_size_title" />
+            <TextView
+                android:id="@+id/eventdtail_qoztime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:gravity="center_vertical"
+                android:text="06.11 11.24"
+                android:textColor="@color/voucher_gray"
+                android:textSize="@dimen/font_size_medium" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

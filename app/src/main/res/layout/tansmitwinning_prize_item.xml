@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--赠票奖励-->
+    <LinearLayout
+        android:id="@+id/away_ticket_layout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:background="@drawable/away_ticket_bg">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/away_ticket_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="2016年第十四届中国摩托车展览会"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/away_ticket_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="双休日"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_title" />、
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/away_ticket_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="2016.9.20-2016.9.30"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_tiny" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="限用一次，入场作废"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_tiny" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/moneylayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:text="￥"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_medium" />
+
+                    <TextView
+                        android:id="@+id/away_ticket_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/text2"
+                        android:gravity="center"
+                        android:text="100"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_huge" />
+
+                    <TextView
+                        android:layout_width="35dp"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="14dp"
+                        android:layout_toRightOf="@+id/text2"
+                        android:visibility="gone"
+                        android:background="@color/white" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/moneylayout"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="赠票"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_title" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--代金券奖励-->
+    <LinearLayout
+        android:id="@+id/voucherlayout"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:background="@drawable/voucher_bg">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="65dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:text="￥"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_medium" />
+
+                        <TextView
+                            android:id="@+id/voucher_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_toRightOf="@id/text1"
+                            android:gravity="center_vertical"
+                            android:text="100"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/font_size_more" />
+
+                        <TextView
+                            android:layout_width="27dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="18dp"
+                            android:visibility="gone"
+                            android:layout_toRightOf="@id/text1"
+                            android:background="@color/white" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="免费领取"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/voucher_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:text="有效期至 2016.9.20"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_tiny" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/voucher_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="2016年第十四届中国摩托车展览会名称"
+                    android:textColor="@color/text_color14"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/voucher_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="重庆市奥迪大坪4s店"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_tiny" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--普通奖励-->
+    <LinearLayout
+        android:id="@+id/generallayout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/bigimage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            fresco:actualImageScaleType="fitXY"
+            fresco:failureImage="@drawable/im_default"
+            fresco:failureImageScaleType="fitXY"
+            fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+            fresco:placeholderImageScaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:text="【一等奖】"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_title" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:text="phone"
+                android:textColor="@color/text_color14"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="3dp"
+                android:text="数量:1"
+                android:textColor="@color/text_more"
+                android:textSize="@dimen/font_size_small" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/voucher_main_bg" />
+</LinearLayout>

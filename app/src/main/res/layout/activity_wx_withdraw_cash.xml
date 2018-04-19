@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/titlebar" />
+
+
+    <RelativeLayout
+        android:id="@+id/addBankCardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@drawable/list_item_selector"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/addBankLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp44"
+            android:background="@drawable/list_item_selector"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/bankCardImg"
+                android:layout_width="@dimen/dp21"
+                android:layout_height="@dimen/dp21"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_bank_card" />
+
+            <TextView
+                android:id="@+id/bankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_toRightOf="@id/bankCardImg"
+                android:gravity="center_vertical"
+                android:text="添加银行卡"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/sp14" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:src="@drawable/more_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_height_size"
+                android:layout_alignParentBottom="true"
+                android:background="@color/split_line_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/addBankLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp66"
+            android:background="@drawable/list_item_selector"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/bankCardImg2"
+                android:layout_width="@dimen/dp21"
+                android:layout_height="@dimen/dp21"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_left_size"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_bank_card" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/bankCardImg2"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/bankName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:gravity="center_vertical"
+                    android:text="中信银行"
+                    android:textColor="@color/text_color12"
+                    android:textSize="@dimen/sp14" />
+
+
+                <TextView
+                    android:id="@+id/cardInfoTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:gravity="center_vertical"
+                    android:text="尾号2192"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/sp10" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_right_size"
+                android:src="@drawable/more_icon" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/split_height_size"
+                android:layout_alignParentBottom="true"
+                android:background="@color/split_line_color" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:layout_marginTop="@dimen/dp10"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp80"
+            android:layout_marginLeft="@dimen/dp20">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="提现金额"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/sp14" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/moneyTagTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="￥"
+                        android:textColor="@color/text_color12"
+                        android:textSize="@dimen/sp30" />
+
+                    <EditText
+                        android:id="@+id/cashET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/moneyTagTv"
+                        android:background="@null"
+                        android:inputType="numberDecimal|number"
+                        android:maxLength="16"
+                        android:singleLine="true"
+                        android:hint="0.00"
+                        android:textColorHint="@color/text_color17"
+                        android:textColor="@color/text_color12"
+                        android:textSize="@dimen/sp30" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:background="@color/split_line_color" />
+
+
+        <TextView
+            android:id="@+id/balanceTv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginLeft="@dimen/dp25"
+            android:gravity="left|center_vertical"
+            android:text="可用余额"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp10" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/payRemarkTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dp30"
+        android:gravity="center_horizontal"
+        android:text="请核对姓名和卡号一致，将于3日内到账"
+        android:textColor="@color/text_color2"
+        android:textSize="@dimen/sp10"
+        android:visibility="gone"
+        />
+
+
+    <Button
+        android:id="@+id/confirmBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp45"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp15"
+        android:background="@drawable/btn_confirm_selector2"
+        android:text="提现到微信，24小时内到账，确认提现"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp16"
+        android:enabled="false"
+        />
+
+
+</LinearLayout>

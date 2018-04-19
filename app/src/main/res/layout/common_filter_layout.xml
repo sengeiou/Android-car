@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+
+    <TextView
+        android:ellipsize="end"
+        android:maxEms="4"
+        android:id="@+id/filterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:paddingLeft="2dp"
+        android:text="北京市"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/font_size_medium" />
+
+    <ImageView
+        android:id="@+id/filterImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/nav_filter_selector" />
+</LinearLayout>

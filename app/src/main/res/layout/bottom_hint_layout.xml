@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/bottom_hint_height_size"
+    android:background="@color/app_layout_bg_color">
+<LinearLayout
+    android:id="@+id/hint_footerlv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/split_height_size"
+        android:layout_alignParentTop="true"
+        android:background="@color/divider"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_hint_height_size"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/limit_bottom_text"
+        android:textColor="@color/text_color2" />
+
+</LinearLayout>
+</RelativeLayout>

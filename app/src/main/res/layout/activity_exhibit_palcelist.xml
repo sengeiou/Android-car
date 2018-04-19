@@ -1,0 +1,47 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@color/app_layout_bg_color"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/titlebar" />
+
+            <ImageView
+                android:id="@+id/exhibitplacelist_headiv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <com.tgf.kcwc.view.MyGridView
+                android:id="@+id/palcelist_menu_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_layout_bg_color"
+                android:numColumns="5"
+                android:padding="10dp"
+                android:verticalSpacing="5dp" />
+
+            <com.tgf.kcwc.view.nestlistview.NestFullListView
+                android:id="@+id/palcelist_image_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</merge>

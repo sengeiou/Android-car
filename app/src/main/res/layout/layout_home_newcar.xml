@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/latest_exhibition_rl"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@color/app_main_color1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/lastest_exhibit_tiltetv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/titleyellow_tag"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            android:text="新车首发,现场参与"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_right_margin"
+            android:rotation="-90"
+            android:src="@drawable/loc_drop_down" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider2" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:layout_marginLeft="@dimen/homeleft_margin"
+        android:layout_marginRight="@dimen/homeleft_margin"
+        android:layout_marginTop="@dimen/common_left_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/home_coverIv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            fresco:actualImageScaleType="centerCrop" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:layout_marginRight="@dimen/common_left_margin"
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/homenewCar_coveriv"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            fresco:actualImageScaleType="fitXY" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/homenewCar_titleTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="宝马5系 2018款 528Li 上特显示一行..."
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/homenewCar_addressTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="2017重庆国际车展/N7馆"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/homenewCar_timeTv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:text="2017.06.12  9:30"
+                android:textSize="@dimen/sp12" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_left_margin">
+
+        <TextView
+            android:id="@+id/homenewCar_nameTv"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:gravity="bottom|center_horizontal"
+            android:singleLine="true"
+            android:text="阿尔法罗密欧"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp10" />
+
+        <TextView
+            android:id="@+id/homenewCar_starTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:gravity="bottom"
+            android:singleLine="true"
+            android:text="到场明星：黄晓明"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/homenewCar_bugTicketTv"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/common_left_margin"
+            android:background="@drawable/btn_login_selector"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="抢门票"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+</LinearLayout>

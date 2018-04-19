@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/style_bg1">
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height">
+
+            <ImageButton
+                android:id="@+id/title_bar_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:padding="5dp"
+                android:src="@drawable/nav_back_n" />
+
+            <RadioGroup
+                android:id="@+id/exhibition_eventrg"
+                android:layout_centerInParent="true"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+                <RadioButton
+                    android:id="@+id/title_leftbtn"
+                    android:padding="4dp"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:checked="true"
+                    android:background="@drawable/selector_exhibitevent_titleleft"
+                    android:text="按时间"
+                    android:button="@null"
+                    android:textColor="@color/btn_exhibiteventfont_color"
+                    android:textSize="@dimen/font_size_medium"/>
+
+                <RadioButton
+
+                    android:id="@+id/title_rightbtn"
+                    android:layout_width="80dp"
+                    android:padding="4dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_exhibitevent_titleright"
+                    android:text="按地点"
+                    android:button="@null"
+                    android:textColor="@color/btn_exhibiteventfont_color"
+                    android:textSize="@dimen/font_size_medium"/>
+            </RadioGroup>
+
+            <com.tgf.kcwc.view.FunctionView
+                android:id="@+id/title_function_btn"
+                android:layout_width="65dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/split"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/title_layout"
+            android:background="@color/split_line_color" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ListView
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:id="@+id/exhibitionevent_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_layout_bg_color"
+        android:divider="#00000000"
+        android:dividerHeight="0dip" />
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginTop="@dimen/list_divider_height">
+
+            <ListView
+                android:id="@+id/filterList"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/filterSplit"
+                android:layout_width="40dp"
+                android:layout_height="1dp"
+                android:layout_below="@id/filterList"
+                android:background="@color/split_line_color" />
+
+            <ImageView
+                android:id="@+id/toggleImg"
+                android:layout_width="40dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/filterSplit"
+                android:background="@color/transparent30"
+                android:scaleType="center"
+                android:src="@drawable/toggle_btn_selector" />
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/dp30">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp30">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="@dimen/dp85"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10"
+            android:gravity="right"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/sp14" />
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_toRightOf="@id/title"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:id="@+id/refundStateImg"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ticket_refund_success"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/ticketget_failedlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:orientation="vertical">
+        <include layout="@layout/titlebar" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/detail_header_bg"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:src="@drawable/icon_pay_failure" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_item_height"
+            android:gravity="center"
+            android:text="抱歉！赠票领取失败！"
+            android:textColor="@color/voucher_black"
+            android:textSize="@dimen/font_size_title" />
+
+        <TextView
+            android:id="@+id/ticketget_failedmsgtv"
+            android:layout_width="220dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="失败原因：网络不给力，请设置网络连接后重试！"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_tiny" />
+    </LinearLayout>
+</LinearLayout>

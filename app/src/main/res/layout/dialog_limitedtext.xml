@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="请输入人数上限(可不填)"
+        android:textColor="@color/text_color14"
+        android:textSize="@dimen/font_size_title" />
+
+    <EditText
+        android:id="@+id/limit_max"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/dialog_edtext_bg"
+        android:digits="0123456789"
+        android:numeric="integer"
+        android:padding="10dp"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="请输入人数下限"
+        android:textColor="@color/text_color14"
+        android:textSize="@dimen/font_size_title" />
+
+    <EditText
+        android:id="@+id/limit_min"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/dialog_edtext_bg"
+        android:digits="0123456789"
+        android:numeric="integer"
+        android:padding="10dp"
+        android:singleLine="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/topLayout"
+        android:background="@color/split_line_color" />
+
+    <LinearLayout
+        android:id="@+id/appltlist_item_end"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:background="@color/app_layout_bg_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/appltlist_item_enddiary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_state_color"
+            android:textSize="@dimen/font_size_title" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:background="@color/text_content_color" />
+
+        <TextView
+            android:id="@+id/appltlist_item_endgroup"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/text_color10"
+            android:textSize="@dimen/font_size_title" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/topLayout"
+        android:background="@color/split_line_color" />
+</LinearLayout>

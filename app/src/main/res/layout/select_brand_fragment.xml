@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <RelativeLayout
+        android:id="@+id/hotSearchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white">
+
+        <GridView
+            android:id="@+id/hotGridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:horizontalSpacing="@dimen/dp5"
+            android:numColumns="4" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/brandRootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hotSearchLayout">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <com.mcxtzhang.indexlib.IndexBar.widget.IndexBar
+                android:id="@+id/indexBar"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:visibility="visible"
+                app:indexBarPressBackground="@color/partTranslucent"
+                app:indexBarTextSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvSideBarHint"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@drawable/shape_side_bar_bg"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:visibility="gone"
+                tools:text="A"
+                tools:visibility="visible" />
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/titlebar" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="87dp"
+                android:background="@color/white"
+                android:padding="10dp">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sendsee_event_iv"
+                    android:layout_width="@dimen/img_foureper"
+                    android:layout_height="@dimen/img_threeeper"
+                    android:layout_alignParentLeft="true"
+                    fresco:actualImageScaleType="fitXY" />
+
+                <TextView
+                    android:id="@+id/sendsee_ticketinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/sendsee_event_iv"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_medium"
+                    tools:text="邓丹第一届汽车展" />
+
+                <TextView
+                    android:id="@+id/sendsee_ticketleft"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sendsee_ticketinfo"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/common_left_margin"
+                    android:layout_toRightOf="@id/sendsee_event_iv"
+                    android:drawableLeft="@drawable/icon_redticket"
+                    android:drawablePadding="7dp"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/font_size_small" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/common_left_margin"
+                    android:text="领取失效时间"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/sendsee_loseTimeMsgtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="（领取失效后，票自动回收）"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/sp10" />
+            </LinearLayout>
+
+            <com.tgf.kcwc.view.MyGridView
+                android:id="@+id/sendsee_lostTimeGv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:numColumns="4"
+                android:padding="8dp"
+                android:verticalSpacing="5dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="已选择好友"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_medium" />
+
+                <TextView
+                    android:id="@+id/sendsee_limiNumtv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/common_left_margin"
+                    android:gravity="center_vertical"
+                    tools:text="每人限领12张"
+                    android:textColor="@color/black_font1"
+                    android:textSize="@dimen/font_size_medium" />
+            </RelativeLayout>
+
+            <com.tgf.kcwc.view.MySwipeMenuListView
+                android:id="@+id/swipe_ticketlv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/ticket_divide" />
+
+            <RelativeLayout
+                android:id="@+id/sendsee_addbtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_height"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/text_height"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/sendsee_add"
+                    android:drawablePadding="3dp"
+                    android:gravity="center"
+                    android:text="添加通讯录好友/手机号码/站内好友"
+                    android:textColor="@color/text_color10" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/ticket_divide" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/common_left_margin"
+                android:text="分发说明"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/ticket_doctv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/common_left_margin"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:paddingRight="@dimen/common_left_margin"
+                android:text="分发说明123" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/sendsee_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:layout_gravity="bottom"
+        android:background="@drawable/btn_login_selector"
+        android:gravity="center"
+        android:text="确认分发"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_title" />
+</FrameLayout>

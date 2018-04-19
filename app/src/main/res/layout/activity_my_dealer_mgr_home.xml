@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:SettingSelectedLayoutView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+
+    <TextView
+        android:id="@+id/orgBalanceTv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:background="@color/btn_bg5"
+        android:gravity="center"
+        android:text="小金库"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/payMgrLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/payTitleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="设置支付密码"
+            android:textColor="@color/text_color12"
+            android:textSize="@dimen/font_size_more" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/more_icon" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/split_line_color" />
+
+    <com.tgf.kcwc.view.SettingSelectedLayoutView
+        android:id="@+id/setNonConfidentialPaymentView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        SettingSelectedLayoutView:is_selected="false"
+        SettingSelectedLayoutView:settingselecttitle="小额免密支付" />
+</LinearLayout>

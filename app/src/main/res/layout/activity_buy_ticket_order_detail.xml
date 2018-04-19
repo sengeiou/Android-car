@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/headerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:background="@drawable/list_item_selector">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/img"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:failureImage="@drawable/cover_default"
+                    fresco:failureImageScaleType="fitXY"
+                    fresco:placeholderImage="@drawable/cover_default"
+                    fresco:placeholderImageScaleType="fitXY"
+                    fresco:roundAsCircle="false"
+                    fresco:viewAspectRatio="1.33" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/img">
+
+                    <TextView
+                        android:id="@+id/senseName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:lines="2"
+                        android:text=""
+                        android:textColor="@color/text_color12"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <TextView
+                        android:id="@+id/tag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/senseName"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:drawableLeft="@drawable/circle_duigou"
+                        android:drawablePadding="8dp"
+                        android:text="随时退"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/sp12"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/tag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/senseName"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:drawableLeft="@drawable/circle_duigou"
+                        android:drawablePadding="8dp"
+                        android:text="过期退"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/sp12"
+                        android:visibility="gone"
+                        />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/split_height_size"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/app_layout_bg_color" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/dp10"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/more_icon" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/ticketInfoList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/headerLayout"
+                android:background="@color/white" />
+
+
+            <RelativeLayout
+                android:id="@+id/descLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_below="@id/ticketInfoList"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/descTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:text="订单信息"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/sp14" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/app_layout_bg_color" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/orderInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descLayout"
+                android:background="@color/white">
+
+                <ListView
+                    android:id="@+id/orderInfoList"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/white"
+                    android:divider="@color/app_layout_bg_color"
+                    android:dividerHeight="@dimen/dp1" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/orderInfoList2Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orderInfoLayout"
+                android:background="@color/white">
+
+                <ListView
+                    android:id="@+id/orderInfoList2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/white"
+                    android:divider="@null" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/orderInfo3Layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/orderInfoList2Layout"
+                android:background="@color/white">
+
+                <ListView
+                    android:id="@+id/orderInfoList3"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/white"
+                    android:divider="@null" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/orderInfo4Layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_below="@id/orderInfo3Layout"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/actuallyPaidTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:textColor="@color/text_color3"
+                    android:textSize="@dimen/sp14" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/app_layout_bg_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp2"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/app_layout_bg_color" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/orderInfo4Layout">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:lineSpacingMultiplier="1.2"
+                    android:text="@string/ticket_refund_desc"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/sp14" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

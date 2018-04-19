@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="horizontal"
+    android:padding="0dp">
+
+    <LinearLayout
+        android:layout_width="47dp"
+        android:layout_height="257dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="12dp"
+            android:background="@color/btn_bg1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_event" />
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:background="@color/btn_bg1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="257dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/eventlist_time"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/app_layout_bg_color"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/common_left_margin"
+            tools:text="2016.06.06 08:30"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_tiny" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="@dimen/exhibit_news_itemh">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/event_cover"
+                android:layout_width="@dimen/exhibit_news_itemw"
+                android:layout_height="@dimen/exhibit_news_itemh"
+                android:scaleType="centerInside"
+                fresco:actualImageScaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/eventlist_hallname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_exhitplacedetail_bg"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:paddingTop="5dp"
+                tools:text="中央大厅"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_medium" />
+
+            <TextView
+                android:id="@+id/eventlist_isennd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_exhitend_bg"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingBottom="2dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="2dp"
+                android:text="已结束"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_medium"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/eventlist_title"
+            android:layout_width="@dimen/exhibit_news_itemw"
+            android:layout_height="@dimen/top_title_height"
+            android:background="@color/app_main_color1"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:paddingLeft="@dimen/common_left_margin"
+            tools:text="这是展会看新闻快讯"
+            android:textColor="@color/text_nav_def_color"
+            android:textSize="@dimen/font_size_more" />
+
+        <TextView
+            android:id="@+id/enventlist_guest"
+            android:layout_width="@dimen/exhibit_news_itemw"
+            android:layout_height="24dp"
+            android:background="@color/app_main_color1"
+            android:gravity="top"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="@dimen/common_left_margin"
+            android:text="主讲/嘉宾: "
+            android:textColor="@color/text_nav_def_color"
+            android:textSize="@dimen/font_size_small" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

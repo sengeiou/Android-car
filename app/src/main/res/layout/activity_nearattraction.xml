@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/title_bar_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:src="@drawable/btn_close_selector" />
+
+        <TextView
+            android:id="@+id/title_bar_text"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/title_bar_back"
+            android:gravity="center|left"
+            android:maxLines="1"
+            android:text="附近景点"
+            android:textColor="@color/voucher_gray"
+            android:textSize="@dimen/font_size_title" />
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/nearattration_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <TextView
+            android:id="@+id/nearatt_emptyboxTv"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="125dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="10dp"
+            android:layout_gravity="center_horizontal"
+            android:drawableTop="@drawable/no_data_img_icon"
+            android:text="        没有选择项"
+            android:visibility="gone"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small" />
+
+    </FrameLayout>
+
+</LinearLayout>

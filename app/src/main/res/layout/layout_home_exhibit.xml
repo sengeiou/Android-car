@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/latest_exhibition_rl"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@color/app_main_color1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/lastest_exhibit_tiltetv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/titleyellow_tag"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            android:text="最近有车展"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_right_margin"
+            android:rotation="-90"
+            android:src="@drawable/loc_drop_down" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider2" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/home_coverIv"
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:layout_marginLeft="@dimen/homeleft_margin"
+        android:layout_marginRight="@dimen/homeleft_margin"
+        android:layout_marginTop="@dimen/common_left_margin"
+        fresco:actualImageScaleType="centerCrop" />
+
+
+    <TextView
+        android:id="@+id/home_titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_left_margin"
+        android:lineSpacingExtra="5dp"
+        android:maxLines="2"
+        android:text="2017(第十九届)中国重庆国际汽车工业展"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/sp18" />
+
+    <TextView
+        android:id="@+id/home_exhibitTimeTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:text="2017.6.8 - 2017.6.14"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/sp12" />
+
+    <com.tgf.kcwc.view.MyGridView
+        android:id="@+id/home_exhibitMenuTv"
+        android:layout_width="match_parent"
+        android:verticalSpacing="@dimen/hometop_margin"
+        android:layout_height="wrap_content"
+        android:numColumns="4"
+        android:layout_marginTop="@dimen/common_left_margin" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_left_margin">
+
+        <TextView
+            android:id="@+id/home_createPlaceTv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/icon_location"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="重庆国际博览中心(重庆悦来)"
+            android:textColor="@color/text_color17" />
+
+        <TextView
+            android:id="@+id/home_exhibitBuyTv"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/common_left_margin"
+            android:background="@drawable/btn_login_selector"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="抢门票"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tgf.kcwc.view.ObservableScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!---基本信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/cover"
+                            android:layout_width="match_parent"
+                            android:layout_height="188dp">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/drivdetails_cover"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                fresco:actualImageScaleType="fitXY"
+                                fresco:failureImage="@drawable/im_default"
+                                fresco:failureImageScaleType="fitXY"
+                                fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                                fresco:placeholderImageScaleType="fitXY" />
+
+                            <ImageView
+                                android:id="@+id/drivdetails_activitystatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="60dp" />
+
+                            <LinearLayout
+                                android:id="@+id/drivdetails_apply"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginLeft="10dp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:id="@+id/applynumberlayout"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@drawable/drivdetails_circleback"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/btn_orange" />
+
+                                    <TextView
+                                        android:id="@+id/drivdetails_apply_number"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="10dp"
+                                        android:text="6/22"
+                                        android:textColor="@color/text_color14"
+                                        android:textSize="@dimen/font_size_s_medium" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/drivdetails_apply_aborttime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="报名截止：3月24日 24:00"
+                                    android:textColor="@color/sevicecity_openbg"
+                                    android:textSize="@dimen/font_size_s_medium" />
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/drivdetails_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cover"
+                            android:padding="20dp"
+                            android:text="春季重庆马友西藏行！一辈子总要去一次西藏！这次有你吗？"
+                            android:textColor="@color/app_title_color1"
+                            android:textSize="@dimen/font_size_title" />
+
+                        <ImageView
+                            android:id="@+id/drivdetails_essence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginTop="160dp"
+                            android:src="@drawable/icon_jing"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/text_content_color" />
+
+                    <LinearLayout
+                        android:id="@+id/drivdetails_startlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:src="@drawable/btn_green" />
+
+                        <TextView
+                            android:id="@+id/drivdetails_startcity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="重庆"
+                            android:textColor="@color/app_title_color1"
+                            android:textSize="@dimen/font_size_medium" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="20dp"
+                            android:background="@color/app_layout_bg_color2" />
+
+                        <TextView
+                            android:id="@+id/drivdetails_start"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingLeft="5dp"
+                            android:text="重庆市渝中区时代天街1号1号重庆市渝中区时代天街1号1号"
+                            android:textColor="@color/tab_text_n_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/drivdetails_overlay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:src="@drawable/btn_red" />
+
+                        <TextView
+                            android:id="@+id/drivdetails_overcity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="拉萨"
+                            android:textColor="@color/app_title_color1"
+                            android:textSize="@dimen/font_size_medium" />
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="20dp"
+                            android:background="@color/app_layout_bg_color2" />
+
+                        <TextView
+                            android:id="@+id/drivdetails_over"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:paddingLeft="5dp"
+                            android:text="重庆市渝中区时代天街1号1号重庆市渝中区时代天街1号1号"
+                            android:textColor="@color/tab_text_n_color" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_time" />
+
+                        <TextView
+                            android:id="@+id/drivdetails_item_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="2017.03.15 21:30 至 2017.03.25 21:30"
+                            android:textColor="@color/tab_text_n_color"
+                            android:textSize="@dimen/font_size_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/budgetlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:src="@drawable/icon_quanyang" />
+
+                        <TextView
+                            android:id="@+id/drivdetails_item_budget"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="200元（人均预算）"
+                            android:textColor="@color/tab_text_n_color"
+                            android:textSize="@dimen/font_size_medium" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/text_content_color" />
+                </LinearLayout>
+
+                <!---地图-->
+                <LinearLayout
+                    android:id="@+id/maplayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    android:orientation="vertical">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/mapimag"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        fresco:actualImageScaleType="fitXY"
+                        fresco:failureImage="@drawable/im_default"
+                        fresco:failureImageScaleType="fitXY"
+                        fresco:placeholderImage="@drawable/icon_the_default__diagram_n"
+                        fresco:placeholderImageScaleType="fitXY" />
+
+                    <LinearLayout
+                        android:id="@+id/notbegunlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="@color/text_color14"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/notbegunkilometre"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center"
+                            android:text="319"
+                            android:textColor="@color/tab_text_s_color"
+                            android:textSize="@dimen/font_size_m_large" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:paddingTop="5dp"
+                            android:text="计划总里程（km）"
+                            android:textColor="@color/text_content_color"
+                            android:textSize="@dimen/font_size_more" />
+
+                        <TextView
+                            android:id="@+id/notbegunkispot"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:gravity="center|left"
+                            android:paddingTop="5dp"
+                            android:text="途经点12个"
+                            android:textColor="@color/text_content_color"
+                            android:textSize="@dimen/font_size_s_medium" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!---行程-->
+                <LinearLayout
+                    android:id="@+id/signinlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@color/text_color14"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/totalrun"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="319"
+                                android:textColor="@color/text_content_color"
+                                android:textSize="@dimen/font_size_m_large" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:paddingTop="5dp"
+                                android:text="计划总里程（km）"
+                                android:textColor="@color/text_content_color"
+                                android:textSize="@dimen/font_size_more" />
+
+                            <TextView
+                                android:id="@+id/plantime"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:paddingTop="5dp"
+                                android:text="计划用时 （t） 42小时15分"
+                                android:textColor="@color/text_content_color"
+                                android:textSize="@dimen/font_size_s_medium" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@color/text_nav_def_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="已进行（km）"
+                                    android:textColor="@color/text_content_color"
+                                    android:textSize="@dimen/font_size_more" />
+
+                                <TextView
+                                    android:id="@+id/already"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="31.9"
+                                    android:textColor="@color/tab_text_s_color"
+                                    android:textSize="@dimen/font_size_huge" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="自驾时间 （t）"
+                                    android:textColor="@color/text_content_color"
+                                    android:textSize="@dimen/font_size_more" />
+
+                                <TextView
+                                    android:id="@+id/elapsedtime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="2:37:21"
+                                    android:textColor="@color/text_color23"
+                                    android:textSize="@dimen/font_size_huge" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="途经第"
+                                        android:textColor="@color/text_content_color"
+                                        android:textSize="@dimen/font_size_more" />
+
+                                    <TextView
+                                        android:id="@+id/stationnum"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text=" 2 "
+                                        android:textColor="@color/tab_text_s_color"
+                                        android:textSize="@dimen/font_size_m_large" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="个站点"
+                                        android:textColor="@color/text_content_color"
+                                        android:textSize="@dimen/font_size_more" />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:text="31.9"
+                                    android:textColor="@color/tab_text_s_color"
+                                    android:textSize="@dimen/font_size_huge">
+
+                                    <ProgressBar
+                                        android:id="@+id/my_progress"
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="3dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginTop="5dp"
+                                        android:max="100"
+                                        android:progress="0"
+                                        android:progressDrawable="@drawable/progressbar"
+                                        android:secondaryProgress="16" />
+
+                                    <TextView
+                                        android:id="@+id/percentage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center|right"
+                                        android:text="16%"
+                                        android:textColor="@color/tab_text_s_color"
+                                        android:textSize="@dimen/font_size_more" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.tgf.kcwc.view.MyListView
+                    android:id="@+id/mylistview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="#00000000"
+                    android:padding="10dp"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp"
+                    android:visibility="visible"></com.tgf.kcwc.view.MyListView>
+
+                <!---精彩分享-->
+                <LinearLayout
+                    android:id="@+id/drivdetail_pagerlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/drivdetail_pager_pagination"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="精彩分享（1/8）"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/text_content_color" />
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/drivdetail_pager"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:layout_margin="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="可左右滑动查阅"
+                        android:textColor="@color/text_color17"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/text_content_color" />
+                </LinearLayout>
+
+                <!--活动说明-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/app_layout_bg_color" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="1px"
+                            android:layout_marginTop="1px"
+                            android:background="@color/tab_text_s_color" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:text="活动说明"
+                            android:textColor="@color/text_selected"
+                            android:textSize="@dimen/font_size_more" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/text_content_color" />
+                    <!-- 富文本内容显示 -->
+                    <com.tgf.kcwc.view.richeditor.MixedTextImageLayout
+                        android:id="@+id/richContentLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/headerLayout"
+                        android:background="#fff"
+                        android:paddingTop="@dimen/dp10" />
+
+                    <!--                    <com.tgf.kcwc.view.MyListView
+                        android:id="@+id/drivdetails_explain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:listSelector="#00000000">
+
+                    </com.tgf.kcwc.view.MyListView>-->
+                </LinearLayout>
+
+                <!--报名要求-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/text_content_color" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="报名要求"
+                        android:textColor="@color/app_title_color1"
+                        android:textSize="@dimen/font_size_more" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ownerlayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/drivdetails_require_owner"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="15dp"
+                                android:src="@drawable/btn_kuanggou" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="仅限车主" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/checklayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/drivdetails_require_audit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="15dp"
+                                android:src="@drawable/icon_select_box_n" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:gravity="center"
+                                android:text="需审核" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/drivdetails_require_annotation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="要求30岁以上的女性，不是歧视男同胞哟，只是为了路上方便"
+                        android:textColor="@color/app_title_color1"
+                        android:textSize="@dimen/font_size_more" />
+
+                    <TextView
+                        android:id="@+id/drivdetails_require_attention"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="注：报名人数不足x人时，活动将自动取消"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/font_size_more" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/text_content_color" />
+                </LinearLayout>
+
+                <!--标签-->
+                <LinearLayout
+                    android:id="@+id/containerlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="标签"
+                        android:textColor="@color/app_title_color1"
+                        android:textSize="@dimen/font_size_title" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:src="@drawable/btn_gray" />
+
+                        <com.tgf.kcwc.view.tagcloudview.TagCloudLayout
+                            android:id="@+id/container"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="8"
+                            app:lineSpacing="10dp"
+                            app:tagSpacing="15dp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/text_content_color" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/app_layout_bg_color" />
+                </LinearLayout>
+
+                <!--召集人-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/userrelayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <com.facebook.drawee.view.SimpleDraweeView
+                                    android:id="@+id/driving_list_view_imageview"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginTop="10dp"
+                                    android:visibility="visible"
+                                    fresco:placeholderImage="@drawable/rp_avatar"
+                                    fresco:placeholderImageScaleType="fitCenter"
+                                    fresco:retryImageScaleType="fitXY"
+                                    fresco:roundAsCircle="true" />
+
+                                <ImageView
+                                    android:id="@+id/drivdetails_convene_sex"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="45dp"
+                                    android:layout_marginTop="35dp"
+                                    android:src="@drawable/icon_men" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/btn_zhaojiren" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/drivdetails_convene_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center"
+                                    android:maxLength="10"
+                                    android:text="潇洒哥"
+                                    android:textColor="@color/text_color6"
+                                    android:textSize="@dimen/font_size_title" />
+
+                                <ImageView
+                                    android:id="@+id/comment_model_tv"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/icon_model" />
+
+                                <ImageView
+                                    android:id="@+id/drivdetails_convene_da"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:src="@drawable/icon_daren" />
+
+                                <com.facebook.drawee.view.SimpleDraweeView
+                                    android:id="@+id/drivdetails_convene_brandLogo"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="10dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/im_default"
+                                    fresco:actualImageScaleType="fitCenter"
+                                    fresco:placeholderImage="@drawable/icon_dazong"
+                                    fresco:placeholderImageScaleType="fitCenter" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/drivdetails_convene_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="3个小时前发布召集"
+                                android:textColor="@color/color_login_devide"
+                                android:textSize="@dimen/font_size_small" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/drivdetails_convene_number"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center|right"
+                                android:paddingRight="10dp"
+                                android:text="共发布2次召集"
+                                android:textColor="@color/app_title_color1"
+                                android:textSize="@dimen/font_size_s_medium" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingRight="10dp"
+                                android:src="@drawable/btn_nextjiantou" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/text_content_color" />
+
+                </LinearLayout>
+
+                <!--报名人数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/applynumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="报名人数（15）"
+                        android:textColor="@color/app_title_color1"
+                        android:textSize="@dimen/font_size_title" />
+
+                    <LinearLayout
+                        android:id="@+id/applylay"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/drivdetail_recyclerview_horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:scrollbars="none" />
+
+                        <ImageView
+                            android:id="@+id/applygo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/btn_nextjiantou"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/text_content_color" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/app_layout_bg_color" />
+
+                </LinearLayout>
+
+                <!--荣誉记录-->
+                <LinearLayout
+                    android:id="@+id/honorlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="2dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/tab_text_s_color" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:text="荣誉记录"
+                            android:textColor="@color/text_selected"
+                            android:textSize="@dimen/font_size_more" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/text_content_color" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/drivdetail_honorrecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:scrollbars="none" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/app_layout_bg_color" />
+                </LinearLayout>
+
+                <!--评论点赞列表-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="100dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/commentHeaderLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp">
+
+                        <RelativeLayout
+                            android:id="@+id/commentBtnLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/cmtTitle"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="@string/comment"
+                                android:textColor="@color/text_selected"
+                                android:textSize="@dimen/font_size_more" />
+
+                            <TextView
+                                android:id="@+id/cmtContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="3dp"
+                                android:layout_toRightOf="@id/cmtTitle"
+                                android:gravity="center"
+                                android:text="(0)"
+                                android:textColor="@color/text_more"
+                                android:textSize="@dimen/font_size_small"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/btmLine1"
+                                android:layout_width="50dp"
+                                android:layout_height="2dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/tab_text_s_color" />
+
+                        </RelativeLayout>
+
+
+                        <RelativeLayout
+                            android:id="@+id/likeBtnLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:layout_toRightOf="@id/commentBtnLayout">
+
+                            <TextView
+                                android:id="@+id/likeTitle"
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:text="点赞"
+                                android:textColor="@color/text_selected"
+                                android:textSize="@dimen/font_size_more" />
+
+                            <TextView
+                                android:id="@+id/likeContent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="3dp"
+                                android:layout_toRightOf="@id/likeTitle"
+                                android:gravity="center"
+                                android:text="(0)"
+                                android:textColor="@color/text_more"
+                                android:textSize="@dimen/font_size_small"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/btmLine2"
+                                android:layout_width="50dp"
+                                android:layout_height="2dp"
+                                android:layout_alignParentBottom="true"
+                                android:background="@color/tab_text_s_color"
+                                android:visibility="invisible" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/split_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@id/commentHeaderLayout"
+                        android:background="@color/partTranslucent" />
+
+                    <LinearLayout
+                        android:id="@+id/melayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/split_line"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/headerImgLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/motodetail_avatar_iv"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="10dip"
+                                android:scaleType="fitCenter"
+                                android:src="@drawable/im_default"
+                                fresco:placeholderImage="@drawable/rp_avatar"
+                                fresco:placeholderImageScaleType="fitCenter"
+                                fresco:roundAsCircle="true" />
+
+                            <com.facebook.drawee.view.SimpleDraweeView
+                                android:id="@+id/belowgenderImg"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
+                                android:layout_alignBottom="@id/motodetail_avatar_iv"
+                                android:layout_alignRight="@id/motodetail_avatar_iv"
+                                fresco:placeholderImage="@drawable/icon_men"
+                                fresco:placeholderImageScaleType="fitCenter"
+                                fresco:roundAsCircle="true" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/CommentrepayLayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:background="@drawable/oval_bg">
+
+                            <TextView
+                                android:id="@+id/inputComment"
+                                android:layout_width="250dp"
+                                android:layout_height="40dp"
+                                android:layout_marginLeft="15dp"
+                                android:drawableLeft="@drawable/input_text_icon"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:text="说点什么"
+                                android:textColor="@color/transparent90_white"
+                                android:textSize="@dimen/font_size_more" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/comment_fragfl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/melayout" />
+
+                    <RelativeLayout
+                        android:id="@+id/emptyLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/emptyContentTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </com.tgf.kcwc.view.ObservableScrollView>
+
+
+        <include
+            android:id="@+id/titleBar"
+            layout="@layout/titlebar" />
+
+
+        <!--我要报名-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:background="@color/btn_select_color"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="我要报名"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_title" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/commentLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/comment_numbers"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/oval_text_numbers_bg"
+                        android:gravity="center"
+                        android:text="21"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/replayImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="15dp"
+                        android:src="@drawable/btn_comments_n" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/favoriteImg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:src="@drawable/btn_heart2" />
+
+                <ImageView
+                    android:id="@+id/share"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="15dp"
+                    android:src="@drawable/btn_share_gray" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

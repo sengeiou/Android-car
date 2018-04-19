@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/latest_exhibition_rl"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:background="@color/app_main_color1"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/lastest_exhibit_tiltetv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/titleyellow_tag"
+            android:drawablePadding="@dimen/common_left_margin"
+            android:gravity="center_vertical"
+            android:text="到店看展车，提现车"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_right_margin"
+            android:rotation="-90"
+            android:src="@drawable/loc_drop_down" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider2" />
+
+    <TextView
+        android:id="@+id/home_titleTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:layout_marginRight="@dimen/common_left_margin"
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:lineSpacingExtra="5dp"
+        android:maxLines="2"
+        android:text="雷克萨斯 LX 2016款 570 动感豪华版可折两行显示，可折两行显示"
+        android:textColor="@color/text_color3"
+        android:textSize="@dimen/sp14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_left_margin"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/homestore_piconeiv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            fresco:viewAspectRatio="1.33"
+            android:layout_marginTop="@dimen/common_left_margin"
+            fresco:actualImageScaleType="centerCrop" />
+
+        <TextView
+            android:layout_width="8dp"
+            android:layout_height="match_parent"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/homestore_picTwoiv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            fresco:viewAspectRatio="1.33"
+            android:layout_marginTop="@dimen/common_left_margin"
+            fresco:actualImageScaleType="centerCrop" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/homestore_outcolor"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:background="@drawable/rectangle_bg_graywhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="6dp"
+            android:paddingRight="@dimen/common_left_margin"
+            android:text="外观 银白"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp12" />
+
+        <TextView
+            android:id="@+id/homestore_incolor"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:background="@drawable/rectangle_bg_graywhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="6dp"
+            android:paddingRight="@dimen/common_left_margin"
+            android:text="内饰 经典黑"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/sp12" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_orglayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/common_left_margin">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/home_storeCoverIv"
+            android:layout_width="60dp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/home_storeNameTv"
+            android:layout_width="221dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_marginTop="@dimen/common_left_margin"
+            android:layout_toRightOf="@id/home_storeCoverIv"
+            android:singleLine="true"
+            android:text="重庆新雅和汽车销售服务有限公司"
+            android:textColor="@color/text_color3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/home_storLocTv"
+            android:layout_width="221dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/home_storeNameTv"
+            android:layout_marginLeft="@dimen/common_left_margin"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/home_storeCoverIv"
+            android:drawableLeft="@drawable/icon_location"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="重庆市渝北区龙溪镇松石道80号附5号"
+            android:textColor="@color/text_color17" />
+
+        <ImageView
+            android:id="@+id/home_orgcallBtn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_phone_green" />
+    </RelativeLayout>
+
+</LinearLayout>

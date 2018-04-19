@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="75dp"
+            android:layout_height="48dp"
+            android:gravity="center_horizontal">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/icon"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                fresco:actualImageScaleType="fitXY"
+                fresco:failureImage="@drawable/rp_avatar"
+                fresco:failureImageScaleType="centerInside"
+                fresco:placeholderImage="@drawable/rp_avatar"
+                fresco:placeholderImageScaleType="fitCenter"
+                fresco:roundAsCircle="true"
+                fresco:roundWithOverlayColor="@color/white"
+                fresco:roundedCornerRadius="10dp"
+                fresco:roundingBorderColor="@color/headframe"
+                fresco:roundingBorderWidth="2dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingTop="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="积分"
+                    android:textColor="@color/color_login_devide"
+                    android:textSize="@dimen/font_size_title" />
+
+                <TextView
+                    android:id="@+id/integraltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="0"
+                    android:textColor="@color/style_bg7"
+                    android:textSize="@dimen/font_size_title" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_integralgradebg"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:paddingTop="3dp"
+                        android:src="@drawable/icon_dengji" />
+
+                    <TextView
+                        android:id="@+id/grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:text="13"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_size_small" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:text="经验"
+                    android:textColor="@color/color_login_devide"
+                    android:textSize="@dimen/font_size_more" />
+
+                <TextView
+                    android:id="@+id/experiencetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:text="0"
+                    android:textColor="@color/style_bg7"
+                    android:textSize="@dimen/font_size_title" />
+
+                <TextView
+                    android:id="@+id/netxexp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="0"
+                    android:textColor="@color/tab_text_n_color"
+                    android:textSize="@dimen/font_size_title" />
+
+                <ProgressBar
+                    android:id="@+id/my_progress"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="7dp"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/integral_progressbar_yellow"
+                    android:secondaryProgress="0"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/conversion"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_integralquery_bg"
+            android:gravity="center"
+            android:text="兑换"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_s_medium" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_color" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/app_layout_bg_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/integrallayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/integrallayoutname"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="积分历史"
+                android:textColor="@color/text_selected"
+                android:textSize="@dimen/font_size_title" />
+
+            <TextView
+                android:id="@+id/integrallayoutdown"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/text_selected" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/experiencelayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/experiencelayoutname"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="经验历史"
+                android:textColor="@color/color_login_devide"
+                android:textSize="@dimen/font_size_title" />
+
+            <TextView
+                android:id="@+id/experiencelayoutdown"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/white" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/split_line_color" />
+
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_layout_bg_color"
+            android:divider="@color/white"
+            android:dividerHeight="0px" />
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+
+</LinearLayout>

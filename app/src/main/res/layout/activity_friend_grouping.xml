@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_2"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:id="@+id/attention_search_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attention_line"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp8"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:paddingTop="@dimen/dp8">
+
+        <EditText
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:id="@+id/friend_seek"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="请输入查询的好友"
+            android:background="@drawable/busyiness_search_bg"
+            android:drawableRight="@drawable/icon_friend_search"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color14"
+            android:textSize="@dimen/dp14"
+            android:paddingLeft="@dimen/common_left_margin"
+            android:paddingRight="10dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/split_line_color" />
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:background="@color/bg_2"
+        android:layout_height="@dimen/dp4"/>
+    <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+        android:id="@+id/rl_modulename_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:divider="@color/bg_2"
+            android:dividerHeight="@dimen/dp1"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:id="@+id/friend_group_lv"
+            ></ListView>
+    </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:background="@color/split_line_color" />
+</LinearLayout>

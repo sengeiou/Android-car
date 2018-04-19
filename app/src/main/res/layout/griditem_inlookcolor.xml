@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/grid_lookcoloriv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp20"
+            android:scaleType="fitXY"
+            tools:background="@color/red" />
+
+        <ImageView
+            android:id="@+id/grid_selectstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:scaleType="fitXY"
+            android:background="@drawable/griditem_duigou" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_marginTop="@dimen/dp9"
+        android:textSize="@dimen/sp12"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/grid_lookcolorname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/style_bg7"
+        android:singleLine="true"
+        tools:text="胡桃木" />
+</LinearLayout>

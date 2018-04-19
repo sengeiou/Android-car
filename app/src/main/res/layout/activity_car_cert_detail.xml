@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/style_bg8">
+    <include
+        android:id="@+id/title"
+        layout="@layout/titlebar"/>
+    <ScrollView
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/dp15"
+                android:layout_marginRight="@dimen/dp15"
+                android:layout_marginTop="@dimen/dp15"
+                android:background="@drawable/button_bg_14">
+
+                <RelativeLayout
+                    android:id="@+id/topLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp15">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_sdv"
+                        android:layout_width="@dimen/dp30"
+                        android:layout_height="@dimen/dp30"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:failureImage="@drawable/cover_default"
+                        fresco:placeholderImage="@drawable/cover_default"
+                        fresco:placeholderImageScaleType="fitCenter" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp80"
+                        android:layout_height="@dimen/dp15"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/shape_white_bg" />
+
+                    <TextView
+                        android:id="@+id/currentRecord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/shape_white_bg"
+                        android:paddingBottom="@dimen/dp3"
+                        android:paddingLeft="@dimen/dp10"
+                        android:paddingRight="@dimen/dp10"
+                        android:paddingTop="@dimen/dp3"
+                        android:text="1/4"
+                        android:textColor="@color/text_selected"
+                        android:textSize="@dimen/sp12" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/top_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/topLayout"
+                    android:layout_marginBottom="@dimen/dp16">
+
+                    <TextView
+                        android:id="@+id/senseName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_top_size"
+                        android:gravity="center"
+                        android:text="2016第十四届中国国际摩托车博览会"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp12" />
+
+                    <TextView
+                        android:id="@+id/certTypeTv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/senseName"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp13"
+                        android:gravity="center"
+                        android:text="专业观众证"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp15" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/middleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/top_green"
+                    android:background="@color/white">
+
+                    <RelativeLayout
+                        android:id="@+id/normalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/img"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/margin_top_size"
+                            fresco:actualImageScaleType="fitXY"
+                            fresco:failureImage="@drawable/icon_certificate_n"
+                            fresco:failureImageScaleType="fitXY"
+                            fresco:placeholderImage="@drawable/icon_certificate_n"
+                            fresco:placeholderImageScaleType="fitXY" />
+
+                        <TextView
+                            android:id="@+id/car_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/img"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:gravity="center"
+                            android:lineSpacingMultiplier="1.5"
+                            android:text="车牌号码"
+                            android:textColor="@color/text_bg"
+                            android:textSize="@dimen/sp15" />
+
+                        <TextView
+                            android:id="@+id/remark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/car_num"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:gravity="center"
+                            android:lineSpacingMultiplier="1.5"
+                            android:text="有效时间"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <TextView
+                            android:id="@+id/exhibition_pos"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/remark"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:gravity="center"
+                            android:lineSpacingMultiplier="1.5"
+                            android:text="参展展位"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <ImageView
+                            android:id="@+id/qrImg"
+                            android:layout_width="@dimen/dp170"
+                            android:layout_height="@dimen/dp70"
+                            android:layout_below="@id/exhibition_pos"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:background="@drawable/cover_default" />
+
+                        <TextView
+                            android:layout_marginBottom="@dimen/dp15"
+                            android:id="@+id/snTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/qrImg"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="11dp"
+                            android:gravity="center"
+                            android:text="通行证编号"
+                            android:textColor="@color/text_color12"
+                            android:textSize="@dimen/sp12" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_below="@+id/middleLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/margin_left_size"
+                    android:layout_marginRight="@dimen/margin_right_size">
+
+                    <TextView
+                        android:id="@+id/hint_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/margin_top_size"
+                        android:gravity="center"
+                        android:text="09:00前未进场将扣押金，限1次/每天"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp12" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin_top_size"
+        android:background="@color/app_main_color1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp30"
+            android:layout_marginRight="@dimen/dp30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/lockBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp8"
+                android:drawableTop="@drawable/cert_btn_selector3"
+                android:gravity="center"
+                android:text="参展指引"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp10" />
+
+            <TextView
+                android:id="@+id/printBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/dp8"
+                android:drawableTop="@drawable/cert_btn_selector1"
+                android:gravity="center"
+                android:text="展位签到"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp10" />
+
+            <TextView
+                android:id="@+id/recordBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp8"
+                android:drawableTop="@drawable/cert_btn_selector2"
+                android:gravity="center"
+                android:text="证件记录"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp10" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

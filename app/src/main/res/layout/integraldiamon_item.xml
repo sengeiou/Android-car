@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/type"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/icon_zhuanshi" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp">
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5500钻石"
+                android:textColor="@color/text_color12"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/number"
+                android:text="￥110"
+                android:textColor="@color/text_color36"
+                android:textSize="@dimen/font_size_more" />
+
+            <TextView
+                android:id="@+id/platform"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/number"
+                android:layout_marginTop="10dp"
+                android:text="看车玩车平台"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_more" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/purchase"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button_purchase_bg"
+            android:gravity="center"
+            android:text="购买"
+            android:textColor="@color/app_main_color2"
+            android:textSize="@dimen/font_size_more" />
+    </LinearLayout>
+
+</LinearLayout>

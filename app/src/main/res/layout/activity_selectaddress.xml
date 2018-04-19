@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <include
+            android:id="@+id/selectaddress_city"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true" />
+
+        <EditText
+            android:paddingLeft="@dimen/dp10"
+            android:layout_marginLeft="@dimen/dp15"
+            android:id="@+id/etsearch"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg"
+            android:drawableRight="@drawable/search_btn_selector"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="start|center_vertical"
+            android:hint="搜索地址"
+            android:paddingRight="15dp"
+            android:scrollbars="none"
+            android:singleLine="true"
+            android:textColor="@color/text_color3"
+            android:textColorHint="@color/text_content_color"
+            android:textSize="@dimen/font_size_medium" />
+
+        <TextView
+            android:id="@+id/selectpos_cancl"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/text_state_color"
+            android:textSize="@dimen/font_size_medium" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/selecAddress_historyrl"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/seek_rl">
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:text="搜索历史" />
+
+        <TextView
+            android:id="@+id/tv_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="#F6F6F6"
+            android:gravity="center"
+            android:text="清除历史" />
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/selectaddress_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </FrameLayout>
+
+</LinearLayout>

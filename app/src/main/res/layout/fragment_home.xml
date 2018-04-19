@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_bar_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/filterLayout"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp10" />
+
+        <TextView
+            android:id="@+id/seek"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@drawable/search_bg"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/search_btn_selector"
+            android:gravity="center_vertical"
+            android:hint="北京现代"
+            android:paddingLeft="@dimen/common_left_margin"
+            android:paddingRight="10dp" />
+
+        <ImageView
+            android:id="@+id/fraghome_scanneriv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_saomiao" />
+
+        <ImageView
+            android:id="@+id/home_shareiv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="@dimen/dp10"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_homemsg" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.tgf.kcwc.view.SmoothListView.SmoothListView
+            android:id="@+id/home_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:divider="@color/app_layout_bg_color"
+            android:dividerHeight="10dp"
+            android:visibility="visible" />
+        <!--头部 关注 热门 同城-->
+        <RelativeLayout
+            android:id="@+id/home_filterRootLayout"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="44dp">
+
+            <ImageView
+                android:id="@+id/home_scrollTopIv"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_back_gray" />
+
+            <RadioGroup
+                android:id="@+id/home_filterRG"
+                android:layout_width="250dp"
+                android:layout_height="44dp"
+                android:layout_centerInParent="true"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp">
+
+                <RadioButton
+                    android:id="@+id/home_filter_fellowBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableBottom="@drawable/tab_menu_selector"
+                    android:gravity="center"
+                    android:text="关注"
+                    android:textColor="@color/tab_hometext_color" />
+
+                <RadioButton
+                    android:id="@+id/home_filter_hotBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/tab_menu_selector"
+                    android:gravity="center"
+                    android:text="热门"
+                    android:textColor="@color/tab_hometext_color" />
+
+                <RadioButton
+                    android:id="@+id/home_filter_cityBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:drawableBottom="@drawable/tab_menu_selector"
+                    android:gravity="center"
+                    android:text="同城"
+                    android:textColor="@color/tab_hometext_color" />
+            </RadioGroup>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

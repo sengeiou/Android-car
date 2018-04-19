@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+    <LinearLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/filter_layout_height"
+        android:layout_below="@id/titleBar"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+
+            <include
+                android:id="@+id/brand"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/price"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/seat"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+            <include
+                android:id="@+id/level"
+                layout="@layout/common_filter_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/moreFilterLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_right_size"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/more_filter"
+                android:textColor="@color/text_state_color"
+                android:textSize="@dimen/font_size_medium" />
+
+            <ImageView
+                android:id="@+id/moreFilter"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/more"
+                android:scaleType="fitCenter"
+                android:src="@drawable/btn_screening_n" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/filterItems"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/filterLayout"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/custom_lists"
+            android:layout_width="290dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:scrollbars="vertical" />
+
+
+        <TextView
+            android:id="@+id/customBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/custom_text"
+            android:textColor="@color/text_color18"
+            android:textSize="@dimen/font_size_medium" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/customModelList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filterItems"
+        android:visibility="gone"
+
+        >
+
+
+        <ListView
+            android:id="@+id/filterSeatList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@color/split_line_color" />
+
+        <RelativeLayout
+            android:id="@+id/setPriceLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!-- <include
+             android:id="@+id/setPriceLayout"
+             layout="@layout/common_price_layout"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" /> -->
+
+        <RelativeLayout
+            android:id="@+id/setBrandLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </android.support.v7.widget.RecyclerView>
+
+                <com.mcxtzhang.indexlib.IndexBar.widget.IndexBar
+                    android:id="@+id/indexBar"
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:visibility="gone"
+                    app:indexBarPressBackground="@color/partTranslucent"
+                    app:indexBarTextSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvSideBarHint"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_side_bar_bg"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    android:visibility="gone"
+                    tools:text="A"
+                    tools:visibility="visible" />
+
+            </FrameLayout>
+
+            <com.tgf.kcwc.view.LoadView
+                android:id="@+id/loadView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/filterCarLevelList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@color/split_line_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/matchesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_below="@id/customModelList">
+
+        <TextView
+            android:id="@+id/matchesTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_size"
+            android:textColor="@color/text_color17"
+            android:textSize="@dimen/font_size_small" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/matchesLayout">
+
+        <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+            android:id="@+id/rl_modulename_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layoutManager="LinearLayoutManager" />
+
+        </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/emptyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/msgTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:drawablePadding="10dp"
+                android:drawableTop="@drawable/no_data_img_icon"
+                android:text="亲,暂无符合条件的车型哦!"
+                android:textColor="@color/text_color17"
+                android:textSize="@dimen/font_size_small" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

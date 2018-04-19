@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="45dp"
+    android:layout_height="45dp"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<com.facebook.drawee.view.SimpleDraweeView
+    android:id="@+id/orderfellow_contactavatar"
+    android:layout_centerInParent="true"
+    android:layout_width="@dimen/text_height"
+    android:layout_height="45dp"
+    fresco:actualImageScaleType="fitXY"
+    fresco:placeholderImageScaleType="fitXY"
+    fresco:roundAsCircle="true"
+    fresco:placeholderImage="@drawable/rp_avatar"/>
+    <TextView
+        android:id="@+id/orderfellow_msgnum"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        tools:text="3"
+        android:textSize="8sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/orderfellow_contactavatar"
+        android:layout_marginLeft="-10dp"
+        android:background="@drawable/notice_reddot"/>
+</RelativeLayout>

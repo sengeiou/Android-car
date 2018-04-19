@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_search_title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/common_search_title_bar"
+    android:background="@drawable/shape_titlebar_bg"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+
+        <ImageView
+            android:id="@+id/voucher_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_back_white"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+        <RelativeLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/voucher_back">
+
+
+            <TextView
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="75dp"
+                android:background="@drawable/search_bg"
+                android:drawableRight="@drawable/search_btn_selector"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="start|center_vertical"
+                android:hint="温泉度假"
+                android:paddingRight="15dp"
+                android:paddingLeft="@dimen/common_left_margin"
+                android:singleLine="true"
+                android:textColor="@color/text_content_color"
+                android:textColorHint="@color/text_content_color"
+                android:textSize="@dimen/font_size_medium" />
+
+            <include
+                android:id="@+id/filterLayout"
+                layout="@layout/common_filter_layout"
+                android:layout_width="67dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="4dp"
+             />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

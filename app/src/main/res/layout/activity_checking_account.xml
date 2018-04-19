@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:pieview="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/app_layout_bg_color"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar"
+        />
+
+
+    <ScrollView
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp45"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:id="@+id/titleTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_color12"
+                        android:textSize="@dimen/sp18"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/incomeTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toRightOf="@id/titleTv"
+                        android:textColor="@color/text_color10"
+                        android:textSize="@dimen/sp18"/>
+
+                    <TextView
+                        android:id="@+id/outlayTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp10"
+                        android:layout_toRightOf="@id/incomeTv"
+                        android:textColor="@color/text_color18"
+                        android:textSize="@dimen/sp18"/>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/split_line_color"/>
+            </RelativeLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/white">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="@dimen/dp30"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:orientation="horizontal">
+
+
+                    <View
+                        android:layout_width="@dimen/dp10"
+                        android:layout_height="@dimen/dp10"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/text_color10"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="收入"
+                        android:textColor="@color/text_color17"
+                        android:textSize="@dimen/sp12"
+                        />
+
+                    <View
+                        android:layout_width="@dimen/dp10"
+                        android:layout_height="@dimen/dp10"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp15"
+                        android:background="@color/text_color18"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp5"
+                        android:text="支出"
+                        android:textColor="@color/text_color17"
+                        android:textSize="@dimen/sp12"
+                        />
+
+
+                </LinearLayout>
+
+
+                <com.tgf.kcwc.view.PieChart
+                    android:id="@+id/pv"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"/>
+
+            </FrameLayout>
+
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/white"
+                android:divider="@color/app_layout_bg_color"
+                android:dividerHeight="@dimen/dp10"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/emptyLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/msgTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/no_data_img_icon"
+            android:gravity="center_horizontal"
+            android:text="您目前还没有账单信息！"
+            android:textColor="@color/text_color15"
+            android:textSize="@dimen/font_size_small"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

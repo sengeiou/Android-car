@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/home_headfilterRG"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="@dimen/common_left_margin"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <RadioButton
+            android:id="@+id/home_headfilter_fellowBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableBottom="@drawable/tab_menu_selector"
+            android:gravity="center"
+            android:text="关注"
+            android:textColor="@color/tab_hometext_color" />
+
+        <RadioButton
+            android:id="@+id/home_headfilter_hotBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/tab_menu_selector"
+            android:gravity="center"
+            android:text="热门"
+            android:textColor="@color/tab_hometext_color" />
+
+        <RadioButton
+            android:id="@+id/home_headfilter_cityBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableBottom="@drawable/tab_menu_selector"
+            android:gravity="center"
+            android:text="同城"
+            android:textColor="@color/tab_hometext_color" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider2" />
+</LinearLayout>

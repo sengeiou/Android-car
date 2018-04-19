@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/popwin_supplier_list_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#5000"
+        android:minHeight="280dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_height">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_height"
+            android:background="@color/bg_2"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/homeleft_margin"
+            android:text="  选择展会项目"
+            android:textSize="12dp" />
+
+        <ImageView
+            android:id="@+id/ticketm_exhibit_closeIV"
+            android:layout_width="@dimen/text_height"
+            android:layout_height="@dimen/text_height"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_close_s" />
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/popwind_exhibitlistlv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:cacheColorHint="@android:color/transparent"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none"
+        android:scrollingCache="false" />
+</LinearLayout>
+

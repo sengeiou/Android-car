@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/titlebar"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/motoparam_ryv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="LinearLayoutManager" />
+        <!--    <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:textSize="12sp" />
+            </RelativeLayout>-->
+        <LinearLayout
+            android:id="@+id/suspension_bar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/color_login_devide"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/snsbar_motoparamtitle_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="基本参数" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableLeft="@drawable/icon_standardset"
+                android:drawablePadding="5dp"
+                android:text="标配" />
+
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:drawableLeft="@drawable/icon_selectset"
+                android:text="选配  - 无" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/motoparam_menu_btn"
+            android:layout_width="@dimen/common_button_height"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_gravity="bottom|left"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/shape_greencircle_btn"
+            android:textColor="@color/white"
+            android:text="目录" />
+    </FrameLayout>
+</LinearLayout>

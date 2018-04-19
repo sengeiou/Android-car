@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.tgf.kcwc.view.nestlistview.NestFullListView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comments_lv"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/app_main_color1"
+    android:divider="@color/app_layout_bg_color"
+    android:dividerHeight="@dimen/list_divider_height"
+    android:orientation="vertical" />

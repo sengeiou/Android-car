@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_layout_bg_color"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar" />
+
+
+    <RelativeLayout
+        android:id="@+id/warning_frame"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp34"
+        android:visibility="gone">
+
+
+        <TextView
+            android:id="@+id/warning_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp14" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/nickLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone">
+
+
+        <EditText
+            android:id="@+id/editContent"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:background="@null"
+            android:gravity="center|start"
+            android:hint="请输入昵称!"
+            android:textColor="@color/text_color12"
+            android:textColorHint="@color/text_color2"
+            android:textSize="@dimen/sp14" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/errorMsgTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:text="昵称不能为空!"
+        android:textColor="@color/red"
+        android:textSize="@dimen/sp14"
+        android:visibility="gone"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/signLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/signET"
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
+                android:background="@color/white"
+                android:gravity="center|start"
+                android:hint="请输入签名信息!"
+                android:lineSpacingMultiplier="1.5"
+                android:maxLength="30"
+                android:padding="8dp"
+                android:textColor="@color/text_color12"
+                android:textColorHint="@color/text_color2"
+                android:textSize="@dimen/sp14" />
+
+            <TextView
+                android:id="@+id/noteTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="8dp"
+                android:text="0/30" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/driving_select"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_button_height"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/listact_categroy"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="20dp"
+            android:background="@color/app_layout_bg_color2" />
+
+        <include
+            android:id="@+id/listact_rank"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="20dp"
+            android:background="@color/app_layout_bg_color2" />
+
+        <include
+            android:id="@+id/listact_time"
+            layout="@layout/common_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="20dp"
+            android:background="@color/app_layout_bg_color2" />
+
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxEms="4"
+            android:paddingLeft="2dp"
+            android:singleLine="true"
+            android:text="更多"
+            android:textColor="@color/text_color3"
+            android:textSize="@dimen/font_size_medium" />
+    </LinearLayout>
+</LinearLayout>

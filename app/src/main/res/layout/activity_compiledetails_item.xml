@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imageicon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="#ff000000"
+            android:layout_margin="10dp"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="发布的动态缩略，非标题发布的动态缩略"
+                android:textColor="@color/app_title_color1"
+                android:textSize="@dimen/font_size_title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/headerImgLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/motodetail_avatar_iv"
+                        android:layout_width="30dp"
+                        android:layout_height="35dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/im_default"
+                        fresco:placeholderImage="@drawable/rp_avatar"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/genderImg"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_alignBottom="@id/motodetail_avatar_iv"
+                        android:layout_alignRight="@id/motodetail_avatar_iv"
+                        fresco:placeholderImage="@drawable/icon_men"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center|left"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="center"
+                            android:maxEms="6"
+                            android:singleLine="true"
+                            android:text="安然"
+                            android:textColor="@color/text_color6"
+                            android:textSize="@dimen/font_size_small" />
+
+                        <ImageView
+                            android:id="@+id/comment_model_tv"
+                            android:layout_width="10dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/icon_model" />
+
+                        <ImageView
+                            android:id="@+id/drivdetails_convene_da"
+                            android:layout_width="10dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:src="@drawable/icon_daren" />
+
+                        <com.facebook.drawee.view.SimpleDraweeView
+                            android:id="@+id/drivdetails_convene_brandLogo"
+                            android:layout_width="10dp"
+                            android:layout_height="15dp"
+                            android:layout_marginLeft="8dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/im_default"
+                            fresco:actualImageScaleType="fitCenter"
+                            fresco:placeholderImage="@drawable/icon_dazong"
+                            fresco:placeholderImageScaleType="fitCenter" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingTop="3dp"
+                        android:text="2017.10.28"
+                        android:textColor="@color/text_color2"
+                        android:textSize="@dimen/font_size_small" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ascending"
+                    android:layout_width="20dp"
+                    android:layout_height="15dp"
+                    android:scaleType="fitXY"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/btn_3down"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

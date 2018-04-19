@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@drawable/play_attention_bg"
+            android:textColor="@color/white"
+            android:text="好友" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/play_attention_text_bg"
+            android:textColor="@color/tab_text_s_color"
+            android:text="话题" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/play_attention_text_bg"
+            android:textColor="@color/tab_text_s_color"
+            android:text="群组" />
+
+    </LinearLayout>
+</LinearLayout>

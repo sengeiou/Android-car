@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/bodyLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_month_day"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp4"
+            android:paddingLeft="@dimen/dp9"
+            android:paddingRight="@dimen/dp9"
+            android:paddingTop="@dimen/dp4">
+
+            <TextView
+                android:id="@+id/dayTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="30"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/monthTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp2"
+                android:text="6月"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp10"
+            android:orientation="vertical">
+
+            <TextView
+                android:paddingBottom="@dimen/dp4"
+                android:paddingTop="@dimen/dp4"
+                android:paddingLeft="@dimen/dp11"
+                android:paddingRight="@dimen/dp11"
+                android:background="@drawable/shape_address_bg"
+                android:id="@+id/titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp7"
+                android:maxLength="30"
+                android:text="标题最多30个字"
+                android:textColor="@color/style_bg7"
+                android:textSize="@dimen/sp15" />
+
+            <TextView
+                android:id="@+id/descTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp4"
+                android:paddingTop="@dimen/dp5"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="内容最多2行"
+                android:textColor="@color/text_color15"
+                android:textSize="@dimen/sp12" />
+
+            <RelativeLayout
+                android:id="@+id/picVideoRl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp10">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/coverSingleIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp194"
+                    android:layout_gravity="center_vertical"
+                    android:visibility="gone"
+                    fresco:actualImageScaleType="fitXY"
+                    fresco:failureImage="@drawable/cover_default"
+                    fresco:placeholderImageScaleType="fitXY" />
+
+                <ImageView
+                    android:id="@+id/videoIv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/video_play"
+                    android:visibility="gone" />
+
+                <com.tgf.kcwc.view.MyGridView
+                    android:id="@+id/gridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:horizontalSpacing="@dimen/dp10"
+                    android:numColumns="3"
+                    android:verticalSpacing="@dimen/dp10"
+                    android:visibility="gone"></com.tgf.kcwc.view.MyGridView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp15"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/detailAddressTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_location"
+                    android:drawablePadding="@dimen/dp5"
+                    android:gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="详细地址"
+                    android:textColor="@color/text_color17"
+                    android:textSize="@dimen/sp10" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/numTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_focus_on"
+                    android:drawablePadding="@dimen/dp5"
+                    android:paddingLeft="@dimen/dp10"
+                    android:text="点击数量"
+                    android:textColor="@color/style_bg7"
+                    android:textSize="@dimen/sp10" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/zanTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/btn_heart1"
+                    android:drawablePadding="@dimen/dp5"
+                    android:paddingLeft="@dimen/dp10"
+                    android:text="点赞数量"
+                    android:textColor="@color/style_bg7"
+                    android:textSize="@dimen/sp10" />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:id="@+id/commentTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/icon_comments"
+                    android:drawablePadding="@dimen/dp5"
+                    android:paddingLeft="@dimen/dp10"
+                    android:text="评论数量"
+                    android:textColor="@color/style_bg7"
+                    android:textSize="@dimen/sp10" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/divider2" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <cn.bingoogolapple.refreshlayout.BGARefreshLayout
+            android:id="@+id/rl_modulename_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="45dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:divider="#00000000"
+                android:dividerHeight="0dip" />
+
+        </cn.bingoogolapple.refreshlayout.BGARefreshLayout>
+
+        <TextView
+            android:id="@+id/found"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/text_color36"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="创建话题"
+            android:textColor="@color/white"
+            android:visibility="visible"
+            android:textSize="@dimen/font_size_title"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>

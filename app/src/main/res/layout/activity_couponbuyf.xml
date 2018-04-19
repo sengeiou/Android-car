@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_header_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_pay_failure" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_item_height"
+        android:gravity="center"
+        android:text="抱歉!订单支付失败!"
+        android:textColor="@color/voucher_black"
+        android:textSize="@dimen/font_size_title" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="您可“继续支付”，完成代金券购买；也可“取消订单“，放弃购买。"
+        android:textColor="@color/voucher_gray"
+        android:textSize="@dimen/font_size_tiny" />
+
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="@dimen/common_button_height">
+
+        <TextView
+            android:id="@+id/couponpay_cancel"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_radiuswhiterect_bg"
+            android:gravity="center"
+            android:text="取消支付"
+            android:textColor="@color/text_color8"
+            android:textSize="@dimen/font_size_medium" />
+        <TextView
+            android:id="@+id/couponpay_continue"
+            android:layout_width="120dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="@dimen/common_button_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_radiusyellowrect_bg"
+            android:gravity="center"
+            android:text="继续支付"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium" />
+
+    </LinearLayout>
+
+</LinearLayout>

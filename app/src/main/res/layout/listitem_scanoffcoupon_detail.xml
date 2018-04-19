@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/white"
+    android:minHeight="50dp">
+
+    <include
+        android:id="@+id/scanoffdetail_avararlayout"
+        layout="@layout/layout_avatar_gender" />
+
+    <TextView
+        android:id="@+id/scanoffdetail_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/scanoffdetail_avararlayout"
+        android:maxLines="1"
+        android:text="姓名"
+        android:textColor="@color/text_color6"
+        android:textSize="@dimen/font_size_small" />
+
+    <TextView
+        android:id="@+id/scanoff_checktime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/common_margin"
+        android:maxLines="1"
+        android:textSize="@dimen/font_size_small"
+        android:text="03.12" />
+</RelativeLayout>

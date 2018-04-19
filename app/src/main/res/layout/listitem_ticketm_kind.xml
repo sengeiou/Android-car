@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_left_margin"
+        android:layout_marginRight="@dimen/common_left_margin"
+        android:background="@drawable/shape_ticketm_typebgt"
+        android:padding="1px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/handleticket_nametv"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape_ticketm_typet"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/homeleft_margin"
+            android:text="媒体日门票"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp15" />
+
+        <LinearLayout
+            android:id="@+id/handleticket_remarkLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#7F6acd63"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/remarks"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="5dp"
+                android:paddingRight="@dimen/homeleft_margin"
+                android:paddingLeft="@dimen/homeleft_margin"
+                android:text="6.14-6.18通用
+6.8-6.9不可用，凭学生证入场"
+                android:textColor="@color/text_color3"
+                android:textSize="@dimen/sp12" />
+
+            <TextView
+                android:id="@+id/ticketm_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="15dp"
+                android:text="￥50"
+                android:textColor="@color/text_color45"
+                android:textSize="@dimen/sp36" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/divider3" />
+        <com.tgf.kcwc.view.nestlistview.NestFullListView
+            android:id="@+id/handleorg_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </LinearLayout>
+</LinearLayout>

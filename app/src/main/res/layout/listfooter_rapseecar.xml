@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/style_bg3"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/text_color3"
+        android:text="晚一秒，就晚一个客户，快点击抢单！" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:lineSpacingExtra="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/text_color17"
+        android:text="① 为了向客户提供优质的服务，允许多人抢单，每单最多限5名销售提供服务" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/text_color17"
+        android:paddingBottom="10dp"
+        android:text="② 系统根据经销商店内展车/现车以及位置进行匹配，并参考服务评分等因素进行阶梯推送" />
+
+    <TextView
+        android:id="@+id/raporder_noticemsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:lineSpacingExtra="5dp"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/text_color17"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="③ 实时刷新时仅显示最新50条待抢单需求，点“全部”可查看所有待抢单需求" />
+</LinearLayout>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_main_color1"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/titleBar"
+        layout="@layout/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titleBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/driverLayout"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/app_main_color1"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/common_title_layout" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/oilBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg"
+                        android:textColor="@color/text_color" />
+
+                    <Button
+                        android:id="@+id/electricBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg"
+                        android:textColor="@color/text_color" />
+
+                    <Button
+                        android:id="@+id/hybridBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_bg"
+                        android:textColor="@color/text_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/priceLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/driverLayout"
+                android:background="@color/app_main_color1"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/common_title_layout" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:text="0"
+                        android:textColor="@color/text_color"
+                        android:layout_marginTop="5dp"
+                        />
+
+                    <com.tgf.kcwc.view.rangeseekbar.RangeBar
+                        android:id="@+id/rangebar"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="30+"
+                        android:textColor="@color/text_color"
+                        android:layout_marginTop="5dp"
+                        />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/brandLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/priceLayout"
+                android:background="@color/app_main_color1"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/common_title_layout" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.tgf.kcwc.view.FlowLayout
+                        android:id="@+id/brandLists"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp" />
+
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/addBrandBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/brandLists"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/corner_style_btn"
+                    android:text="@string/select_brand_btn"
+                    android:textColor="@color/text_nav_def_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/modelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_below="@id/brandLayout"
+                android:background="@color/app_main_color1"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/common_title_layout" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ccLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/modelLayout"
+                android:background="@color/app_main_color1"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/common_title_layout" />
+
+                <GridView
+                    android:id="@+id/ccGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:numColumns="3"
+                    android:verticalSpacing="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/drivingKMLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ccLayout"
+                android:background="@color/app_main_color1"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/common_title_layout" />
+
+                <GridView
+                    android:id="@+id/drivingGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:numColumns="3"
+                    android:verticalSpacing="5dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/powerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/drivingKMLayout"
+                android:background="@color/app_main_color1"
+                android:orientation="vertical">
+
+
+                <include layout="@layout/common_title_layout" />
+
+
+                <GridView
+                    android:id="@+id/powerGridView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:numColumns="3"
+                    android:verticalSpacing="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+
+                android:layout_marginTop="10dp"
+                android:background="@color/app_layout_bg_color">
+
+                <Button
+                    android:id="@+id/confirmBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/button_bg_3"
+                    android:text="@string/confirm_btn_text"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>
